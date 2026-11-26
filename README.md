@@ -1,5 +1,7 @@
 # Giant Creature Framework (GCF)
 
+**English** | [简体中文](README.zh-CN.md)
+
 A RimWorld 1.7 framework for multi-part colossal creatures, super-heavy mechs, and multi-tile vehicles.
 
 ---
@@ -63,7 +65,7 @@ dotnet build Source/GiantCreatureFramework/GiantCreatureFramework.csproj -c Rele
 dotnet build Source/GiantCreatureFramework.Agent/GiantCreatureFramework.Agent.csproj -c Release -p:RimWorldPath="PATH_TO_RIMWORLD"
 ```
 
-Run the standalone Agent & imaging unit tests:
+Run the standalone Agent and imaging unit tests:
 
 ```bash
 dotnet test Source/GiantCreatureFramework.Agent.Tests/GiantCreatureFramework.Agent.Tests.csproj -c Release
@@ -78,17 +80,6 @@ Compiled mod assemblies output to `1.7/Assemblies/` (ignored by Git). Pass `-p:D
 - [Giant Creature Framework Manual](Docs/GiantCreatureFramework_Manual.md)
 - [CompGiantRig Architecture](Docs/CompGiantRig_Architecture.md)
 - [Performance Report](Docs/Performance_Report.md)
-
----
-
-## 简介（中文）
-
-**Giant Creature Framework（GCF）** 是专为 RimWorld 1.7 打造的巨型生物、超重型机甲与大型载具底层框架。
-
-- **多部位骨骼与柔性动画**：支持独立四肢、双翼、长尾、360 度炮塔、履带滚动、贝塞尔链、软鞭以及 2D 线性混合蒙皮（LBS）。
-- **断肢破坏与真实多格体积**：部位被打断时对应骨骼子树脱落飞出并失效挂载武器；核心碰撞格、冠层排挤格与受击轮廓格随转向实时同步，近战、集火、喂食与包扎均可直接点击身体任意位置响应。
-- **多武器、飞行、水栖与乘员座舱**：支持多炮口齐射、Boss 阶段变形、空地飞行切换、两栖/水上载具、最多 12 人座舱或骨骼乘骑位，以及跨世界地图远征。
-- **内置样机与创作工坊**：主框架内置「重装机械巨蝎（GCF_MechScorpion）」；在模组设置中开启创作终端并配置自己的模型与文生图 API 后，可在游戏内直接生成部件贴图、完成关节拼装并免重启热加载测试。
 
 ---
 
