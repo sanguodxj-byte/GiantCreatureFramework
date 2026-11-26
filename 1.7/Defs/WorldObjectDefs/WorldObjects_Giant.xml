@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <WorldObjectDef>
+    <defName>GCF_WorldGiant</defName>
+    <worldObjectClass>GiantCreatureFramework.WorldObject_Giant</worldObjectClass>
+    <canHaveMap>false</canHaveMap>
+    <useDynamicDrawer>true</useDynamicDrawer>
+    <expandingIcon>false</expandingIcon>
+    <selectable>true</selectable>
+    <canHaveFaction>true</canHaveFaction>
+  </WorldObjectDef>
+</Defs>

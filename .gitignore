@@ -1,0 +1,42 @@
+# Build results
+[Bb]in/
+[Oo]bj/
+TestResults/
+1.7/Assemblies/*.dll
+1.7/Assemblies/*.pdb
+
+# Verification & runtime caches
+.verify/
+site_previews/
+backup_screenshots/
+*.mp4
+*.gif
+*.wav
+
+# Non-generic creature resources (keep MechScorpion and generic Wounds only)
+1.7/Textures/Things/Pawn/GiantCreature/*
+!1.7/Textures/Things/Pawn/GiantCreature/MechScorpion/
+!1.7/Textures/Things/Pawn/GiantCreature/Wounds/
+
+# Visual Studio / Rider / VS Code
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Python
+__pycache__/
+*.py[cod]
+
+# OS & temporary files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*.bak
+*.swp
+*~
+*.log

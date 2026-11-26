@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <GCF_InspectRigLabel>リグインスペクター</GCF_InspectRigLabel>
+  <GCF_InspectRigDesc>巨大生物フレームワークのノード軸ボーンアニメーションと動的マス ヒット/衝突判定インスペクターを開く。</GCF_InspectRigDesc>
+  <GCF_InspectorTitle>巨大リグインスペクター</GCF_InspectorTitle>
+  <GCF_InspectorSummary>進行方位: {0} 度  |  状態: {1}  |  クリップ: {2}
+有効ヒットセル (緑+赤): {3}  |  実体衝突セル (赤): {4}</GCF_InspectorSummary>
+  <GCF_ToggleFootprint>ヒット/衝突セルを表示</GCF_ToggleFootprint>
+  <GCF_ToggleSkeleton>ピボット骨格を表示</GCF_ToggleSkeleton>
+  <GCF_ToggleGlobalFootprint>全体セルオーバーレイ</GCF_ToggleGlobalFootprint>
+  <GCF_ToggleManualPose>手動ボーン角度</GCF_ToggleManualPose>
+  <GCF_AnimClipSection>ボーンアニメーションクリップのプレビュー:</GCF_AnimClipSection>
+  <GCF_ResetPoseBtn>ポーズをリセット / AI制御に復帰</GCF_ResetPoseBtn>
+  <GCF_AbilityDisabledMissingOrgan>器官切断: {0}</GCF_AbilityDisabledMissingOrgan>
+  <GCF_BioferriteCoreActive>バイオフェライト再生コア: 稼働中 (+{0} HP/秒)</GCF_BioferriteCoreActive>
+  <GCF_BioferriteCoreSevered>バイオフェライト再生コア: オフライン (深淵溶炉コアが切断された)</GCF_BioferriteCoreSevered>
+  <GCF_DisabledSkillsLine>無効化済みスキル: {0}</GCF_DisabledSkillsLine>
+  <GCF_SettingsCategory>巨大生物フレームワーク</GCF_SettingsCategory>
+  <GCF_SettingsSection_Debug>デバッグ可視化トグル (既定でオフ)</GCF_SettingsSection_Debug>
+  <GCF_Setting_DrawCollisionCells>衝突セルを表示</GCF_Setting_DrawCollisionCells>
+  <GCF_Setting_DrawCollisionCells_Desc>マップ上の巨大ユニットの実体遮断衝突セル輪郭 (赤) を描画する。</GCF_Setting_DrawCollisionCells_Desc>
+  <GCF_Setting_DrawHitCells>ヒットセルを表示</GCF_Setting_DrawHitCells>
+  <GCF_Setting_DrawHitCells_Desc>マップ上の巨大ユニットのアルファマップ ヒットセル輪郭 (緑) を描画する。</GCF_Setting_DrawHitCells_Desc>
+  <GCF_Setting_DrawSkeleton>骨格を表示</GCF_Setting_DrawSkeleton>
+  <GCF_Setting_DrawSkeleton_Desc>マップ上にボーン関節ピボット・親子リンク・連続曲線・エミッタ方向ベクトルを描画する。</GCF_Setting_DrawSkeleton_Desc>
+  <GCF_Setting_EnableDebugPanel>デバッグパネルを有効化</GCF_Setting_EnableDebugPanel>
+  <GCF_Setting_EnableDebugPanel_Desc>プレイ中にデバッグパネルのフローティング入口ボタンを表示し、オフにすると入口と開いているパネルを即座に閉じる。</GCF_Setting_EnableDebugPanel_Desc>
+  <GCF_Setting_OpenDebugPanel>デバッグパネルを開く</GCF_Setting_OpenDebugPanel>
+  <GCF_DebugPanelLauncherBtn>デバッグパネル</GCF_DebugPanelLauncherBtn>
+  <GCF_DebugPanelTitle>巨型生物デバッグパネル</GCF_DebugPanelTitle>
+  <GCF_DebugPanelActiveTool>使用中のマップツール: {0}</GCF_DebugPanelActiveTool>
+  <GCF_DebugPanelCancelTool>ツール解除</GCF_DebugPanelCancelTool>
+  <GCF_DebugCat_Spawn>ユニット生成</GCF_DebugCat_Spawn>
+  <GCF_DebugCat_Tools>デバッグツール</GCF_DebugCat_Tools>
+  <GCF_DebugAction_SpawnScorpionPlayer>重装機械巨蠍 · 味方</GCF_DebugAction_SpawnScorpionPlayer>
+  <GCF_DebugAction_SpawnScorpionHostile>重装機械巨蠍 · 敵対</GCF_DebugAction_SpawnScorpionHostile>
+  <GCF_DebugAction_SpawnDynamicPlayer>{0} · 味方</GCF_DebugAction_SpawnDynamicPlayer>
+  <GCF_DebugAction_SpawnDynamicHostile>{0} · 敵対</GCF_DebugAction_SpawnDynamicHostile>
+  <GCF_DebugAction_DestroyBone>カーソル位置の部位を破壊</GCF_DebugAction_DestroyBone>
+  <GCF_DebugAction_LogHitCell>カーソルセルの命中情報を出力</GCF_DebugAction_LogHitCell>
+  <GCF_DebugAction_RecallInterceptors>全キャリア迎撃機を帰還</GCF_DebugAction_RecallInterceptors>
+  <GCF_DebugAction_StartFpsTelemetry>FPS計測を開始</GCF_DebugAction_StartFpsTelemetry>
+  <GCF_DebugAction_StopFpsTelemetry>FPS計測を停止・出力</GCF_DebugAction_StopFpsTelemetry>
+  <GCF_SettingsSection_Authoring>実行時クリーチャーフォージ ターミナル (既定でオフ)</GCF_SettingsSection_Authoring>
+  <GCF_Setting_EnableAuthoringTerminal>巨獣工房 (Creature Forge) 実行時製作ターミナルを有効化</GCF_Setting_EnableAuthoringTerminal>
+  <GCF_Setting_EnableAuthoringTerminal_Desc>有効化するとメインバーに [巨獣工房] ボタンを表示し、F10 ホットキーと AI 造獣対話を有効にする。オフにすると入口を即時隠蔽し、実行中のターンを中止して、すべてのネットワーク要求をブロックする (保存済みのカスタム巨獣は通常どおりロードされる)。</GCF_Setting_EnableAuthoringTerminal_Desc>
+  <GCF_PhaseAdvanceDisabledTransforming>次段階へ艦体再構成中</GCF_PhaseAdvanceDisabledTransforming>
+  <GCF_PhaseAdvanceDisabledFinalStage>既に最終段階</GCF_PhaseAdvanceDisabledFinalStage>
+  <GCF_PhaseAdvanceDisabledUnavailable>変形システム利用不可</GCF_PhaseAdvanceDisabledUnavailable>
+  <GCF_PhaseRevertDisabledTransforming>段階再構成を実行中</GCF_PhaseRevertDisabledTransforming>
+  <GCF_PhaseRevertDisabledFirstStage>既に初期段階</GCF_PhaseRevertDisabledFirstStage>
+  <GCF_PhaseRevertDisabledNotFullState>満状態（無傷・欠損なし・悪影響状態なし）ではないため前段階へ退縮不可。損傷時は次段階への進行のみ可能</GCF_PhaseRevertDisabledNotFullState>
+  <GCF_CarrierHangarStatus>インターセプター: 航空 {0} / 格納 {1} (上限 {2}/{3})</GCF_CarrierHangarStatus>
+  <GCF_CarrierHangarDestroyed>インターセプター格納庫: オフライン (両格納庫区画が損壊)</GCF_CarrierHangarDestroyed>
+  <GCF_CarrierNoInterceptorsReady>出撃可能なインターセプターなし。</GCF_CarrierNoInterceptorsReady>
+  <GCF_CarrierRebuildingInterceptor>製造中: {0}%</GCF_CarrierRebuildingInterceptor>
+  <GCF_CarrierCatapultOverdriveActive>重力子オーバードライブ: {0}秒</GCF_CarrierCatapultOverdriveActive>
+  <GCF_Gizmo_RecallInterceptors_Label>インターセプター召還 ({0})</GCF_Gizmo_RecallInterceptors_Label>
+  <GCF_Gizmo_RecallInterceptors_Desc>航空中の全インターセプターに即時攻撃離脱を命じ、空母の格納庫区画へ帰投させて艦体修復とシールド再充填を行う。</GCF_Gizmo_RecallInterceptors_Desc>
+  <GCF_Gizmo_RecallDisabledNoneAirborne>航空中のインターセプターなし。</GCF_Gizmo_RecallDisabledNoneAirborne>
+  <GCF_Gizmo_AutoLaunch_Label>自動スクランブル発艦</GCF_Gizmo_AutoLaunch_Label>
+  <GCF_Gizmo_AutoLaunch_Desc>有効時、空母は射程内の敵対脅威に対して格納中のインターセプターを自動発艦させる。無効にすると手動命令までインターセプターを格納したままにする。</GCF_Gizmo_AutoLaunch_Desc>
+  <GCF_Gizmo_AutoRebuild_Label>インターセプター自動補充製造</GCF_Gizmo_AutoRebuild_Label>
+  <GCF_Gizmo_AutoRebuild_Desc>戦闘で戦闘機を喪失した際、無傷の格納庫区画内で代替インターセプターを自動ワープ製造する。</GCF_Gizmo_AutoRebuild_Desc>
+  <GCF_InterceptorInspectLine>プラズマシールド: {0} / {1}  |  状態: {2}</GCF_InterceptorInspectLine>
+  <GCF_InterceptorState_Docked>格納中</GCF_InterceptorState_Docked>
+  <GCF_InterceptorState_Launching>カタパルト射出</GCF_InterceptorState_Launching>
+  <GCF_InterceptorState_AttackRun>掃射攻撃</GCF_InterceptorState_AttackRun>
+  <GCF_InterceptorState_BreakTurn>バンク旋回</GCF_InterceptorState_BreakTurn>
+  <GCF_InterceptorState_EscortOrbit>戦闘哨戒</GCF_InterceptorState_EscortOrbit>
+  <GCF_InterceptorState_Returning>帰艦中</GCF_InterceptorState_Returning>
+  <GCF_Tab_Cockpit>コックピット</GCF_Tab_Cockpit>
+  <GCF_CockpitMode_Piloted>有人操縦オーバードライブ</GCF_CockpitMode_Piloted>
+  <GCF_CockpitMode_Autonomous>自律AI巡航</GCF_CockpitMode_Autonomous>
+  <GCF_CockpitMode_Dormant>待機 (駐機)</GCF_CockpitMode_Dormant>
+  <GCF_CockpitRole_PrimaryPilot>操縦手</GCF_CockpitRole_PrimaryPilot>
+  <GCF_CockpitRole_Gunner>砲手</GCF_CockpitRole_Gunner>
+  <GCF_CockpitRole_Commander>車長</GCF_CockpitRole_Commander>
+  <GCF_CockpitRole_Passenger>同乗者</GCF_CockpitRole_Passenger>
+  <GCF_CockpitInspect_Manned>モード: {0} ({1})  |  乗員: {2}  |  機動 {3} · 射撃 {4}</GCF_CockpitInspect_Manned>
+  <GCF_CockpitInspect_Unmanned>モード: {0}  |  乗員: {1}  |  機動 {2} · 射撃 {3}</GCF_CockpitInspect_Unmanned>
+  <GCF_Gizmo_AutonomousMode_Label>自律AI巡航</GCF_Gizmo_AutonomousMode_Label>
+  <GCF_Gizmo_AutonomousMode_Desc>無人時の機載自律AI巡航と戦闘状態を切替える。オフにするとユニットは待機モードで駐機し、自主移動や交戦を行わない。</GCF_Gizmo_AutonomousMode_Desc>
+  <GCF_Gizmo_BoardCrew_Label>乗員搭乗割当</GCF_Gizmo_BoardCrew_Label>
+  <GCF_Gizmo_BoardCrew_Desc>近くの入植者を選び、空席コックピットに搭乗させて有人操縦オーバードライブ補正を発動させる。</GCF_Gizmo_BoardCrew_Desc>
+  <GCF_Gizmo_DisembarkAll_Label>全員降車 ({0})</GCF_Gizmo_DisembarkAll_Label>
+  <GCF_Gizmo_DisembarkAll_Desc>搭乗中の全乗員に艦体輪郭外側の安全な周辺セルへの降車を命じる。</GCF_Gizmo_DisembarkAll_Desc>
+  <GCF_FloatMenu_BoardCockpitSeat>搭乗 {0} ({1})</GCF_FloatMenu_BoardCockpitSeat>
+  <GCF_FloatMenu_BoardMulti>乗員一斉搭乗 {0}</GCF_FloatMenu_BoardMulti>
+  <GCF_FloatMenu_BoardDisabled>{0} に搭乗不可: {1}</GCF_FloatMenu_BoardDisabled>
+  <GCF_FloatMenu_SeatUnavailable>{0} [{1}]: {2}</GCF_FloatMenu_SeatUnavailable>
+  <GCF_FloatMenu_AssignColonistItem>{0} (射撃 {1} / 格闘 {2})</GCF_FloatMenu_AssignColonistItem>
+  <GCF_FloatMenu_NoEligibleColonists>コックピットに到達できる利用可能な入植者なし</GCF_FloatMenu_NoEligibleColonists>
+  <GCF_CockpitFail_HostUnavailable>母機ユニットが利用不可</GCF_CockpitFail_HostUnavailable>
+  <GCF_CockpitFail_InvalidCrew>このユニットはコックピットに搭乗不可</GCF_CockpitFail_InvalidCrew>
+  <GCF_CockpitFail_WrongFaction>プレイヤー支配下ではない</GCF_CockpitFail_WrongFaction>
+  <GCF_CockpitFail_SeatDestroyed>コックピット構造損壊 ({0})</GCF_CockpitFail_SeatDestroyed>
+  <GCF_CockpitFail_SeatOccupied>席は既に使用中</GCF_CockpitFail_SeatOccupied>
+  <GCF_CockpitFail_AllSeatsDestroyed>全コックピットモジュール損壊</GCF_CockpitFail_AllSeatsDestroyed>
+  <GCF_CockpitFail_Full>コックピット満員</GCF_CockpitFail_Full>
+  <GCF_CockpitFail_AiCoreDestroyed>自律演算コア損壊</GCF_CockpitFail_AiCoreDestroyed>
+  <GCF_CrewDisabledUnmanned>待機: 無人状態</GCF_CrewDisabledUnmanned>
+  <GCF_CrewDisabledNoGunner>兵器オフライン: 砲手不在</GCF_CrewDisabledNoGunner>
+  <GCF_CrewDisabledNoOperator>システムオフライン: 車長不在</GCF_CrewDisabledNoOperator>
+  <GCF_CockpitTab_EfficiencySummary>機動: {0}  |  射撃管制: {1}  |  装填: {2}</GCF_CockpitTab_EfficiencySummary>
+  <GCF_CockpitTab_EjectAllBtn>全員降車</GCF_CockpitTab_EjectAllBtn>
+  <GCF_CockpitTab_PartDestroyed>損壊</GCF_CockpitTab_PartDestroyed>
+  <GCF_CockpitTab_OccupantStatus>{0} (意識 {1})</GCF_CockpitTab_OccupantStatus>
+  <GCF_CockpitTab_DisembarkBtn>脱出</GCF_CockpitTab_DisembarkBtn>
+  <GCF_CockpitTab_SeatEmpty>空席</GCF_CockpitTab_SeatEmpty>
+  <GCF_CockpitTab_AssignBtn>割当</GCF_CockpitTab_AssignBtn>
+  <GCF_PartFocusTarget_Label>集中攻撃目標</GCF_PartFocusTarget_Label>
+  <GCF_PartFocusTarget_Desc>無傷の全ボーン武装パーツと格納庫区画に優先集中目標を割当てる。移動行進中でも各無傷パーツは各自の射界内で自動的に独立照準・発砲または攻撃を行う。</GCF_PartFocusTarget_Desc>
+  <GCF_PartClearTarget_Label>集中解除: {0}</GCF_PartClearTarget_Label>
+  <GCF_PartClearTarget_Desc>現在ロック中の優先集中目標を解除し、各ボーン武装パーツを各自射界での自律索敵に戻す。</GCF_PartClearTarget_Desc>
+  <GCF_PartFireAtWill_Label>パーツ自由射撃</GCF_PartFireAtWill_Label>
+  <GCF_PartFireAtWill_Desc>有効時、無傷の全攻撃パーツは移動・駐留を問わず自動索敵して独立発砲/攻撃する。無効時は手動指定の集中目標にのみ発砲する。</GCF_PartFireAtWill_Desc>
+  <GCF_PartWeaponsAllSevered>全攻撃パーツ損壊</GCF_PartWeaponsAllSevered>
+  <GCF_FloatMenu_PartFocusAttack>パーツ集中攻撃 {0}</GCF_FloatMenu_PartFocusAttack>
+  <GCF_Gizmo_FlightTakeoff_Label>離陸</GCF_Gizmo_FlightTakeoff_Label>
+  <GCF_Gizmo_FlightLand_Label>着陸</GCF_Gizmo_FlightLand_Label>
+  <GCF_Gizmo_FlightToggle_Desc>高空飛行状態 (壁と深水を無視して越障経路探索し、地上近接攻撃を完全に無効化) と地上移動状態を切替える。</GCF_Gizmo_FlightToggle_Desc>
+  <GCF_FlightFail_LiftDamaged>揚力器官/推進モジュールの損傷が大きく離陸不可</GCF_FlightFail_LiftDamaged>
+  <GCF_FlightFail_ThickRoof>真上に山岳屋根があり離陸不可</GCF_FlightFail_ThickRoof>
+  <GCF_FlightState_Grounded>地上移動</GCF_FlightState_Grounded>
+  <GCF_FlightState_TakingOff>上昇離陸中</GCF_FlightState_TakingOff>
+  <GCF_FlightState_Airborne>高空巡航</GCF_FlightState_Airborne>
+  <GCF_FlightState_Landing>滑空着陸中</GCF_FlightState_Landing>
+  <GCF_FlightInspectLine>飛行モード: {0} (揚力効率 {1})</GCF_FlightInspectLine>
+  <GCF_FlightFail_CombatCooldown>戦闘飛行の翼回復中 (残り {0} 秒)</GCF_FlightFail_CombatCooldown>
+  <GCF_FlightInspect_CombatAirLeft>戦闘滞空制限: {0} 秒</GCF_FlightInspect_CombatAirLeft>
+  <GCF_FlightInspect_CombatCooldown>離陸回復: {0} 秒</GCF_FlightInspect_CombatCooldown>
+  <GCF_FloatMenu_CannotMeleeAirborne>高空飛行目標 {0} に近接攻撃不可</GCF_FloatMenu_CannotMeleeAirborne>
+  <GCF_FloatMenu_TakeCockpitControl>{0} を操縦制御 ({1})</GCF_FloatMenu_TakeCockpitControl>
+  <GCF_FloatMenu_BoardRoleOpenCount>{0} に搭乗 ({1}・空席 {2})</GCF_FloatMenu_BoardRoleOpenCount>
+  <GCF_FloatMenu_DraftControl>{0} を徴兵制御</GCF_FloatMenu_DraftControl>
+  <GCF_FloatMenu_UndraftControl>{0} の徴兵を解除</GCF_FloatMenu_UndraftControl>
+  <GCF_FloatMenu_DraftAndMoveHere>徴兵してここへ移動</GCF_FloatMenu_DraftAndMoveHere>
+  <GCF_FloatMenu_DraftAndFocusAttack>徴兵して {0} にパーツ集中攻撃</GCF_FloatMenu_DraftAndFocusAttack>
+  <GCF_FloatMenu_SwitchAutonomousOn>制御切替: 自律AI巡航を有効化</GCF_FloatMenu_SwitchAutonomousOn>
+  <GCF_FloatMenu_SwitchStandbyOn>制御切替: 駐機待機へ移行</GCF_FloatMenu_SwitchStandbyOn>
+  <GCF_FloatMenu_PartFireAtWillOn>パーツ自由射撃: ON (クリックで無効化)</GCF_FloatMenu_PartFireAtWillOn>
+  <GCF_FloatMenu_PartFireAtWillOff>パーツ自由射撃: OFF (クリックで有効化)</GCF_FloatMenu_PartFireAtWillOff>
+  <GCF_FloatMenu_PhaseAdvance>段階変構: 次段階へ展開 ({0})</GCF_FloatMenu_PhaseAdvance>
+  <GCF_FloatMenu_PhaseRevert>段階変構: 前段階へ収納 ({0})</GCF_FloatMenu_PhaseRevert>
+  <GCF_FloatMenu_PhaseDisabled>変構不可: {0}</GCF_FloatMenu_PhaseDisabled>
+  <GCF_Letter_WarQueenScorpionUnlock_Label>重装設計図解禁: 重装機械巨蠍</GCF_Letter_WarQueenScorpionUnlock_Label>
+  <GCF_Letter_WarQueenScorpionUnlock_Text>ウォークイーンの撃破により、高位メカテック研究とパワーフォーカスチップ2個を揃えることで大型メカ培養槽にて重装機械巨蠍を培養できるようになりました。</GCF_Letter_WarQueenScorpionUnlock_Text>
+  <GCF_FlightFail_InsufficientLift>翼の損傷が激しく離陸揚力を確保できません</GCF_FlightFail_InsufficientLift>
+  <GCF_CrewMode_Mounted>騎乗操縦</GCF_CrewMode_Mounted>
+  <GCF_CrewMode_Unmounted>非騎乗</GCF_CrewMode_Unmounted>
+  <GCF_WorldDeparture_ConfirmCloseMap>{0} はこの非コロニーマップに残る最後の味方ユニットです。離脱するとマップが閉じられ、残されたアイテムは放棄されます。続行しますか？</GCF_WorldDeparture_ConfirmCloseMap>
+  <GCF_WorldDeparture_ConfirmDestroySite>{0} は「{1}」に残る最後の味方ユニットです。離脱するとマップが閉じられ、このワールド拠点は消滅します（残されたアイテムも失われます）。続行しますか？</GCF_WorldDeparture_ConfirmDestroySite>
+  <GCF_Setting_LoadedGiantsHeader>ロード済み巨獣一覧（{0}）</GCF_Setting_LoadedGiantsHeader>
+  <GCF_Setting_LoadedGiantsEmpty>ロード済みの巨獣はありません</GCF_Setting_LoadedGiantsEmpty>
+  <GCF_GiantSource_BuiltIn>内蔵</GCF_GiantSource_BuiltIn>
+  <GCF_GiantSource_Custom>カスタム</GCF_GiantSource_Custom>
+  <GCF_GiantSource_ExternalMod>{0}</GCF_GiantSource_ExternalMod>
+  <GCF_GiantSource_UnknownMod>外部Mod</GCF_GiantSource_UnknownMod>
+  <GCF_Setting_OpenCreaturesFolder>カスタム巨獣フォルダを開く（Config\GiantCreatureFramework\Creatures）</GCF_Setting_OpenCreaturesFolder>
+  <GCF_AquaticMode_WaterOnly>完全水棲・艦船</GCF_AquaticMode_WaterOnly>
+  <GCF_AquaticMode_Amphibious>水陸両用</GCF_AquaticMode_Amphibious>
+  <GCF_AquaticState_DeepWater>深水巡航</GCF_AquaticState_DeepWater>
+  <GCF_AquaticState_ShallowWater>浅水航行</GCF_AquaticState_ShallowWater>
+  <GCF_AquaticState_Ashore>陸上行動</GCF_AquaticState_Ashore>
+  <GCF_AquaticInspectLine>水域モード: {0} · {1}</GCF_AquaticInspectLine>
+  <GCF_AquaticInspectLineWithPropulsion>水域モード: {0} · {1}（推進効率 {2}）</GCF_AquaticInspectLineWithPropulsion>
+  <GCF_AquaticWorldFail_InvalidDestination>完全水棲ユニットおよび艦船は内陸の陸地へ移動できません（海洋・湖沼・沿岸・河川タイルを選択してください）。</GCF_AquaticWorldFail_InvalidDestination>
+  <GCF_AquaticWorldFail_NoWaterRoute>目的地まで接続された水域または沿岸ルートがありません。</GCF_AquaticWorldFail_NoWaterRoute>
+  <GCF_AquaticFail_NoWaterOnMap>このマップには完全水棲ユニット・艦船が展開できる水域がありません。</GCF_AquaticFail_NoWaterOnMap>
+</LanguageData>

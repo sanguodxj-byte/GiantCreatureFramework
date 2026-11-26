@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <GCF_Anim_MechScorpion_Walk.label>液压行进</GCF_Anim_MechScorpion_Walk.label>
+  <GCF_Anim_MechScorpion_ClawLeft.label>左钳钳击</GCF_Anim_MechScorpion_ClawLeft.label>
+  <GCF_Anim_MechScorpion_ClawRight.label>右钳钳击</GCF_Anim_MechScorpion_ClawRight.label>
+  <GCF_Anim_MechScorpion_TailSting.label>尾刺突刺</GCF_Anim_MechScorpion_TailSting.label>
+  <GCF_Anim_MechScorpion_RangedTail.label>尾刺齐射</GCF_Anim_MechScorpion_RangedTail.label>
+  <GCF_Anim_MechScorpion_CarapaceRam.label>重甲头胸冲撞</GCF_Anim_MechScorpion_CarapaceRam.label>
+  <GCF_Anim_MechScorpion_Downed.label>瘫痪停机</GCF_Anim_MechScorpion_Downed.label>
+  <GCF_Anim_MechScorpion_Death.label>液压爆裂解体坍塌</GCF_Anim_MechScorpion_Death.label>
+</LanguageData>

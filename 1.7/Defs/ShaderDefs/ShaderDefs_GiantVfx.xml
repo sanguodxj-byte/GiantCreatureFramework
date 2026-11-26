@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ShaderDef>
+    <defName>GCF_RimfxUberVfx</defName>
+    <shaderProgram>
+      <vertexShaderFileName>SceneDefault.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>GCF_RimfxUberVfx.frag.glsl</fragmentShaderFileName>
+      <useTexture>true</useTexture>
+      <flipTextureST>false</flipTextureST>
+      <transparent>true</transparent>
+      <blendMode>Custom</blendMode>
+      <blendSrcFactor>One</blendSrcFactor>
+      <blendDstFactor>OneMinusSrcAlpha</blendDstFactor>
+      <depthTest>true</depthTest>
+      <depthWrite>false</depthWrite>
+      <cullMode>None</cullMode>
+      <renderQueue>3158</renderQueue>
+    </shaderProgram>
+  </ShaderDef>
+
+  <ShaderTypeDef>
+    <defName>GCF_RimfxUberVfx</defName>
+    <shaderPath>Map/GCF_RimfxUberVfx</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderDef>
+    <defName>GCF_GiantDropShadow</defName>
+    <shaderProgram>
+      <vertexShaderFileName>SceneDefault.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>GCF_GiantDropShadow.frag.glsl</fragmentShaderFileName>
+      <useTexture>true</useTexture>
+      <flipTextureST>true</flipTextureST>
+      <transparent>true</transparent>
+      <blendMode>Custom</blendMode>
+      <blendSrcFactor>One</blendSrcFactor>
+      <blendDstFactor>OneMinusSrcAlpha</blendDstFactor>
+      <depthTest>true</depthTest>
+      <depthWrite>false</depthWrite>
+      <cullMode>None</cullMode>
+      <stencilEnabled>true</stencilEnabled>
+      <stencilCompare>Greater</stencilCompare>
+      <stencilPassOp>Replace</stencilPassOp>
+      <stencilRef>32</stencilRef>
+      <stencilReadMask>32</stencilReadMask>
+      <stencilWriteMask>32</stencilWriteMask>
+      <renderQueue>2850</renderQueue>
+      <textureWrapOverrides>
+        <li>
+          <key>_MainTex</key>
+          <value>Clamp</value>
+        </li>
+      </textureWrapOverrides>
+    </shaderProgram>
+  </ShaderDef>
+
+  <ShaderTypeDef>
+    <defName>GCF_GiantDropShadow</defName>
+    <shaderPath>Map/GCF_GiantDropShadow</shaderPath>
+  </ShaderTypeDef>
+
+</Defs>

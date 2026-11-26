@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <GCF_MechCarapace.label>armored chassis carapace</GCF_MechCarapace.label>
+  <GCF_MechCephalothorax.label>cephalothorax sensor hood</GCF_MechCephalothorax.label>
+  <GCF_MechCapacitor.label>hypercapacitor</GCF_MechCapacitor.label>
+  <GCF_MechCrusherClaw.label>hydraulic crusher claw</GCF_MechCrusherClaw.label>
+  <GCF_MechClawPincer.label>hydraulic pincer jaw</GCF_MechClawPincer.label>
+  <GCF_MechClawActuator.label>claw servo actuator</GCF_MechClawActuator.label>
+  <GCF_MechWalkingLeg.label>hydraulic walking leg</GCF_MechWalkingLeg.label>
+  <GCF_MechWalkingFoot.label>tarsus foot</GCF_MechWalkingFoot.label>
+  <GCF_MechTailRing1.label>first armored tail ring</GCF_MechTailRing1.label>
+  <GCF_MechTailRing1.labelShort>tail ring</GCF_MechTailRing1.labelShort>
+  <GCF_MechTailRing2.label>second armored tail ring</GCF_MechTailRing2.label>
+  <GCF_MechTailRing2.labelShort>tail ring</GCF_MechTailRing2.labelShort>
+  <GCF_MechTailRing3.label>third armored tail ring</GCF_MechTailRing3.label>
+  <GCF_MechTailRing3.labelShort>tail ring</GCF_MechTailRing3.labelShort>
+  <GCF_MechTailRing4.label>fourth armored tail ring</GCF_MechTailRing4.label>
+  <GCF_MechTailRing4.labelShort>tail ring</GCF_MechTailRing4.labelShort>
+  <GCF_MechTailRing5.label>fifth armored tail ring</GCF_MechTailRing5.label>
+  <GCF_MechTailRing5.labelShort>tail ring</GCF_MechTailRing5.labelShort>
+  <GCF_MechTailRing6.label>sixth armored tail ring</GCF_MechTailRing6.label>
+  <GCF_MechTailRing6.labelShort>tail ring</GCF_MechTailRing6.labelShort>
+  <GCF_MechTailStinger.label>plasma tail stinger</GCF_MechTailStinger.label>
+  <GCF_MechPlasmaEmitter.label>plasma emitter core</GCF_MechPlasmaEmitter.label>
+</LanguageData>

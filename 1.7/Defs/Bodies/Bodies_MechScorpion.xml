@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Body Part Groups for the Articulated Strike Limbs -->
+
+  <BodyPartGroupDef>
+    <defName>GCF_LeftClawGroup</defName>
+    <label>left crusher claw</label>
+  </BodyPartGroupDef>
+
+  <BodyPartGroupDef>
+    <defName>GCF_RightClawGroup</defName>
+    <label>right crusher claw</label>
+  </BodyPartGroupDef>
+
+  <BodyPartGroupDef>
+    <defName>GCF_TailStingerGroup</defName>
+    <label>plasma tail stinger</label>
+  </BodyPartGroupDef>
+
+  <!-- Mechanoid Anatomical Part Defs (1.0x Diabolus-tier base hitPoints; 1.5x scaling via baseHealthScale=6.75) -->
+
+  <BodyPartDef>
+    <defName>GCF_MechCarapace</defName>
+    <label>armored chassis carapace</label>
+    <hitPoints>55</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <alive>false</alive>
+    <bleedRate>0</bleedRate>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>GCF_MechCephalothorax</defName>
+    <label>cephalothorax sensor hood</label>
+    <hitPoints>30</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <alive>false</alive>
+    <bleedRate>0</bleedRate>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>GCF_MechCapacitor</defName>
+    <label>hypercapacitor</label>
+    <hitPoints>50</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <alive>false</alive>
+    <bleedRate>0</bleedRate>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>GCF_MechCrusherClaw</defName>
+    <label>hydraulic crusher claw</label>
+    <hitPoints>40</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <alive>false</alive>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>ManipulationLimbCore</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>GCF_MechClawPincer</defName>
+    <label>hydraulic pincer jaw</label>
+    <hitPoints>25</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <alive>false</alive>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>ManipulationLimbSegment</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>GCF_MechClawActuator</defName>
+    <label>claw servo actuator</label>
+    <hitPoints>20</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <alive>false</alive>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>ManipulationLimbSegment</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>GCF_MechWalkingLeg</defName>
+    <label>hydraulic walking leg</label>
+    <hitPoints>30</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <alive>false</alive>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>MovingLimbCore</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>GCF_MechWalkingFoot</defName>
+    <label>tarsus foot</label>
+    <hitPoints>20</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <alive>false</alive>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>MovingLimbSegment</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef Abstract="True" Name="GCF_MechTailRingBase">
+    <labelShort>tail ring</labelShort>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <alive>false</alive>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>ManipulationLimbSegment</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef ParentName="GCF_MechTailRingBase">
+    <defName>GCF_MechTailRing1</defName>
+    <label>first armored tail ring</label>
+    <hitPoints>55</hitPoints>
+  </BodyPartDef>
+
+  <BodyPartDef ParentName="GCF_MechTailRingBase">
+    <defName>GCF_MechTailRing2</defName>
+    <label>second armored tail ring</label>
+    <hitPoints>50</hitPoints>
+  </BodyPartDef>
+
+  <BodyPartDef ParentName="GCF_MechTailRingBase">
+    <defName>GCF_MechTailRing3</defName>
+    <label>third armored tail ring</label>
+    <hitPoints>45</hitPoints>
+  </BodyPartDef>
+
+  <BodyPartDef ParentName="GCF_MechTailRingBase">
+    <defName>GCF_MechTailRing4</defName>
+    <label>fourth armored tail ring</label>
+    <hitPoints>40</hitPoints>
+  </BodyPartDef>
+
+  <BodyPartDef ParentName="GCF_MechTailRingBase">
+    <defName>GCF_MechTailRing5</defName>
+    <label>fifth armored tail ring</label>
+    <hitPoints>35</hitPoints>
+  </BodyPartDef>
+
+  <BodyPartDef ParentName="GCF_MechTailRingBase">
+    <defName>GCF_MechTailRing6</defName>
+    <label>sixth armored tail ring</label>
+    <hitPoints>30</hitPoints>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>GCF_MechTailStinger</defName>
+    <label>plasma tail stinger</label>
+    <hitPoints>40</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <alive>false</alive>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>ManipulationLimbSegment</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>GCF_MechPlasmaEmitter</defName>
+    <label>plasma emitter core</label>
+    <hitPoints>20</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <alive>false</alive>
+    <bleedRate>0</bleedRate>
+  </BodyPartDef>
+
+  <!-- 43-Part Giant Mechanical Scorpion Anatomical Body Graph (18 Rig-Linked Nodes + 25 Sub-Parts) -->
+
+  <BodyDef>
+    <defName>GCF_Body_MechScorpion</defName>
+    <label>giant mechanical scorpion</label>
+    <corePart>
+      <def>GCF_MechCarapace</def>
+      <height>Middle</height>
+      <depth>Outside</depth>
+      <groups>
+        <li>Torso</li>
+      </groups>
+      <parts>
+        <!-- Anterior Cephalothorax Sensor Hood & Core Control Systems -->
+        <li>
+          <def>GCF_MechCephalothorax</def>
+          <customLabel>cephalothorax sensor hood</customLabel>
+          <coverage>0.10</coverage>
+          <height>Top</height>
+          <depth>Outside</depth>
+          <groups>
+            <li>HeadAttackTool</li>
+          </groups>
+          <parts>
+            <li>
+              <def>ArtificialBrain</def>
+              <coverage>0.10</coverage>
+              <depth>Inside</depth>
+            </li>
+            <li>
+              <def>SightSensor</def>
+              <customLabel>left sight sensor</customLabel>
+              <coverage>0.13</coverage>
+            </li>
+            <li>
+              <def>SightSensor</def>
+              <customLabel>right sight sensor</customLabel>
+              <coverage>0.13</coverage>
+            </li>
+            <li>
+              <def>HearingSensor</def>
+              <customLabel>left hearing sensor</customLabel>
+              <coverage>0.10</coverage>
+            </li>
+            <li>
+              <def>HearingSensor</def>
+              <customLabel>right hearing sensor</customLabel>
+              <coverage>0.10</coverage>
+            </li>
+            <li>
+              <def>SmellSensor</def>
+              <coverage>0.10</coverage>
+            </li>
+          </parts>
+        </li>
+
+        <!-- Core Reactor, Hypercapacitors & Fluid Reprocessors -->
+        <li>
+          <def>Reactor</def>
+          <coverage>0.05</coverage>
+          <depth>Inside</depth>
+        </li>
+        <li>
+          <def>GCF_MechCapacitor</def>
+          <customLabel>left hypercapacitor</customLabel>
+          <coverage>0.06</coverage>
+          <depth>Outside</depth>
+        </li>
+        <li>
+          <def>GCF_MechCapacitor</def>
+          <customLabel>right hypercapacitor</customLabel>
+          <coverage>0.06</coverage>
+          <depth>Outside</depth>
+        </li>
+        <li>
+          <def>FluidReprocessor</def>
+          <customLabel>left fluid reprocessor</customLabel>
+          <coverage>0.03</coverage>
+          <depth>Inside</depth>
+        </li>
+        <li>
+          <def>FluidReprocessor</def>
+          <customLabel>right fluid reprocessor</customLabel>
+          <coverage>0.03</coverage>
+          <depth>Inside</depth>
+        </li>
+
+        <!-- Twin Hydraulic Crusher Claws with Pincer Jaws & Servo Actuators -->
+        <li>
+          <def>GCF_MechCrusherClaw</def>
+          <customLabel>left crusher claw</customLabel>
+          <coverage>0.10</coverage>
+          <height>Middle</height>
+          <groups>
+            <li>GCF_LeftClawGroup</li>
+          </groups>
+          <parts>
+            <li>
+              <def>GCF_MechClawPincer</def>
+              <customLabel>left pincer jaw</customLabel>
+              <coverage>0.35</coverage>
+              <groups>
+                <li>GCF_LeftClawGroup</li>
+              </groups>
+            </li>
+            <li>
+              <def>GCF_MechClawActuator</def>
+              <customLabel>left claw servo</customLabel>
+              <coverage>0.15</coverage>
+              <depth>Inside</depth>
+            </li>
+          </parts>
+        </li>
+        <li>
+          <def>GCF_MechCrusherClaw</def>
+          <customLabel>right crusher claw</customLabel>
+          <coverage>0.10</coverage>
+          <height>Middle</height>
+          <groups>
+            <li>GCF_RightClawGroup</li>
+          </groups>
+          <parts>
+            <li>
+              <def>GCF_MechClawPincer</def>
+              <customLabel>right pincer jaw</customLabel>
+              <coverage>0.35</coverage>
+              <groups>
+                <li>GCF_RightClawGroup</li>
+              </groups>
+            </li>
+            <li>
+              <def>GCF_MechClawActuator</def>
+              <customLabel>right claw servo</customLabel>
+              <coverage>0.15</coverage>
+              <depth>Inside</depth>
+            </li>
+          </parts>
+        </li>
+
+        <!-- 8 Independent Hydraulic Walking Legs & Terminal Tarsus Feet -->
+        <li>
+          <def>GCF_MechWalkingLeg</def>
+          <customLabel>front left hydraulic leg</customLabel>
+          <coverage>0.03</coverage>
+          <height>Bottom</height>
+          <parts>
+            <li>
+              <def>GCF_MechWalkingFoot</def>
+              <customLabel>front left tarsus foot</customLabel>
+              <coverage>0.35</coverage>
+              <height>Bottom</height>
+            </li>
+          </parts>
+        </li>
+        <li>
+          <def>GCF_MechWalkingLeg</def>
+          <customLabel>mid front left hydraulic leg</customLabel>
+          <coverage>0.03</coverage>
+          <height>Bottom</height>
+          <parts>
+            <li>
+              <def>GCF_MechWalkingFoot</def>
+              <customLabel>mid front left tarsus foot</customLabel>
+              <coverage>0.35</coverage>
+              <height>Bottom</height>
+            </li>
+          </parts>
+        </li>
+        <li>
+          <def>GCF_MechWalkingLeg</def>
+          <customLabel>mid rear left hydraulic leg</customLabel>
+          <coverage>0.03</coverage>
+          <height>Bottom</height>
+          <parts>
+            <li>
+              <def>GCF_MechWalkingFoot</def>
+              <customLabel>mid rear left tarsus foot</customLabel>
+              <coverage>0.35</coverage>
+              <height>Bottom</height>
+            </li>
+          </parts>
+        </li>
+        <li>
+          <def>GCF_MechWalkingLeg</def>
+          <customLabel>rear left hydraulic leg</customLabel>
+          <coverage>0.03</coverage>
+          <height>Bottom</height>
+          <parts>
+            <li>
+              <def>GCF_MechWalkingFoot</def>
+              <customLabel>rear left tarsus foot</customLabel>
+              <coverage>0.35</coverage>
+              <height>Bottom</height>
+            </li>
+          </parts>
+        </li>
+        <li>
+          <def>GCF_MechWalkingLeg</def>
+          <customLabel>front right hydraulic leg</customLabel>
+          <coverage>0.03</coverage>
+          <height>Bottom</height>
+          <parts>
+            <li>
+              <def>GCF_MechWalkingFoot</def>
+              <customLabel>front right tarsus foot</customLabel>
+              <coverage>0.35</coverage>
+              <height>Bottom</height>
+            </li>
+          </parts>
+        </li>
+        <li>
+          <def>GCF_MechWalkingLeg</def>
+          <customLabel>mid front right hydraulic leg</customLabel>
+          <coverage>0.03</coverage>
+          <height>Bottom</height>
+          <parts>
+            <li>
+              <def>GCF_MechWalkingFoot</def>
+              <customLabel>mid front right tarsus foot</customLabel>
+              <coverage>0.35</coverage>
+              <height>Bottom</height>
+            </li>
+          </parts>
+        </li>
+        <li>
+          <def>GCF_MechWalkingLeg</def>
+          <customLabel>mid rear right hydraulic leg</customLabel>
+          <coverage>0.03</coverage>
+          <height>Bottom</height>
+          <parts>
+            <li>
+              <def>GCF_MechWalkingFoot</def>
+              <customLabel>mid rear right tarsus foot</customLabel>
+              <coverage>0.35</coverage>
+              <height>Bottom</height>
+            </li>
+          </parts>
+        </li>
+        <li>
+          <def>GCF_MechWalkingLeg</def>
+          <customLabel>rear right hydraulic leg</customLabel>
+          <coverage>0.03</coverage>
+          <height>Bottom</height>
+          <parts>
+            <li>
+              <def>GCF_MechWalkingFoot</def>
+              <customLabel>rear right tarsus foot</customLabel>
+              <coverage>0.35</coverage>
+              <height>Bottom</height>
+            </li>
+          </parts>
+        </li>
+
+        <!-- 7-Segment Articulated Armored Metasoma Tail Chain + Plasma Stinger & Emitter -->
+        <li>
+          <def>GCF_MechTailRing1</def>
+          <customLabel>tail segment 1</customLabel>
+          <coverage>0.11</coverage>
+          <height>Top</height>
+          <parts>
+            <li>
+              <def>GCF_MechTailRing2</def>
+              <customLabel>tail segment 2</customLabel>
+              <coverage>0.82</coverage>
+              <height>Top</height>
+              <parts>
+                <li>
+                  <def>GCF_MechTailRing3</def>
+                  <customLabel>tail segment 3</customLabel>
+                  <coverage>0.82</coverage>
+                  <height>Top</height>
+                  <parts>
+                    <li>
+                      <def>GCF_MechTailRing4</def>
+                      <customLabel>tail segment 4</customLabel>
+                      <coverage>0.82</coverage>
+                      <height>Top</height>
+                      <parts>
+                        <li>
+                          <def>GCF_MechTailRing5</def>
+                          <customLabel>tail segment 5</customLabel>
+                          <coverage>0.82</coverage>
+                          <height>Top</height>
+                          <parts>
+                            <li>
+                              <def>GCF_MechTailRing6</def>
+                              <customLabel>tail segment 6</customLabel>
+                              <coverage>0.82</coverage>
+                              <height>Top</height>
+                              <parts>
+                                <li>
+                                  <def>GCF_MechTailStinger</def>
+                                  <customLabel>plasma tail stinger</customLabel>
+                                  <coverage>0.80</coverage>
+                                  <height>Top</height>
+                                  <groups>
+                                    <li>GCF_TailStingerGroup</li>
+                                  </groups>
+                                  <parts>
+                                    <li>
+                                      <def>GCF_MechPlasmaEmitter</def>
+                                      <customLabel>plasma emitter core</customLabel>
+                                      <coverage>0.25</coverage>
+                                      <depth>Inside</depth>
+                                    </li>
+                                  </parts>
+                                </li>
+                              </parts>
+                            </li>
+                          </parts>
+                        </li>
+                      </parts>
+                    </li>
+                  </parts>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+      </parts>
+    </corePart>
+  </BodyDef>
+
+</Defs>

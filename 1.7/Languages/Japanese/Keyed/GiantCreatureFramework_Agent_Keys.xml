@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <!-- セッション状態とタイトル -->
+  <GCFAgent_SessionTitleNew>新規セッション</GCFAgent_SessionTitleNew>
+  <GCFAgent_SessionStatusReady>準備完了</GCFAgent_SessionStatusReady>
+  <GCFAgent_SessionStatusAborting>中止中</GCFAgent_SessionStatusAborting>
+  <GCFAgent_SessionStatusAborted>中止済み</GCFAgent_SessionStatusAborted>
+  <GCFAgent_SessionStatusTimeout>要求タイムアウト</GCFAgent_SessionStatusTimeout>
+  <GCFAgent_SessionStatusRequestFailed>要求失敗</GCFAgent_SessionStatusRequestFailed>
+  <GCFAgent_SessionNew>新規セッション</GCFAgent_SessionNew>
+  <GCFAgent_SessionListTitle>セッション一覧 ({0})</GCFAgent_SessionListTitle>
+  <GCFAgent_SessionDeleteTip>このセッションを削除</GCFAgent_SessionDeleteTip>
+  <GCFAgent_SessionItemSubCached>{0}件 · {1} · キャッシュ{2}</GCFAgent_SessionItemSubCached>
+  <GCFAgent_SessionItemSubTokens>{0}件 · {1} tok</GCFAgent_SessionItemSubTokens>
+  <GCFAgent_SessionItemSubMessages>{0}件のメッセージ</GCFAgent_SessionItemSubMessages>
+  <GCFAgent_SessionLimitReached>セッション数が上限に達しました。先にセッションを中止または削除してください。</GCFAgent_SessionLimitReached>
+  <GCFAgent_SessionReadFailed>セッション読込に失敗しました。元ファイルは変更していません: {0}</GCFAgent_SessionReadFailed>
+  <GCFAgent_SessionSaveFailed>セッション保存に失敗しました: {0}</GCFAgent_SessionSaveFailed>
+  <GCFAgent_SaveStreamingIncomplete>[保存時点でこのターンは未完了でした。再度質問してください]</GCFAgent_SaveStreamingIncomplete>
+  <GCFAgent_ArchiveFileEmpty>セッションファイルが空です。</GCFAgent_ArchiveFileEmpty>
+  <GCFAgent_ArchiveStructureInvalid>セッション構造が無効です。復元のため元ファイルを保持しています。</GCFAgent_ArchiveStructureInvalid>
+
+  <!-- ターン状態とバブル通知 -->
+  <GCFAgent_StatusPromptTooLong>質問が {0} 文字制限を超えています。範囲を絞るか、1回あたりの上限を引き上げてください</GCFAgent_StatusPromptTooLong>
+  <GCFAgent_StatusSessionBudgetReached>セッション単位の純トークン予算に到達 ({0}/{1})</GCFAgent_StatusSessionBudgetReached>
+  <GCFAgent_StatusUploadingScreenshot>スクリーンショットと質問をアップロード中</GCFAgent_StatusUploadingScreenshot>
+  <GCFAgent_StatusPreparingQuery>質問を準備中</GCFAgent_StatusPreparingQuery>
+  <GCFAgent_StatusFallbackConnection>フォールバックエンドポイントへ切替中 ({0}: {1})</GCFAgent_StatusFallbackConnection>
+  <GCFAgent_StatusMultimodalDowngraded>現在のモデルは画像入力非対応のため、自動的にプローブモードへ切替えました</GCFAgent_StatusMultimodalDowngraded>
+  <GCFAgent_StatusReadyWithUsage>準備完了 · 今回 {0}{1} tok (入 {2} / 出 {3})</GCFAgent_StatusReadyWithUsage>
+  <GCFAgent_StatusCapturingScreenshot>現在のゲーム画面をキャプチャ中...</GCFAgent_StatusCapturingScreenshot>
+  <GCFAgent_StatusReadingEvidence>ゲーム証拠を読取中</GCFAgent_StatusReadingEvidence>
+  <GCFAgent_StatusInvestigatingRound>調査中 · 第 {0} ラウンド</GCFAgent_StatusInvestigatingRound>
+  <GCFAgent_StatusSynthesizing>結論と証拠を整理中</GCFAgent_StatusSynthesizing>
+  <GCFAgent_NoticeTurnIncomplete>[{0}、今回の回答は未完了]</GCFAgent_NoticeTurnIncomplete>
+  <GCFAgent_NoticePrepareFailed>要求準備に失敗: {0}</GCFAgent_NoticePrepareFailed>
+  <GCFAgent_NoticeRequestFailed>要求失敗: {0}</GCFAgent_NoticeRequestFailed>
+  <GCFAgent_NoticeInsufficientEvidence>現在の証拠では該当事実を確認できません。</GCFAgent_NoticeInsufficientEvidence>
+  <GCFAgent_NoticeContentTruncated>[切り詰め済み]</GCFAgent_NoticeContentTruncated>
+  <GCFAgent_NoticeUiTruncated>[切り詰め済み]</GCFAgent_NoticeUiTruncated>
+  <GCFAgent_EvidenceNoticeFallback>ヒント: 今回はランタイムプローブを呼び出していません。以下の内容は既存の証拠または一般知識に基づく直接回答です</GCFAgent_EvidenceNoticeFallback>
+
+  <!-- プロバイダー表示名 -->
+  <GCFAgent_ProviderLabel_DeepSeek>DeepSeek</GCFAgent_ProviderLabel_DeepSeek>
+  <GCFAgent_ProviderLabel_GLM>GLM (智譜オープンプラットフォーム)</GCFAgent_ProviderLabel_GLM>
+  <GCFAgent_ProviderLabel_GLMCoding>GLM Coding (智譜コーディング)</GCFAgent_ProviderLabel_GLMCoding>
+  <GCFAgent_ProviderLabel_AlibabaIntl>Alibaba Intl (百煉インターナショナル)</GCFAgent_ProviderLabel_AlibabaIntl>
+  <GCFAgent_ProviderLabel_AlibabaCN>Alibaba CN (阿里百煉)</GCFAgent_ProviderLabel_AlibabaCN>
+  <GCFAgent_ProviderLabel_Moonshot>Moonshot (Kimi)</GCFAgent_ProviderLabel_Moonshot>
+  <GCFAgent_ProviderLabel_Player2>Player2 (ローカルクライアント / キー不要クラウド)</GCFAgent_ProviderLabel_Player2>
+  <GCFAgent_ProviderLabel_Custom>Custom (カスタム OpenAI 互換)</GCFAgent_ProviderLabel_Custom>
+  <GCFAgent_ProviderLabel_Disabled>Disabled (未有効)</GCFAgent_ProviderLabel_Disabled>
+  <GCFAgent_ProviderShortLabel_AlibabaCN>百煉</GCFAgent_ProviderShortLabel_AlibabaCN>
+
+  <!-- モデル識別 -->
+  <GCFAgent_ModelIdentityRequested>要求モデル: {0}</GCFAgent_ModelIdentityRequested>
+  <GCFAgent_ModelIdentityResponse>エンドポイント返却モデル: {0}</GCFAgent_ModelIdentityResponse>
+  <GCFAgent_ModelIdentityFallback>今回はフォールバックエンドポイントへ切替えました。</GCFAgent_ModelIdentityFallback>
+  <GCFAgent_ModelIdentityCurrent>現在</GCFAgent_ModelIdentityCurrent>
+  <GCFAgent_ModelIdentityLast>前回</GCFAgent_ModelIdentityLast>
+  <GCFAgent_ModelTagWithIdentity>{0}: {1} ▾</GCFAgent_ModelTagWithIdentity>
+  <GCFAgent_ModelTagStandby>待機: {0}: {1} ▾</GCFAgent_ModelTagStandby>
+  <GCFAgent_ModelTagUnconfigured>プロバイダー未設定 ▾</GCFAgent_ModelTagUnconfigured>
+  <GCFAgent_ModelTagNoRequestTip>まだ要求を送信していません。表示中のモデルは待機設定です。</GCFAgent_ModelTagNoRequestTip>
+  <GCFAgent_ModelBadgeTip>クリックで優先プロバイダーまたはモデルを高速切替</GCFAgent_ModelBadgeTip>
+  <GCFAgent_ModelChipCurrent>▾ 現在: {0}</GCFAgent_ModelChipCurrent>
+  <GCFAgent_ModelChipNext>▾ 次回: {0}</GCFAgent_ModelChipNext>
+  <GCFAgent_ModelChipChoose>▾ プロバイダーとモデルを選択</GCFAgent_ModelChipChoose>
+  <GCFAgent_ModelChipNextSendTip>選択の変更は次回送信にのみ影響します。</GCFAgent_ModelChipNextSendTip>
+  <GCFAgent_ModelChipChooseTip>次回送信で使用するモデルまたはプロバイダーを選択します。</GCFAgent_ModelChipChooseTip>
+  <GCFAgent_SwitcherConfigTag>[設定 #{0}] {1} · {2}{3}</GCFAgent_SwitcherConfigTag>
+  <GCFAgent_SwitcherFetchedModel>取得済みモデルへ切替 -&gt; {0}</GCFAgent_SwitcherFetchedModel>
+  <GCFAgent_SwitcherOpenConfig>プロバイダーとモデルの設定パネルを開く...</GCFAgent_SwitcherOpenConfig>
+  <GCFAgent_NotEnabled>未有効</GCFAgent_NotEnabled>
+
+  <!-- トークン統計 -->
+  <GCFAgent_TokenPillCached>累計: {0} · キャッシュ {1}</GCFAgent_TokenPillCached>
+  <GCFAgent_TokenPillPlain>累計: {0} tok</GCFAgent_TokenPillPlain>
+  <GCFAgent_TokenPillTooltip>本セッションの複数ターン累計トークン: {0}\n├─ 総入力 (Prompt): {1}\n├─ キャッシュヒット (Cached): {2} (キャッシュ率 {3})\n├─ 純新規入力 (Uncached): {4}\n├─ 単一ターン最大コンテキスト (Peak Context): {5}\n└─ 総出力 (Completion): {6}\nクリックでシステムプロンプトとトークン統計を開く</GCFAgent_TokenPillTooltip>
+  <GCFAgent_TokLabel>{0}{1} (純入力 {2}{3}){4}</GCFAgent_TokLabel>
+  <GCFAgent_TokLabelCache>· キャッシュ {0}</GCFAgent_TokLabelCache>
+  <GCFAgent_TokLabelRounds>({0} ラウンド)</GCFAgent_TokLabelRounds>
+  <GCFAgent_TokLabelTotalRounds>計 {0} 回呼出</GCFAgent_TokLabelTotalRounds>
+  <GCFAgent_TokLabelTooltip>本ターンの複数ステップ課金合計: {0} トークン{1}\n├─ 総入力 (複数ラウンドのプレフィックス再送を含む): {2}\n├─ キャッシュヒット (Cached): {3} (キャッシュ命中率 {4})\n├─ 純新規入力 (Uncached): {5}\n├─ 総出力 (Completion): {6}\n└─ 最大コンテキストウィンドウ: {7}</GCFAgent_TokLabelTooltip>
+  <GCFAgent_ReportRoundsTag>{0} ラウンド ·</GCFAgent_ReportRoundsTag>
+  <GCFAgent_ReportDetailCached>純入力 {0} · キャッシュヒット {1} [{2}] · 出力 {3}</GCFAgent_ReportDetailCached>
+  <GCFAgent_ReportDetailPlain>入力 {0} · キャッシュヒット 0 [0.0%] · 出力 {1}</GCFAgent_ReportDetailPlain>
+  <GCFAgent_ReportLine>トークン明細 ({0}ピーク {1}): {2}{3} ({4}) | セッション累計 {5} (キャッシュ率 {6})</GCFAgent_ReportLine>
+  <GCFAgent_UsageLine1>現在のセッション [{0}] 累計合計: {1} tok | 最大コンテキスト: {2} tok | キャッシュ命中率: {3}</GCFAgent_UsageLine1>
+  <GCFAgent_UsageLine2>入力明細: 累計入力 {0} (キャッシュヒット {1} · 純新規入力 {2}) | 累計出力: {3}</GCFAgent_UsageLine2>
+  <GCFAgent_UsageResetStats>統計をリセット</GCFAgent_UsageResetStats>
+
+  <!-- 照会証拠プレビュー -->
+  <GCFAgent_EvidenceToggle>照会証拠 ({0})</GCFAgent_EvidenceToggle>
+  <GCFAgent_EvidenceCopyAll>証拠全文をコピー</GCFAgent_EvidenceCopyAll>
+  <GCFAgent_EvidencePreviewHint>([証拠全文をコピー] をクリックすると保持済みの全結果を表示)</GCFAgent_EvidencePreviewHint>
+  <GCFAgent_EvidencePreviewHeader>{0} · {1} · {2} ms\n{3}</GCFAgent_EvidencePreviewHeader>
+  <GCFAgent_ToolStatusRunning>実行中</GCFAgent_ToolStatusRunning>
+  <GCFAgent_ToolStatusFailed>失敗</GCFAgent_ToolStatusFailed>
+  <GCFAgent_ToolStatusDone>完了</GCFAgent_ToolStatusDone>
+  <GCFAgent_ScreenshotTag>[現在のゲーム画面]</GCFAgent_ScreenshotTag>
+
+  <!-- ツール表示名 -->
+  <GCFAgent_ToolLabelWithSummary>{0}  [{1}]</GCFAgent_ToolLabelWithSummary>
+  <GCFAgent_ToolLabel_SelectInvestigation>調査能力を選択</GCFAgent_ToolLabel_SelectInvestigation>
+  <GCFAgent_ToolLabel_ReadEvidence>収集済み証拠を読む</GCFAgent_ToolLabel_ReadEvidence>
+  <GCFAgent_ToolLabel_FoldEvidence>調査ノートを要約</GCFAgent_ToolLabel_FoldEvidence>
+  <GCFAgent_ToolLabel_SearchKnowledge>ローカル知識を検索</GCFAgent_ToolLabel_SearchKnowledge>
+  <GCFAgent_ToolLabel_ReadKnowledge>知識ソースを読む</GCFAgent_ToolLabel_ReadKnowledge>
+  <GCFAgent_ToolLabel_Calculate>計算とデータ整理</GCFAgent_ToolLabel_Calculate>
+  <GCFAgent_ToolLabel_SearchDefs>XML Def を検索</GCFAgent_ToolLabel_SearchDefs>
+  <GCFAgent_ToolLabel_DefDetails>Def マージ済みフィールドツリーを読む</GCFAgent_ToolLabel_DefDetails>
+  <GCFAgent_ToolLabel_WeaponDps>単一装甲層に対する武器 DPS を推定</GCFAgent_ToolLabel_WeaponDps>
+  <GCFAgent_ToolLabel_QuestState>クエストノードツリーを検査</GCFAgent_ToolLabel_QuestState>
+  <GCFAgent_ToolLabel_ColonyState>入植者サマリーを読む</GCFAgent_ToolLabel_ColonyState>
+  <GCFAgent_ToolLabel_RecentErrors>赤字エラーのスタックトレースを抽出</GCFAgent_ToolLabel_RecentErrors>
+  <GCFAgent_ToolLabel_MethodPatches>Harmony パッチチェーンを確認</GCFAgent_ToolLabel_MethodPatches>
+  <GCFAgent_ToolLabel_Decompile>C# ソースを逆コンパイル</GCFAgent_ToolLabel_Decompile>
+  <GCFAgent_ToolLabel_CodeSymbols>アセンブリシンボルを検索</GCFAgent_ToolLabel_CodeSymbols>
+  <GCFAgent_ToolLabel_TypeMembers>クラスメンバーシグネチャをリフレクション</GCFAgent_ToolLabel_TypeMembers>
+  <GCFAgent_ToolLabel_DerivedTypes>派生サブクラス/実装を検索</GCFAgent_ToolLabel_DerivedTypes>
+  <GCFAgent_ToolLabel_MethodIl>メソッド IL 命令ストリームを読む</GCFAgent_ToolLabel_MethodIl>
+  <GCFAgent_ToolLabel_ModsInfo>MODロード順を読む</GCFAgent_ToolLabel_ModsInfo>
+  <GCFAgent_ToolLabel_ReadModFile>MODファイルを読む</GCFAgent_ToolLabel_ReadModFile>
+  <GCFAgent_ToolLabel_SearchModXml>MODを横断してディスク上の XML/Patch を検索</GCFAgent_ToolLabel_SearchModXml>
+  <GCFAgent_ToolLabel_StatFormula>バニラ Stat 計算式を分解</GCFAgent_ToolLabel_StatFormula>
+  <GCFAgent_ToolLabel_Recipes>レシピと製作チェーンを照会</GCFAgent_ToolLabel_Recipes>
+  <GCFAgent_ToolLabel_Research>テックツリーと解禁項目を照会</GCFAgent_ToolLabel_Research>
+  <GCFAgent_ToolLabel_SelectedObjects>現在選択中のオブジェクトを検査</GCFAgent_ToolLabel_SelectedObjects>
+  <GCFAgent_ToolLabel_PawnDeep>ポーン8能力値の詳細診断</GCFAgent_ToolLabel_PawnDeep>
+  <GCFAgent_ToolLabel_MapStoryteller>マップ電力網/在庫/ストーリーテラーを診断</GCFAgent_ToolLabel_MapStoryteller>
+  <GCFAgent_ToolLabel_ReflectPath>ランタイムメモリオブジェクトパスをリフレクション</GCFAgent_ToolLabel_ReflectPath>
+
+  <!-- 伝送層エラー (プレイヤーバブルに表示) -->
+  <GCFAgent_TransportResponseTimeout>モデルエンドポイントの応答待ちがタイムアウトしました。</GCFAgent_TransportResponseTimeout>
+  <GCFAgent_TransportHttpError>モデルエンドポイントが HTTP {0} を返しました。エンドポイント設定を確認するか、後ほど再試行してください。</GCFAgent_TransportHttpError>
+  <GCFAgent_TransportIdleNoData>モデル応答が長時間データを送信しませんでした。</GCFAgent_TransportIdleNoData>
+  <GCFAgent_TransportResponseTooLong>モデル応答が長さ制限を超えました。</GCFAgent_TransportResponseTooLong>
+  <GCFAgent_TransportStreamIdle>モデルストリームが長時間データを送信しませんでした。</GCFAgent_TransportStreamIdle>
+  <GCFAgent_TransportStreamTooLong>モデルストリームが長さ制限を超えました。</GCFAgent_TransportStreamTooLong>
+  <GCFAgent_TransportEventLineTooLong>モデルイベント行が長すぎました。</GCFAgent_TransportEventLineTooLong>
+  <GCFAgent_TransportStreamError>モデルストリームがエラーを返しました。</GCFAgent_TransportStreamError>
+  <GCFAgent_TransportChoicesMustBeArray>モデルの choices は配列である必要があります。</GCFAgent_TransportChoicesMustBeArray>
+  <GCFAgent_TransportToolCallsMustBeArray>モデルの tool_calls は配列である必要があります。</GCFAgent_TransportToolCallsMustBeArray>
+  <GCFAgent_TransportTooManyToolCalls>単一ターンのツール呼出が {0} を超えました。</GCFAgent_TransportTooManyToolCalls>
+  <GCFAgent_TransportLengthTruncated>モデル出力が長さ制限で切り詰められました。質問を絞るか最大出力トークン予算を引き上げてください。</GCFAgent_TransportLengthTruncated>
+  <GCFAgent_TransportAbnormalFinish>モデル応答が正常に終了しませんでした。</GCFAgent_TransportAbnormalFinish>
+  <GCFAgent_TransportFinishMismatch>ツール終了マーカーが結果と一致しません。</GCFAgent_TransportFinishMismatch>
+  <GCFAgent_TransportToolMissingIdOrName>ツール呼出に名前または ID がありません。</GCFAgent_TransportToolMissingIdOrName>
+  <GCFAgent_TransportArgsMustBeObject>ツール引数は JSON オブジェクトである必要があります。</GCFAgent_TransportArgsMustBeObject>
+  <GCFAgent_TransportDuplicateToolCallId>ツール呼出 ID が重複しています。</GCFAgent_TransportDuplicateToolCallId>
+
+  <!-- ターンフローエラー (プレイヤーバブルに表示) -->
+  <GCFAgent_TurnRequestTimeout>今回のモデル要求がタイムアウトしました。取得済みの調査証拠は保持されます。</GCFAgent_TurnRequestTimeout>
+  <GCFAgent_TurnNoReplyOrToolCall>モデルが回答もツール呼出も返しませんでした。</GCFAgent_TurnNoReplyOrToolCall>
+  <GCFAgent_TurnNoFinalSubmission>モデルが有効な回答提出を完了しませんでした。</GCFAgent_TurnNoFinalSubmission>
+  <GCFAgent_TurnContextBudgetExceeded>この質問と照会結果がコンテキスト予算を超えました。範囲を絞るか最大コンテキスト予算を引き上げてください。</GCFAgent_TurnContextBudgetExceeded>
+
+  <!-- 設定検証と永続化 -->
+  <GCFAgent_ConfigReadFailed>設定読込に失敗しました: {0}</GCFAgent_ConfigReadFailed>
+  <GCFAgent_ConfigSaveFailed>設定保存に失敗しました: {0}</GCFAgent_ConfigSaveFailed>
+  <GCFAgent_ValidateEndpointRequired>完全な HTTP(S) Chat Completions エンドポイント URL を入力するか、設定でプリセットプロバイダーを選択してください。</GCFAgent_ValidateEndpointRequired>
+  <GCFAgent_ValidateModelRequired>モデル名を入力または選択してください。</GCFAgent_ValidateModelRequired>
+  <GCFAgent_PromptOverridesMismatch>プロンプト上書きの名前と値の数が一致しません。</GCFAgent_PromptOverridesMismatch>
+
+  <!-- MOD設定ページ -->
+  <GCFAgent_SettingsHeader>クリーチャーフォージ プロバイダーとプロンプト設定</GCFAgent_SettingsHeader>
+  <GCFAgent_SettingsOpenTerminal>クリーチャーフォージターミナルを開く</GCFAgent_SettingsOpenTerminal>
+
+  <!-- メインメニューボタン -->
+  <GCFAgent_MainTabUnreadTip>クリーチャーフォージの返信が完了しました (クリックで表示)</GCFAgent_MainTabUnreadTip>
+  <GCFAgent_BrandAvatarTip>クリックでアバターとペルソナプロンプトを設定</GCFAgent_BrandAvatarTip>
+
+  <!-- 共通ボタン -->
+  <GCFAgent_CommonClose>閉じる</GCFAgent_CommonClose>
+  <GCFAgent_CommonCancel>キャンセル</GCFAgent_CommonCancel>
+  <GCFAgent_CommonCopy>コピー</GCFAgent_CommonCopy>
+  <GCFAgent_CommonCopyCode>コードをコピー</GCFAgent_CommonCopyCode>
+  <GCFAgent_CommonClear>クリア</GCFAgent_CommonClear>
+  <GCFAgent_CommonAbort>中止</GCFAgent_CommonAbort>
+  <GCFAgent_CommonSend>送信</GCFAgent_CommonSend>
+  <GCFAgent_ClearButtonTip>入力欄に内容があれば入力をクリア、空なら現在の会話履歴をクリアします</GCFAgent_ClearButtonTip>
+
+  <!-- 入力バー -->
+  <GCFAgent_ComposerPlaceholder>質問または診断コマンドを入力... (Enter で送信、Shift+Enter で改行、Ctrl+V で貼り付け)</GCFAgent_ComposerPlaceholder>
+  <GCFAgent_CameraButtonTip>現在のゲーム画面をキャプチャしてモデルへ送信 (入力欄のテキストも一緒に送信)</GCFAgent_CameraButtonTip>
+  <GCFAgent_TermInsertTip>クリックで入力欄に追加: {0}</GCFAgent_TermInsertTip>
+  <GCFAgent_ContextOn>コンテキスト: オン</GCFAgent_ContextOn>
+  <GCFAgent_ContextOff>コンテキスト: オフ</GCFAgent_ContextOff>
+  <GCFAgent_ContextPending>コンテキスト: 未選択</GCFAgent_ContextPending>
+  <GCFAgent_ContextEnableThisChat>この会話のコンテキストを有効化</GCFAgent_ContextEnableThisChat>
+  <GCFAgent_ContextDisableThisChat>この会話のコンテキストを無効化</GCFAgent_ContextDisableThisChat>
+  <GCFAgent_ContextScopeTip>この会話にのみ影響します。オフ時は各質問を独立処理しますが、チャット履歴は保持されます。</GCFAgent_ContextScopeTip>
+
+  <!-- 会話コンテキストダイアログ -->
+  <GCFAgent_ContextDialogTitle>この会話でコンテキストを有効にしますか？</GCFAgent_ContextDialogTitle>
+  <GCFAgent_ContextDialogBody>有効: 過去の質問・回答・調査結果を踏まえます。追問に適しますが入力用量が増加します。\n\n無効: 各質問を独立処理します。無関係な質問に適します。チャット履歴は保持されます。</GCFAgent_ContextDialogBody>
+  <GCFAgent_ContextDialogRemember>今後確認しない (新規会話はこの選択を再利用)</GCFAgent_ContextDialogRemember>
+  <GCFAgent_ContextDialogRememberTip>現在の会話はいつでも切替え可能。設定からプロンプトを復元することもできます。</GCFAgent_ContextDialogRememberTip>
+  <GCFAgent_ContextEnable>コンテキストを有効化</GCFAgent_ContextEnable>
+  <GCFAgent_ContextDisable>コンテキストを無効化</GCFAgent_ContextDisable>
+
+  <!-- プロバイダーとモデル設定パネル -->
+  <GCFAgent_HeaderModelConfig>モデルと設定</GCFAgent_HeaderModelConfig>
+  <GCFAgent_TabProviders>プロバイダーとモデル ({0})</GCFAgent_TabProviders>
+  <GCFAgent_TabPrompts>システムプロンプトとトークン統計</GCFAgent_TabPrompts>
+  <GCFAgent_TabPromptsCustomized>システムプロンプトと統計 (カスタマイズ済み)</GCFAgent_TabPromptsCustomized>
+  <GCFAgent_ActiveProviderLabel>優先: {0} · {1}</GCFAgent_ActiveProviderLabel>
+  <GCFAgent_NoValidProvider>有効なプロバイダーが未設定</GCFAgent_NoValidProvider>
+  <GCFAgent_ProviderListCaption>予備 AI プロバイダー一覧 (リスト順に自動フェイルオーバー。URL 補完とモデル取得は自動)</GCFAgent_ProviderListCaption>
+  <GCFAgent_ProviderAdd>プロバイダーを追加</GCFAgent_ProviderAdd>
+  <GCFAgent_KeysHide>キーを隠す</GCFAgent_KeysHide>
+  <GCFAgent_KeysShow>キーを表示</GCFAgent_KeysShow>
+  <GCFAgent_ColEnable>有効/順序</GCFAgent_ColEnable>
+  <GCFAgent_ColProvider>AI プロバイダー (Provider)</GCFAgent_ColProvider>
+  <GCFAgent_ColApiKey>API Key / 認証方式</GCFAgent_ColApiKey>
+  <GCFAgent_ColModel>モデル ID (Model)</GCFAgent_ColModel>
+  <GCFAgent_ColActions>優先度/操作</GCFAgent_ColActions>
+  <GCFAgent_ProviderEnableTip>このプロバイダーノードを有効/無効化 (自動フェイルオーバーはリスト順に従う)</GCFAgent_ProviderEnableTip>
+  <GCFAgent_ProviderRowTip>現在のプロバイダー: {0}\n既定エンドポイント: {1}</GCFAgent_ProviderRowTip>
+  <GCFAgent_LocalKeyPlaceholder>ローカルサービスはキー不要 (任意)</GCFAgent_LocalKeyPlaceholder>
+  <GCFAgent_ApiKeyPlaceholder>API Key を入力 (sk-...)</GCFAgent_ApiKeyPlaceholder>
+  <GCFAgent_ModelFetchingPlaceholder>モデル一覧を自動取得中...</GCFAgent_ModelFetchingPlaceholder>
+  <GCFAgent_ModelPickPlaceholder>モデルを入力するか、右側の取得済みモデルをクリックして選択</GCFAgent_ModelPickPlaceholder>
+  <GCFAgent_ModelInputPlaceholder>モデル ID を入力 (キー入力後に自動取得)</GCFAgent_ModelInputPlaceholder>
+  <GCFAgent_ModelFetchedTip>利用可能なモデルを {0} 件自動取得しました (クリックまたは右クリックで切替)</GCFAgent_ModelFetchedTip>
+  <GCFAgent_UrlFieldLabel>エンドポイント URL:</GCFAgent_UrlFieldLabel>
+  <GCFAgent_UrlPlaceholderLocal>http://127.0.0.1:11434/v1/chat/completions (サフィックスは自動補完)</GCFAgent_UrlPlaceholderLocal>
+  <GCFAgent_UrlPlaceholderCustom>https://api.example.com/v1/chat/completions (サフィックスは自動補完)</GCFAgent_UrlPlaceholderCustom>
+  <GCFAgent_QuestSpoilersSetting>未公開クエストのネタバレ条件の照会を許可 (AllowQuestSpoilers — 有効時、QuestPart の隠蔽トリガー条件と未公開分岐を照会可能)</GCFAgent_QuestSpoilersSetting>
+  <GCFAgent_FailoverFooterNote>ヒント: 複数のプロバイダーを有効化してフェイルオーバーチェーンを構成できます (#1 主エンドポイントのタイムアウトやエラー時に、次の有効な予備プロバイダーへ自動切替)。Google/OpenAI/DeepSeek/Alibaba 百煉/智譜 GLM/Kimi/Claude/OpenRouter/Player2/ローカルサービスに対応。</GCFAgent_FailoverFooterNote>
+  <GCFAgent_BannerCollapse>パネルを折りたたむ</GCFAgent_BannerCollapse>
+  <GCFAgent_BannerSavePersist>保存して永続化</GCFAgent_BannerSavePersist>
+  <GCFAgent_BannerSaved>プロバイダーとプロンプトの設定を保存し、設定ファイルへ永続化しました。</GCFAgent_BannerSaved>
+  <GCFAgent_BannerSavedWithWarning>設定を保存しましたが、主エンドポイント検証の警告: {0}</GCFAgent_BannerSavedWithWarning>
+  <GCFAgent_BannerValidate>設定を検証</GCFAgent_BannerValidate>
+  <GCFAgent_BannerValidateOk>検証合格: {0} · {1} ({2})</GCFAgent_BannerValidateOk>
+  <GCFAgent_BannerValidateFailed>設定検証に失敗: {0}</GCFAgent_BannerValidateFailed>
+  <GCFAgent_BannerProviderCount>プロバイダー {0} 件有効 · 予算上限なし · 返信ごとにトークン消費を自動報告</GCFAgent_BannerProviderCount>
+  <GCFAgent_BannerLocalServiceFound>ローカルサービスを自動検出 [{0}]: {1}</GCFAgent_BannerLocalServiceFound>
+  <GCFAgent_BannerModelsFetched>{0} から利用可能なモデルを {1} 件自動取得</GCFAgent_BannerModelsFetched>
+
+  <!-- Player2 認証 -->
+  <GCFAgent_Player2AuthRequestingCode>Player2 にデバイス認証コードを要求中...</GCFAgent_Player2AuthRequestingCode>
+  <GCFAgent_Player2AuthSuccess>Player2 ウェブ認証に成功しました！</GCFAgent_Player2AuthSuccess>
+  <GCFAgent_Player2AuthTimeout>Player2 ウェブ認証がタイムアウトまたは未完了です。</GCFAgent_Player2AuthTimeout>
+  <GCFAgent_Player2AuthCancelled>Player2 認証をキャンセルしました。</GCFAgent_Player2AuthCancelled>
+  <GCFAgent_Player2AuthCancelledShort>認証をキャンセルしました。</GCFAgent_Player2AuthCancelledShort>
+  <GCFAgent_Player2AuthFailed>認証失敗: {0}</GCFAgent_Player2AuthFailed>
+  <GCFAgent_Player2AuthCodeHint>(認証コード: {0})</GCFAgent_Player2AuthCodeHint>
+  <GCFAgent_Player2AuthPageOpened>ブラウザで Player2 認証ページを開きました{0}。ウェブ確認を待機中...</GCFAgent_Player2AuthPageOpened>
+  <GCFAgent_Player2DeviceRequestFailed>Player2 デバイス認証要求に失敗 (HTTP {0})</GCFAgent_Player2DeviceRequestFailed>
+  <GCFAgent_Player2DeviceInvalidResponse>Player2 が無効なデバイス認証レスポンスを返しました。</GCFAgent_Player2DeviceInvalidResponse>
+  <GCFAgent_Player2ClientConnected>クライアント接続済み · モデル自動ルーティング</GCFAgent_Player2ClientConnected>
+  <GCFAgent_Player2ClientConnectedTip>ローカル Player2 クライアントを検出 ({0})。キー不要で自動ログインしました。クリックで予備ウェブ認証を管理。</GCFAgent_Player2ClientConnectedTip>
+  <GCFAgent_Player2AwaitingWebConfirm>ウェブ確認を待機中...</GCFAgent_Player2AwaitingWebConfirm>
+  <GCFAgent_Player2WebAuthReady>ウェブ認証準備完了 · クラウド自動ルーティング</GCFAgent_Player2WebAuthReady>
+  <GCFAgent_Player2StartClientHint>クライアントを起動するか、左のウェブ認証をクリック</GCFAgent_Player2StartClientHint>
+  <GCFAgent_Player2LocalEndpoint>ローカル Player2 エンドポイント: {0}</GCFAgent_Player2LocalEndpoint>
+  <GCFAgent_Player2AutoModelTip>Player2 はサーバー側で最適モデルを自動割当。model パラメータの手動設定は不要</GCFAgent_Player2AutoModelTip>
+  <GCFAgent_Player2KeyPlaceholder>デスクトップでは不要 / ウェブ認証 p2Key</GCFAgent_Player2KeyPlaceholder>
+  <GCFAgent_Player2AuthMenu>認証</GCFAgent_Player2AuthMenu>
+  <GCFAgent_Player2WaitConfirm>ウェブ確認待ち (再オープン)</GCFAgent_Player2WaitConfirm>
+  <GCFAgent_Player2WaitConfirmTip>ブラウザで Player2 認証ページを開いています。クリックで再オープンまたはキャンセル</GCFAgent_Player2WaitConfirmTip>
+  <GCFAgent_Player2WebAuth>ウェブ認証</GCFAgent_Player2WebAuth>
+  <GCFAgent_Player2WebAuthed>ウェブ認証済み</GCFAgent_Player2WebAuthed>
+  <GCFAgent_Player2WebAuthedTip>Player2 ウェブ認証キー設定済み。クリックで再認証・キー表示/編集・クリア。</GCFAgent_Player2WebAuthedTip>
+  <GCFAgent_Player2DetectClient>クライアント検出</GCFAgent_Player2DetectClient>
+  <GCFAgent_Player2OneClickAuth>ウェブワンクリック認証</GCFAgent_Player2OneClickAuth>
+  <GCFAgent_Player2OneClickAuthTip>クリックでブラウザに Player2 ウェブ認証を開きキーを自動入力 (右クリックでその他のオプション)</GCFAgent_Player2OneClickAuthTip>
+  <GCFAgent_Player2DetectTip>ローカル Player2 デスクトップクライアントを検出 (ポート 4315/4316 または api.port)</GCFAgent_Player2DetectTip>
+  <GCFAgent_Player2ReopenAuthPage>ブラウザで認証ページを再オープン</GCFAgent_Player2ReopenAuthPage>
+  <GCFAgent_Player2CancelAuth>実行中のウェブ認証をキャンセル</GCFAgent_Player2CancelAuth>
+  <GCFAgent_Player2WebAuthCancelled>Player2 ウェブ認証をキャンセルしました。</GCFAgent_Player2WebAuthCancelled>
+  <GCFAgent_Player2StartWebAuth>ウェブワンクリック認証を開始 (推奨)</GCFAgent_Player2StartWebAuth>
+  <GCFAgent_Player2DetectNow>今すぐローカル Player2 クライアントを検出</GCFAgent_Player2DetectNow>
+  <GCFAgent_Player2HideKeyInput>手動入力欄を隠す</GCFAgent_Player2HideKeyInput>
+  <GCFAgent_Player2ShowKeyInput>API Key を手動入力 / 表示</GCFAgent_Player2ShowKeyInput>
+  <GCFAgent_Player2ClearKey>保存済みウェブ認証キーをクリア</GCFAgent_Player2ClearKey>
+  <GCFAgent_Player2KeyCleared>Player2 ウェブ認証キーをクリアしました。</GCFAgent_Player2KeyCleared>
+  <GCFAgent_Player2OpenWebsite>Player2 公式サイトを開く (player2.game)</GCFAgent_Player2OpenWebsite>
+  <GCFAgent_Player2Detecting>ローカル Player2 クライアントを検出中 (api.port / 4315 / 4316)...</GCFAgent_Player2Detecting>
+  <GCFAgent_Player2LocalConnected>ローカル Player2 クライアントに接続 ({0})。セッションキーを自動取得しました！</GCFAgent_Player2LocalConnected>
+  <GCFAgent_Player2NotDetected>実行中のローカル Player2 クライアントを検出できませんでした。クライアントを起動するか、[ウェブワンクリック認証] をクリックしてクラウドサービスを利用してください。</GCFAgent_Player2NotDetected>
+  <GCFAgent_Player2RequestingDeviceAuth>Player2 にウェブデバイス認証を要求中...</GCFAgent_Player2RequestingDeviceAuth>
+  <GCFAgent_BannerPlayer2AuthSuccess>Player2 ウェブ認証に成功。キーを自動入力して保存しました！</GCFAgent_BannerPlayer2AuthSuccess>
+  <GCFAgent_BannerPlayer2AuthIncomplete>Player2 認証が未完了: {0}</GCFAgent_BannerPlayer2AuthIncomplete>
+
+  <!-- コンテキスト切替設定 -->
+  <GCFAgent_SettingAskContext>新規会話の2回目の送信時にコンテキスト有効化を確認</GCFAgent_SettingAskContext>
+  <GCFAgent_SettingAskContextTip>プロンプトの復元は既に選択済みの会話を変更しません。</GCFAgent_SettingAskContextTip>
+  <GCFAgent_SettingDefaultContext>再確認しない場合、新規会話は既定でコンテキスト有効</GCFAgent_SettingDefaultContext>
+  <GCFAgent_SettingDefaultContextTip>各会話は入力欄下のコンテキスト切替で個別に変更できます。</GCFAgent_SettingDefaultContextTip>
+  <GCFAgent_SettingContextNote>コンテキストを切ると履歴入力用量を削減。ターン内のツール調査は引き続き正常に連携します。</GCFAgent_SettingContextNote>
+
+  <!-- システムプロンプト編集入口 -->
+  <GCFAgent_PromptsOpen>システムプロンプト...</GCFAgent_PromptsOpen>
+  <GCFAgent_PromptsOpenDesc>別ウィンドウで既定プロンプトの表示・編集・復元を行います。</GCFAgent_PromptsOpenDesc>
+  <GCFAgent_PromptsOpenNote>保存後の次回質問から適用。ゲーム再起動は不要。</GCFAgent_PromptsOpenNote>
+
+  <!-- 知識インデックス -->
+  <GCFAgent_KnowledgeEnable>MOD知識インデックスをバックグラウンド準備</GCFAgent_KnowledgeEnable>
+  <GCFAgent_KnowledgeEnableTip>初回準備はゲームセッションを跨いで継続できます。照会では従来の調査ツールも使用可能。</GCFAgent_KnowledgeEnableTip>
+  <GCFAgent_KnowledgePreferGpu>GPU を優先</GCFAgent_KnowledgePreferGpu>
+  <GCFAgent_KnowledgeGpuTip>利用可能ならグラフィックカードを使用し、初期化失敗時はシングルスレッド CPU にフォールバック。ゲームが重い間はバックグラウンド処理が減速します。</GCFAgent_KnowledgeGpuTip>
+  <GCFAgent_IndexPhaseStarting>オープン中</GCFAgent_IndexPhaseStarting>
+  <GCFAgent_IndexPhaseText>全文インデックス準備中</GCFAgent_IndexPhaseText>
+  <GCFAgent_IndexPhaseModel>モデルをウォームアップ中</GCFAgent_IndexPhaseModel>
+  <GCFAgent_IndexPhaseEmbedding>セマンティックインデックス準備中</GCFAgent_IndexPhaseEmbedding>
+  <GCFAgent_IndexPhaseCode>MODコード準備中</GCFAgent_IndexPhaseCode>
+  <GCFAgent_IndexPhasePartial>部分インデックス利用可能</GCFAgent_IndexPhasePartial>
+  <GCFAgent_IndexPhaseReady>準備完了</GCFAgent_IndexPhaseReady>
+  <GCFAgent_IndexPhaseLexical>全文インデックス利用可能</GCFAgent_IndexPhaseLexical>
+  <GCFAgent_IndexPhaseFaulted>インデックスは一時利用不可</GCFAgent_IndexPhaseFaulted>
+  <GCFAgent_IndexPhaseDisabled>未有効</GCFAgent_IndexPhaseDisabled>
+  <GCFAgent_IndexPaused>一時停止中</GCFAgent_IndexPaused>
+  <GCFAgent_IndexStatusLine>{0} · ファイル {1} · コード {2} · セマンティック {3}/{4} · {5}</GCFAgent_IndexStatusLine>
+  <GCFAgent_IndexStatusTooltip>{0}\nアセンブリ {1}/{2} · IL メンバー {3} · 失敗メンバー {4}\n{5}\n{6}\n{7}</GCFAgent_IndexStatusTooltip>
+  <GCFAgent_IndexResume>準備を再開</GCFAgent_IndexResume>
+  <GCFAgent_IndexPause>準備を一時停止</GCFAgent_IndexPause>
+  <GCFAgent_IndexRebuild>インデックスを再構築</GCFAgent_IndexRebuild>
+  <GCFAgent_IndexNote1>準備はこのマシンのバックグラウンドで実行され、モデルサービスを呼び出さず API トークンも消費しません。</GCFAgent_IndexNote1>
+  <GCFAgent_IndexNote2>準備を一時停止しても完了済みインデックス部分は照会可能。完全な内容調査は常時利用可能です。</GCFAgent_IndexNote2>
+  <GCFAgent_IndexRestartFailed>インデックス再起動に失敗: {0}</GCFAgent_IndexRestartFailed>
+
+  <!-- システムプロンプトウィンドウ -->
+  <GCFAgent_PromptsInitialStatus>保存後の次回質問から適用。再起動不要。ウィンドウを閉じると未保存の変更は破棄されます。</GCFAgent_PromptsInitialStatus>
+  <GCFAgent_PromptsSaveIncomplete>設定書き込みが未完了: {0}</GCFAgent_PromptsSaveIncomplete>
+  <GCFAgent_PromptsSaved>保存しました。次回質問から新プロンプトを使用。実行中の返信は送信時の設定を維持します。</GCFAgent_PromptsSaved>
+  <GCFAgent_PromptsTitle>システムプロンプト</GCFAgent_PromptsTitle>
+  <GCFAgent_PromptsUnsavedMark>· 未保存</GCFAgent_PromptsUnsavedMark>
+  <GCFAgent_PromptsBackToEdit>エディタへ戻る</GCFAgent_PromptsBackToEdit>
+  <GCFAgent_PromptsPreview>適用内容プレビュー</GCFAgent_PromptsPreview>
+  <GCFAgent_PromptsResetSection>この項目の既定に戻す</GCFAgent_PromptsResetSection>
+  <GCFAgent_PromptsResetAll>すべて既定に戻す</GCFAgent_PromptsResetAll>
+  <GCFAgent_PromptsPreviewNote>プレビューには現在の下書きを含みます。保存後に適用。トリガー条件で適用されるプロンプトは別途一覧表示されます。</GCFAgent_PromptsPreviewNote>
+  <GCFAgent_PromptsPreviewSection>【{0}】\n{1}</GCFAgent_PromptsPreviewSection>
+  <GCFAgent_PromptsPlaceholder>空欄にするとこのプロンプトは送信されません。「この項目の既定に戻す」で内蔵内容を復元します。</GCFAgent_PromptsPlaceholder>
+  <GCFAgent_PromptsContentStats>現在の内容 {0} 文字 · ローカル推定 ≈{1} トークン</GCFAgent_PromptsContentStats>
+  <GCFAgent_PromptsSave>保存</GCFAgent_PromptsSave>
+  <GCFAgent_PromptSectionLabel_Main>メインシステムプロンプト</GCFAgent_PromptSectionLabel_Main>
+  <GCFAgent_PromptSectionDesc_Main>アシスタントの責務・調査原則・回答範囲。</GCFAgent_PromptSectionDesc_Main>
+  <GCFAgent_PromptSectionLabel_OutputFormat>表現と用語フォーマット</GCFAgent_PromptSectionLabel_OutputFormat>
+  <GCFAgent_PromptSectionDesc_OutputFormat>プレイヤーに見える表現と用語タグを制御。</GCFAgent_PromptSectionDesc_OutputFormat>
+  <GCFAgent_PromptSectionLabel_Persona>ペルソナと呼称</GCFAgent_PromptSectionLabel_Persona>
+  <GCFAgent_PromptSectionDesc_Persona>呼称・口調・キャラクター性を制御。アバターページと共用。</GCFAgent_PromptSectionDesc_Persona>
+  <GCFAgent_PromptSectionLabel_PersonaBoundary>ペルソナ適用範囲</GCFAgent_PromptSectionLabel_PersonaBoundary>
+  <GCFAgent_PromptSectionDesc_PersonaBoundary>ペルソナの後に配置し、事実とツールプロトコルとの関係を説明。</GCFAgent_PromptSectionDesc_PersonaBoundary>
+  <GCFAgent_PromptSectionLabel_Submission>回答提出の指示</GCFAgent_PromptSectionLabel_Submission>
+  <GCFAgent_PromptSectionDesc_Submission>提出ツール経由で回答を渡す方法をモデルに指示。</GCFAgent_PromptSectionDesc_Submission>
+  <GCFAgent_PromptSectionLabel_Evidence>証拠使用の説明</GCFAgent_PromptSectionLabel_Evidence>
+  <GCFAgent_PromptSectionDesc_Evidence>ソース ID・プレビュー・履歴スナップショット・引用修復を説明。</GCFAgent_PromptSectionDesc_Evidence>
+  <GCFAgent_PromptSectionLabel_MissingSubmission>未提出時のリマインダー</GCFAgent_PromptSectionLabel_MissingSubmission>
+  <GCFAgent_PromptSectionDesc_MissingSubmission>モデルが回答を提出せず平文を返した場合に使用。</GCFAgent_PromptSectionDesc_MissingSubmission>
+  <GCFAgent_PromptSectionLabel_CitationRepair>引用失敗後のリマインダー</GCFAgent_PromptSectionLabel_CitationRepair>
+  <GCFAgent_PromptSectionDesc_CitationRepair>引用検証失敗時にエラー詳細へ追記。</GCFAgent_PromptSectionDesc_CitationRepair>
+  <GCFAgent_PromptSectionLabel_Synthesis>要求失敗後の要約指示</GCFAgent_PromptSectionLabel_Synthesis>
+  <GCFAgent_PromptSectionDesc_Synthesis>ネットワークタイムアウト等で取得済み証拠から結論をまとめる必要がある場合に使用。</GCFAgent_PromptSectionDesc_Synthesis>
+  <GCFAgent_PromptSectionLabel_ImageQuestion>スクリーンショットのみ送信時の質問</GCFAgent_PromptSectionLabel_ImageQuestion>
+  <GCFAgent_PromptSectionDesc_ImageQuestion>スクリーンショットのみで入力テキストがない場合に使用。</GCFAgent_PromptSectionDesc_ImageQuestion>
+  <GCFAgent_PromptSectionLabel_ToolDiscovery>ツール発見の説明</GCFAgent_PromptSectionLabel_ToolDiscovery>
+  <GCFAgent_PromptSectionDesc_ToolDiscovery>カタログ一覧と名前指定によるツール定義のロードを説明。全モデル共用。</GCFAgent_PromptSectionDesc_ToolDiscovery>
+
+  <!-- アバターとペルソナウィンドウ -->
+  <GCFAgent_PersonaWindowTitle>アシスタントアバターとペルソナプロンプト設定</GCFAgent_PersonaWindowTitle>
+  <GCFAgent_PersonaWindowSubtitle>左上隅およびチャットメッセージ左側のアシスタントアバターをカスタマイズし、会話専用ペルソナと口調を設定</GCFAgent_PersonaWindowSubtitle>
+  <GCFAgent_AvatarCurrentCustom>現在のアバター: カスタム画像 ({0})</GCFAgent_AvatarCurrentCustom>
+  <GCFAgent_AvatarCurrentDefault>現在のアバター: 内蔵既定 (PNG / JPG 対応、外枠なし透明角丸描画)</GCFAgent_AvatarCurrentDefault>
+  <GCFAgent_AvatarPathPlaceholder>空欄で既定アバターを使用。または下の [ローカル画像を参照] をクリックして PNG/JPG ファイルを選択</GCFAgent_AvatarPathPlaceholder>
+  <GCFAgent_AvatarBrowse>ローカル画像を参照...</GCFAgent_AvatarBrowse>
+  <GCFAgent_AvatarFolderMenu>アバターライブラリ / フォルダ</GCFAgent_AvatarFolderMenu>
+  <GCFAgent_AvatarReset>既定アバターに戻す</GCFAgent_AvatarReset>
+  <GCFAgent_AvatarResetDone>既定アバターに戻しました。</GCFAgent_AvatarResetDone>
+  <GCFAgent_PersonaHeaderActive>ペルソナプロンプト (有効 · {0} 文字 / ≈{1} tok):</GCFAgent_PersonaHeaderActive>
+  <GCFAgent_PersonaHeaderIdle>ペルソナプロンプト (アシスタントの性格・キャラクター・呼称・口調を設定):</GCFAgent_PersonaHeaderIdle>
+  <GCFAgent_PersonaQuickPresets>クイックプリセット:</GCFAgent_PersonaQuickPresets>
+  <GCFAgent_PersonaNone>追加ペルソナなし</GCFAgent_PersonaNone>
+  <GCFAgent_PersonaGentleMaid>穏やかなメイド顧問</GCFAgent_PersonaGentleMaid>
+  <GCFAgent_PersonaTsundereAdvisor>毒舌ツンデレ顧問</GCFAgent_PersonaTsundereAdvisor>
+  <GCFAgent_PersonaColdCore>冷徹機械コア</GCFAgent_PersonaColdCore>
+  <GCFAgent_PersonaOldCaptain>辺境惑星の老艦長</GCFAgent_PersonaOldCaptain>
+  <GCFAgent_PersonaCleared>追加ペルソナをクリアしました。</GCFAgent_PersonaCleared>
+  <GCFAgent_PersonaApplied>[{0}] ペルソナテンプレートを適用しました。引き続き自由に編集できます。</GCFAgent_PersonaApplied>
+  <GCFAgent_PersonaEditorPlaceholder>ここにカスタムペルソナプロンプトを入力 (キャラ背景・性格・プレイヤーへの呼称・口癖など)。空欄で既定の堅実なアシスタントスタイルを維持...</GCFAgent_PersonaEditorPlaceholder>
+  <GCFAgent_PersonaSaveDone>保存して完了</GCFAgent_PersonaSaveDone>
+  <GCFAgent_PersonaStatusHint>ヒント: ペルソナプロンプトはゲーム内ランタイムプローブによる事実検証能力を維持しつつ、アシスタントの口調とキャラクターを主に制御します。</GCFAgent_PersonaStatusHint>
+  <GCFAgent_AvatarFileMissing>選択した画像ファイルが存在しません。</GCFAgent_AvatarFileMissing>
+  <GCFAgent_AvatarLoaded>アバターを読込・保存しました: {0}</GCFAgent_AvatarLoaded>
+  <GCFAgent_AvatarLoadFailed>アバター読込失敗: {0}</GCFAgent_AvatarLoadFailed>
+  <GCFAgent_AvatarUse>アバターを使用: {0}</GCFAgent_AvatarUse>
+  <GCFAgent_AvatarSwitched>アバターを切替: {0}</GCFAgent_AvatarSwitched>
+  <GCFAgent_AvatarOpenFolder>エクスプローラーでアバターフォルダを開く...</GCFAgent_AvatarOpenFolder>
+  <GCFAgent_AvatarOpenFolderFailed>フォルダを開けませんでした: {0}</GCFAgent_AvatarOpenFolderFailed>
+  <GCFAgent_AvatarFileDialogTitle>クリーチャーフォージ アシスタントアバター画像を選択 (PNG / JPG)</GCFAgent_AvatarFileDialogTitle>
+
+
+  <!-- GCF 製作ツールと画像エンドポイント -->
+  <GCFAgent_ToolLabel_ListManuals>製作マニュアル一覧</GCFAgent_ToolLabel_ListManuals>
+  <GCFAgent_ToolLabel_LoadManual>製作マニュアルをロード</GCFAgent_ToolLabel_LoadManual>
+  <GCFAgent_ToolLabel_ListWorkspace>クリーチャーワークスペース一覧</GCFAgent_ToolLabel_ListWorkspace>
+  <GCFAgent_ToolLabel_ReadCreatureXml>クリーチャー XML を読む</GCFAgent_ToolLabel_ReadCreatureXml>
+  <GCFAgent_ToolLabel_WriteCreatureXml>クリーチャー XML を書く</GCFAgent_ToolLabel_WriteCreatureXml>
+  <GCFAgent_ToolLabel_GenerateLocomotionAnim>3D ボーンアニメーションを合成</GCFAgent_ToolLabel_GenerateLocomotionAnim>
+  <GCFAgent_ToolLabel_GenerateImage>スプライトシートを生成</GCFAgent_ToolLabel_GenerateImage>
+  <GCFAgent_ToolLabel_ExtractSheet>グリーンスクリーンシートを抽出</GCFAgent_ToolLabel_ExtractSheet>
+  <GCFAgent_ToolLabel_WarpBone>ボーンスプライトの変形と輪郭処理</GCFAgent_ToolLabel_WarpBone>
+  <GCFAgent_ToolLabel_PreviewSheet>チェッカーボードプレビューを描画</GCFAgent_ToolLabel_PreviewSheet>
+  <GCFAgent_ToolLabel_PreviewAnimStrip>連続フレーム動作プレビューを描画</GCFAgent_ToolLabel_PreviewAnimStrip>
+  <GCFAgent_ToolLabel_ValidateCreature>Def と関節を検証</GCFAgent_ToolLabel_ValidateCreature>
+  <GCFAgent_ToolLabel_InjectCreature>クリーチャーをホット注入</GCFAgent_ToolLabel_InjectCreature>
+  <GCFAgent_ToolLabel_SpawnCreature>マップにクリーチャーを生成</GCFAgent_ToolLabel_SpawnCreature>
+  <GCFAgent_ImageApiHeader>画像生成エンドポイント (OpenAI 互換 images/generations と images/edits)</GCFAgent_ImageApiHeader>
+  <GCFAgent_ImageEndpointLabel>画像ベース URL:</GCFAgent_ImageEndpointLabel>
+  <GCFAgent_ImageEndpointPlaceholder>http://127.0.0.1:2048/v1 (generations / edits は自動判別)</GCFAgent_ImageEndpointPlaceholder>
+  <GCFAgent_ImageModelLabel>画像モデル ID:</GCFAgent_ImageModelLabel>
+  <GCFAgent_ImageModelPlaceholder>画像モデル ID を入力 (例: gemini-3-pro-image / gpt-image-1)</GCFAgent_ImageModelPlaceholder>
+  <GCFAgent_ImageApiKeyLabel>画像 API Key:</GCFAgent_ImageApiKeyLabel>
+  <GCFAgent_ImageApiKeyPlaceholder>任意の API Key (キー不要のローカルサービスは空欄)</GCFAgent_ImageApiKeyPlaceholder>
+  <GCFAgent_SidebarTitle>巨獣工房</GCFAgent_SidebarTitle>
+  <GCFAgent_SidebarSubtitle>RUNTIME CREATURE FORGE</GCFAgent_SidebarSubtitle>
+  <GCFAgent_ManualButton>巨獣・ツール説明書</GCFAgent_ManualButton>
+  <GCFAgent_ManualButtonTip>巨獣タイプ、再利用可能な機能（スキンメッシュ / カスタム砲塔など）、Def 定義とツール一覧を開く</GCFAgent_ManualButtonTip>
+  <GCFAgent_ManualWindowTitle>Giant Creature Framework 開発・ツール説明書</GCFAgent_ManualWindowTitle>
+  <GCFAgent_ManualWindowSubtitle>巨獣アーキタイプ · 再利用機能 · Def リファレンス · ツール一覧</GCFAgent_ManualWindowSubtitle>
+  <GCFAgent_ManualCopyAll>全文コピー</GCFAgent_ManualCopyAll>
+  <GCFAgent_ManualReload>再読込</GCFAgent_ManualReload>
+  <GCFAgent_ManualSearchPlaceholder>機能 / Def / タグ / ツールを検索...</GCFAgent_ManualSearchPlaceholder>
+  <GCFAgent_ManualClearSearch>検索フィルタをクリア</GCFAgent_ManualClearSearch>
+  <GCFAgent_ManualChaptersHeader>チャプター</GCFAgent_ManualChaptersHeader>
+  <GCFAgent_ManualAllChapters>全チャプター（全体表示）</GCFAgent_ManualAllChapters>
+  <GCFAgent_ManualNoMatch>検索条件に一致する項目が見つかりませんでした。</GCFAgent_ManualNoMatch>
+  <GCFAgent_ManualFileMissing>説明書ファイル Docs\GiantCreatureFramework_Manual.md が見つかりません。</GCFAgent_ManualFileMissing>
+  <GCFAgent_ManualReadFailed>説明書の読み込みに失敗しました: {0}</GCFAgent_ManualReadFailed>
+</LanguageData>

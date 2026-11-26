@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <GCF_InspectRigLabel>Инспектор каркаса</GCF_InspectRigLabel>
+  <GCF_InspectRigDesc>Открывает инспектор Каркаса гигантских существ: скелетная анимация по узловым осям и динамическая визуализация клеток попаданий и столкновений на карте.</GCF_InspectRigDesc>
+  <GCF_InspectorTitle>Инспектор каркаса исполина</GCF_InspectorTitle>
+  <GCF_InspectorSummary>Курс: {0} град.  |  Состояние: {1}  |  Клип: {2}
+Активные клетки попаданий (зел.+красн.): {3}  |  Клетки твёрдых столкновений (красн.): {4}</GCF_InspectorSummary>
+  <GCF_ToggleFootprint>Показать клетки попаданий и столкновений</GCF_ToggleFootprint>
+  <GCF_ToggleSkeleton>Показать узловой скелет</GCF_ToggleSkeleton>
+  <GCF_ToggleGlobalFootprint>Глобальный слой клеток</GCF_ToggleGlobalFootprint>
+  <GCF_ToggleManualPose>Ручные углы костей</GCF_ToggleManualPose>
+  <GCF_AnimClipSection>Клипы скелетной анимации для предпросмотра:</GCF_AnimClipSection>
+  <GCF_ResetPoseBtn>Сбросить позу / вернуть ИИ</GCF_ResetPoseBtn>
+  <GCF_AbilityDisabledMissingOrgan>Орган отсечён, способность обезоружена: {0}</GCF_AbilityDisabledMissingOrgan>
+  <GCF_BioferriteCoreActive>Ядро регенерации из биоферрита: активно (+{0} ОЗ/с)</GCF_BioferriteCoreActive>
+  <GCF_BioferriteCoreSevered>Ядро регенерации из биоферрита: отключено (ядро пустотного тигеля отсечено)</GCF_BioferriteCoreSevered>
+  <GCF_DisabledSkillsLine>Обезоруженные способности: {0}</GCF_DisabledSkillsLine>
+  <GCF_SettingsCategory>Каркас гигантских существ</GCF_SettingsCategory>
+  <GCF_SettingsSection_Debug>Переключатели отладочной визуализации (по умолчанию выкл.)</GCF_SettingsSection_Debug>
+  <GCF_Setting_DrawCollisionCells>Показывать клетки столкновений</GCF_Setting_DrawCollisionCells>
+  <GCF_Setting_DrawCollisionCells_Desc>Отображает на карте контуры клеток твёрдых столкновений (красные) гигантских юнитов.</GCF_Setting_DrawCollisionCells_Desc>
+  <GCF_Setting_DrawHitCells>Показывать клетки попаданий</GCF_Setting_DrawHitCells>
+  <GCF_Setting_DrawHitCells_Desc>Отображает на карте контуры клеток попаданий по альфа-карте (зелёные) гигантских юнитов.</GCF_Setting_DrawHitCells_Desc>
+  <GCF_Setting_DrawSkeleton>Показывать скелет</GCF_Setting_DrawSkeleton>
+  <GCF_Setting_DrawSkeleton_Desc>Отображает на карте шарниры костей, связи родитель-потомок, непрерывные кривые и векторы эмиттеров.</GCF_Setting_DrawSkeleton_Desc>
+  <GCF_Setting_EnableDebugPanel>Включить панель отладки</GCF_Setting_EnableDebugPanel>
+  <GCF_Setting_EnableDebugPanel_Desc>Отображает в игре плавающую кнопку панели отладки; при отключении немедленно скрывает кнопку и закрывает открытую панель.</GCF_Setting_EnableDebugPanel_Desc>
+  <GCF_Setting_OpenDebugPanel>Открыть панель отладки</GCF_Setting_OpenDebugPanel>
+  <GCF_DebugPanelLauncherBtn>Отладка GCF</GCF_DebugPanelLauncherBtn>
+  <GCF_DebugPanelTitle>Панель отладки гигантов</GCF_DebugPanelTitle>
+  <GCF_DebugPanelActiveTool>Инструмент карты: {0}</GCF_DebugPanelActiveTool>
+  <GCF_DebugPanelCancelTool>Сбросить инструмент</GCF_DebugPanelCancelTool>
+  <GCF_DebugCat_Spawn>Спавн существ</GCF_DebugCat_Spawn>
+  <GCF_DebugCat_Tools>Инструменты</GCF_DebugCat_Tools>
+  <GCF_DebugAction_SpawnScorpionPlayer>Мех-скорпион - Союзник</GCF_DebugAction_SpawnScorpionPlayer>
+  <GCF_DebugAction_SpawnScorpionHostile>Мех-скорпион - Враг</GCF_DebugAction_SpawnScorpionHostile>
+  <GCF_DebugAction_SpawnDynamicPlayer>{0} - Союзник</GCF_DebugAction_SpawnDynamicPlayer>
+  <GCF_DebugAction_SpawnDynamicHostile>{0} - Враг</GCF_DebugAction_SpawnDynamicHostile>
+  <GCF_DebugAction_DestroyBone>Уничтожить кость под курсором</GCF_DebugAction_DestroyBone>
+  <GCF_DebugAction_LogHitCell>Вывести инфо о клетке под курсором</GCF_DebugAction_LogHitCell>
+  <GCF_DebugAction_RecallInterceptors>Отозвать всех перехватчиков</GCF_DebugAction_RecallInterceptors>
+  <GCF_DebugAction_StartFpsTelemetry>Запустить телеметрию FPS</GCF_DebugAction_StartFpsTelemetry>
+  <GCF_DebugAction_StopFpsTelemetry>Остановить и записать FPS</GCF_DebugAction_StopFpsTelemetry>
+  <GCF_SettingsSection_Authoring>Терминал кузницы исполинов в реальном времени (по умолчанию выкл.)</GCF_SettingsSection_Authoring>
+  <GCF_Setting_EnableAuthoringTerminal>Включить терминал кузницы исполинов в реальном времени</GCF_Setting_EnableAuthoringTerminal>
+  <GCF_Setting_EnableAuthoringTerminal_Desc>Показывает кнопку кузницы исполинов в главной панели и включает горячую клавишу F10 и терминал создания существ ИИ. Отключение немедленно скрывает вход, прерывает активные сеансы и блокирует все сетевые запросы (уже сохранённые пользовательские исполины загружаются как обычно).</GCF_Setting_EnableAuthoringTerminal_Desc>
+  <GCF_PhaseAdvanceDisabledTransforming>Корпус перестраивается для следующей стадии</GCF_PhaseAdvanceDisabledTransforming>
+  <GCF_PhaseAdvanceDisabledFinalStage>Уже на финальной стадии</GCF_PhaseAdvanceDisabledFinalStage>
+  <GCF_PhaseAdvanceDisabledUnavailable>Система смены стадий недоступна</GCF_PhaseAdvanceDisabledUnavailable>
+  <GCF_PhaseRevertDisabledTransforming>Идёт перестройка стадии корпуса</GCF_PhaseRevertDisabledTransforming>
+  <GCF_PhaseRevertDisabledFirstStage>Уже на начальной стадии</GCF_PhaseRevertDisabledFirstStage>
+  <GCF_PhaseRevertDisabledNotFullState>Требуется полная целостность (без ранений, утраченных частей и негативных состояний) для отката; при повреждениях доступен только переход на следующую стадию</GCF_PhaseRevertDisabledNotFullState>
+  <GCF_CarrierHangarStatus>Перехватчики: {0} в воздухе / {1} в ангаре (лимит {2}/{3})</GCF_CarrierHangarStatus>
+  <GCF_CarrierHangarDestroyed>Ангары перехватчиков: отключены (оба ангарных отсека отсечены)</GCF_CarrierHangarDestroyed>
+  <GCF_CarrierNoInterceptorsReady>Нет готовых перехватчиков.</GCF_CarrierNoInterceptorsReady>
+  <GCF_CarrierRebuildingInterceptor>Изготовление: {0}%</GCF_CarrierRebuildingInterceptor>
+  <GCF_CarrierCatapultOverdriveActive>Гравитонный форсаж: {0} с</GCF_CarrierCatapultOverdriveActive>
+  <GCF_Gizmo_RecallInterceptors_Label>Отозвать перехватчики ({0})</GCF_Gizmo_RecallInterceptors_Label>
+  <GCF_Gizmo_RecallInterceptors_Desc>Немедленно приказывает всем перехватчикам в воздухе выйти из атаки и вернуться в ангарные отсеки авианосца для ремонта корпуса и подзарядки щита.</GCF_Gizmo_RecallInterceptors_Desc>
+  <GCF_Gizmo_RecallDisabledNoneAirborne>Нет перехватчиков в воздухе.</GCF_Gizmo_RecallDisabledNoneAirborne>
+  <GCF_Gizmo_AutoLaunch_Label>Автоподъём эскадрильи</GCF_Gizmo_AutoLaunch_Label>
+  <GCF_Gizmo_AutoLaunch_Desc>Если включено, авианосец автоматически выстреливает перехватчиков из ангаров по враждебным целям в зоне действия. Отключите, чтобы перехватчики оставались в ангарах до ручного приказа.</GCF_Gizmo_AutoLaunch_Desc>
+  <GCF_Gizmo_AutoRebuild_Label>Автоизготовление перехватчиков</GCF_Gizmo_AutoRebuild_Label>
+  <GCF_Gizmo_AutoRebuild_Desc>Автоматически варпирует и изготавливает перехватчиков на замену в целых ангарных отсеках, когда истребители потеряны в бою.</GCF_Gizmo_AutoRebuild_Desc>
+  <GCF_InterceptorInspectLine>Плазменный щит: {0} / {1}  |  Состояние: {2}</GCF_InterceptorInspectLine>
+  <GCF_InterceptorState_Docked>В ангаре</GCF_InterceptorState_Docked>
+  <GCF_InterceptorState_Launching>Катапультирование</GCF_InterceptorState_Launching>
+  <GCF_InterceptorState_AttackRun>Штурмовой заход</GCF_InterceptorState_AttackRun>
+  <GCF_InterceptorState_BreakTurn>Крен-разворот</GCF_InterceptorState_BreakTurn>
+  <GCF_InterceptorState_EscortOrbit>Боевой патруль</GCF_InterceptorState_EscortOrbit>
+  <GCF_InterceptorState_Returning>Возврат в ангар</GCF_InterceptorState_Returning>
+  <GCF_Tab_Cockpit>Кабина</GCF_Tab_Cockpit>
+  <GCF_CockpitMode_Piloted>Пилотируемый форсаж</GCF_CockpitMode_Piloted>
+  <GCF_CockpitMode_Autonomous>Автономный ИИ</GCF_CockpitMode_Autonomous>
+  <GCF_CockpitMode_Dormant>Ожидание (на стоянке)</GCF_CockpitMode_Dormant>
+  <GCF_CockpitRole_PrimaryPilot>Пилот</GCF_CockpitRole_PrimaryPilot>
+  <GCF_CockpitRole_Gunner>Стрелок</GCF_CockpitRole_Gunner>
+  <GCF_CockpitRole_Commander>Командир</GCF_CockpitRole_Commander>
+  <GCF_CockpitRole_Passenger>Пассажир</GCF_CockpitRole_Passenger>
+  <GCF_CockpitInspect_Manned>Режим: {0} ({1})  |  Экипаж: {2}  |  Ход {3} · Огонь {4}</GCF_CockpitInspect_Manned>
+  <GCF_CockpitInspect_Unmanned>Режим: {0}  |  Экипаж: {1}  |  Ход {2} · Огонь {3}</GCF_CockpitInspect_Unmanned>
+  <GCF_Gizmo_AutonomousMode_Label>Автономный ИИ</GCF_Gizmo_AutonomousMode_Label>
+  <GCF_Gizmo_AutonomousMode_Desc>Переключает автономный патруль и бой бортового ИИ, когда юнит остаётся без экипажа. Выключите, чтобы поставить юнит в режим ожидания на стоянке.</GCF_Gizmo_AutonomousMode_Desc>
+  <GCF_Gizmo_BoardCrew_Label>Назначить экипаж</GCF_Gizmo_BoardCrew_Label>
+  <GCF_Gizmo_BoardCrew_Desc>Выберите ближайшего колониста, чтобы он занял свободное место в кабине и включил бонусы пилотируемого форсажа.</GCF_Gizmo_BoardCrew_Desc>
+  <GCF_Gizmo_DisembarkAll_Label>Высадить всех ({0})</GCF_Gizmo_DisembarkAll_Label>
+  <GCF_Gizmo_DisembarkAll_Desc>Приказывает всему экипажу покинуть юнит на безопасные клетки за пределами корпуса.</GCF_Gizmo_DisembarkAll_Desc>
+  <GCF_FloatMenu_BoardCockpitSeat>Сесть в {0} ({1})</GCF_FloatMenu_BoardCockpitSeat>
+  <GCF_FloatMenu_BoardMulti>Экипаж: сесть в {0}</GCF_FloatMenu_BoardMulti>
+  <GCF_FloatMenu_BoardDisabled>Нельзя сесть в {0}: {1}</GCF_FloatMenu_BoardDisabled>
+  <GCF_FloatMenu_SeatUnavailable>{0} [{1}]: {2}</GCF_FloatMenu_SeatUnavailable>
+  <GCF_FloatMenu_AssignColonistItem>{0} (стрельба {1} / ближний бой {2})</GCF_FloatMenu_AssignColonistItem>
+  <GCF_FloatMenu_NoEligibleColonists>Нет доступных колонистов, способных добраться до кабины</GCF_FloatMenu_NoEligibleColonists>
+  <GCF_CockpitFail_HostUnavailable>Юнит-носитель недоступен</GCF_CockpitFail_HostUnavailable>
+  <GCF_CockpitFail_InvalidCrew>Юнит не может занять кабину</GCF_CockpitFail_InvalidCrew>
+  <GCF_CockpitFail_WrongFaction>Не под контролем игрока</GCF_CockpitFail_WrongFaction>
+  <GCF_CockpitFail_SeatDestroyed>Модуль кабины уничтожен ({0})</GCF_CockpitFail_SeatDestroyed>
+  <GCF_CockpitFail_SeatOccupied>Место уже занято</GCF_CockpitFail_SeatOccupied>
+  <GCF_CockpitFail_AllSeatsDestroyed>Все модули кабины уничтожены</GCF_CockpitFail_AllSeatsDestroyed>
+  <GCF_CockpitFail_Full>Кабина заполнена</GCF_CockpitFail_Full>
+  <GCF_CockpitFail_AiCoreDestroyed>Ядро автономного ИИ уничтожено</GCF_CockpitFail_AiCoreDestroyed>
+  <GCF_CrewDisabledUnmanned>Ожидание: экипажа нет</GCF_CrewDisabledUnmanned>
+  <GCF_CrewDisabledNoGunner>Оружие отключено: нет стрелка</GCF_CrewDisabledNoGunner>
+  <GCF_CrewDisabledNoOperator>Системы отключены: нет командира</GCF_CrewDisabledNoOperator>
+  <GCF_CockpitTab_EfficiencySummary>Мобильность: {0}  |  Управление огнём: {1}  |  Перезарядка: {2}</GCF_CockpitTab_EfficiencySummary>
+  <GCF_CockpitTab_EjectAllBtn>Высадить всех</GCF_CockpitTab_EjectAllBtn>
+  <GCF_CockpitTab_PartDestroyed>УНИЧТОЖЕНО</GCF_CockpitTab_PartDestroyed>
+  <GCF_CockpitTab_OccupantStatus>{0} (сознание {1})</GCF_CockpitTab_OccupantStatus>
+  <GCF_CockpitTab_DisembarkBtn>Катапультировать</GCF_CockpitTab_DisembarkBtn>
+  <GCF_CockpitTab_SeatEmpty>Свободно</GCF_CockpitTab_SeatEmpty>
+  <GCF_CockpitTab_AssignBtn>Назначить</GCF_CockpitTab_AssignBtn>
+  <GCF_PartFocusTarget_Label>Приоритетная цель</GCF_PartFocusTarget_Label>
+  <GCF_PartFocusTarget_Desc>Назначает приоритетную цель для всех уцелевших орудийных узлов и ангарных отсеков. Целые части наводятся и атакуют независимо даже в движении.</GCF_PartFocusTarget_Desc>
+  <GCF_PartClearTarget_Label>Сбросить цель: {0}</GCF_PartClearTarget_Label>
+  <GCF_PartClearTarget_Desc>Снимает фиксацию приоритетной цели и возвращает уцелевшие орудийные узлы к автономному выбору целей в секторах.</GCF_PartClearTarget_Desc>
+  <GCF_PartFireAtWill_Label>Свободный огонь узлов</GCF_PartFireAtWill_Label>
+  <GCF_PartFireAtWill_Desc>Если включено, целые наступательные узлы автоматически выбирают и атакуют врагов в своих секторах обстрела, в том числе на ходу.</GCF_PartFireAtWill_Desc>
+  <GCF_PartWeaponsAllSevered>Все наступательные части уничтожены.</GCF_PartWeaponsAllSevered>
+  <GCF_FloatMenu_PartFocusAttack>Сфокусировать огонь узлов на {0}</GCF_FloatMenu_PartFocusAttack>
+  <GCF_Gizmo_FlightTakeoff_Label>Взлететь</GCF_Gizmo_FlightTakeoff_Label>
+  <GCF_Gizmo_FlightLand_Label>Приземлиться</GCF_Gizmo_FlightLand_Label>
+  <GCF_Gizmo_FlightToggle_Desc>Переключает высотный полёт (обходит стены и глубокую воду, невосприимчив к ближним атакам с земли) и наземное перемещение.</GCF_Gizmo_FlightToggle_Desc>
+  <GCF_FlightFail_LiftDamaged>Несущие органы или двигатели слишком повреждены для взлёта</GCF_FlightFail_LiftDamaged>
+  <GCF_FlightFail_ThickRoof>Блокировано горной породой сверху</GCF_FlightFail_ThickRoof>
+  <GCF_FlightState_Grounded>На земле</GCF_FlightState_Grounded>
+  <GCF_FlightState_TakingOff>Взлетает</GCF_FlightState_TakingOff>
+  <GCF_FlightState_Airborne>В воздухе</GCF_FlightState_Airborne>
+  <GCF_FlightState_Landing>Идёт на посадку</GCF_FlightState_Landing>
+  <GCF_FlightInspectLine>Полёт: {0} (подъёмная сила {1})</GCF_FlightInspectLine>
+  <GCF_FlightFail_CombatCooldown>Восстановление после боевого полёта ({0} с)</GCF_FlightFail_CombatCooldown>
+  <GCF_FlightInspect_CombatAirLeft>Лимит боевого полёта: {0} с</GCF_FlightInspect_CombatAirLeft>
+  <GCF_FlightInspect_CombatCooldown>Отдых перед взлётом: {0} с</GCF_FlightInspect_CombatCooldown>
+  <GCF_FloatMenu_CannotMeleeAirborne>Нельзя атаковать в ближнем бою цель в воздухе: {0}</GCF_FloatMenu_CannotMeleeAirborne>
+  <GCF_FloatMenu_TakeCockpitControl>Управлять {0} ({1})</GCF_FloatMenu_TakeCockpitControl>
+  <GCF_FloatMenu_BoardRoleOpenCount>Занять место в {0} ({1}, свободно {2})</GCF_FloatMenu_BoardRoleOpenCount>
+  <GCF_FloatMenu_DraftControl>Призвать под управление {0}</GCF_FloatMenu_DraftControl>
+  <GCF_FloatMenu_UndraftControl>Отменить призыв {0}</GCF_FloatMenu_UndraftControl>
+  <GCF_FloatMenu_DraftAndMoveHere>Призвать и идти сюда</GCF_FloatMenu_DraftAndMoveHere>
+  <GCF_FloatMenu_DraftAndFocusAttack>Призвать и сфокусировать оружие на {0}</GCF_FloatMenu_DraftAndFocusAttack>
+  <GCF_FloatMenu_SwitchAutonomousOn>Режим управления: включить автономный ИИ</GCF_FloatMenu_SwitchAutonomousOn>
+  <GCF_FloatMenu_SwitchStandbyOn>Режим управления: перевести в ожидание</GCF_FloatMenu_SwitchStandbyOn>
+  <GCF_FloatMenu_PartFireAtWillOn>Свободный огонь узлов: ВКЛ (нажмите, чтобы отключить)</GCF_FloatMenu_PartFireAtWillOn>
+  <GCF_FloatMenu_PartFireAtWillOff>Свободный огонь узлов: ВЫКЛ (нажмите, чтобы включить)</GCF_FloatMenu_PartFireAtWillOff>
+  <GCF_FloatMenu_PhaseAdvance>Фазовая перестройка: перейти к «{0}»</GCF_FloatMenu_PhaseAdvance>
+  <GCF_FloatMenu_PhaseRevert>Фазовая перестройка: вернуться к «{0}»</GCF_FloatMenu_PhaseRevert>
+  <GCF_FloatMenu_PhaseDisabled>Перестройка невозможна: {0}</GCF_FloatMenu_PhaseDisabled>
+  <GCF_Letter_WarQueenScorpionUnlock_Label>Осадный чертёж открыт: Тяжёлый мех-скорпион</GCF_Letter_WarQueenScorpionUnlock_Label>
+  <GCF_Letter_WarQueenScorpionUnlock_Text>После уничтожения королевы войны ваше поселение может выращивать тяжёлых механических скорпионов в крупном мех-гестаторе при наличии высоких мехтехнологий и двух энергофокусных чипов.</GCF_Letter_WarQueenScorpionUnlock_Text>
+  <GCF_FlightFail_InsufficientLift>Крылья слишком повреждены для взлёта</GCF_FlightFail_InsufficientLift>
+  <GCF_CrewMode_Mounted>Оседлан</GCF_CrewMode_Mounted>
+  <GCF_CrewMode_Unmounted>Без всадника</GCF_CrewMode_Unmounted>
+  <GCF_WorldDeparture_ConfirmCloseMap>{0} — последний юнит игрока на этой карте вне колонии. Уход закроет карту и оставит все вещи на ней. Продолжить?</GCF_WorldDeparture_ConfirmCloseMap>
+  <GCF_WorldDeparture_ConfirmDestroySite>{0} — последний юнит игрока в «{1}». Уход закроет карту и удалит этот объект с карты мира (оставленные вещи будут потеряны). Продолжить?</GCF_WorldDeparture_ConfirmDestroySite>
+  <GCF_Setting_LoadedGiantsHeader>Загруженные исполины ({0})</GCF_Setting_LoadedGiantsHeader>
+  <GCF_Setting_LoadedGiantsEmpty>Нет загруженных исполинов</GCF_Setting_LoadedGiantsEmpty>
+  <GCF_GiantSource_BuiltIn>Встроенный</GCF_GiantSource_BuiltIn>
+  <GCF_GiantSource_Custom>Пользовательский</GCF_GiantSource_Custom>
+  <GCF_GiantSource_ExternalMod>{0}</GCF_GiantSource_ExternalMod>
+  <GCF_GiantSource_UnknownMod>Внешний мод</GCF_GiantSource_UnknownMod>
+  <GCF_Setting_OpenCreaturesFolder>Открыть папку исполинов (Config\GiantCreatureFramework\Creatures)</GCF_Setting_OpenCreaturesFolder>
+  <GCF_AquaticMode_WaterOnly>Только вода / Корабль</GCF_AquaticMode_WaterOnly>
+  <GCF_AquaticMode_Amphibious>Амфибия</GCF_AquaticMode_Amphibious>
+  <GCF_AquaticState_DeepWater>Глубокая вода</GCF_AquaticState_DeepWater>
+  <GCF_AquaticState_ShallowWater>Мелководье</GCF_AquaticState_ShallowWater>
+  <GCF_AquaticState_Ashore>На суше</GCF_AquaticState_Ashore>
+  <GCF_AquaticInspectLine>Водный режим: {0} · {1}</GCF_AquaticInspectLine>
+  <GCF_AquaticInspectLineWithPropulsion>Водный режим: {0} · {1} (Тяга {2})</GCF_AquaticInspectLineWithPropulsion>
+  <GCF_AquaticWorldFail_InvalidDestination>Чисто водный исполин или корабль не может двигаться по материковой суше (выберите океан, озеро, побережье или реку).</GCF_AquaticWorldFail_InvalidDestination>
+  <GCF_AquaticWorldFail_NoWaterRoute>Нет связанного водного или прибрежного маршрута до цели.</GCF_AquaticWorldFail_NoWaterRoute>
+  <GCF_AquaticFail_NoWaterOnMap>На этой карте нет подходящей воды для размещения водного юнита или корабля.</GCF_AquaticFail_NoWaterOnMap>
+</LanguageData>

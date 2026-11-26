@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- 18-Node Top-Down 512x512 Vector-Art Skeletal Rig for Heavy Mechanical Scorpion (8 Legs + 7-Seg Tail) -->
+  <GiantCreatureFramework.GiantRigDef>
+    <defName>GCF_Rig_MechScorpion</defName>
+    <label>heavy mechanical scorpion rig</label>
+    <healthBarDef>GCF_HealthBar_TopBossClean</healthBarDef>
+    <painImmune>true</painImmune>
+    <onlyDieWhenCoreDestroyed>true</onlyDieWhenCoreDestroyed>
+
+    <turnSpeedDegPerTick>2.20</turnSpeedDegPerTick>
+    <hitCoverageThreshold>0.08</hitCoverageThreshold>
+    <collisionCoverageThreshold>0.52</collisionCoverageThreshold>
+    <collisionPathCost>10000</collisionPathCost>
+    <coreClearanceRadius>1</coreClearanceRadius>
+    <footprintUpdateIntervalTicks>2</footprintUpdateIntervalTicks>
+    <walkCycleDistance>1.35</walkCycleDistance>
+    <runCycleDistance>1.8</runCycleDistance>
+    <turnCycleAngleDeg>42</turnCycleAngleDeg>
+    <portraitScaleFactor>0.32</portraitScaleFactor>
+
+    <rushWhenEnemyFar>true</rushWhenEnemyFar>
+    <rushStartDistance>14</rushStartDistance>
+    <rushStopDistance>8</rushStopDistance>
+    <rushMoveSpeedMultiplier>1.45</rushMoveSpeedMultiplier>
+
+    <crushBuildingsAndTerrain>true</crushBuildingsAndTerrain>
+    <canCrushNaturalRock>true</canCrushNaturalRock>
+    <canCrushConstructedBuildings>true</canCrushConstructedBuildings>
+    <canCrushDestructibleTerrain>true</canCrushDestructibleTerrain>
+    <crushDamagePerStep>320</crushDamagePerStep>
+    <crushIntervalTicks>14</crushIntervalTicks>
+
+    <meleeTouchRadius>2.0</meleeTouchRadius>
+    <useDirectionalMeleeTools>true</useDirectionalMeleeTools>
+
+    <walkAnim>GCF_Anim_MechScorpion_Walk</walkAnim>
+    <turnLeftAnim>GCF_Anim_MechScorpion_TurnLeft</turnLeftAnim>
+    <turnRightAnim>GCF_Anim_MechScorpion_TurnRight</turnRightAnim>
+    <meleeAttackAnims>
+      <li>GCF_Anim_MechScorpion_ClawLeft</li>
+      <li>GCF_Anim_MechScorpion_ClawRight</li>
+      <li>GCF_Anim_MechScorpion_CarapaceRam</li>
+    </meleeAttackAnims>
+    <rangedAttackAnim>GCF_Anim_MechScorpion_RangedTail</rangedAttackAnim>
+    <rangedWeaponBoneId>tail_stinger</rangedWeaponBoneId>
+    <weaponEmitters>
+      <li>
+        <emitterId>tail_plasma_stinger</emitterId>
+        <fireMode>PrimaryWithFallback</fireMode>
+        <replaceVanillaMuzzleFlash>true</replaceVanillaMuzzleFlash>
+        <spawnMuzzleVfxOnLaunch>true</spawnMuzzleVfxOnLaunch>
+        <vfxPresetOverride>PlasmaBurst</vfxPresetOverride>
+        <vfxScale>1.05</vfxScale>
+        <vfxColor>(0.35, 0.92, 1.0, 0.92)</vfxColor>
+        <barrels>
+          <li>
+            <boneId>tail_stinger</boneId>
+            <socketId>stinger_tip</socketId>
+          </li>
+        </barrels>
+      </li>
+    </weaponEmitters>
+    <downedAnim>GCF_Anim_MechScorpion_Downed</downedAnim>
+    <deathAnim>GCF_Anim_MechScorpion_Death</deathAnim>
+
+    <steering>
+      <enabled>true</enabled>
+      <bodyTurnAccelDegPerTick2>0.72</bodyTurnAccelDegPerTick2>
+      <bodyPathLookAheadCells>2</bodyPathLookAheadCells>
+      <bodyPathLookAheadWeight>0.28</bodyPathLookAheadWeight>
+      <gazePathLookAheadCells>5</gazePathLookAheadCells>
+      <headLeadGateAngleDeg>50</headLeadGateAngleDeg>
+      <minBodyTurnScaleWhileHeadLeads>0.55</minBodyTurnScaleWhileHeadLeads>
+      <lookChains>
+        <li>
+          <chainId>claw_left_aim</chainId>
+          <boneIds>
+            <li>claw_left</li>
+          </boneIds>
+          <weights>
+            <li>1.0</li>
+          </weights>
+          <maxChainAngleDeg>28</maxChainAngleDeg>
+          <maxBoneAngleDeg>28</maxBoneAngleDeg>
+          <turnSpeedDegPerTick>6.5</turnSpeedDegPerTick>
+          <responsiveness>0.28</responsiveness>
+          <combatTargetWeight>0.50</combatTargetWeight>
+          <pathLookAheadWeight>0.35</pathLookAheadWeight>
+          <idleScanAmplitudeDeg>0</idleScanAmplitudeDeg>
+          <idleScanPeriodTicks>180</idleScanPeriodTicks>
+          <locoWaveAmplitudeDeg>0</locoWaveAmplitudeDeg>
+          <locoWavePeriodTicks>60</locoWavePeriodTicks>
+          <oneShotClipSwayScale>0</oneShotClipSwayScale>
+          <oneShotClipAimScale>1.0</oneShotClipAimScale>
+        </li>
+        <li>
+          <chainId>claw_right_aim</chainId>
+          <boneIds>
+            <li>claw_right</li>
+          </boneIds>
+          <weights>
+            <li>1.0</li>
+          </weights>
+          <maxChainAngleDeg>28</maxChainAngleDeg>
+          <maxBoneAngleDeg>28</maxBoneAngleDeg>
+          <turnSpeedDegPerTick>6.5</turnSpeedDegPerTick>
+          <responsiveness>0.28</responsiveness>
+          <combatTargetWeight>0.50</combatTargetWeight>
+          <pathLookAheadWeight>0.35</pathLookAheadWeight>
+          <idleScanAmplitudeDeg>0</idleScanAmplitudeDeg>
+          <idleScanPeriodTicks>180</idleScanPeriodTicks>
+          <locoWaveAmplitudeDeg>0</locoWaveAmplitudeDeg>
+          <locoWavePeriodTicks>60</locoWavePeriodTicks>
+          <oneShotClipSwayScale>0</oneShotClipSwayScale>
+          <oneShotClipAimScale>1.0</oneShotClipAimScale>
+        </li>
+      </lookChains>
+      <lagBones>
+        <li>
+          <boneId>tail_seg1</boneId>
+          <followSpeedDegPerTick>2.30</followSpeedDegPerTick>
+          <followResponsiveness>0.18</followResponsiveness>
+          <forwardMotionAlignGain>2.2</forwardMotionAlignGain>
+          <maxBendAngleDeg>18</maxBendAngleDeg>
+        </li>
+      </lagBones>
+      <yawBankBones>
+        <li>
+          <boneId>tail_seg2</boneId>
+          <yawRateGain>-1.1</yawRateGain>
+          <maxAngleDeg>6</maxAngleDeg>
+          <smoothing>0.24</smoothing>
+        </li>
+        <li>
+          <boneId>tail_seg3</boneId>
+          <yawRateGain>-1.4</yawRateGain>
+          <maxAngleDeg>7</maxAngleDeg>
+          <smoothing>0.24</smoothing>
+        </li>
+      </yawBankBones>
+    </steering>
+
+    <bezierChains>
+      <li>
+        <chainId>tail_main</chainId>
+        <boneIds>
+          <li>tail_seg1</li>
+          <li>tail_seg2</li>
+          <li>tail_seg3</li>
+          <li>tail_seg4</li>
+          <li>tail_seg5</li>
+          <li>tail_seg6</li>
+          <li>tail_stinger</li>
+        </boneIds>
+        <tipUV>(0.5, 0.21)</tipUV>
+        <p1Frequency>0.22</p1Frequency>
+        <p1Damping>0.74</p1Damping>
+        <p2Frequency>0.14</p2Frequency>
+        <p2Damping>0.62</p2Damping>
+        <p3Frequency>0.095</p3Frequency>
+        <p3Damping>0.52</p3Damping>
+        <whipCrackGain>0.12</whipCrackGain>
+        <waveLagCoupling>0.28</waveLagCoupling>
+        <maxJointBendDeg>32</maxJointBendDeg>
+        <idleWaveAmplitudeDeg>1.2</idleWaveAmplitudeDeg>
+        <idleWavePeriodTicks>84</idleWavePeriodTicks>
+        <velocityTrailingGain>16</velocityTrailingGain>
+        <trailingMaxOffsetCells>1.2</trailingMaxOffsetCells>
+        <trailingLateralSign>0</trailingLateralSign>
+        <trailingLateralRatio>0</trailingLateralRatio>
+        <moveSwayAmplitudeCells>0.26</moveSwayAmplitudeCells>
+        <moveSwayPeriodTicks>48</moveSwayPeriodTicks>
+        <moveRefSpeedCellsPerTick>0.05</moveRefSpeedCellsPerTick>
+      </li>
+    </bezierChains>
+
+    <nodes>
+      <!-- 1. Root Chassis Carapace (512x512 Vector Sprite) -->
+      <li>
+        <nodeId>carapace</nodeId>
+        <label>Armored Carapace</label>
+        <texPath>Things/Pawn/GiantCreature/MechScorpion/Carapace</texPath>
+        <textureResolution>512</textureResolution>
+        <drawSize>(3.6, 3.6)</drawSize>
+        <pivotPixel>(256, 256)</pivotPixel>
+        <layerOffset>0</layerOffset>
+        <linkedBodyPart>GCF_MechCarapace</linkedBodyPart>
+        <hideWhenMissing>false</hideWhenMissing>
+        <contributesToHitbox>true</contributesToHitbox>
+        <contributesToCollision>true</contributesToCollision>
+        <alphaThreshold>32</alphaThreshold>
+        <damageMultiplier>0.68</damageMultiplier>
+        <armorMultiplier>1.55</armorMultiplier>
+        <deflectChance>0.15</deflectChance>
+        <hitVfxPreset>Sparks</hitVfxPreset>
+        <partAttacks>
+          <li>
+            <attackId>scorpion_carapace_ram</attackId>
+            <label>cephalothorax carapace</label>
+            <kind>Melee</kind>
+            <damageDef>Blunt</damageDef>
+            <power>27</power>
+            <armorPenetration>0.40</armorPenetration>
+            <warmupTime>0.48</warmupTime>
+            <cooldownTime>2.6</cooldownTime>
+            <range>2.4</range>
+            <sectorCenterDeg>0</sectorCenterDeg>
+            <sectorHalfAngleDeg>55</sectorHalfAngleDeg>
+            <knockbackDistance>1.5</knockbackDistance>
+            <selectionWeight>0.35</selectionWeight>
+            <attackAnim>GCF_Anim_MechScorpion_CarapaceRam</attackAnim>
+          </li>
+        </partAttacks>
+      </li>
+
+      <!-- 2-5. Left Independent Hydraulic Walking Legs L1..L4 (512x512 Split Vector Sprites) -->
+      <li>
+        <nodeId>leg_l1</nodeId>
+        <label>Front-Left Hydraulic Leg</label>
+        <parentId>carapace</parentId>
+        <texPath>Things/Pawn/GiantCreature/MechScorpion/LegL1</texPath>
+        <textureResolution>512</textureResolution>
+        <drawSize>(3.0, 3.0)</drawSize>
+        <pivotPixel>(402, 256)</pivotPixel>
+        <parentSocketPixel>(99, 201)</parentSocketPixel>
+        <baseAngle>0</baseAngle>
+        <layerOffset>-4</layerOffset>
+        <linkedBodyPart>GCF_MechWalkingLeg</linkedBodyPart>
+        <linkedBodyPartCustomLabel>front left hydraulic leg</linkedBodyPartCustomLabel>
+        <hideWhenMissing>true</hideWhenMissing>
+        <contributesToHitbox>true</contributesToHitbox>
+        <contributesToCollision>false</contributesToCollision>
+        <alphaThreshold>32</alphaThreshold>
+        <damageMultiplier>1.18</damageMultiplier>
+        <hitVfxPreset>Sparks</hitVfxPreset>
+        <severVfxPreset>MechExplosion</severVfxPreset>
+        <severVfxScale>0.85</severVfxScale>
+      </li>
+      <li>
+        <nodeId>leg_l2</nodeId>
+        <label>Mid-Front-Left Hydraulic Leg</label>
+        <parentId>carapace</parentId>
+        <texPath>Things/Pawn/GiantCreature/MechScorpion/LegL2</texPath>
+        <textureResolution>512</textureResolution>
+        <drawSize>(3.0, 3.0)</drawSize>
+        <pivotPixel>(402, 256)</pivotPixel>
+        <parentSocketPixel>(99, 241)</parentSocketPixel>
+        <baseAngle>0</baseAngle>
+        <layerOffset>-5</layerOffset>
+        <linkedBodyPart>GCF_MechWalkingLeg</linkedBodyPart>
+        <linkedBodyPartCustomLabel>mid front left hydraulic leg</linkedBodyPartCustomLabel>
+        <hideWhenMissing>true</hideWhenMissing>
+        <contributesToHitbox>true</contributesToHitbox>
+        <contributesToCollision>false</contributesToCollision>
+        <alphaThreshold>32</alphaThreshold>
+        <damageMultiplier>1.18</damageMultiplier>
+        <hitVfxPreset>Sparks</hitVfxPreset>
+        <severVfxPreset>MechExplosion</severVfxPreset>
+        <severVfxScale>0.85</severVfxScale>
+      </li>
+      <li>
+        <nodeId>leg_l3</nodeId>
+        <label>Mid-Rear-Left Hydraulic Leg</label>
+        <parentId>carapace</parentId>
+        <texPath>Things/Pawn/GiantCreature/MechScorpion/LegL3</texPath>
+        <textureResolution>512</textureResolution>
+        <drawSize>(3.0, 3.0)</drawSize>
+        <pivotPixel>(402, 256)</pivotPixel>
+        <parentSocketPixel>(99, 291)</parentSocketPixel>
+        <baseAngle>0</baseAngle>
+        <layerOffset>-6</layerOffset>
+        <linkedBodyPart>GCF_MechWalkingLeg</linkedBodyPart>
+        <linkedBodyPartCustomLabel>mid rear left hydraulic leg</linkedBodyPartCustomLabel>
+        <hideWhenMissing>true</hideWhenMissing>
+        <contributesToHitbox>true</contributesToHitbox>
+        <contributesToCollision>false</contributesToCollision>
+        <alphaThreshold>32</alphaThreshold>
+        <damageMultiplier>1.18</damageMultiplier>
+        <hitVfxPreset>Sparks</hitVfxPreset>
+        <severVfxPreset>MechExplosion</severVfxPreset>
+        <severVfxScale>0.85</severVfxScale>
+      </li>
+      <li>
+        <nodeId>leg_l4</nodeId>
+        <label>Rear-Left Hydraulic Leg</label>
+        <parentId>carapace</parentId>
+        <texPath>Things/Pawn/GiantCreature/MechScorpion/LegL4</texPath>
+        <textureResolution>512</textureResolution>
+        <drawSize>(3.0, 3.0)</drawSize>
+        <pivotPixel>(420, 256)</pivotPixel>
+        <parentSocketPixel>(114, 336)</parentSocketPixel>
+        <baseAngle>0</baseAngle>
+        <layerOffset>-7</layerOffset>
+        <linkedBodyPart>GCF_MechWalkingLeg</linkedBodyPart>
+        <linkedBodyPartCustomLabel>rear left hydraulic leg</linkedBodyPartCustomLabel>
+        <hideWhenMissing>true</hideWhenMissing>
+        <contributesToHitbox>true</contributesToHitbox>
+        <contributesToCollision>false</contributesToCollision>
+        <alphaThreshold>32</alphaThreshold>
+        <damageMultiplier>1.18</damageMultiplier>
+        <hitVfxPreset>Sparks</hitVfxPreset>
+        <severVfxPreset>MechExplosion</severVfxPreset>
+        <severVfxScale>0.85</severVfxScale>
+      </li>
+
+      <!-- 6-9. Right Independent Hydraulic Walking Legs R1..R4 (512x512 Split Vector Sprites) -->
+      <li>
+        <nodeId>leg_r1</nodeId>
+        <label>Front-Right Hydraulic Leg</label>
+        <parentId>carapace</parentId>
+        <texPath>Things/Pawn/GiantCreature/MechScorpion/LegR1</texPath>
+        <textureResolution>512</textureResolution>
+        <drawSize>(3.0, 3.0)</drawSize>
+        <pivotPixel>(110, 256)</pivotPixel>
+        <parentSocketPixel>(413, 201)</parentSocketPixel>
+        <baseAngle>0</baseAngle>
+        <layerOffset>-4</layerOffset>
+        <linkedBodyPart>GCF_MechWalkingLeg</linkedBodyPart>
+        <linkedBodyPartCustomLabel>front right hydraulic leg</linkedBodyPartCustomLabel>
+        <hideWhenMissing>true</hideWhenMissing>
+        <contributesToHitbox>true</contributesToHitbox>
+        <contributesToCollision>false</contributesToCollision>
+        <alphaThreshold>32</alphaThreshold>
+        <damageMultiplier>1.18</damageMultiplier>
+        <hitVfxPreset>Sparks</hitVfxPreset>
+        <severVfxPreset>MechExplosion</severVfxPreset>
+        <severVfxScale>0.85</severVfxScale>
+      </li>
+      <li>
+        <nodeId>leg_r2</nodeId>
+        <label>Mid-Front-Right Hydraulic Leg</label>
+        <parentId>carapace</parentId>
+        <texPath>Things/Pawn/GiantCreature/MechScorpion/LegR2</texPath>
+        <textureResolution>512</textureResolution>
+        <drawSize>(3.0, 3.0)</drawSize>
+        <pivotPixel>(110, 256)</pivotPixel>
+        <parentSocketPixel>(413, 241)</parentSocketPixel>
+        <baseAngle>0</baseAngle>
+        <layerOffset>-5</layerOffset>
+        <linkedBodyPart>GCF_MechWalkingLeg</linkedBodyPart>
+        <linkedBodyPartCustomLabel>mid front right hydraulic leg</linkedBodyPartCustomLabel>
+        <hideWhenMissing>true</hideWhenMissing>
+        <contributesToHitbox>true</contributesToHitbox>
+        <contributesToCollision>false</contributesToCollision>
+        <alphaThreshold>32</alphaThreshold>
+        <damageMultiplier>1.18</damageMultiplier>
+        <hitVfxPreset>Sparks</hitVfxPreset>
+        <severVfxPreset>MechExplosion</severVfxPreset>
+        <severVfxScale>0.85</severVfxScale>
+      </li>
+      <li>
+        <nodeId>leg_r3</nodeId>
+        <label>Mid-Rear-Right Hydraulic Leg</label>
+        <parentId>carapace</parentId>
+        <texPath>Things/Pawn/GiantCreature/MechScorpion/LegR3</texPath>
+        <textureResolution>512</textureResolution>
+        <drawSize>(3.0, 3.0)</drawSize>
+        <pivotPixel>(110, 256)</pivotPixel>
+        <parentSocketPixel>(413, 291)</parentSocketPixel>
+        <baseAngle>0</baseAngle>
+        <layerOffset>-6</layerOffset>
+        <linkedBodyPart>GCF_MechWalkingLeg</linkedBodyPart>
+        <linkedBodyPartCustomLabel>mid rear right hydraulic leg</linkedBodyPartCustomLabel>
+        <hideWhenMissing>true</hideWhenMissing>
+        <contributesToHitbox>true</contributesToHitbox>
+        <contributesToCollision>false</contributesToCollision>
+        <alphaThreshold>32</alphaThreshold>
+        <damageMultiplier>1.18</damageMultiplier>
+        <hitVfxPreset>Sparks</hitVfxPreset>
+        <severVfxPreset>MechExplosion</severVfxPreset>
+        <severVfxScale>0.85</severVfxScale>
+      </li>
+      <li>
+        <nodeId>leg_r4</nodeId>
+        <label>Rear-Right Hydraulic Leg</label>
+        <parentId>carapace</parentId>
+        <texPath>Things/Pawn/GiantCreature/MechScorpion/LegR4</texPath>
+        <textureResolution>512</textureResolution>
+        <drawSize>(3.0, 3.0)</drawSize>
+        <pivotPixel>(92, 256)</pivotPixel>
+        <parentSocketPixel>(398, 336)</parentSocketPixel>
+        <baseAngle>0</baseAngle>
+        <layerOffset>-7</layerOffset>
+        <linkedBodyPart>GCF_MechWalkingLeg</linkedBodyPart>
+        <linkedBodyPartCustomLabel>rear right hydraulic leg</linkedBodyPartCustomLabel>
+        <hideWhenMissing>true</hideWhenMissing>
+        <contributesToHitbox>true</contributesToHitbox>
+        <contributesToCollision>false</contributesToCollision>
+        <alphaThreshold>32</alphaThreshold>
+        <damageMultiplier>1.18</damageMultiplier>
+        <hitVfxPreset>Sparks</hitVfxPreset>
+        <severVfxPreset>MechExplosion</severVfxPreset>
+        <severVfxScale>0.85</severVfxScale>
+      </li>
+
+      <!-- 4. Left Heavy Crusher Claw (512x512 Vector Sprite) -->
+      <li>
+        <nodeId>claw_left</nodeId>
+        <label>Left Crusher Claw</label>
+        <parentId>carapace</parentId>
+        <texPath>Things/Pawn/GiantCreature/MechScorpion/ClawLeft</texPath>
+        <textureResolution>512</textureResolution>
+        <drawSize>(3.1, 3.1)</drawSize>
+        <pivotPixel>(338, 412)</pivotPixel>
+        <parentSocketPixel>(114, 126)</parentSocketPixel>
+        <baseAngle>-14</baseAngle>
+        <layerOffset>4</layerOffset>
+        <linkedBodyPart>GCF_MechCrusherClaw</linkedBodyPart>
+        <linkedBodyPartCustomLabel>left crusher claw</linkedBodyPartCustomLabel>
+        <hideWhenMissing>true</hideWhenMissing>
+        <contributesToHitbox>true</contributesToHitbox>
+        <contributesToCollision>true</contributesToCollision>
+        <alphaThreshold>32</alphaThreshold>
+        <damageMultiplier>1.08</damageMultiplier>
+        <hitVfxPreset>Sparks</hitVfxPreset>
+        <severVfxPreset>MechExplosion</severVfxPreset>
+        <severVfxScale>1.05</severVfxScale>
+        <aimAtTargetWeight>0.25</aimAtTargetWeight>
+        <aimMaxAngle>22</aimMaxAngle>
+        <partAttacks>
+          <li>
+            <attackId>scorpion_claw_left</attackId>
+            <label>left crusher claw</label>
+            <kind>Melee</kind>
+            <damageDef>Cut</damageDef>
+            <power>33</power>
+            <armorPenetration>0.50</armorPenetration>
+            <warmupTime>0.42</warmupTime>
+            <cooldownTime>2.4</cooldownTime>
+            <initialPhaseOffset01>0.0</initialPhaseOffset01>
+            <range>2.8</range>
+            <sectorCenterDeg>-24</sectorCenterDeg>
+            <sectorHalfAngleDeg>72</sectorHalfAngleDeg>
+            <attackAnim>GCF_Anim_MechScorpion_ClawLeft</attackAnim>
+          </li>
+        </partAttacks>
+      </li>
+
+      <!-- 5. Right Heavy Crusher Claw (512x512 Vector Sprite) -->
+      <li>
+        <nodeId>claw_right</nodeId>
+        <label>Right Crusher Claw</label>
+        <parentId>carapace</parentId>
+        <texPath>Things/Pawn/GiantCreature/MechScorpion/ClawRight</texPath>
+        <textureResolution>512</textureResolution>
+        <drawSize>(3.1, 3.1)</drawSize>
+        <pivotPixel>(174, 412)</pivotPixel>
+        <parentSocketPixel>(398, 126)</parentSocketPixel>
+        <baseAngle>14</baseAngle>
+        <layerOffset>4</layerOffset>
+        <linkedBodyPart>GCF_MechCrusherClaw</linkedBodyPart>
+        <linkedBodyPartCustomLabel>right crusher claw</linkedBodyPartCustomLabel>
+        <hideWhenMissing>true</hideWhenMissing>
+        <contributesToHitbox>true</contributesToHitbox>
+        <contributesToCollision>true</contributesToCollision>
+        <alphaThreshold>32</alphaThreshold>
+        <damageMultiplier>1.08</damageMultiplier>
+        <hitVfxPreset>Sparks</hitVfxPreset>
+        <severVfxPreset>MechExplosion</severVfxPreset>
+        <severVfxScale>1.05</severVfxScale>
+        <aimAtTargetWeight>0.25</aimAtTargetWeight>
+        <aimMaxAngle>22</aimMaxAngle>
+        <partAttacks>
+          <li>
+            <attackId>scorpion_claw_right</attackId>
+            <label>right crusher claw</label>
+            <kind>Melee</kind>
+            <damageDef>Cut</damageDef>
+            <power>33</power>
+            <armorPenetration>0.50</armorPenetration>
+            <warmupTime>0.42</warmupTime>
+            <cooldownTime>2.4</cooldownTime>
+            <initialPhaseOffset01>0.5</initialPhaseOffset01>
+            <range>2.8</range>
+            <sectorCenterDeg>24</sectorCenterDeg>
+            <sectorHalfAngleDeg>72</sectorHalfAngleDeg>
+            <attackAnim>GCF_Anim_MechScorpion_ClawRight</attackAnim>
+          </li>
+        </partAttacks>
+      </li>
+
+      <!-- 12-18. 7-Segment Articulated Extended Plasma Tail Chain (7x 512x512 Vector Sprites) -->
+      <li>
+        <nodeId>tail_seg1</nodeId>
+        <label>Tail Segment 1</label>
+        <parentId>carapace</parentId>
+        <texPath>Things/Pawn/GiantCreature/MechScorpion/TailSeg1</texPath>
+        <textureResolution>512</textureResolution>
+        <drawSize>(2.2, 2.2)</drawSize>
+        <pivotPixel>(256, 176)</pivotPixel>
+        <parentSocketPixel>(256, 434)</parentSocketPixel>
+        <baseAngle>0</baseAngle>
+        <layerOffset>10</layerOffset>
+        <linkedBodyPart>GCF_MechTailRing1</linkedBodyPart>
+        <linkedBodyPartCustomLabel>tail segment 1</linkedBodyPartCustomLabel>
+        <hideWhenMissing>true</hideWhenMissing>
+        <contributesToHitbox>true</contributesToHitbox>
+        <contributesToCollision>true</contributesToCollision>
+        <alphaThreshold>32</alphaThreshold>
+        <hitVfxPreset>Sparks</hitVfxPreset>
+        <severVfxPreset>MechExplosion</severVfxPreset>
+        <severVfxScale>1.05</severVfxScale>
+      </li>
+      <li>
+        <nodeId>tail_seg2</nodeId>
+        <label>Tail Segment 2</label>
+        <parentId>tail_seg1</parentId>
+        <texPath>Things/Pawn/GiantCreature/MechScorpion/TailSeg2</texPath>
+        <textureResolution>512</textureResolution>
+        <drawSize>(2.2, 2.2)</drawSize>
+        <pivotPixel>(256, 176)</pivotPixel>
+        <parentSocketPixel>(256, 308)</parentSocketPixel>
+        <baseAngle>0</baseAngle>
+        <layerOffset>11</layerOffset>
+        <linkedBodyPart>GCF_MechTailRing2</linkedBodyPart>
+        <linkedBodyPartCustomLabel>tail segment 2</linkedBodyPartCustomLabel>
+        <hideWhenMissing>true</hideWhenMissing>
+        <contributesToHitbox>true</contributesToHitbox>
+        <contributesToCollision>true</contributesToCollision>
+        <alphaThreshold>32</alphaThreshold>
+        <hitVfxPreset>Sparks</hitVfxPreset>
+        <severVfxPreset>MechExplosion</severVfxPreset>
+        <severVfxScale>1.0</severVfxScale>
+      </li>
+      <li>
+        <nodeId>tail_seg3</nodeId>
+        <label>Tail Segment 3</label>
+        <parentId>tail_seg2</parentId>
+        <texPath>Things/Pawn/GiantCreature/MechScorpion/TailSeg3</texPath>
+        <textureResolution>512</textureResolution>
+        <drawSize>(2.2, 2.2)</drawSize>
+        <pivotPixel>(256, 176)</pivotPixel>
+        <parentSocketPixel>(256, 306)</parentSocketPixel>
+        <baseAngle>0</baseAngle>
+        <layerOffset>12</layerOffset>
+        <linkedBodyPart>GCF_MechTailRing3</linkedBodyPart>
+        <linkedBodyPartCustomLabel>tail segment 3</linkedBodyPartCustomLabel>
+        <hideWhenMissing>true</hideWhenMissing>
+        <contributesToHitbox>true</contributesToHitbox>
+        <contributesToCollision>false</contributesToCollision>
+        <alphaThreshold>32</alphaThreshold>
+        <hitVfxPreset>Sparks</hitVfxPreset>
+        <severVfxPreset>MechExplosion</severVfxPreset>
+        <severVfxScale>1.0</severVfxScale>
+      </li>
+      <li>
+        <nodeId>tail_seg4</nodeId>
+        <label>Tail Segment 4</label>
+        <parentId>tail_seg3</parentId>
+        <texPath>Things/Pawn/GiantCreature/MechScorpion/TailSeg4</texPath>
+        <textureResolution>512</textureResolution>
+        <drawSize>(2.2, 2.2)</drawSize>
+        <pivotPixel>(256, 176)</pivotPixel>
+        <parentSocketPixel>(256, 304)</parentSocketPixel>
+        <baseAngle>0</baseAngle>
+        <layerOffset>13</layerOffset>
+        <linkedBodyPart>GCF_MechTailRing4</linkedBodyPart>
+        <linkedBodyPartCustomLabel>tail segment 4</linkedBodyPartCustomLabel>
+        <hideWhenMissing>true</hideWhenMissing>
+        <contributesToHitbox>true</contributesToHitbox>
+        <contributesToCollision>false</contributesToCollision>
+        <alphaThreshold>32</alphaThreshold>
+        <damageMultiplier>1.08</damageMultiplier>
+        <hitVfxPreset>Sparks</hitVfxPreset>
+        <severVfxPreset>MechExplosion</severVfxPreset>
+        <severVfxScale>0.95</severVfxScale>
+      </li>
+      <li>
+        <nodeId>tail_seg5</nodeId>
+        <label>Tail Segment 5</label>
+        <parentId>tail_seg4</parentId>
+        <texPath>Things/Pawn/GiantCreature/MechScorpion/TailSeg5</texPath>
+        <textureResolution>512</textureResolution>
+        <drawSize>(2.2, 2.2)</drawSize>
+        <pivotPixel>(256, 176)</pivotPixel>
+        <parentSocketPixel>(256, 302)</parentSocketPixel>
+        <baseAngle>0</baseAngle>
+        <layerOffset>14</layerOffset>
+        <linkedBodyPart>GCF_MechTailRing5</linkedBodyPart>
+        <linkedBodyPartCustomLabel>tail segment 5</linkedBodyPartCustomLabel>
+        <hideWhenMissing>true</hideWhenMissing>
+        <contributesToHitbox>true</contributesToHitbox>
+        <contributesToCollision>false</contributesToCollision>
+        <alphaThreshold>32</alphaThreshold>
+        <damageMultiplier>1.10</damageMultiplier>
+        <hitVfxPreset>Sparks</hitVfxPreset>
+        <severVfxPreset>MechExplosion</severVfxPreset>
+        <severVfxScale>0.95</severVfxScale>
+      </li>
+      <li>
+        <nodeId>tail_seg6</nodeId>
+        <label>Tail Segment 6</label>
+        <parentId>tail_seg5</parentId>
+        <texPath>Things/Pawn/GiantCreature/MechScorpion/TailSeg6</texPath>
+        <textureResolution>512</textureResolution>
+        <drawSize>(2.2, 2.2)</drawSize>
+        <pivotPixel>(256, 176)</pivotPixel>
+        <parentSocketPixel>(256, 300)</parentSocketPixel>
+        <baseAngle>0</baseAngle>
+        <layerOffset>15</layerOffset>
+        <linkedBodyPart>GCF_MechTailRing6</linkedBodyPart>
+        <linkedBodyPartCustomLabel>tail segment 6</linkedBodyPartCustomLabel>
+        <hideWhenMissing>true</hideWhenMissing>
+        <contributesToHitbox>true</contributesToHitbox>
+        <contributesToCollision>false</contributesToCollision>
+        <alphaThreshold>32</alphaThreshold>
+        <damageMultiplier>1.12</damageMultiplier>
+        <hitVfxPreset>Sparks</hitVfxPreset>
+        <severVfxPreset>MechExplosion</severVfxPreset>
+        <severVfxScale>0.95</severVfxScale>
+      </li>
+      <li>
+        <nodeId>tail_stinger</nodeId>
+        <label>Plasma Tail Stinger</label>
+        <parentId>tail_seg6</parentId>
+        <texPath>Things/Pawn/GiantCreature/MechScorpion/TailStingerTip</texPath>
+        <textureResolution>512</textureResolution>
+        <drawSize>(2.2, 2.2)</drawSize>
+        <pivotPixel>(256, 136)</pivotPixel>
+        <parentSocketPixel>(256, 298)</parentSocketPixel>
+        <muzzlePixel>(256, 404)</muzzlePixel>
+        <muzzleAngleOffset>180</muzzleAngleOffset>
+        <muzzleVfxPreset>PlasmaBurst</muzzleVfxPreset>
+        <muzzleVfxScale>1.05</muzzleVfxScale>
+        <muzzleVfxColor>(0.35, 0.92, 1.0, 0.92)</muzzleVfxColor>
+        <emitterSockets>
+          <li>
+            <socketId>stinger_tip</socketId>
+            <pixel>(256, 404)</pixel>
+            <angleOffset>180</angleOffset>
+            <vfxPreset>PlasmaBurst</vfxPreset>
+            <vfxScale>1.05</vfxScale>
+            <vfxColor>(0.35, 0.92, 1.0, 0.92)</vfxColor>
+          </li>
+        </emitterSockets>
+        <baseAngle>0</baseAngle>
+        <layerOffset>16</layerOffset>
+        <linkedBodyPart>GCF_MechTailStinger</linkedBodyPart>
+        <linkedBodyPartCustomLabel>plasma tail stinger</linkedBodyPartCustomLabel>
+        <hideWhenMissing>true</hideWhenMissing>
+        <contributesToHitbox>true</contributesToHitbox>
+        <contributesToCollision>false</contributesToCollision>
+        <alphaThreshold>32</alphaThreshold>
+        <damageMultiplier>1.12</damageMultiplier>
+        <hitVfxPreset>PlasmaFlash</hitVfxPreset>
+        <severVfxPreset>MechExplosion</severVfxPreset>
+        <severVfxScale>1.05</severVfxScale>
+        <partAttacks>
+          <li>
+            <attackId>scorpion_plasma_barrage</attackId>
+            <label>plasma tail barrage</label>
+            <kind>Ranged</kind>
+            <projectileDef>GCF_Bullet_PlasmaStinger</projectileDef>
+            <socketId>stinger_tip</socketId>
+            <rangeOriginBoneId>carapace</rangeOriginBoneId>
+            <minRange>7.5</minRange>
+            <range>28.4</range>
+            <warmupTime>0.62</warmupTime>
+            <cooldownTime>4.4</cooldownTime>
+            <burstShotCount>4</burstShotCount>
+            <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+            <sectorCenterDeg>0</sectorCenterDeg>
+            <sectorHalfAngleDeg>32</sectorHalfAngleDeg>
+            <vfxPresetOverride>PlasmaBurst</vfxPresetOverride>
+            <vfxScale>1.05</vfxScale>
+            <vfxColor>(0.35, 0.92, 1.0, 0.92)</vfxColor>
+            <soundCast>Shot_ChargeBlaster</soundCast>
+            <soundCastTail>GunTail_Heavy</soundCastTail>
+            <attackAnim>GCF_Anim_MechScorpion_RangedTail</attackAnim>
+          </li>
+        </partAttacks>
+      </li>
+    </nodes>
+  </GiantCreatureFramework.GiantRigDef>
+
+</Defs>

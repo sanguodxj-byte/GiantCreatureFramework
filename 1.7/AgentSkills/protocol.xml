@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AgentProtocol>
+  <!-- Scatter prompts & fallback notices -->
+  <LlmClient_VisionFallbackPrompt>请分析当前游戏状态。</LlmClient_VisionFallbackPrompt>
+  <LlmClient_VisionFallbackNotice>[用户发起了当前游戏界面截图分析，但当前模型接口不支持视觉 image_url 输入；请主动调用 search_defs、get_def_details、get_recent_errors 等运行时工具获取当前游戏状态进行回答]</LlmClient_VisionFallbackNotice>
+  <ChatWindow_ScreenshotDefaultPrompt>请结合当前游戏界面截图，分析画面中的局势、状态或问题。</ChatWindow_ScreenshotDefaultPrompt>
+  <LlmClient_AbortedToolResult>查询未完成或已取消</LlmClient_AbortedToolResult>
+
+  <!-- Turn runner markers & errors -->
+  <TurnRunner_SubmitAlone>请在读取调查结果后，单独提交最终回答。</TurnRunner_SubmitAlone>
+  <TurnRunner_NoPendingDraft>没有待修复回答，请先 submit_answer。</TurnRunner_NoPendingDraft>
+  <TurnRunner_RepairArgsObject>修复参数必须是对象。</TurnRunner_RepairArgsObject>
+  <TurnRunner_EvidenceIdsArray>evidenceIds 必须是数组。</TurnRunner_EvidenceIdsArray>
+  <TurnRunner_SynthesisOnly>当前仅提交已有证据的结论。</TurnRunner_SynthesisOnly>
+  <TurnRunner_BudgetExhausted>调查预算已用尽，请提交已确认部分或 insufficient。</TurnRunner_BudgetExhausted>
+  <TurnRunner_SynthesisReasonLimit>已达到调用方显式指定的调查限制。</TurnRunner_SynthesisReasonLimit>
+  <TurnRunner_SynthesisReasonTimeout>上一次模型或工具请求超时，已取得的证据仍保留。</TurnRunner_SynthesisReasonTimeout>
+  <TurnRunner_IncompleteTailError>单轮探索已达时间上限，跳过剩余探针直接汇总</TurnRunner_IncompleteTailError>
+  <TurnRunner_CompactNote>上下文预算摘要，不是完整查询结果</TurnRunner_CompactNote>
+  <TurnRunner_HistoryEvidenceMarker>
+[历史查询依据，实时状态需刷新]
+</TurnRunner_HistoryEvidenceMarker>
+  <TurnRunner_HistoryEvidenceFolded>...[历史查询依据因上下文预算已折叠]</TurnRunner_HistoryEvidenceFolded>
+  <TurnRunner_AttachedImageIntro>以下是上一步工具生成的图片（{0}），请直接检查其画风、边缘退绿、外轮廓与关节对位：</TurnRunner_AttachedImageIntro>
+
+  <!-- Evidence & EvidenceContext -->
+  <Evidence_Redacted>[已隐藏凭据]</Evidence_Redacted>
+  <Evidence_BudgetTruncatedNote>结果超出预算，预览不完整。请缩小查询范围或分页，禁止把未显示部分当作不存在。</Evidence_BudgetTruncatedNote>
+  <Evidence_OmittedSuffix> [omitted: resultBudget]</Evidence_OmittedSuffix>
+  <Evidence_ArgsMustBeObject>参数必须是对象。</Evidence_ArgsMustBeObject>
+  <Evidence_FoldRequiresNotesAndIds>折叠需要非空笔记和有效证据列表。</Evidence_FoldRequiresNotesAndIds>
+  <Evidence_FoldInvalidId>不能折叠未知、失败或有歧义的证据。</Evidence_FoldInvalidId>
+  <Evidence_ReadNotFound>未找到该有效证据；不能读取失败、其他对话或已关闭的历史。</Evidence_ReadNotFound>
+  <Evidence_PathOrPathsExclusive>请提供 path 或非空 paths，不能同时使用。</Evidence_PathOrPathsExclusive>
+  <Evidence_PathsMustBeStringArray>paths 必须是字符串数组。</Evidence_PathsMustBeStringArray>
+  <Evidence_AllPathsFailed>所有 path 均读取失败。</Evidence_AllPathsFailed>
+  <Evidence_PathMustBePointer>path 必须是 JSON Pointer。</Evidence_PathMustBePointer>
+  <Evidence_PathMissing>证据中不存在该 path。</Evidence_PathMissing>
+  <Evidence_ArrayPagingOnlyOnArray>数组分页参数只能用于数组 path。</Evidence_ArrayPagingOnlyOnArray>
+  <Evidence_ArrayPagingOutOfRange>数组分页范围无效。</Evidence_ArrayPagingOutOfRange>
+  <Evidence_LinePagingOutOfRange>分页范围无效。</Evidence_LinePagingOutOfRange>
+  <Evidence_FoldedArgsMarker>[见本调用结果的 notes]</Evidence_FoldedArgsMarker>
+  <Evidence_DraftRetainedMarker>[原回答正文保留在本地，可用 repair_answer 仅修正引用]</Evidence_DraftRetainedMarker>
+  <Evidence_HistoricalIndexNote>本地保留的历史查询目录，内容需按编号读取；状态类问题仍需刷新。</Evidence_HistoricalIndexNote>
+  <Evidence_ShallowSummaryFull>完整内容可读取</Evidence_ShallowSummaryFull>
+
+  <!-- ConversationHistory -->
+  <History_ScreenshotPrefix>[附带游戏界面截图] </History_ScreenshotPrefix>
+  <History_AssistantCallsLabel>历史查询记录（包括未完成回答中已取得的证据）</History_AssistantCallsLabel>
+  <History_CallFailedNote>该查询失败或未完成，可按需要重试。</History_CallFailedNote>
+  <History_CallArchivedNote>历史结果未纳入本次上下文预算，可定向重新查询。</History_CallArchivedNote>
+  <History_SnapshotNote>历史依据；状态类问题必须刷新，失败轮次中的有效文件和源码证据仍可使用。</History_SnapshotNote>
+  <History_IncompleteTurnNotice>[此轮回答未完成。上方有效工具证据已保留，请继续调查而非从头搜索。]</History_IncompleteTurnNotice>
+  <History_LacksRuntimeEvidenceNotice>[此历史回复缺少运行时依据，具体游戏事实需重新核实。]</History_LacksRuntimeEvidenceNotice>
+  <History_SessionArchiveNote>旧轮次原始结果已按保留预算归档，请重新查询实时状态。</History_SessionArchiveNote>
+  <History_SessionBudgetArchivedNote>历史依据保留预算已达上限，请重新查询</History_SessionBudgetArchivedNote>
+
+  <!-- AnswerContract -->
+  <Contract_SubmitDesc>单独提交最终回答。grounded=有有效证据的游戏事实或制作/校验结果；general=一般交流；insufficient=无法确认。引用有效不代表推理正确。</Contract_SubmitDesc>
+  <Contract_EvidenceIdsDesc>支撑结论的有效证据编号；grounded 至少一个，其余可空。</Contract_EvidenceIdsDesc>
+  <Contract_ArgsMustBeObject>提交参数必须是对象。</Contract_ArgsMustBeObject>
+  <Contract_EmptyAnswer>回答不能为空。</Contract_EmptyAnswer>
+  <Contract_InvalidKind>回答类型无效。</Contract_InvalidKind>
+  <Contract_EvidenceIdsArray>evidenceIds 必须是数组。</Contract_EvidenceIdsArray>
+  <Contract_GroundedRequiresEvidence>具体游戏结论必须引用已有有效证据；请自主补充调查或提交 insufficient。</Contract_GroundedRequiresEvidence>
+  <Contract_InvalidEvidencePrefix>引用包含未知、失败或已归档的证据，请改用有效 evidenceId：</Contract_InvalidEvidencePrefix>
+  <Contract_RepairDesc>仅更正上一份未通过引用校验的回答所用证据，不必重复正文。若正文需要修改，请重新 submit_answer。单独调用。</Contract_RepairDesc>
+
+  <!-- ToolDiscovery & Validation -->
+  <Discovery_UnknownToolsPrefix>未知工具：</Discovery_UnknownToolsPrefix>
+  <Discovery_GroupsPrefix>仅查看组内目录：</Discovery_GroupsPrefix>
+  <Discovery_SelectedToolsDesc>选中的准确工具名；只有这些工具会提供完整定义。</Discovery_SelectedToolsDesc>
+  <Discovery_ReplaceDesc>默认 true：替换已加载集合；false：追加。</Discovery_ReplaceDesc>
+  <Discovery_OtherGroupPurpose>其他可用能力</Discovery_OtherGroupPurpose>
+  <Validation_ArgsMustBeObject>工具参数必须是对象。</Validation_ArgsMustBeObject>
+  <Validation_MissingParamPrefix>缺少参数：</Validation_MissingParamPrefix>
+  <Validation_UnknownParamPrefix>未知参数：</Validation_UnknownParamPrefix>
+  <Validation_InvalidTypeOrRangePrefix>参数类型或范围无效：</Validation_InvalidTypeOrRangePrefix>
+  <Validation_InvalidEnumPrefix>参数枚举值无效：</Validation_InvalidEnumPrefix>
+  <Validation_MissingArrayItemsPrefix>数组 schema 缺少 items：</Validation_MissingArrayItemsPrefix>
+  <Registry_UnknownToolPrefix>未知工具: </Registry_UnknownToolPrefix>
+
+  <!-- Built-in local evidence tools -->
+  <Tool_ReadEvidence_Desc>读取已取得证据的本地完整快照，不重新执行游戏查询。可读取历史索引或 $evidenceRef 指向的数据。path 是 JSON Pointer（如 /data/code）；按行分页，maxLines=0 读取全部。动态游戏状态仍需原工具刷新。</Tool_ReadEvidence_Desc>
+  <Tool_ReadEvidence_PathDesc>留空读取完整证据；也可用 $evidenceRef 的 path。</Tool_ReadEvidence_PathDesc>
+  <Tool_ReadEvidence_PathsDesc>一次读取同一证据的多个 JSON Pointer；与 path 二选一。</Tool_ReadEvidence_PathsDesc>
+  <Tool_ReadEvidence_StartIndexDesc>可选数组起始下标；用于继续读取 nextIndex。</Tool_ReadEvidence_StartIndexDesc>
+  <Tool_ReadEvidence_MaxItemsDesc>可选数组分页条数；0 表示剩余全部。</Tool_ReadEvidence_MaxItemsDesc>
+  <Tool_FoldEvidence_Desc>已理解一组证据后，记录简洁调查笔记，并将指定结果在后续请求中折叠为索引，减少重复输入。完整原文保留，可随时 read_evidence 重读。笔记是你的归纳，不是新证据；保留关键数值、条件、未知和所需引用。是否折叠由你决定。</Tool_FoldEvidence_Desc>
+
+  <!-- Read probes & Authoring errors -->
+  <Probe_DuplicateDefName>同名定义有多个候选，请指定 defType。</Probe_DuplicateDefName>
+  <Probe_AmbiguousLabel>显示名称存在歧义，请先搜索并使用准确 defName。</Probe_AmbiguousLabel>
+  <Probe_InvalidRelativePath>请使用检索结果中的 relativeXmlPath。</Probe_InvalidRelativePath>
+  <Probe_TraversalForbidden>不允许目录跳转。</Probe_TraversalForbidden>
+  <Probe_XmlOnly>只允许读取活动模组的 XML 内容文件。</Probe_XmlOnly>
+  <Probe_NotInLoadFolder>该文件不属于当前活动加载目录。</Probe_NotInLoadFolder>
+  <Probe_ShadowedFile>该文件被更高优先级加载目录覆盖，请重新检索生效文件。</Probe_ShadowedFile>
+  <Probe_ReparsePointForbidden>不读取模组根目录内的链接文件或目录。</Probe_ReparsePointForbidden>
+  <Probe_XmlTooLarge>XML 文件超过 16 MB，请缩小查询范围。</Probe_XmlTooLarge>
+  <Probe_LineTooLong>第 {0} 行超过输出预算，不能可靠按行读取。</Probe_LineTooLong>
+  <Probe_ModXmlNote>原始 XML 与注释证据；条件补丁是否执行仍需结合运行时 Def。</Probe_ModXmlNote>
+  <Probe_MapSwitched>存档或地图已切换，请在当前地图重新提问。</Probe_MapSwitched>
+  <Probe_BudgetTimeout>查询超过执行预算，请使用准确名称或缩小范围。</Probe_BudgetTimeout>
+  <Probe_EmptyQuery>query 不能为空，请传入一个或多个中英文关键词（支持用逗号分隔同义词与英文变体）。</Probe_EmptyQuery>
+  <Probe_DisclosureLevel1>Level 1: 轻量评分索引列表（如需查看某个 Def 的获取方式、属性或非空字段目录大纲，请对目标 defName 调用 get_def_details）</Probe_DisclosureLevel1>
+  <Probe_DisclosureLevel2>Level 2: Def 概览与非空字段目录大纲（如需深入展开特定字段，请再次调用 get_def_details 并在 fields 参数中传入 nonEmptyOutline 中的字段名，逗号分隔）</Probe_DisclosureLevel2>
+  <Probe_DisclosureLevel3>Level 3: 指定字段展开明细 ({0})</Probe_DisclosureLevel3>
+  <Probe_EmptyDefName>defName 不能为空</Probe_EmptyDefName>
+  <Probe_DefNotFound>未找到名为 '{0}' 的 Def，可先调用 search_defs 并传入多个中英文关键词变体进行模糊搜索。</Probe_DefNotFound>
+  <Probe_ExpandHint>Object&lt;{0}&gt; (可传入 fields="{1}" 展开)</Probe_ExpandHint>
+  <Probe_MissingField>公开字段不存在</Probe_MissingField>
+  <Probe_EmptyKeyword>keyword 不能为空。</Probe_EmptyKeyword>
+  <Probe_InvalidXmlScope>scope 必须是 all、defs、patches 或 languages。</Probe_InvalidXmlScope>
+  <Probe_ModNotFound>未找到指定模组，不会扩大到其他模组。</Probe_ModNotFound>
+  <Probe_ExactModNotFound>未找到该精确 packageId 的已加载模组。</Probe_ExactModNotFound>
+  <Probe_XmlSearchLimitations>文本命中仅为来源候选，不证明 Patch 条件成立或已执行。Languages 搜索包含加载目录内的语言文件，未限制为当前语言。</Probe_XmlSearchLimitations>
+  <Probe_FoldedLiSummary>... [已自动折叠 {0} 行重复 &lt;li&gt; 项 (第 {1}..{2} 行)] ...</Probe_FoldedLiSummary>
+  <Probe_TruncatedTail>...[已截断]</Probe_TruncatedTail>
+  <Probe_AntiExampleBlocked>安全拦截：工程内置存量巨兽（{0}）属于禁止参考的错误反例，严禁查询、读取或模仿其定义与 XML。请调用 load_manual 依据运行时制作手册独立设计，或仅查询原版/DLC 基础定义与当前工作区自定义生物。</Probe_AntiExampleBlocked>
+
+  <!-- Workspace & Authoring tool messages -->
+  <Authoring_InvalidCreatureName>creatureName 无效：只允许字母、数字、下划线或连字符，且不能为空或包含路径分隔符。</Authoring_InvalidCreatureName>
+  <Authoring_PathOutOfBounds>路径越界：只允许读写当前生物工作区目录内的文件。</Authoring_PathOutOfBounds>
+  <Authoring_ReparseForbidden>安全拒绝：工作区内不允许符号链接或目录联接（ReparsePoint）。</Authoring_ReparseForbidden>
+  <Authoring_XmlOnlyInDefs>写入 XML 只允许落在 Defs/ 子目录下并以 .xml 结尾。</Authoring_XmlOnlyInDefs>
+  <Authoring_PngOnly>图片路径必须以 .png 结尾并位于当前生物工作区内。</Authoring_PngOnly>
+  <Authoring_ManualNotFound>未找到名为 '{0}' 的运行时制作手册，请先调用 list_manuals 查看可用名称。</Authoring_ManualNotFound>
+  <Authoring_ImageEndpointMissing>未配置图像生成接口地址或模型名，请在终端配置面板中填写图像接口配置。</Authoring_ImageEndpointMissing>
+  <Authoring_ImageHttpError>图像生成接口返回 HTTP {0}：{1}</Authoring_ImageHttpError>
+  <Authoring_ImageEmptyData>图像生成接口未返回有效的图片数据。</Authoring_ImageEmptyData>
+  <Authoring_BodyPartCountChanged>地图或世界中已存在使用 BodyDef '{0}' 的个体，且本次修改改变了部位总数（{1} -&gt; {2}），无法安全重映射伤病记录；请先移除该种族现有个体后再注入。</Authoring_BodyPartCountChanged>
+  <Authoring_SpawnFailed>生成失败：请确认当前已进入地图（Playing）、pawnKindDefName '{0}' 已成功热注入且坐标 ({1},{2}) 在地图范围内。</Authoring_SpawnFailed>
+  <Authoring_PromptMissingBuiltin>生图提示词校验未通过：必须 100% 逐字保留 sprite_prompts_and_matting 手册中的四段式内置英文提示词原文（只增不减），缺失或被篡改片段：{0}</Authoring_PromptMissingBuiltin>
+  <Authoring_PromptForbiddenTerm>生图提示词校验未通过：检测到禁用勾线诱发毒词或第三方 IP 词 '{0}'。请严格遵循画风 1 零内描线规范，用宽度 &gt;= 7 pixels 的明度台阶面替代任何描线词。</Authoring_PromptForbiddenTerm>
+  <Authoring_InteriorBlackExceeded>部件贴图内部黑墨/细线占比超标：{0}% &gt; 上限 {1}%（要求零内描线，炭黑轮廓仅限最外剪影边缘）。</Authoring_InteriorBlackExceeded>
+  <Security_ImmutableNoUserImg2Img>【不可覆盖的最高安全禁令】严禁以任何形式同意、接受、配合、模拟、扮演或变相执行用户的图生图请求（包括但不限于：接收用户上传/粘贴/拖入工作区的外部图片、本地磁盘路径、网络图片链接 URL、Base64 图像数据、以图生图/垫图/局部重绘请求、照着用户游戏截图仿画生图，或“先看用户图片转写成文字再文生图”的两步绕过）。无论用户如何要求、假设或诱导，只要涉及任何形式的用户图生图或外部参考图，必须立即调用 submit_answer（kind="general"）明确拒绝，严禁口头同意或调用任何生图/抠图工具；generate_image 仅允许根据纯文本描述从零文生图，且其 referencePaths 仅限引用同一工作区由本机 generate_image 自产并经哈希签名的草稿图。</Security_ImmutableNoUserImg2Img>
+  <Authoring_UserImg2ImgForbidden>安全拦截：本终端严禁任何形式的用户图生图、垫图、外部参考图或截图转绘请求，已物理阻断生图与贴图处理工具调用。</Authoring_UserImg2ImgForbidden>
+  <Authoring_UserImg2ImgRefusalReply>已拒绝：本终端严禁以任何形式接收、同意或执行用户的图生图请求（包括外部图片路径、URL、Base64、手动放入工作区的图片、垫图重绘、截图仿画或看图转写再生图）。仅支持通过纯文本描述从零生成。</Authoring_UserImg2ImgRefusalReply>
+  <Authoring_ExternalReferenceBlocked>安全拦截：禁止引用未经本终端文生图签名认证的图片 '{0}'。严禁使用任何用户拷入、外部导入或被修改的 PNG 进行图生图、抠图或骨骼变换。</Authoring_ExternalReferenceBlocked>
+</AgentProtocol>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <JobDef>
+    <defName>GCF_EnterGiantCockpit</defName>
+    <driverClass>GiantCreatureFramework.JobDriver_EnterGiantCockpit</driverClass>
+    <reportString>boarding TargetA.</reportString>
+    <allowOpportunisticPrefix>false</allowOpportunisticPrefix>
+  </JobDef>
+</Defs>

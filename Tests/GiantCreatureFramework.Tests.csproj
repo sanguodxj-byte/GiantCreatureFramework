@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <NuGetAudit>false</NuGetAudit>
+    <RimWorldPath Condition="'$(RimWorldPath)' == ''">D:\Steam\steamapps\common\RimWorld</RimWorldPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Source\GiantCreatureFramework\GiantCreatureFramework.csproj" />
+    <ProjectReference Include="..\..\[GCF]Rathalos\Source\GCF.Rathalos\GCF.Rathalos.csproj" />
+    <ProjectReference Include="..\..\[GCF]Valstrax\Source\GCF.Valstrax\GCF.Valstrax.csproj" />
+    <ProjectReference Include="..\..\[GCF]Mech Colossus\Source\GCF.MechColossus\GCF.MechColossus.csproj" />
+    <ProjectReference Include="..\..\[GCF]Panzer IV\Source\GCF.PanzerIV\GCF.PanzerIV.csproj" />
+    <ProjectReference Include="..\..\[GCF]Protoss Carrier\Source\GCF.ProtossCarrier\GCF.ProtossCarrier.csproj" />
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(RimWorldPath)\Assembly-CSharp.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="RimWorld">
+      <HintPath>$(RimWorldPath)\RimWorld.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="UnityStubs">
+      <HintPath>$(RimWorldPath)\UnityStubs.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="Waylith">
+      <HintPath>$(RimWorldPath)\Waylith.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="Waylith.UnityCompat">
+      <HintPath>$(RimWorldPath)\Waylith.UnityCompat.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>$(RimWorldPath)\Mods\Harmony\1.7\Assemblies\0Harmony.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <!-- 会话状态与标题 -->
+  <GCFAgent_SessionTitleNew>新会话</GCFAgent_SessionTitleNew>
+  <GCFAgent_SessionStatusReady>就绪</GCFAgent_SessionStatusReady>
+  <GCFAgent_SessionStatusAborting>正在中止</GCFAgent_SessionStatusAborting>
+  <GCFAgent_SessionStatusAborted>已中止</GCFAgent_SessionStatusAborted>
+  <GCFAgent_SessionStatusTimeout>请求超时</GCFAgent_SessionStatusTimeout>
+  <GCFAgent_SessionStatusRequestFailed>请求失败</GCFAgent_SessionStatusRequestFailed>
+  <GCFAgent_SessionNew>新建会话</GCFAgent_SessionNew>
+  <GCFAgent_SessionListTitle>会话列表 ({0})</GCFAgent_SessionListTitle>
+  <GCFAgent_SessionDeleteTip>删除此会话</GCFAgent_SessionDeleteTip>
+  <GCFAgent_SessionItemSubCached>{0}条 · {1} · 缓存{2}</GCFAgent_SessionItemSubCached>
+  <GCFAgent_SessionItemSubTokens>{0} 条 · {1} tok</GCFAgent_SessionItemSubTokens>
+  <GCFAgent_SessionItemSubMessages>{0} 条消息</GCFAgent_SessionItemSubMessages>
+  <GCFAgent_SessionLimitReached>会话数量已达上限，请先中止或删除一个会话。</GCFAgent_SessionLimitReached>
+  <GCFAgent_SessionReadFailed>会话读取失败，已停止覆盖原文件：{0}</GCFAgent_SessionReadFailed>
+  <GCFAgent_SessionSaveFailed>会话保存失败：{0}</GCFAgent_SessionSaveFailed>
+  <GCFAgent_SaveStreamingIncomplete>[此轮请求在保存时尚未完成，请重新提问]</GCFAgent_SaveStreamingIncomplete>
+  <GCFAgent_ArchiveFileEmpty>会话文件内容为空。</GCFAgent_ArchiveFileEmpty>
+  <GCFAgent_ArchiveStructureInvalid>会话结构无效，保留原文件以便恢复。</GCFAgent_ArchiveStructureInvalid>
+
+  <!-- 提问运行状态与气泡提示 -->
+  <GCFAgent_StatusPromptTooLong>问题超过 {0} 字符限制，请缩小范围或调高单次提问上限</GCFAgent_StatusPromptTooLong>
+  <GCFAgent_StatusSessionBudgetReached>已达单会话净 Token 预算 ({0}/{1})</GCFAgent_StatusSessionBudgetReached>
+  <GCFAgent_StatusUploadingScreenshot>正在上传截图与查询</GCFAgent_StatusUploadingScreenshot>
+  <GCFAgent_StatusPreparingQuery>准备查询</GCFAgent_StatusPreparingQuery>
+  <GCFAgent_StatusFallbackConnection>切换备用接口 ({0}: {1})</GCFAgent_StatusFallbackConnection>
+  <GCFAgent_StatusMultimodalDowngraded>当前模型不支持图片输入，已自动降级为探针模式</GCFAgent_StatusMultimodalDowngraded>
+  <GCFAgent_StatusReadyWithUsage>就绪 · 本轮 {0}{1} tok (入 {2} / 出 {3})</GCFAgent_StatusReadyWithUsage>
+  <GCFAgent_StatusCapturingScreenshot>正在截取当前游戏画面...</GCFAgent_StatusCapturingScreenshot>
+  <GCFAgent_StatusReadingEvidence>读取游戏依据</GCFAgent_StatusReadingEvidence>
+  <GCFAgent_StatusInvestigatingRound>调查中 · 第 {0} 轮</GCFAgent_StatusInvestigatingRound>
+  <GCFAgent_StatusSynthesizing>整理结论与依据</GCFAgent_StatusSynthesizing>
+  <GCFAgent_NoticeTurnIncomplete>[{0}，本轮回答未完成]</GCFAgent_NoticeTurnIncomplete>
+  <GCFAgent_NoticePrepareFailed>请求准备失败：{0}</GCFAgent_NoticePrepareFailed>
+  <GCFAgent_NoticeRequestFailed>请求失败：{0}</GCFAgent_NoticeRequestFailed>
+  <GCFAgent_NoticeInsufficientEvidence>当前证据不足以确认所询问的事实。</GCFAgent_NoticeInsufficientEvidence>
+  <GCFAgent_NoticeContentTruncated>[已截断]</GCFAgent_NoticeContentTruncated>
+  <GCFAgent_NoticeUiTruncated>[已截断]</GCFAgent_NoticeUiTruncated>
+  <GCFAgent_EvidenceNoticeFallback>提示：本轮未调用运行时探针，以下内容基于前文依据或通用知识直接回答</GCFAgent_EvidenceNoticeFallback>
+
+  <!-- 提供商显示名 -->
+  <GCFAgent_ProviderLabel_DeepSeek>DeepSeek (深度求索)</GCFAgent_ProviderLabel_DeepSeek>
+  <GCFAgent_ProviderLabel_GLM>GLM (智谱开放平台)</GCFAgent_ProviderLabel_GLM>
+  <GCFAgent_ProviderLabel_GLMCoding>GLM Coding (智谱编程)</GCFAgent_ProviderLabel_GLMCoding>
+  <GCFAgent_ProviderLabel_AlibabaIntl>Alibaba Intl (百炼国际)</GCFAgent_ProviderLabel_AlibabaIntl>
+  <GCFAgent_ProviderLabel_AlibabaCN>Alibaba CN (阿里百炼国内)</GCFAgent_ProviderLabel_AlibabaCN>
+  <GCFAgent_ProviderLabel_Moonshot>Moonshot (Kimi 月之暗面)</GCFAgent_ProviderLabel_Moonshot>
+  <GCFAgent_ProviderLabel_Player2>Player2 (本地客户端/云端免配)</GCFAgent_ProviderLabel_Player2>
+  <GCFAgent_ProviderLabel_Custom>Custom (自定义 OpenAI 兼容)</GCFAgent_ProviderLabel_Custom>
+  <GCFAgent_ProviderLabel_Disabled>Disabled (未启用)</GCFAgent_ProviderLabel_Disabled>
+  <GCFAgent_ProviderShortLabel_AlibabaCN>阿里百炼</GCFAgent_ProviderShortLabel_AlibabaCN>
+
+  <!-- 模型标识 -->
+  <GCFAgent_ModelIdentityRequested>请求模型：{0}</GCFAgent_ModelIdentityRequested>
+  <GCFAgent_ModelIdentityResponse>接口返回模型：{0}</GCFAgent_ModelIdentityResponse>
+  <GCFAgent_ModelIdentityFallback>本轮已切换至备用接口。</GCFAgent_ModelIdentityFallback>
+  <GCFAgent_ModelIdentityCurrent>当前</GCFAgent_ModelIdentityCurrent>
+  <GCFAgent_ModelIdentityLast>上次</GCFAgent_ModelIdentityLast>
+  <GCFAgent_ModelTagWithIdentity>{0}: {1} ▾</GCFAgent_ModelTagWithIdentity>
+  <GCFAgent_ModelTagStandby>待用: {0}: {1} ▾</GCFAgent_ModelTagStandby>
+  <GCFAgent_ModelTagUnconfigured>未配置提供商 ▾</GCFAgent_ModelTagUnconfigured>
+  <GCFAgent_ModelTagNoRequestTip>尚未发送请求。模型显示的是待用配置。</GCFAgent_ModelTagNoRequestTip>
+  <GCFAgent_ModelBadgeTip>点击快速切换首选提供商或模型</GCFAgent_ModelBadgeTip>
+  <GCFAgent_ModelChipCurrent>▾ 当前: {0}</GCFAgent_ModelChipCurrent>
+  <GCFAgent_ModelChipNext>▾ 下次: {0}</GCFAgent_ModelChipNext>
+  <GCFAgent_ModelChipChoose>▾ 选择提供商与模型</GCFAgent_ModelChipChoose>
+  <GCFAgent_ModelChipNextSendTip>更改选择只影响下一次发送。</GCFAgent_ModelChipNextSendTip>
+  <GCFAgent_ModelChipChooseTip>选择下一次发送使用的模型或提供商。</GCFAgent_ModelChipChooseTip>
+  <GCFAgent_SwitcherConfigTag>[配置 #{0}] {1} · {2}{3}</GCFAgent_SwitcherConfigTag>
+  <GCFAgent_SwitcherFetchedModel>切换已获取模型 -&gt; {0}</GCFAgent_SwitcherFetchedModel>
+  <GCFAgent_SwitcherOpenConfig>打开提供商与模型配置面板...</GCFAgent_SwitcherOpenConfig>
+  <GCFAgent_NotEnabled>未启用</GCFAgent_NotEnabled>
+
+  <!-- Token 统计 -->
+  <GCFAgent_TokenPillCached>累计: {0} · 缓存 {1}</GCFAgent_TokenPillCached>
+  <GCFAgent_TokenPillPlain>累计: {0} tok</GCFAgent_TokenPillPlain>
+  <GCFAgent_TokenPillTooltip>本会话多轮累计 Token: {0}\n├─ 累计输入 (Prompt): {1}\n├─ 缓存命中 (Cached): {2} (缓存率 {3})\n├─ 净新增输入 (Uncached): {4}\n├─ 单轮峰值上下文 (Peak Context): {5}\n└─ 累计输出 (Completion): {6}\n点击打开系统提示词与 Token 统计</GCFAgent_TokenPillTooltip>
+  <GCFAgent_TokLabel>{0}{1} (净入 {2}{3}){4}</GCFAgent_TokLabel>
+  <GCFAgent_TokLabelCache>· 缓存 {0}</GCFAgent_TokLabelCache>
+  <GCFAgent_TokLabelRounds>({0}轮)</GCFAgent_TokLabelRounds>
+  <GCFAgent_TokLabelTotalRounds>共 {0} 轮调用</GCFAgent_TokLabelTotalRounds>
+  <GCFAgent_TokLabelTooltip>本轮多步累计账面总计: {0} Tokens{1}\n├─ 累计输入 (含多轮前缀重发): {2}\n├─ 缓存命中 (Cached): {3} (缓存命中率 {4})\n├─ 净新增输入 (Uncached): {5}\n├─ 累计输出 (Completion): {6}\n└─ 峰值上下文窗口: {7}</GCFAgent_TokLabelTooltip>
+  <GCFAgent_ReportRoundsTag>{0}轮 ·</GCFAgent_ReportRoundsTag>
+  <GCFAgent_ReportDetailCached>净输入 {0} · 缓存命中 {1} [{2}] · 输出 {3}</GCFAgent_ReportDetailCached>
+  <GCFAgent_ReportDetailPlain>输入 {0} · 缓存命中 0 [0.0%] · 输出 {1}</GCFAgent_ReportDetailPlain>
+  <GCFAgent_ReportLine>Token 明细 ({0}峰值 {1})：{2}{3}（{4}）｜会话累计 {5} (缓存率 {6})</GCFAgent_ReportLine>
+  <GCFAgent_UsageLine1>当前会话 [{0}] 累计总计: {1} tok ｜ 峰值上下文: {2} tok ｜ 缓存命中率: {3}</GCFAgent_UsageLine1>
+  <GCFAgent_UsageLine2>输入明细: 累计输入 {0} (缓存命中 {1} · 净新增输入 {2}) ｜ 累计输出: {3}</GCFAgent_UsageLine2>
+  <GCFAgent_UsageResetStats>清零统计</GCFAgent_UsageResetStats>
+
+  <!-- 调查依据预览 -->
+  <GCFAgent_EvidenceToggle>查询依据 ({0})</GCFAgent_EvidenceToggle>
+  <GCFAgent_EvidenceCopyAll>复制完整依据</GCFAgent_EvidenceCopyAll>
+  <GCFAgent_EvidencePreviewHint>（点击[复制完整依据]可查看全部保留结果）</GCFAgent_EvidencePreviewHint>
+  <GCFAgent_EvidencePreviewHeader>{0} · {1} · {2} ms\n{3}</GCFAgent_EvidencePreviewHeader>
+  <GCFAgent_ToolStatusRunning>执行中</GCFAgent_ToolStatusRunning>
+  <GCFAgent_ToolStatusFailed>失败</GCFAgent_ToolStatusFailed>
+  <GCFAgent_ToolStatusDone>已完成</GCFAgent_ToolStatusDone>
+  <GCFAgent_ScreenshotTag>[当前游戏界面截图]</GCFAgent_ScreenshotTag>
+
+  <!-- 工具显示名 -->
+  <GCFAgent_ToolLabelWithSummary>{0}  [{1}]</GCFAgent_ToolLabelWithSummary>
+  <GCFAgent_ToolLabel_SelectInvestigation>选择调查能力</GCFAgent_ToolLabel_SelectInvestigation>
+  <GCFAgent_ToolLabel_ReadEvidence>读取已取得证据</GCFAgent_ToolLabel_ReadEvidence>
+  <GCFAgent_ToolLabel_FoldEvidence>整理调查笔记</GCFAgent_ToolLabel_FoldEvidence>
+  <GCFAgent_ToolLabel_SearchKnowledge>检索本地知识</GCFAgent_ToolLabel_SearchKnowledge>
+  <GCFAgent_ToolLabel_ReadKnowledge>读取知识来源</GCFAgent_ToolLabel_ReadKnowledge>
+  <GCFAgent_ToolLabel_Calculate>计算与数据整理</GCFAgent_ToolLabel_Calculate>
+  <GCFAgent_ToolLabel_SearchDefs>检索 XML Def</GCFAgent_ToolLabel_SearchDefs>
+  <GCFAgent_ToolLabel_DefDetails>读取 Def 合并字段树</GCFAgent_ToolLabel_DefDetails>
+  <GCFAgent_ToolLabel_WeaponDps>估算武器单层护甲 DPS</GCFAgent_ToolLabel_WeaponDps>
+  <GCFAgent_ToolLabel_QuestState>透视任务节点树</GCFAgent_ToolLabel_QuestState>
+  <GCFAgent_ToolLabel_ColonyState>读取殖民者摘要</GCFAgent_ToolLabel_ColonyState>
+  <GCFAgent_ToolLabel_RecentErrors>提取红字异常栈</GCFAgent_ToolLabel_RecentErrors>
+  <GCFAgent_ToolLabel_MethodPatches>审查 Harmony 补丁链</GCFAgent_ToolLabel_MethodPatches>
+  <GCFAgent_ToolLabel_Decompile>反编译 C# 源码</GCFAgent_ToolLabel_Decompile>
+  <GCFAgent_ToolLabel_CodeSymbols>搜索程序集符号</GCFAgent_ToolLabel_CodeSymbols>
+  <GCFAgent_ToolLabel_TypeMembers>反射类成员签名</GCFAgent_ToolLabel_TypeMembers>
+  <GCFAgent_ToolLabel_DerivedTypes>检索派生子类/实现</GCFAgent_ToolLabel_DerivedTypes>
+  <GCFAgent_ToolLabel_MethodIl>读取方法 IL 指令流</GCFAgent_ToolLabel_MethodIl>
+  <GCFAgent_ToolLabel_ModsInfo>读取模组加载序</GCFAgent_ToolLabel_ModsInfo>
+  <GCFAgent_ToolLabel_ReadModFile>读取模组文件</GCFAgent_ToolLabel_ReadModFile>
+  <GCFAgent_ToolLabel_SearchModXml>跨模组检索磁盘 XML/Patch</GCFAgent_ToolLabel_SearchModXml>
+  <GCFAgent_ToolLabel_StatFormula>拆解原版 Stat 计算公式</GCFAgent_ToolLabel_StatFormula>
+  <GCFAgent_ToolLabel_Recipes>查询配方与合成链</GCFAgent_ToolLabel_Recipes>
+  <GCFAgent_ToolLabel_Research>查询科技树与解锁项</GCFAgent_ToolLabel_Research>
+  <GCFAgent_ToolLabel_SelectedObjects>检视当前鼠标选中对象</GCFAgent_ToolLabel_SelectedObjects>
+  <GCFAgent_ToolLabel_PawnDeep>小人八维深度体检</GCFAgent_ToolLabel_PawnDeep>
+  <GCFAgent_ToolLabel_MapStoryteller>诊断地图电网/库存/说书人</GCFAgent_ToolLabel_MapStoryteller>
+  <GCFAgent_ToolLabel_ReflectPath>反射运行时内存对象路径</GCFAgent_ToolLabel_ReflectPath>
+
+  <!-- 传输层报错（显示在玩家气泡中） -->
+  <GCFAgent_TransportResponseTimeout>模型接口等待响应超时。</GCFAgent_TransportResponseTimeout>
+  <GCFAgent_TransportHttpError>模型接口 HTTP {0}。请检查接口配置或稍后重试。</GCFAgent_TransportHttpError>
+  <GCFAgent_TransportIdleNoData>模型响应长时间无数据。</GCFAgent_TransportIdleNoData>
+  <GCFAgent_TransportResponseTooLong>模型响应超出长度限制。</GCFAgent_TransportResponseTooLong>
+  <GCFAgent_TransportStreamIdle>模型流长时间无数据。</GCFAgent_TransportStreamIdle>
+  <GCFAgent_TransportStreamTooLong>模型流超出长度限制。</GCFAgent_TransportStreamTooLong>
+  <GCFAgent_TransportEventLineTooLong>模型事件行过长。</GCFAgent_TransportEventLineTooLong>
+  <GCFAgent_TransportStreamError>模型流返回错误。</GCFAgent_TransportStreamError>
+  <GCFAgent_TransportChoicesMustBeArray>模型 choices 必须为数组。</GCFAgent_TransportChoicesMustBeArray>
+  <GCFAgent_TransportToolCallsMustBeArray>模型 tool_calls 必须为数组。</GCFAgent_TransportToolCallsMustBeArray>
+  <GCFAgent_TransportTooManyToolCalls>单轮工具调用超过 {0} 项。</GCFAgent_TransportTooManyToolCalls>
+  <GCFAgent_TransportLengthTruncated>模型输出被长度限制截断，请缩小问题范围或调大最大输出 Token 预算。</GCFAgent_TransportLengthTruncated>
+  <GCFAgent_TransportAbnormalFinish>模型响应未正常结束。</GCFAgent_TransportAbnormalFinish>
+  <GCFAgent_TransportFinishMismatch>工具结束标记与结果不一致。</GCFAgent_TransportFinishMismatch>
+  <GCFAgent_TransportToolMissingIdOrName>工具调用缺少名称或标识。</GCFAgent_TransportToolMissingIdOrName>
+  <GCFAgent_TransportArgsMustBeObject>工具参数必须是 JSON 对象。</GCFAgent_TransportArgsMustBeObject>
+  <GCFAgent_TransportDuplicateToolCallId>工具调用标识重复。</GCFAgent_TransportDuplicateToolCallId>
+
+  <!-- 回合流程异常（显示在玩家气泡中） -->
+  <GCFAgent_TurnRequestTimeout>本次模型网络请求超时，已取得的调查证据仍保留。</GCFAgent_TurnRequestTimeout>
+  <GCFAgent_TurnNoReplyOrToolCall>模型未返回回答或工具调用。</GCFAgent_TurnNoReplyOrToolCall>
+  <GCFAgent_TurnNoFinalSubmission>模型未完成有效的回答提交。</GCFAgent_TurnNoFinalSubmission>
+  <GCFAgent_TurnContextBudgetExceeded>本次问题及查询结果超出上下文预算，请缩小范围或调大最大上下文预算。</GCFAgent_TurnContextBudgetExceeded>
+
+  <!-- 配置校验与持久化 -->
+  <GCFAgent_ConfigReadFailed>配置读取失败：{0}</GCFAgent_ConfigReadFailed>
+  <GCFAgent_ConfigSaveFailed>配置保存失败：{0}</GCFAgent_ConfigSaveFailed>
+  <GCFAgent_ValidateEndpointRequired>请填写完整 HTTP(S) Chat Completions 接口地址，或在配置中选择预设提供商。</GCFAgent_ValidateEndpointRequired>
+  <GCFAgent_ValidateModelRequired>请填写或选择模型名称。</GCFAgent_ValidateModelRequired>
+  <GCFAgent_PromptOverridesMismatch>提示词配置的名称和值数量不匹配。</GCFAgent_PromptOverridesMismatch>
+
+  <!-- 模组设置页 -->
+  <GCFAgent_SettingsHeader>Creature Forge 提供商与提示词配置</GCFAgent_SettingsHeader>
+  <GCFAgent_SettingsOpenTerminal>打开 Creature Forge 终端</GCFAgent_SettingsOpenTerminal>
+
+  <!-- 主菜单按钮 -->
+  <GCFAgent_MainTabUnreadTip>Creature Forge 已完成回复（点击查看）</GCFAgent_MainTabUnreadTip>
+  <GCFAgent_BrandAvatarTip>点击设置头像与人格提示词</GCFAgent_BrandAvatarTip>
+
+  <!-- 通用按钮 -->
+  <GCFAgent_CommonClose>关闭</GCFAgent_CommonClose>
+  <GCFAgent_CommonCancel>取消</GCFAgent_CommonCancel>
+  <GCFAgent_CommonCopy>复制</GCFAgent_CommonCopy>
+  <GCFAgent_CommonCopyCode>复制代码</GCFAgent_CommonCopyCode>
+  <GCFAgent_CommonClear>清空</GCFAgent_CommonClear>
+  <GCFAgent_CommonAbort>中止</GCFAgent_CommonAbort>
+  <GCFAgent_CommonSend>发送</GCFAgent_CommonSend>
+  <GCFAgent_ClearButtonTip>若输入框有内容则清空输入；若输入框为空则清空当前对话记录</GCFAgent_ClearButtonTip>
+
+  <!-- 输入栏 -->
+  <GCFAgent_ComposerPlaceholder>输入问题或诊断指令... (Enter 发送，Shift+Enter 换行，Ctrl+V 粘贴)</GCFAgent_ComposerPlaceholder>
+  <GCFAgent_CameraButtonTip>拍摄并向模型发送「当前游戏界面截图」（若输入框有文字则一并附带发送）</GCFAgent_CameraButtonTip>
+  <GCFAgent_TermInsertTip>点击添加到输入框：{0}</GCFAgent_TermInsertTip>
+  <GCFAgent_ContextOn>上下文：开</GCFAgent_ContextOn>
+  <GCFAgent_ContextOff>上下文：关</GCFAgent_ContextOff>
+  <GCFAgent_ContextPending>上下文：待选</GCFAgent_ContextPending>
+  <GCFAgent_ContextEnableThisChat>启用本对话上下文</GCFAgent_ContextEnableThisChat>
+  <GCFAgent_ContextDisableThisChat>关闭本对话上下文</GCFAgent_ContextDisableThisChat>
+  <GCFAgent_ContextScopeTip>仅影响本对话。关闭后每次提问独立处理，聊天记录仍会保留。</GCFAgent_ContextScopeTip>
+
+  <!-- 上下文选择对话框 -->
+  <GCFAgent_ContextDialogTitle>本对话是否启用上下文？</GCFAgent_ContextDialogTitle>
+  <GCFAgent_ContextDialogBody>启用：结合之前的问答和调查结果，适合继续追问，但会增加输入用量。\n\n关闭：每次提问独立处理，适合询问不同问题。聊天记录仍会保留。</GCFAgent_ContextDialogBody>
+  <GCFAgent_ContextDialogRemember>不再提示（新对话沿用本次选择）</GCFAgent_ContextDialogRemember>
+  <GCFAgent_ContextDialogRememberTip>当前对话可随时切换；也可在设置中恢复提示。</GCFAgent_ContextDialogRememberTip>
+  <GCFAgent_ContextEnable>启用上下文</GCFAgent_ContextEnable>
+  <GCFAgent_ContextDisable>关闭上下文</GCFAgent_ContextDisable>
+
+  <!-- 提供商与模型配置面板 -->
+  <GCFAgent_HeaderModelConfig>模型与配置</GCFAgent_HeaderModelConfig>
+  <GCFAgent_TabProviders>提供商与模型 ({0})</GCFAgent_TabProviders>
+  <GCFAgent_TabPrompts>系统提示词与 Token 统计</GCFAgent_TabPrompts>
+  <GCFAgent_TabPromptsCustomized>系统提示词与统计 (已自定义)</GCFAgent_TabPromptsCustomized>
+  <GCFAgent_ActiveProviderLabel>首选: {0} · {1}</GCFAgent_ActiveProviderLabel>
+  <GCFAgent_NoValidProvider>未配置有效提供商</GCFAgent_NoValidProvider>
+  <GCFAgent_ProviderListCaption>多备选 AI 提供商列表（按顺序自动故障转移，URL 补全与模型拉取自动完成）</GCFAgent_ProviderListCaption>
+  <GCFAgent_ProviderAdd>新增提供商</GCFAgent_ProviderAdd>
+  <GCFAgent_KeysHide>隐藏密钥</GCFAgent_KeysHide>
+  <GCFAgent_KeysShow>显示密钥</GCFAgent_KeysShow>
+  <GCFAgent_ColEnable>启用/序</GCFAgent_ColEnable>
+  <GCFAgent_ColProvider>AI 提供商 (Provider)</GCFAgent_ColProvider>
+  <GCFAgent_ColApiKey>API Key / 认证方式</GCFAgent_ColApiKey>
+  <GCFAgent_ColModel>模型 ID (Model)</GCFAgent_ColModel>
+  <GCFAgent_ColActions>优先级/操作</GCFAgent_ColActions>
+  <GCFAgent_ProviderEnableTip>启用或禁用该提供商节点（按列表顺序自动故障转移）</GCFAgent_ProviderEnableTip>
+  <GCFAgent_ProviderRowTip>当前提供商: {0}\n默认端点: {1}</GCFAgent_ProviderRowTip>
+  <GCFAgent_LocalKeyPlaceholder>本地服务免填 Key (可选)</GCFAgent_LocalKeyPlaceholder>
+  <GCFAgent_ApiKeyPlaceholder>输入 API Key (sk-...)</GCFAgent_ApiKeyPlaceholder>
+  <GCFAgent_ModelFetchingPlaceholder>正在自动获取模型列表...</GCFAgent_ModelFetchingPlaceholder>
+  <GCFAgent_ModelPickPlaceholder>输入或点击右侧选择已获取模型</GCFAgent_ModelPickPlaceholder>
+  <GCFAgent_ModelInputPlaceholder>输入模型 ID（填好 Key 后自动获取）</GCFAgent_ModelInputPlaceholder>
+  <GCFAgent_ModelFetchedTip>已自动获取 {0} 个可用模型（点击或右键切换）</GCFAgent_ModelFetchedTip>
+  <GCFAgent_UrlFieldLabel>接口地址 URL:</GCFAgent_UrlFieldLabel>
+  <GCFAgent_UrlPlaceholderLocal>http://127.0.0.1:11434/v1/chat/completions（自动补全后缀）</GCFAgent_UrlPlaceholderLocal>
+  <GCFAgent_UrlPlaceholderCustom>https://api.example.com/v1/chat/completions（自动补全后缀）</GCFAgent_UrlPlaceholderCustom>
+  <GCFAgent_QuestSpoilersSetting>允许查询未揭示任务剧透条件 (AllowQuestSpoilers — 启用后可查询 QuestPart 隐藏触发条件与未公开分支)</GCFAgent_QuestSpoilersSetting>
+  <GCFAgent_FailoverFooterNote>提示：可启用多个提供商构成容灾链（#1 主接口超时或报错时自动切换至下一个已启用的备用提供商）。支持 Google/OpenAI/DeepSeek/阿里百炼/智谱GLM/Kimi/Claude/OpenRouter/Player2/本地服务。</GCFAgent_FailoverFooterNote>
+  <GCFAgent_BannerCollapse>收起面板</GCFAgent_BannerCollapse>
+  <GCFAgent_BannerSavePersist>保存并持久化</GCFAgent_BannerSavePersist>
+  <GCFAgent_BannerSaved>提供商与提示词配置已保存并持久化至配置文件。</GCFAgent_BannerSaved>
+  <GCFAgent_BannerSavedWithWarning>配置已保存，但主接口校验提示：{0}</GCFAgent_BannerSavedWithWarning>
+  <GCFAgent_BannerValidate>验证配置</GCFAgent_BannerValidate>
+  <GCFAgent_BannerValidateOk>验证通过: {0} · {1} ({2})</GCFAgent_BannerValidateOk>
+  <GCFAgent_BannerValidateFailed>配置校验未通过: {0}</GCFAgent_BannerValidateFailed>
+  <GCFAgent_BannerProviderCount>已启用 {0} 个提供商 · 无预算上限 · 每次回复自动回报 Token 消耗</GCFAgent_BannerProviderCount>
+  <GCFAgent_BannerLocalServiceFound>已自动发现本地服务 [{0}]: {1}</GCFAgent_BannerLocalServiceFound>
+  <GCFAgent_BannerModelsFetched>已自动从 {0} 获取 {1} 个可用模型</GCFAgent_BannerModelsFetched>
+
+  <!-- Player2 授权 -->
+  <GCFAgent_Player2AuthRequestingCode>正在向 Player2 请求设备授权码...</GCFAgent_Player2AuthRequestingCode>
+  <GCFAgent_Player2AuthSuccess>Player2 网页授权成功！</GCFAgent_Player2AuthSuccess>
+  <GCFAgent_Player2AuthTimeout>Player2 网页授权超时或未完成。</GCFAgent_Player2AuthTimeout>
+  <GCFAgent_Player2AuthCancelled>已取消 Player2 授权。</GCFAgent_Player2AuthCancelled>
+  <GCFAgent_Player2AuthCancelledShort>已取消授权。</GCFAgent_Player2AuthCancelledShort>
+  <GCFAgent_Player2AuthFailed>授权失败：{0}</GCFAgent_Player2AuthFailed>
+  <GCFAgent_Player2AuthCodeHint>(授权码: {0})</GCFAgent_Player2AuthCodeHint>
+  <GCFAgent_Player2AuthPageOpened>已在浏览器打开 Player2 授权页面{0}，等待网页确认...</GCFAgent_Player2AuthPageOpened>
+  <GCFAgent_Player2DeviceRequestFailed>Player2 设备认证请求失败 (HTTP {0})</GCFAgent_Player2DeviceRequestFailed>
+  <GCFAgent_Player2DeviceInvalidResponse>Player2 返回了无效的设备认证响应。</GCFAgent_Player2DeviceInvalidResponse>
+  <GCFAgent_Player2ClientConnected>客户端已连接 · 自动路由模型</GCFAgent_Player2ClientConnected>
+  <GCFAgent_Player2ClientConnectedTip>已检测到本地 Player2 客户端 ({0})，自动登录免配置 Key。点击可管理备用网页授权。</GCFAgent_Player2ClientConnectedTip>
+  <GCFAgent_Player2AwaitingWebConfirm>等待网页确认授权...</GCFAgent_Player2AwaitingWebConfirm>
+  <GCFAgent_Player2WebAuthReady>网页授权已就绪 · 云端自动路由</GCFAgent_Player2WebAuthReady>
+  <GCFAgent_Player2StartClientHint>请启动客户端或点击左侧网页授权</GCFAgent_Player2StartClientHint>
+  <GCFAgent_Player2LocalEndpoint>本地 Player2 端点: {0}</GCFAgent_Player2LocalEndpoint>
+  <GCFAgent_Player2AutoModelTip>Player2 由服务端自动分配最优模型，无需手动指定 model 参数</GCFAgent_Player2AutoModelTip>
+  <GCFAgent_Player2KeyPlaceholder>桌面端免填 / 网页授权 p2Key</GCFAgent_Player2KeyPlaceholder>
+  <GCFAgent_Player2AuthMenu>授权</GCFAgent_Player2AuthMenu>
+  <GCFAgent_Player2WaitConfirm>等待网页确认 (重开)</GCFAgent_Player2WaitConfirm>
+  <GCFAgent_Player2WaitConfirmTip>已在浏览器打开 Player2 授权页面，点击可重新打开网页或取消</GCFAgent_Player2WaitConfirmTip>
+  <GCFAgent_Player2WebAuth>网页授权</GCFAgent_Player2WebAuth>
+  <GCFAgent_Player2WebAuthed>已网页授权</GCFAgent_Player2WebAuthed>
+  <GCFAgent_Player2WebAuthedTip>已配置 Player2 网页授权密钥。点击可重新授权、查看/修改密钥或清除密钥。</GCFAgent_Player2WebAuthedTip>
+  <GCFAgent_Player2DetectClient>检测客户端</GCFAgent_Player2DetectClient>
+  <GCFAgent_Player2OneClickAuth>网页端一键授权</GCFAgent_Player2OneClickAuth>
+  <GCFAgent_Player2OneClickAuthTip>点击在浏览器打开 Player2 网页授权并自动填入 Key（右键展开更多选项）</GCFAgent_Player2OneClickAuthTip>
+  <GCFAgent_Player2DetectTip>检测本地运行中的 Player2 桌面客户端 (端口 4315/4316 或 api.port)</GCFAgent_Player2DetectTip>
+  <GCFAgent_Player2ReopenAuthPage>在浏览器重新打开授权页面</GCFAgent_Player2ReopenAuthPage>
+  <GCFAgent_Player2CancelAuth>取消正在进行的网页授权</GCFAgent_Player2CancelAuth>
+  <GCFAgent_Player2WebAuthCancelled>已取消 Player2 网页授权。</GCFAgent_Player2WebAuthCancelled>
+  <GCFAgent_Player2StartWebAuth>发起网页端一键授权 (推荐)</GCFAgent_Player2StartWebAuth>
+  <GCFAgent_Player2DetectNow>立即检测本地 Player2 客户端</GCFAgent_Player2DetectNow>
+  <GCFAgent_Player2HideKeyInput>隐藏手动输入框</GCFAgent_Player2HideKeyInput>
+  <GCFAgent_Player2ShowKeyInput>手动输入 / 查看 API Key</GCFAgent_Player2ShowKeyInput>
+  <GCFAgent_Player2ClearKey>清除已保存的网页授权 Key</GCFAgent_Player2ClearKey>
+  <GCFAgent_Player2KeyCleared>已清除 Player2 网页授权密钥。</GCFAgent_Player2KeyCleared>
+  <GCFAgent_Player2OpenWebsite>打开 Player2 官网 (player2.game)</GCFAgent_Player2OpenWebsite>
+  <GCFAgent_Player2Detecting>正在检测本地 Player2 客户端 (api.port / 4315 / 4316)...</GCFAgent_Player2Detecting>
+  <GCFAgent_Player2LocalConnected>已连接本地 Player2 客户端 ({0})，自动获取会话密钥成功！</GCFAgent_Player2LocalConnected>
+  <GCFAgent_Player2NotDetected>未检测到运行中的本地 Player2 客户端。请启动客户端，或点击【网页端一键授权】使用云端服务。</GCFAgent_Player2NotDetected>
+  <GCFAgent_Player2RequestingDeviceAuth>正在向 Player2 请求网页设备授权...</GCFAgent_Player2RequestingDeviceAuth>
+  <GCFAgent_BannerPlayer2AuthSuccess>Player2 网页授权成功，已自动填入并保存密钥！</GCFAgent_BannerPlayer2AuthSuccess>
+  <GCFAgent_BannerPlayer2AuthIncomplete>Player2 授权未完成: {0}</GCFAgent_BannerPlayer2AuthIncomplete>
+
+  <!-- 上下文开关设置 -->
+  <GCFAgent_SettingAskContext>新对话第二次发送时询问是否启用上下文</GCFAgent_SettingAskContext>
+  <GCFAgent_SettingAskContextTip>恢复询问不会改变已作选择的对话。</GCFAgent_SettingAskContextTip>
+  <GCFAgent_SettingDefaultContext>不再提示时，新对话默认启用上下文</GCFAgent_SettingDefaultContext>
+  <GCFAgent_SettingDefaultContextTip>每个对话仍可通过输入框下方的上下文开关单独修改。</GCFAgent_SettingDefaultContextTip>
+  <GCFAgent_SettingContextNote>关闭上下文可减少历史输入用量；本轮工具调查仍正常衔接。</GCFAgent_SettingContextNote>
+
+  <!-- 系统提示词编辑入口 -->
+  <GCFAgent_PromptsOpen>系统提示词…</GCFAgent_PromptsOpen>
+  <GCFAgent_PromptsOpenDesc>在独立窗口中查看、编辑和恢复默认提示词。</GCFAgent_PromptsOpenDesc>
+  <GCFAgent_PromptsOpenNote>保存后下一次提问生效，无需重启游戏。</GCFAgent_PromptsOpenNote>
+
+  <!-- 知识索引 -->
+  <GCFAgent_KnowledgeEnable>后台准备模组知识索引</GCFAgent_KnowledgeEnable>
+  <GCFAgent_KnowledgeEnableTip>首次准备可以跨多次游戏继续；查询仍可使用原有调查工具。</GCFAgent_KnowledgeEnableTip>
+  <GCFAgent_KnowledgePreferGpu>优先使用 GPU</GCFAgent_KnowledgePreferGpu>
+  <GCFAgent_KnowledgeGpuTip>可用时使用显卡，初始化失败时回退单线程 CPU；后台工作会在游戏卡顿时放慢。</GCFAgent_KnowledgeGpuTip>
+  <GCFAgent_IndexPhaseStarting>正在打开</GCFAgent_IndexPhaseStarting>
+  <GCFAgent_IndexPhaseText>准备全文索引</GCFAgent_IndexPhaseText>
+  <GCFAgent_IndexPhaseModel>预热模型</GCFAgent_IndexPhaseModel>
+  <GCFAgent_IndexPhaseEmbedding>准备语义索引</GCFAgent_IndexPhaseEmbedding>
+  <GCFAgent_IndexPhaseCode>准备模组代码</GCFAgent_IndexPhaseCode>
+  <GCFAgent_IndexPhasePartial>部分索引可用</GCFAgent_IndexPhasePartial>
+  <GCFAgent_IndexPhaseReady>已就绪</GCFAgent_IndexPhaseReady>
+  <GCFAgent_IndexPhaseLexical>全文索引可用</GCFAgent_IndexPhaseLexical>
+  <GCFAgent_IndexPhaseFaulted>索引暂不可用</GCFAgent_IndexPhaseFaulted>
+  <GCFAgent_IndexPhaseDisabled>未启用</GCFAgent_IndexPhaseDisabled>
+  <GCFAgent_IndexPaused>已暂停</GCFAgent_IndexPaused>
+  <GCFAgent_IndexStatusLine>{0} · 文件 {1} · 代码 {2} · 语义 {3}/{4} · {5}</GCFAgent_IndexStatusLine>
+  <GCFAgent_IndexStatusTooltip>{0}\n程序集 {1}/{2} · IL 成员 {3} · 失败成员 {4}\n{5}\n{6}\n{7}</GCFAgent_IndexStatusTooltip>
+  <GCFAgent_IndexResume>继续准备</GCFAgent_IndexResume>
+  <GCFAgent_IndexPause>暂停准备</GCFAgent_IndexPause>
+  <GCFAgent_IndexRebuild>重建索引</GCFAgent_IndexRebuild>
+  <GCFAgent_IndexNote1>准备在本机后台进行，不调用模型服务、不消耗 API Token。</GCFAgent_IndexNote1>
+  <GCFAgent_IndexNote2>暂停准备后，已完成的索引仍可查询；完整内容调查始终可用。</GCFAgent_IndexNote2>
+  <GCFAgent_IndexRestartFailed>索引重启失败：{0}</GCFAgent_IndexRestartFailed>
+
+  <!-- 系统提示词窗口 -->
+  <GCFAgent_PromptsInitialStatus>保存后下一次提问生效，无需重启。关闭窗口将放弃未保存的修改。</GCFAgent_PromptsInitialStatus>
+  <GCFAgent_PromptsSaveIncomplete>写入配置未完成：{0}</GCFAgent_PromptsSaveIncomplete>
+  <GCFAgent_PromptsSaved>已保存。下一次提问使用新提示词；正在进行的回复保持发送时的设置。</GCFAgent_PromptsSaved>
+  <GCFAgent_PromptsTitle>系统提示词</GCFAgent_PromptsTitle>
+  <GCFAgent_PromptsUnsavedMark>· 未保存</GCFAgent_PromptsUnsavedMark>
+  <GCFAgent_PromptsBackToEdit>返回编辑</GCFAgent_PromptsBackToEdit>
+  <GCFAgent_PromptsPreview>生效内容预览</GCFAgent_PromptsPreview>
+  <GCFAgent_PromptsResetSection>恢复本项默认</GCFAgent_PromptsResetSection>
+  <GCFAgent_PromptsResetAll>恢复全部默认</GCFAgent_PromptsResetAll>
+  <GCFAgent_PromptsPreviewNote>预览包含当前草稿；保存后生效。按触发条件使用的提示单独列出。</GCFAgent_PromptsPreviewNote>
+  <GCFAgent_PromptsPreviewSection>【{0}】\n{1}</GCFAgent_PromptsPreviewSection>
+  <GCFAgent_PromptsPlaceholder>留空不发送本项提示；“恢复本项默认”恢复内置内容。</GCFAgent_PromptsPlaceholder>
+  <GCFAgent_PromptsContentStats>当前内容 {0} 字符 · 本地估算 ≈{1} Token</GCFAgent_PromptsContentStats>
+  <GCFAgent_PromptsSave>保存</GCFAgent_PromptsSave>
+  <GCFAgent_PromptSectionLabel_Main>主系统提示词</GCFAgent_PromptSectionLabel_Main>
+  <GCFAgent_PromptSectionDesc_Main>助手的职责、调查原则与回答范围。</GCFAgent_PromptSectionDesc_Main>
+  <GCFAgent_PromptSectionLabel_OutputFormat>表达与词条格式</GCFAgent_PromptSectionLabel_OutputFormat>
+  <GCFAgent_PromptSectionDesc_OutputFormat>控制玩家可见的表达方式和词条标签。</GCFAgent_PromptSectionDesc_OutputFormat>
+  <GCFAgent_PromptSectionLabel_Persona>人格与称呼</GCFAgent_PromptSectionLabel_Persona>
+  <GCFAgent_PromptSectionDesc_Persona>控制称呼、语气和角色风格；与头像页面共用。</GCFAgent_PromptSectionDesc_Persona>
+  <GCFAgent_PromptSectionLabel_PersonaBoundary>人格适用范围</GCFAgent_PromptSectionLabel_PersonaBoundary>
+  <GCFAgent_PromptSectionDesc_PersonaBoundary>在人格之后说明它与事实、工具协议的关系。</GCFAgent_PromptSectionDesc_PersonaBoundary>
+  <GCFAgent_PromptSectionLabel_Submission>回答提交说明</GCFAgent_PromptSectionLabel_Submission>
+  <GCFAgent_PromptSectionDesc_Submission>告诉模型如何通过提交工具交付回答。</GCFAgent_PromptSectionDesc_Submission>
+  <GCFAgent_PromptSectionLabel_Evidence>证据使用说明</GCFAgent_PromptSectionLabel_Evidence>
+  <GCFAgent_PromptSectionDesc_Evidence>说明来源编号、预览、历史快照和引用修复。</GCFAgent_PromptSectionDesc_Evidence>
+  <GCFAgent_PromptSectionLabel_MissingSubmission>未提交时的提醒</GCFAgent_PromptSectionLabel_MissingSubmission>
+  <GCFAgent_PromptSectionDesc_MissingSubmission>模型返回普通文本、尚未提交回答时使用。</GCFAgent_PromptSectionDesc_MissingSubmission>
+  <GCFAgent_PromptSectionLabel_CitationRepair>引用失败后的提醒</GCFAgent_PromptSectionLabel_CitationRepair>
+  <GCFAgent_PromptSectionDesc_CitationRepair>引用校验失败时附在错误详情中。</GCFAgent_PromptSectionDesc_CitationRepair>
+  <GCFAgent_PromptSectionLabel_Synthesis>请求失败后的汇总说明</GCFAgent_PromptSectionLabel_Synthesis>
+  <GCFAgent_PromptSectionDesc_Synthesis>网络超时等原因需要使用已有证据整理结论时使用。</GCFAgent_PromptSectionDesc_Synthesis>
+  <GCFAgent_PromptSectionLabel_ImageQuestion>仅发送截图时的问题</GCFAgent_PromptSectionLabel_ImageQuestion>
+  <GCFAgent_PromptSectionDesc_ImageQuestion>只有截图而没有输入文字时使用。</GCFAgent_PromptSectionDesc_ImageQuestion>
+  <GCFAgent_PromptSectionLabel_ToolDiscovery>工具发现说明</GCFAgent_PromptSectionLabel_ToolDiscovery>
+  <GCFAgent_PromptSectionDesc_ToolDiscovery>说明查看目录与按名称加载工具定义；所有模型共用。</GCFAgent_PromptSectionDesc_ToolDiscovery>
+
+  <!-- 头像与人格窗口 -->
+  <GCFAgent_PersonaWindowTitle>助手头像与人格提示词设置</GCFAgent_PersonaWindowTitle>
+  <GCFAgent_PersonaWindowSubtitle>自定义左上角及对话消息左侧的助手头像，并设定专属对话人格与说话口吻</GCFAgent_PersonaWindowSubtitle>
+  <GCFAgent_AvatarCurrentCustom>当前头像: 自定义图片 ({0})</GCFAgent_AvatarCurrentCustom>
+  <GCFAgent_AvatarCurrentDefault>当前头像: 内置默认头像（支持 PNG / JPG，无外框透明圆角渲染）</GCFAgent_AvatarCurrentDefault>
+  <GCFAgent_AvatarPathPlaceholder>留空使用默认头像，或点击下方【浏览本地图片】选择 PNG/JPG 文件</GCFAgent_AvatarPathPlaceholder>
+  <GCFAgent_AvatarBrowse>浏览本地图片...</GCFAgent_AvatarBrowse>
+  <GCFAgent_AvatarFolderMenu>头像库 / 目录</GCFAgent_AvatarFolderMenu>
+  <GCFAgent_AvatarReset>恢复默认头像</GCFAgent_AvatarReset>
+  <GCFAgent_AvatarResetDone>已恢复为默认头像。</GCFAgent_AvatarResetDone>
+  <GCFAgent_PersonaHeaderActive>人格提示词 (已启用 · {0} 字符 / ≈{1} tok):</GCFAgent_PersonaHeaderActive>
+  <GCFAgent_PersonaHeaderIdle>人格提示词 (设定助手性格、角色身份、称呼与说话口吻):</GCFAgent_PersonaHeaderIdle>
+  <GCFAgent_PersonaQuickPresets>快速预设:</GCFAgent_PersonaQuickPresets>
+  <GCFAgent_PersonaNone>无附加人格</GCFAgent_PersonaNone>
+  <GCFAgent_PersonaGentleMaid>温柔女仆智囊</GCFAgent_PersonaGentleMaid>
+  <GCFAgent_PersonaTsundereAdvisor>毒舌傲娇顾问</GCFAgent_PersonaTsundereAdvisor>
+  <GCFAgent_PersonaColdCore>冷酷机械核心</GCFAgent_PersonaColdCore>
+  <GCFAgent_PersonaOldCaptain>边缘世界老舰长</GCFAgent_PersonaOldCaptain>
+  <GCFAgent_PersonaCleared>已清空附加人格设定。</GCFAgent_PersonaCleared>
+  <GCFAgent_PersonaApplied>已套用【{0}】人格模板，可继续自由修改。</GCFAgent_PersonaApplied>
+  <GCFAgent_PersonaEditorPlaceholder>在此输入自定义人格提示词（如角色背景、性格特点、对玩家的称呼、口头禅等），留空则保持默认专业严谨助手风格...</GCFAgent_PersonaEditorPlaceholder>
+  <GCFAgent_PersonaSaveDone>保存并完成</GCFAgent_PersonaSaveDone>
+  <GCFAgent_PersonaStatusHint>提示：人格提示词将在保留游戏运行时探针核实能力的前提下，优先控制助手的说话语气与角色性格。</GCFAgent_PersonaStatusHint>
+  <GCFAgent_AvatarFileMissing>所选图片文件不存在。</GCFAgent_AvatarFileMissing>
+  <GCFAgent_AvatarLoaded>已加载并保存头像: {0}</GCFAgent_AvatarLoaded>
+  <GCFAgent_AvatarLoadFailed>加载头像失败: {0}</GCFAgent_AvatarLoadFailed>
+  <GCFAgent_AvatarUse>使用头像: {0}</GCFAgent_AvatarUse>
+  <GCFAgent_AvatarSwitched>已切换头像: {0}</GCFAgent_AvatarSwitched>
+  <GCFAgent_AvatarOpenFolder>在资源管理器中打开头像目录...</GCFAgent_AvatarOpenFolder>
+  <GCFAgent_AvatarOpenFolderFailed>无法打开目录: {0}</GCFAgent_AvatarOpenFolderFailed>
+  <GCFAgent_AvatarFileDialogTitle>选择 Creature Forge 助手头像图片 (PNG / JPG)</GCFAgent_AvatarFileDialogTitle>
+
+
+  <!-- GCF 制作工具与图像接口 -->
+  <GCFAgent_ToolLabel_ListManuals>列出制作手册</GCFAgent_ToolLabel_ListManuals>
+  <GCFAgent_ToolLabel_LoadManual>加载制作手册</GCFAgent_ToolLabel_LoadManual>
+  <GCFAgent_ToolLabel_ListWorkspace>查看生物工作区</GCFAgent_ToolLabel_ListWorkspace>
+  <GCFAgent_ToolLabel_ReadCreatureXml>读取生物 XML</GCFAgent_ToolLabel_ReadCreatureXml>
+  <GCFAgent_ToolLabel_WriteCreatureXml>写入生物 XML</GCFAgent_ToolLabel_WriteCreatureXml>
+  <GCFAgent_ToolLabel_GenerateLocomotionAnim>合成三维骨骼动画</GCFAgent_ToolLabel_GenerateLocomotionAnim>
+  <GCFAgent_ToolLabel_GenerateImage>生成部件贴图</GCFAgent_ToolLabel_GenerateImage>
+  <GCFAgent_ToolLabel_ExtractSheet>绿幕分栏抠图</GCFAgent_ToolLabel_ExtractSheet>
+  <GCFAgent_ToolLabel_WarpBone>骨骼贴图对位</GCFAgent_ToolLabel_WarpBone>
+  <GCFAgent_ToolLabel_PreviewSheet>棋盘格贴图预览</GCFAgent_ToolLabel_PreviewSheet>
+  <GCFAgent_ToolLabel_PreviewAnimStrip>多帧动作连拍预览</GCFAgent_ToolLabel_PreviewAnimStrip>
+  <GCFAgent_ToolLabel_ValidateCreature>校验配置与关节</GCFAgent_ToolLabel_ValidateCreature>
+  <GCFAgent_ToolLabel_InjectCreature>定向热注入</GCFAgent_ToolLabel_InjectCreature>
+  <GCFAgent_ToolLabel_SpawnCreature>地图生成巨兽</GCFAgent_ToolLabel_SpawnCreature>
+  <GCFAgent_ImageApiHeader>图像生成接口配置（OpenAI 兼容 images/generations 与 images/edits）</GCFAgent_ImageApiHeader>
+  <GCFAgent_ImageEndpointLabel>图像接口地址:</GCFAgent_ImageEndpointLabel>
+  <GCFAgent_ImageEndpointPlaceholder>http://127.0.0.1:2048/v1（自动识别 generations / edits）</GCFAgent_ImageEndpointPlaceholder>
+  <GCFAgent_ImageModelLabel>图像模型 ID:</GCFAgent_ImageModelLabel>
+  <GCFAgent_ImageModelPlaceholder>输入生图模型名（如 gemini-3-pro-image / gpt-image-1）</GCFAgent_ImageModelPlaceholder>
+  <GCFAgent_ImageApiKeyLabel>图像 API Key:</GCFAgent_ImageApiKeyLabel>
+  <GCFAgent_ImageApiKeyPlaceholder>可选 API Key（本地免密服务可留空）</GCFAgent_ImageApiKeyPlaceholder>
+  <GCFAgent_SidebarTitle>巨兽工坊</GCFAgent_SidebarTitle>
+  <GCFAgent_SidebarSubtitle>RUNTIME CREATURE FORGE</GCFAgent_SidebarSubtitle>
+  <GCFAgent_ManualButton>巨兽与工具说明书</GCFAgent_ManualButton>
+  <GCFAgent_ManualButtonTip>打开 GCF 巨兽类型、可复用能力（蒙皮网格 / 自定义炮塔等）、Def 字典与全栈工具说明书</GCFAgent_ManualButtonTip>
+  <GCFAgent_ManualWindowTitle>Giant Creature Framework 开发与工具说明书</GCFAgent_ManualWindowTitle>
+  <GCFAgent_ManualWindowSubtitle>以巨兽类型为切入点 · 支持的 Def 定义与全栈工具速查</GCFAgent_ManualWindowSubtitle>
+  <GCFAgent_ManualCopyAll>复制全文</GCFAgent_ManualCopyAll>
+  <GCFAgent_ManualReload>重新加载</GCFAgent_ManualReload>
+  <GCFAgent_ManualSearchPlaceholder>搜索能力 / Def / 标签 / 工具名...</GCFAgent_ManualSearchPlaceholder>
+  <GCFAgent_ManualClearSearch>清除搜索过滤</GCFAgent_ManualClearSearch>
+  <GCFAgent_ManualChaptersHeader>章节导航</GCFAgent_ManualChaptersHeader>
+  <GCFAgent_ManualAllChapters>全部章节（完整视图）</GCFAgent_ManualAllChapters>
+  <GCFAgent_ManualNoMatch>未找到与当前搜索词匹配的段落或表格行。</GCFAgent_ManualNoMatch>
+  <GCFAgent_ManualFileMissing>未找到说明书文件 Docs\GiantCreatureFramework_Manual.md。</GCFAgent_ManualFileMissing>
+  <GCFAgent_ManualReadFailed>读取说明书失败: {0}</GCFAgent_ManualReadFailed>
+</LanguageData>

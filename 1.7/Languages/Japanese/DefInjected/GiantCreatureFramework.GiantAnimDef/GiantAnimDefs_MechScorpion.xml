@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <GCF_Anim_MechScorpion_Walk.label>油圧走行</GCF_Anim_MechScorpion_Walk.label>
+  <GCF_Anim_MechScorpion_ClawLeft.label>左鉗はさみ撃</GCF_Anim_MechScorpion_ClawLeft.label>
+  <GCF_Anim_MechScorpion_ClawRight.label>右鉗はさみ撃</GCF_Anim_MechScorpion_ClawRight.label>
+  <GCF_Anim_MechScorpion_TailSting.label>尾針突き刺し</GCF_Anim_MechScorpion_TailSting.label>
+  <GCF_Anim_MechScorpion_RangedTail.label>尾針斉射</GCF_Anim_MechScorpion_RangedTail.label>
+  <GCF_Anim_MechScorpion_CarapaceRam.label>重装甲頭胸体当たり</GCF_Anim_MechScorpion_CarapaceRam.label>
+  <GCF_Anim_MechScorpion_Downed.label>麻痺機能停止</GCF_Anim_MechScorpion_Downed.label>
+  <GCF_Anim_MechScorpion_Death.label>油圧爆裂解体崩壊</GCF_Anim_MechScorpion_Death.label>
+</LanguageData>

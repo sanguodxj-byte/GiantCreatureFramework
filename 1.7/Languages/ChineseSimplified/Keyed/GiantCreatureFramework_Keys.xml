@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <GCF_InspectRigLabel>骨骼与体积检视</GCF_InspectRigLabel>
+  <GCF_InspectRigDesc>打开巨型生物框架检视器，实时查看节点轴骨骼姿态与部位血量、触发动画片段，并开关贴图映射的受击格与碰撞格可视化图层。</GCF_InspectRigDesc>
+  <GCF_InspectorTitle>巨型生物骨骼与体积检视器</GCF_InspectorTitle>
+  <GCF_InspectorSummary>当前朝向: {0} 度  |  状态: {1}  |  动画: {2}
+贴图受击格总数 (绿+红): {3} 格  |  实体阻挡碰撞格 (红): {4} 格</GCF_InspectorSummary>
+  <GCF_ToggleFootprint>显示受击与碰撞体积格</GCF_ToggleFootprint>
+  <GCF_ToggleSkeleton>显示节点轴骨骼连线</GCF_ToggleSkeleton>
+  <GCF_ToggleGlobalFootprint>全局显示所有巨兽体积</GCF_ToggleGlobalFootprint>
+  <GCF_ToggleManualPose>启用手动关节旋转</GCF_ToggleManualPose>
+  <GCF_AnimClipSection>点击预览骨骼动画片段:</GCF_AnimClipSection>
+  <GCF_ResetPoseBtn>重置姿态并恢复AI驱动</GCF_ResetPoseBtn>
+  <GCF_AbilityDisabledMissingOrgan>器官已被摧毁，技能缴械：{0}</GCF_AbilityDisabledMissingOrgan>
+  <GCF_BioferriteCoreActive>暗铁再生核心：激活（+{0} 生命/秒）</GCF_BioferriteCoreActive>
+  <GCF_BioferriteCoreSevered>暗铁再生核心：离线（再生尾核已被斩断）</GCF_BioferriteCoreSevered>
+  <GCF_DisabledSkillsLine>已缴械技能：{0}</GCF_DisabledSkillsLine>
+  <GCF_SettingsCategory>巨型生物框架</GCF_SettingsCategory>
+  <GCF_SettingsSection_Debug>调试可视化开关（默认关闭）</GCF_SettingsSection_Debug>
+  <GCF_Setting_DrawCollisionCells>显示碰撞格</GCF_Setting_DrawCollisionCells>
+  <GCF_Setting_DrawCollisionCells_Desc>在地图上显示巨型单位的实心阻挡碰撞格轮廓（红色）。</GCF_Setting_DrawCollisionCells_Desc>
+  <GCF_Setting_DrawHitCells>显示受击格</GCF_Setting_DrawHitCells>
+  <GCF_Setting_DrawHitCells_Desc>在地图上显示巨型单位的贴图受击体积格轮廓（绿色）。</GCF_Setting_DrawHitCells_Desc>
+  <GCF_Setting_DrawSkeleton>显示骨骼</GCF_Setting_DrawSkeleton>
+  <GCF_Setting_DrawSkeleton_Desc>在地图上显示巨型单位的骨骼关节枢轴、父子连线与挂点朝向。</GCF_Setting_DrawSkeleton_Desc>
+  <GCF_Setting_EnableDebugPanel>启用调试面板</GCF_Setting_EnableDebugPanel>
+  <GCF_Setting_EnableDebugPanel_Desc>开启后在游戏中显示调试面板入口按钮，用于打开巨型生物调试面板；关闭时立即隐藏入口并关闭面板。</GCF_Setting_EnableDebugPanel_Desc>
+  <GCF_Setting_OpenDebugPanel>打开调试面板</GCF_Setting_OpenDebugPanel>
+  <GCF_DebugPanelLauncherBtn>调试面板</GCF_DebugPanelLauncherBtn>
+  <GCF_DebugPanelTitle>巨型生物调试面板</GCF_DebugPanelTitle>
+  <GCF_DebugPanelActiveTool>当前地图工具: {0}</GCF_DebugPanelActiveTool>
+  <GCF_DebugPanelCancelTool>取消工具</GCF_DebugPanelCancelTool>
+  <GCF_DebugCat_Spawn>单位生成</GCF_DebugCat_Spawn>
+  <GCF_DebugCat_Tools>调试工具</GCF_DebugCat_Tools>
+  <GCF_DebugAction_SpawnScorpionPlayer>重装机械巨蝎 · 己方</GCF_DebugAction_SpawnScorpionPlayer>
+  <GCF_DebugAction_SpawnScorpionHostile>重装机械巨蝎 · 敌对</GCF_DebugAction_SpawnScorpionHostile>
+  <GCF_DebugAction_SpawnDynamicPlayer>{0} · 己方</GCF_DebugAction_SpawnDynamicPlayer>
+  <GCF_DebugAction_SpawnDynamicHostile>{0} · 敌对</GCF_DebugAction_SpawnDynamicHostile>
+  <GCF_DebugAction_DestroyBone>破坏鼠标处骨骼部位</GCF_DebugAction_DestroyBone>
+  <GCF_DebugAction_LogHitCell>输出鼠标格受击信息</GCF_DebugAction_LogHitCell>
+  <GCF_DebugAction_RecallInterceptors>召回全部航母拦截机</GCF_DebugAction_RecallInterceptors>
+  <GCF_DebugAction_StartFpsTelemetry>开启帧率遥测统计</GCF_DebugAction_StartFpsTelemetry>
+  <GCF_DebugAction_StopFpsTelemetry>停止并输出帧率遥测</GCF_DebugAction_StopFpsTelemetry>
+  <GCF_SettingsSection_Authoring>运行时巨兽工坊终端（默认关闭）</GCF_SettingsSection_Authoring>
+  <GCF_Setting_EnableAuthoringTerminal>启用巨兽工坊（Creature Forge）运行时制作终端</GCF_Setting_EnableAuthoringTerminal>
+  <GCF_Setting_EnableAuthoringTerminal_Desc>开启后在底部主菜单栏显示【巨兽工坊】按钮并启用 F10 快捷键与 AI 造兽交互；关闭时立即隐藏入口并中止一切活跃请求，不发起任何网络调用（已落盘的自定义巨兽仍正常加载）。</GCF_Setting_EnableAuthoringTerminal_Desc>
+  <GCF_PhaseAdvanceDisabledTransforming>正在展开变构至下一阶段</GCF_PhaseAdvanceDisabledTransforming>
+  <GCF_PhaseAdvanceDisabledFinalStage>已处于最终形态阶段</GCF_PhaseAdvanceDisabledFinalStage>
+  <GCF_PhaseAdvanceDisabledUnavailable>变构系统不可用</GCF_PhaseAdvanceDisabledUnavailable>
+  <GCF_PhaseRevertDisabledTransforming>正在执行阶段变构</GCF_PhaseRevertDisabledTransforming>
+  <GCF_PhaseRevertDisabledFirstStage>已处于初始形态阶段</GCF_PhaseRevertDisabledFirstStage>
+  <GCF_PhaseRevertDisabledNotFullState>机体未处于满状态（存在损伤、缺失部件或异常状态），当前仅可进入下一阶段</GCF_PhaseRevertDisabledNotFullState>
+  <GCF_CarrierHangarStatus>拦截机编队：在航 {0} / 归舱 {1}（可用上限 {2}/{3}）</GCF_CarrierHangarStatus>
+  <GCF_CarrierHangarDestroyed>拦截机机库：离线（左右机库舱均已被摧毁）</GCF_CarrierHangarDestroyed>
+  <GCF_CarrierNoInterceptorsReady>当前无可用拦截机。</GCF_CarrierNoInterceptorsReady>
+  <GCF_CarrierRebuildingInterceptor>机库制造中：{0}%</GCF_CarrierRebuildingInterceptor>
+  <GCF_CarrierCatapultOverdriveActive>引力弹射超频：{0} 秒</GCF_CarrierCatapultOverdriveActive>
+  <GCF_Gizmo_RecallInterceptors_Label>召回拦截机（{0}）</GCF_Gizmo_RecallInterceptors_Label>
+  <GCF_Gizmo_RecallInterceptors_Desc>立即命令全部在航神族拦截机脱离攻击航线，返航进入航母机库归舱修复并补充等离子护盾。</GCF_Gizmo_RecallInterceptors_Desc>
+  <GCF_Gizmo_RecallDisabledNoneAirborne>当前没有在航拦截机。</GCF_Gizmo_RecallDisabledNoneAirborne>
+  <GCF_Gizmo_AutoLaunch_Label>自动放飞迎敌</GCF_Gizmo_AutoLaunch_Label>
+  <GCF_Gizmo_AutoLaunch_Desc>开启后，航母在交战范围内发现敌对目标时将自动弹射放飞舱内拦截机出击；关闭后保持舱内待命，仅响应手动指令。</GCF_Gizmo_AutoLaunch_Desc>
+  <GCF_Gizmo_AutoRebuild_Label>自动补造拦截机</GCF_Gizmo_AutoRebuild_Label>
+  <GCF_Gizmo_AutoRebuild_Desc>开启后，当拦截机在战斗中损毁时，完好的机库舱会自动折跃制造补充新的拦截机。</GCF_Gizmo_AutoRebuild_Desc>
+  <GCF_InterceptorInspectLine>等离子护盾：{0} / {1}  |  航行状态：{2}</GCF_InterceptorInspectLine>
+  <GCF_InterceptorState_Docked>机库待命</GCF_InterceptorState_Docked>
+  <GCF_InterceptorState_Launching>引力弹射出舱</GCF_InterceptorState_Launching>
+  <GCF_InterceptorState_AttackRun>俯冲掠袭齐射</GCF_InterceptorState_AttackRun>
+  <GCF_InterceptorState_BreakTurn>高速侧倾回转</GCF_InterceptorState_BreakTurn>
+  <GCF_InterceptorState_EscortOrbit>护航索敌盘旋</GCF_InterceptorState_EscortOrbit>
+  <GCF_InterceptorState_Returning>返航归舱</GCF_InterceptorState_Returning>
+  <GCF_Tab_Cockpit>乘员舱</GCF_Tab_Cockpit>
+  <GCF_CockpitMode_Piloted>有人驾驶超频</GCF_CockpitMode_Piloted>
+  <GCF_CockpitMode_Autonomous>自律AI巡航</GCF_CockpitMode_Autonomous>
+  <GCF_CockpitMode_Dormant>驻停待命</GCF_CockpitMode_Dormant>
+  <GCF_CockpitRole_PrimaryPilot>主驾驶</GCF_CockpitRole_PrimaryPilot>
+  <GCF_CockpitRole_Gunner>炮手</GCF_CockpitRole_Gunner>
+  <GCF_CockpitRole_Commander>车长</GCF_CockpitRole_Commander>
+  <GCF_CockpitRole_Passenger>乘员</GCF_CockpitRole_Passenger>
+  <GCF_CockpitInspect_Manned>控制模式：{0}（{1}）  |  乘员：{2}  |  机动 {3} · 火控 {4}</GCF_CockpitInspect_Manned>
+  <GCF_CockpitInspect_Unmanned>控制模式：{0}  |  乘员：{1}  |  机动 {2} · 火控 {3}</GCF_CockpitInspect_Unmanned>
+  <GCF_Gizmo_AutonomousMode_Label>自律AI巡航</GCF_Gizmo_AutonomousMode_Label>
+  <GCF_Gizmo_AutonomousMode_Desc>切换无人登舱时的机载自律AI巡航与协同作战状态。关闭后机体将进入驻停锁死待命状态，不再自主移动或交战。</GCF_Gizmo_AutonomousMode_Desc>
+  <GCF_Gizmo_BoardCrew_Label>指派乘员登舱</GCF_Gizmo_BoardCrew_Label>
+  <GCF_Gizmo_BoardCrew_Desc>选择附近一名可用殖民者前往登乘空闲座舱席位，接管操控并激活有人驾驶超频加成。</GCF_Gizmo_BoardCrew_Desc>
+  <GCF_Gizmo_DisembarkAll_Label>全员离舱（{0}）</GCF_Gizmo_DisembarkAll_Label>
+  <GCF_Gizmo_DisembarkAll_Desc>命令舱内全部乘员安全撤离至机体碰撞轮廓外侧空地。</GCF_Gizmo_DisembarkAll_Desc>
+  <GCF_FloatMenu_BoardCockpitSeat>登乘 {0}（{1}）</GCF_FloatMenu_BoardCockpitSeat>
+  <GCF_FloatMenu_BoardMulti>编组登乘 {0}</GCF_FloatMenu_BoardMulti>
+  <GCF_FloatMenu_BoardDisabled>无法登乘 {0}：{1}</GCF_FloatMenu_BoardDisabled>
+  <GCF_FloatMenu_SeatUnavailable>{0} [{1}]：{2}</GCF_FloatMenu_SeatUnavailable>
+  <GCF_FloatMenu_AssignColonistItem>{0}（射击 {1} / 格斗 {2}）</GCF_FloatMenu_AssignColonistItem>
+  <GCF_FloatMenu_NoEligibleColonists>附近无可达的空闲殖民者</GCF_FloatMenu_NoEligibleColonists>
+  <GCF_CockpitFail_HostUnavailable>目标机体当前不可用</GCF_CockpitFail_HostUnavailable>
+  <GCF_CockpitFail_InvalidCrew>该单位无法进入座舱</GCF_CockpitFail_InvalidCrew>
+  <GCF_CockpitFail_WrongFaction>非己方受控单位</GCF_CockpitFail_WrongFaction>
+  <GCF_CockpitFail_SeatDestroyed>座舱结构已损毁（{0}）</GCF_CockpitFail_SeatDestroyed>
+  <GCF_CockpitFail_SeatOccupied>席位已有乘员</GCF_CockpitFail_SeatOccupied>
+  <GCF_CockpitFail_AllSeatsDestroyed>全部座舱模块均已损毁</GCF_CockpitFail_AllSeatsDestroyed>
+  <GCF_CockpitFail_Full>乘员舱已满员</GCF_CockpitFail_Full>
+  <GCF_CockpitFail_AiCoreDestroyed>自律运算核心已损毁</GCF_CockpitFail_AiCoreDestroyed>
+  <GCF_CrewDisabledUnmanned>驻停待命：无驾驶员接管</GCF_CrewDisabledUnmanned>
+  <GCF_CrewDisabledNoGunner>武器离线：缺少炮手席乘员</GCF_CrewDisabledNoGunner>
+  <GCF_CrewDisabledNoOperator>系统离线：缺少战术车长操作员</GCF_CrewDisabledNoOperator>
+  <GCF_CockpitTab_EfficiencySummary>机动效率: {0}  |  火控精度: {1}  |  装填响应: {2}</GCF_CockpitTab_EfficiencySummary>
+  <GCF_CockpitTab_EjectAllBtn>全员离舱</GCF_CockpitTab_EjectAllBtn>
+  <GCF_CockpitTab_PartDestroyed>已损毁</GCF_CockpitTab_PartDestroyed>
+  <GCF_CockpitTab_OccupantStatus>{0}（意识 {1}）</GCF_CockpitTab_OccupantStatus>
+  <GCF_CockpitTab_DisembarkBtn>离舱</GCF_CockpitTab_DisembarkBtn>
+  <GCF_CockpitTab_SeatEmpty>席位空置</GCF_CockpitTab_SeatEmpty>
+  <GCF_CockpitTab_AssignBtn>指派</GCF_CockpitTab_AssignBtn>
+  <GCF_PartFocusTarget_Label>指定集火目标</GCF_PartFocusTarget_Label>
+  <GCF_PartFocusTarget_Desc>为全部完好的骨骼武装部件与机库舱锁定优先集火目标。移动行进期间各完好部件仍将在各自射界内自动独立瞄准开火或挥击。</GCF_PartFocusTarget_Desc>
+  <GCF_PartClearTarget_Label>清除集火：{0}</GCF_PartClearTarget_Label>
+  <GCF_PartClearTarget_Desc>解除当前锁定的优先集火目标，恢复各骨骼武装部件按各自射界自主索敌。</GCF_PartClearTarget_Desc>
+  <GCF_PartFireAtWill_Label>部件自由开火</GCF_PartFireAtWill_Label>
+  <GCF_PartFireAtWill_Desc>开启后，全部完好的攻击部件将在移动或驻守时自动索敌并独立开火/挥击；关闭后仅对手动指定的集火目标开火。</GCF_PartFireAtWill_Desc>
+  <GCF_PartWeaponsAllSevered>全部攻击部件均已损毁</GCF_PartWeaponsAllSevered>
+  <GCF_FloatMenu_PartFocusAttack>部件集火 {0}</GCF_FloatMenu_PartFocusAttack>
+  <GCF_Gizmo_FlightTakeoff_Label>升空飞行</GCF_Gizmo_FlightTakeoff_Label>
+  <GCF_Gizmo_FlightLand_Label>降落着陆</GCF_Gizmo_FlightLand_Label>
+  <GCF_Gizmo_FlightToggle_Desc>切换高空飞行态（无视围墙与深水越障寻路，并完全免疫地面近战攻击）与地面陆行态。</GCF_Gizmo_FlightToggle_Desc>
+  <GCF_FlightFail_LiftDamaged>升力器官/推进模块受损严重，无法升空</GCF_FlightFail_LiftDamaged>
+  <GCF_FlightFail_ThickRoof>正上方存在厚岩山顶阻挡，无法升空</GCF_FlightFail_ThickRoof>
+  <GCF_FlightState_Grounded>地面陆行</GCF_FlightState_Grounded>
+  <GCF_FlightState_TakingOff>爬升起飞中</GCF_FlightState_TakingOff>
+  <GCF_FlightState_Airborne>高空巡航</GCF_FlightState_Airborne>
+  <GCF_FlightState_Landing>滑翔降落中</GCF_FlightState_Landing>
+  <GCF_FlightInspectLine>飞行模态：{0}（升力效率 {1}）</GCF_FlightInspectLine>
+  <GCF_FlightFail_CombatCooldown>战斗飞行体力恢复中（剩余 {0} 秒）</GCF_FlightFail_CombatCooldown>
+  <GCF_FlightInspect_CombatAirLeft>战斗滞空时限：{0} 秒</GCF_FlightInspect_CombatAirLeft>
+  <GCF_FlightInspect_CombatCooldown>升空恢复：{0} 秒</GCF_FlightInspect_CombatCooldown>
+  <GCF_FloatMenu_CannotMeleeAirborne>无法近战攻击高空飞行目标：{0}</GCF_FloatMenu_CannotMeleeAirborne>
+  <GCF_FloatMenu_TakeCockpitControl>驾驶控制 {0}（{1}）</GCF_FloatMenu_TakeCockpitControl>
+  <GCF_FloatMenu_BoardRoleOpenCount>登乘 {0}（{1}，空余 {2}）</GCF_FloatMenu_BoardRoleOpenCount>
+  <GCF_FloatMenu_DraftControl>征召控制 {0}</GCF_FloatMenu_DraftControl>
+  <GCF_FloatMenu_UndraftControl>解除征召 {0}</GCF_FloatMenu_UndraftControl>
+  <GCF_FloatMenu_DraftAndMoveHere>征召并移动至此</GCF_FloatMenu_DraftAndMoveHere>
+  <GCF_FloatMenu_DraftAndFocusAttack>征召并部件集火 {0}</GCF_FloatMenu_DraftAndFocusAttack>
+  <GCF_FloatMenu_SwitchAutonomousOn>切换控制：启用自律AI巡航</GCF_FloatMenu_SwitchAutonomousOn>
+  <GCF_FloatMenu_SwitchStandbyOn>切换控制：转入驻停待命</GCF_FloatMenu_SwitchStandbyOn>
+  <GCF_FloatMenu_PartFireAtWillOn>部件自由开火：已开启（点击关闭）</GCF_FloatMenu_PartFireAtWillOn>
+  <GCF_FloatMenu_PartFireAtWillOff>部件自由开火：已关闭（点击开启）</GCF_FloatMenu_PartFireAtWillOff>
+  <GCF_FloatMenu_PhaseAdvance>阶段变构：展开下一阶段（{0}）</GCF_FloatMenu_PhaseAdvance>
+  <GCF_FloatMenu_PhaseRevert>阶段变构：回退上一阶段（{0}）</GCF_FloatMenu_PhaseRevert>
+  <GCF_FloatMenu_PhaseDisabled>无法变构：{0}</GCF_FloatMenu_PhaseDisabled>
+  <GCF_Letter_WarQueenScorpionUnlock_Label>重装蓝图解锁：重装机械巨蝎</GCF_Letter_WarQueenScorpionUnlock_Label>
+  <GCF_Letter_WarQueenScorpionUnlock_Text>随着战争女王被成功击毁，殖民地已破译重装攻城机械体权限。完成高级机械科技研究并备齐 2 枚动力聚焦芯片后，即可在大型机械培育仓中培育重装机械巨蝎。</GCF_Letter_WarQueenScorpionUnlock_Text>
+  <GCF_FlightFail_InsufficientLift>双翼受损严重，升力不足以腾空</GCF_FlightFail_InsufficientLift>
+  <GCF_CrewMode_Mounted>骑乘驾驭</GCF_CrewMode_Mounted>
+  <GCF_CrewMode_Unmounted>自由活动</GCF_CrewMode_Unmounted>
+  <GCF_WorldDeparture_ConfirmCloseMap>当前处于非殖民地地图，{0} 是此处最后一个己方单位。离开后将关闭该地图并放弃遗留物品，确定离开吗？</GCF_WorldDeparture_ConfirmCloseMap>
+  <GCF_WorldDeparture_ConfirmDestroySite>当前处于非殖民地据点“{1}”，{0} 是此处最后一个己方单位。离开后将关闭地图并移除该世界据点（遗留物品也会丢失），确定离开吗？</GCF_WorldDeparture_ConfirmDestroySite>
+  <GCF_Setting_LoadedGiantsHeader>当前已载入巨兽（{0}）</GCF_Setting_LoadedGiantsHeader>
+  <GCF_Setting_LoadedGiantsEmpty>暂无已载入巨兽</GCF_Setting_LoadedGiantsEmpty>
+  <GCF_GiantSource_BuiltIn>内置</GCF_GiantSource_BuiltIn>
+  <GCF_GiantSource_Custom>自定义</GCF_GiantSource_Custom>
+  <GCF_GiantSource_ExternalMod>{0}</GCF_GiantSource_ExternalMod>
+  <GCF_GiantSource_UnknownMod>未知模组</GCF_GiantSource_UnknownMod>
+  <GCF_Setting_OpenCreaturesFolder>打开自定义巨兽文件夹（Config\GiantCreatureFramework\Creatures）</GCF_Setting_OpenCreaturesFolder>
+  <GCF_AquaticMode_WaterOnly>纯水栖/舰船</GCF_AquaticMode_WaterOnly>
+  <GCF_AquaticMode_Amphibious>水陆两栖</GCF_AquaticMode_Amphibious>
+  <GCF_AquaticState_DeepWater>深水巡航</GCF_AquaticState_DeepWater>
+  <GCF_AquaticState_ShallowWater>浅水航行</GCF_AquaticState_ShallowWater>
+  <GCF_AquaticState_Ashore>陆行上岸</GCF_AquaticState_Ashore>
+  <GCF_AquaticInspectLine>水域模态：{0} · {1}</GCF_AquaticInspectLine>
+  <GCF_AquaticInspectLineWithPropulsion>水域模态：{0} · {1}（水下推进 {2}）</GCF_AquaticInspectLineWithPropulsion>
+  <GCF_AquaticWorldFail_InvalidDestination>纯水栖单位或水面舰船无法前往内陆旱地（需选择海洋、湖泊、海岸或可通航河段）。</GCF_AquaticWorldFail_InvalidDestination>
+  <GCF_AquaticWorldFail_NoWaterRoute>当前位置与目标之间不存在连通的水域或海岸航线。</GCF_AquaticWorldFail_NoWaterRoute>
+  <GCF_AquaticFail_NoWaterOnMap>当前地图没有可供纯水栖单位/舰船进入或驻留的合格水域。</GCF_AquaticFail_NoWaterOnMap>
+</LanguageData>

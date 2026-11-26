@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Reusable PawnRenderTreeDef for Multi-Part Top-Down Giant Creatures -->
+  <PawnRenderTreeDef>
+    <defName>GCF_GiantSkeletalRenderTree</defName>
+    <root Class="GiantCreatureFramework.PawnRenderNodeProperties_GiantRoot">
+      <debugLabel>GiantRigRoot</debugLabel>
+      <tagDef>Root</tagDef>
+      <children>
+        <li Class="PawnRenderNodeProperties_Overlay">
+          <debugLabel>Status overlay</debugLabel>
+          <workerClass>PawnRenderNodeWorker_OverlayStatus</workerClass>
+          <baseLayer>100</baseLayer>
+        </li>
+      </children>
+    </root>
+  </PawnRenderTreeDef>
+
+  <!-- Tail-Mounted Plasma Stinger Projectile -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>GCF_Bullet_PlasmaStinger</defName>
+    <label>plasma stinger bolt</label>
+    <graphicData>
+      <texPath>Things/Projectile/Charge_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>1.8</drawSize>
+      <color>(90, 235, 255)</color>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>23</damageAmountBase>
+      <armorPenetrationBase>0.525</armorPenetrationBase>
+      <stoppingPower>2.25</stoppingPower>
+      <speed>85</speed>
+    </projectile>
+  </ThingDef>
+
+  <!-- Apex Non-Boss Mechanoid Combatant: Heavy Mechanical Scorpion -->
+  <ThingDef ParentName="BaseMechanoid">
+    <defName>GCF_MechScorpion</defName>
+    <label>heavy mech scorpion</label>
+    <description>An ultra-heavy arachnid siege mechanoid engineered by distant machine hives to crack fortified bastions. Beneath a sloped reactor carapace and twin hypercapacitor banks, eight armored hydraulic legs carry its massive frame across rubble while colossal crusher claws pin and shear anything within reach. Arching high above its back, a segmented stinger tail rains superheated plasma bolts over cover; severing the tail silences its ranged barrages, while shattering its claws strips away its devastating close-quarters grip.</description>
+    <tradeability>None</tradeability>
+    <statBases>
+      <MarketValue>6800</MarketValue>
+      <MoveSpeed>3.6</MoveSpeed>
+      <ArmorRating_Blunt>0.375</ArmorRating_Blunt>
+      <ArmorRating_Sharp>1.125</ArmorRating_Sharp>
+      <ArmorRating_Heat>2.00</ArmorRating_Heat>
+      <PsychicSensitivity>1.125</PsychicSensitivity>
+      <EMPResistance MayRequireAnyOf="Ludeon.RimWorld.Biotech,Ludeon.RimWorld.Anomaly">0.90</EMPResistance>
+      <BandwidthCost MayRequire="Ludeon.RimWorld.Biotech">8</BandwidthCost>
+      <ControlTakingTime MayRequire="Ludeon.RimWorld.Biotech">45</ControlTakingTime>
+      <MechEnergyLossPerHP MayRequire="Ludeon.RimWorld.Biotech">0.10</MechEnergyLossPerHP>
+      <WastepacksPerRecharge MayRequire="Ludeon.RimWorld.Biotech">4.6875</WastepacksPerRecharge>
+    </statBases>
+    <tools Inherit="False" />
+    <race>
+      <intelligence>ToolUser</intelligence>
+      <thinkTreeMain>GCF_MechScorpionMain</thinkTreeMain>
+      <thinkTreeConstant>GCF_MechScorpionConstant</thinkTreeConstant>
+      <body>GCF_Body_MechScorpion</body>
+      <renderTree>GCF_GiantSkeletalRenderTree</renderTree>
+      <baseBodySize>6.0</baseBodySize>
+      <baseHealthScale>6.75</baseHealthScale>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Mech_Centipede_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Centipede_Death</soundDeath>
+          <soundCall>Pawn_Mech_Centipede_Call</soundCall>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Biotech">
+          <def>MechanoidFullyFormed</def>
+          <minAge>100</minAge>
+          <soundWounded>Pawn_Mech_Centipede_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Centipede_Death</soundDeath>
+          <soundCall>Pawn_Mech_Centipede_Call</soundCall>
+        </li>
+      </lifeStageAges>
+      <soundCallIntervalRange>1200~2400</soundCallIntervalRange>
+      <soundMeleeHitPawn>Pawn_Melee_MechanoidSlash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_MechanoidBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_MechanoidSlash_Miss</soundMeleeMiss>
+      <mechWeightClass>UltraHeavy</mechWeightClass>
+      <detritusLeavings>
+        <li>
+          <def>ChunkMechanoidSlag</def>
+          <texOverrideIndex>3</texOverrideIndex>
+          <spawnChance>0.75</spawnChance>
+        </li>
+        <li>
+          <def>ChunkMechanoidSlag</def>
+          <texOverrideIndex>17</texOverrideIndex>
+          <spawnChance>0.75</spawnChance>
+        </li>
+        <li>
+          <def>ChunkMechanoidSlag</def>
+          <texOverrideIndex>1</texOverrideIndex>
+          <spawnChance>0.75</spawnChance>
+        </li>
+        <li>
+          <def>ChunkMechanoidSlag</def>
+          <texOverrideIndex>10</texOverrideIndex>
+          <spawnChance>0.75</spawnChance>
+        </li>
+        <li>
+          <def>ChunkMechanoidSlag</def>
+          <texOverrideIndex>19</texOverrideIndex>
+          <spawnChance>0.375</spawnChance>
+        </li>
+      </detritusLeavings>
+    </race>
+    <comps>
+      <li Class="GiantCreatureFramework.CompProperties_GiantRig">
+        <rigDef>GCF_Rig_MechScorpion</rigDef>
+      </li>
+    </comps>
+    <butcherProducts Inherit="False">
+      <Steel>150</Steel>
+      <Plasteel>80</Plasteel>
+      <ComponentSpacer>3</ComponentSpacer>
+    </butcherProducts>
+    <killedLeavingsPlayerHostile MayRequire="Ludeon.RimWorld.Biotech">
+      <SignalChip>2</SignalChip>
+      <ComponentSpacer>2</ComponentSpacer>
+    </killedLeavingsPlayerHostile>
+  </ThingDef>
+
+  <PawnKindDef ParentName="BaseMechanoidKind">
+    <defName>GCF_MechScorpion</defName>
+    <label>heavy mech scorpion</label>
+    <race>GCF_MechScorpion</race>
+    <combatPower>480</combatPower>
+    <maxPerGroup>2</maxPerGroup>
+    <isBoss>false</isBoss>
+    <canMeleeAttack>false</canMeleeAttack>
+    <allowInMechClusters>true</allowInMechClusters>
+    <techHediffsChance>1</techHediffsChance>
+    <techHediffsMoney>9999~9999</techHediffsMoney>
+    <controlGroupPortraitZoom MayRequire="Ludeon.RimWorld.Biotech">0.7</controlGroupPortraitZoom>
+    <lifeStages>
+      <li MayRequire="Ludeon.RimWorld.Biotech">
+        <bodyGraphicData>
+          <texPath>Things/Pawn/GiantCreature/MechScorpion/Carapace</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>3.6</drawSize>
+          <shadowData>
+            <volume>(1.6, 1.0, 1.8)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/GiantCreature/MechScorpion/Carapace</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>3.6</drawSize>
+          <shadowData>
+            <volume>(1.6, 1.0, 1.8)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+</Defs>

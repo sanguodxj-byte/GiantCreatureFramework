@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <MainButtonDef>
+    <defName>GCF_AuthoringTerminal_MainTab</defName>
+    <label>Creature Forge</label>
+    <description>Runtime giant creature authoring terminal</description>
+    <workerClass>GiantCreatureFramework.Agent.UI.MainButtonWorker_AuthoringTerminal</workerClass>
+    <tabWindowClass>GiantCreatureFramework.Agent.UI.MainTabWindow_AuthoringTerminal</tabWindowClass>
+    <iconPath>UI/Icons/GCF_Agent_MainTab</iconPath>
+    <order>96</order>
+    <validWithoutMap>true</validWithoutMap>
+    <minimized>true</minimized>
+  </MainButtonDef>
+</Defs>

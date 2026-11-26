@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <GCF_InspectRigLabel>Rig Inspector</GCF_InspectRigLabel>
+  <GCF_InspectRigDesc>Open the Giant Creature Framework node-axis skeletal animation and dynamic map-cell hitbox/collision inspector.</GCF_InspectRigDesc>
+  <GCF_InspectorTitle>Giant Rig Inspector</GCF_InspectorTitle>
+  <GCF_InspectorSummary>Heading: {0} deg  |  State: {1}  |  Clip: {2}
+Active Hit Cells (Green+Red): {3}  |  Solid Collision Cells (Red): {4}</GCF_InspectorSummary>
+  <GCF_ToggleFootprint>Show Cell Hit/Collision</GCF_ToggleFootprint>
+  <GCF_ToggleSkeleton>Show Pivot Skeleton</GCF_ToggleSkeleton>
+  <GCF_ToggleGlobalFootprint>Global Cell Overlay</GCF_ToggleGlobalFootprint>
+  <GCF_ToggleManualPose>Manual Bone Angles</GCF_ToggleManualPose>
+  <GCF_AnimClipSection>Preview Skeletal Animation Clips:</GCF_AnimClipSection>
+  <GCF_ResetPoseBtn>Reset Pose / Resume AI</GCF_ResetPoseBtn>
+  <GCF_AbilityDisabledMissingOrgan>Organ severed: {0}</GCF_AbilityDisabledMissingOrgan>
+  <GCF_BioferriteCoreActive>Bioferrite Regeneration Core: Active (+{0} HP/s)</GCF_BioferriteCoreActive>
+  <GCF_BioferriteCoreSevered>Bioferrite Regeneration Core: Offline (void crucible core severed)</GCF_BioferriteCoreSevered>
+  <GCF_DisabledSkillsLine>Disarmed abilities: {0}</GCF_DisabledSkillsLine>
+  <GCF_SettingsCategory>Giant Creature Framework</GCF_SettingsCategory>
+  <GCF_SettingsSection_Debug>Debug Visualization Toggles (Default Off)</GCF_SettingsSection_Debug>
+  <GCF_Setting_DrawCollisionCells>Show Collision Cells</GCF_Setting_DrawCollisionCells>
+  <GCF_Setting_DrawCollisionCells_Desc>Draws solid blocking collision cell outlines (red) for giant units on the map.</GCF_Setting_DrawCollisionCells_Desc>
+  <GCF_Setting_DrawHitCells>Show Hit Cells</GCF_Setting_DrawHitCells>
+  <GCF_Setting_DrawHitCells_Desc>Draws alpha-mapped hit cell outlines (green) for giant units on the map.</GCF_Setting_DrawHitCells_Desc>
+  <GCF_Setting_DrawSkeleton>Show Skeleton</GCF_Setting_DrawSkeleton>
+  <GCF_Setting_DrawSkeleton_Desc>Draws bone joint pivots, parent-child links, continuum curves, and emitter vectors on the map.</GCF_Setting_DrawSkeleton_Desc>
+  <GCF_Setting_EnableDebugPanel>Enable Debug Panel</GCF_Setting_EnableDebugPanel>
+  <GCF_Setting_EnableDebugPanel_Desc>Shows a floating Debug Panel button during gameplay to open the Giant Creature Debug Panel. Turning this off immediately hides the button and closes any open panel.</GCF_Setting_EnableDebugPanel_Desc>
+  <GCF_Setting_OpenDebugPanel>Open Debug Panel</GCF_Setting_OpenDebugPanel>
+  <GCF_DebugPanelLauncherBtn>Debug Panel</GCF_DebugPanelLauncherBtn>
+  <GCF_DebugPanelTitle>Giant Creature Debug Panel</GCF_DebugPanelTitle>
+  <GCF_DebugPanelActiveTool>Active Map Tool: {0}</GCF_DebugPanelActiveTool>
+  <GCF_DebugPanelCancelTool>Cancel Tool</GCF_DebugPanelCancelTool>
+  <GCF_DebugCat_Spawn>Spawn</GCF_DebugCat_Spawn>
+  <GCF_DebugCat_Tools>Tools</GCF_DebugCat_Tools>
+  <GCF_DebugAction_SpawnScorpionPlayer>Mech Scorpion - Player</GCF_DebugAction_SpawnScorpionPlayer>
+  <GCF_DebugAction_SpawnScorpionHostile>Mech Scorpion - Hostile</GCF_DebugAction_SpawnScorpionHostile>
+  <GCF_DebugAction_SpawnDynamicPlayer>{0} - Player</GCF_DebugAction_SpawnDynamicPlayer>
+  <GCF_DebugAction_SpawnDynamicHostile>{0} - Hostile</GCF_DebugAction_SpawnDynamicHostile>
+  <GCF_DebugAction_DestroyBone>Destroy Bone At Mouse</GCF_DebugAction_DestroyBone>
+  <GCF_DebugAction_LogHitCell>Log HitCell Aiming Info</GCF_DebugAction_LogHitCell>
+  <GCF_DebugAction_RecallInterceptors>Recall All Carrier Interceptors</GCF_DebugAction_RecallInterceptors>
+  <GCF_DebugAction_StartFpsTelemetry>Start Live FPS Telemetry</GCF_DebugAction_StartFpsTelemetry>
+  <GCF_DebugAction_StopFpsTelemetry>Stop &amp; Log FPS Telemetry</GCF_DebugAction_StopFpsTelemetry>
+  <GCF_SettingsSection_Authoring>Runtime Creature Forge Terminal (Default Off)</GCF_SettingsSection_Authoring>
+  <GCF_Setting_EnableAuthoringTerminal>Enable Creature Forge runtime authoring terminal</GCF_Setting_EnableAuthoringTerminal>
+  <GCF_Setting_EnableAuthoringTerminal_Desc>Shows the Creature Forge main-bar button and enables the F10 hotkey and AI creature authoring terminal. Turning this off immediately hides the entry, aborts active turns, and blocks all network requests (already-saved custom creatures still load normally).</GCF_Setting_EnableAuthoringTerminal_Desc>
+  <GCF_PhaseAdvanceDisabledTransforming>Reconfiguring hull to next stage</GCF_PhaseAdvanceDisabledTransforming>
+  <GCF_PhaseAdvanceDisabledFinalStage>Already in final stage</GCF_PhaseAdvanceDisabledFinalStage>
+  <GCF_PhaseAdvanceDisabledUnavailable>Phase transform system unavailable</GCF_PhaseAdvanceDisabledUnavailable>
+  <GCF_PhaseRevertDisabledTransforming>Reconfiguring hull stage</GCF_PhaseRevertDisabledTransforming>
+  <GCF_PhaseRevertDisabledFirstStage>Already in initial stage</GCF_PhaseRevertDisabledFirstStage>
+  <GCF_PhaseRevertDisabledNotFullState>Requires full structural integrity (zero injuries, missing parts, or adverse conditions) to revert; can only advance to next stage while damaged</GCF_PhaseRevertDisabledNotFullState>
+  <GCF_CarrierHangarStatus>Interceptors: {0} airborne / {1} docked (Cap {2}/{3})</GCF_CarrierHangarStatus>
+  <GCF_CarrierHangarDestroyed>Interceptor hangars: Offline (both hangar bays severed)</GCF_CarrierHangarDestroyed>
+  <GCF_CarrierNoInterceptorsReady>No Interceptors ready.</GCF_CarrierNoInterceptorsReady>
+  <GCF_CarrierRebuildingInterceptor>Fabricating: {0}%</GCF_CarrierRebuildingInterceptor>
+  <GCF_CarrierCatapultOverdriveActive>Graviton Overdrive: {0}s</GCF_CarrierCatapultOverdriveActive>
+  <GCF_Gizmo_RecallInterceptors_Label>Recall Interceptors ({0})</GCF_Gizmo_RecallInterceptors_Label>
+  <GCF_Gizmo_RecallInterceptors_Desc>Immediately order all airborne Interceptors to break off attack runs and return to the Carrier's hangar bays for hull repair and shield recharge.</GCF_Gizmo_RecallInterceptors_Desc>
+  <GCF_Gizmo_RecallDisabledNoneAirborne>No airborne Interceptors.</GCF_Gizmo_RecallDisabledNoneAirborne>
+  <GCF_Gizmo_AutoLaunch_Label>Auto-Scramble Squadron</GCF_Gizmo_AutoLaunch_Label>
+  <GCF_Gizmo_AutoLaunch_Desc>When enabled, the Carrier automatically launches docked Interceptors against hostile threats in range. Disable to keep Interceptors docked until manually ordered.</GCF_Gizmo_AutoLaunch_Desc>
+  <GCF_Gizmo_AutoRebuild_Label>Auto-Fabricate Interceptors</GCF_Gizmo_AutoRebuild_Label>
+  <GCF_Gizmo_AutoRebuild_Desc>Automatically warps and fabricates replacement Interceptors inside intact hangar bays when fighters are lost in combat.</GCF_Gizmo_AutoRebuild_Desc>
+  <GCF_InterceptorInspectLine>Plasma shield: {0} / {1}  |  State: {2}</GCF_InterceptorInspectLine>
+  <GCF_InterceptorState_Docked>Docked</GCF_InterceptorState_Docked>
+  <GCF_InterceptorState_Launching>Catapult Launch</GCF_InterceptorState_Launching>
+  <GCF_InterceptorState_AttackRun>Strafing Attack</GCF_InterceptorState_AttackRun>
+  <GCF_InterceptorState_BreakTurn>Banking Turn</GCF_InterceptorState_BreakTurn>
+  <GCF_InterceptorState_EscortOrbit>Combat Patrol</GCF_InterceptorState_EscortOrbit>
+  <GCF_InterceptorState_Returning>Returning to Bay</GCF_InterceptorState_Returning>
+  <GCF_Tab_Cockpit>Cockpit</GCF_Tab_Cockpit>
+  <GCF_CockpitMode_Piloted>Piloted Overdrive</GCF_CockpitMode_Piloted>
+  <GCF_CockpitMode_Autonomous>Autonomous AI</GCF_CockpitMode_Autonomous>
+  <GCF_CockpitMode_Dormant>Standby (Parked)</GCF_CockpitMode_Dormant>
+  <GCF_CockpitRole_PrimaryPilot>Pilot</GCF_CockpitRole_PrimaryPilot>
+  <GCF_CockpitRole_Gunner>Gunner</GCF_CockpitRole_Gunner>
+  <GCF_CockpitRole_Commander>Commander</GCF_CockpitRole_Commander>
+  <GCF_CockpitRole_Passenger>Passenger</GCF_CockpitRole_Passenger>
+  <GCF_CockpitInspect_Manned>Mode: {0} ({1})  |  Crew: {2}  |  Move {3} · Fire {4}</GCF_CockpitInspect_Manned>
+  <GCF_CockpitInspect_Unmanned>Mode: {0}  |  Crew: {1}  |  Move {2} · Fire {3}</GCF_CockpitInspect_Unmanned>
+  <GCF_Gizmo_AutonomousMode_Label>Autonomous AI</GCF_Gizmo_AutonomousMode_Label>
+  <GCF_Gizmo_AutonomousMode_Desc>Toggle onboard autonomous AI patrol and combat when unmanned. Turn off to park the unit in standby mode.</GCF_Gizmo_AutonomousMode_Desc>
+  <GCF_Gizmo_BoardCrew_Label>Assign Crew</GCF_Gizmo_BoardCrew_Label>
+  <GCF_Gizmo_BoardCrew_Desc>Select a nearby colonist to board an open cockpit seat and engage piloted overdrive bonuses.</GCF_Gizmo_BoardCrew_Desc>
+  <GCF_Gizmo_DisembarkAll_Label>Disembark All ({0})</GCF_Gizmo_DisembarkAll_Label>
+  <GCF_Gizmo_DisembarkAll_Desc>Order all boarded crew members to disembark onto safe perimeter cells outside the hull.</GCF_Gizmo_DisembarkAll_Desc>
+  <GCF_FloatMenu_BoardCockpitSeat>Board {0} ({1})</GCF_FloatMenu_BoardCockpitSeat>
+  <GCF_FloatMenu_BoardMulti>Crew Board {0}</GCF_FloatMenu_BoardMulti>
+  <GCF_FloatMenu_BoardDisabled>Cannot board {0}: {1}</GCF_FloatMenu_BoardDisabled>
+  <GCF_FloatMenu_SeatUnavailable>{0} [{1}]: {2}</GCF_FloatMenu_SeatUnavailable>
+  <GCF_FloatMenu_AssignColonistItem>{0} (Shooting {1} / Melee {2})</GCF_FloatMenu_AssignColonistItem>
+  <GCF_FloatMenu_NoEligibleColonists>No available colonists can reach cockpit</GCF_FloatMenu_NoEligibleColonists>
+  <GCF_CockpitFail_HostUnavailable>Host unit unavailable</GCF_CockpitFail_HostUnavailable>
+  <GCF_CockpitFail_InvalidCrew>Unit cannot board cockpit</GCF_CockpitFail_InvalidCrew>
+  <GCF_CockpitFail_WrongFaction>Not player controlled</GCF_CockpitFail_WrongFaction>
+  <GCF_CockpitFail_SeatDestroyed>Cockpit module destroyed ({0})</GCF_CockpitFail_SeatDestroyed>
+  <GCF_CockpitFail_SeatOccupied>Seat already occupied</GCF_CockpitFail_SeatOccupied>
+  <GCF_CockpitFail_AllSeatsDestroyed>All cockpit modules destroyed</GCF_CockpitFail_AllSeatsDestroyed>
+  <GCF_CockpitFail_Full>Cockpit full</GCF_CockpitFail_Full>
+  <GCF_CockpitFail_AiCoreDestroyed>Autonomous AI core destroyed</GCF_CockpitFail_AiCoreDestroyed>
+  <GCF_CrewDisabledUnmanned>Standby: unit unmanned</GCF_CrewDisabledUnmanned>
+  <GCF_CrewDisabledNoGunner>Weapons offline: missing gunner</GCF_CrewDisabledNoGunner>
+  <GCF_CrewDisabledNoOperator>Systems offline: missing commander</GCF_CrewDisabledNoOperator>
+  <GCF_CockpitTab_EfficiencySummary>Mobility: {0}  |  Fire Control: {1}  |  Reload: {2}</GCF_CockpitTab_EfficiencySummary>
+  <GCF_CockpitTab_EjectAllBtn>Disembark All</GCF_CockpitTab_EjectAllBtn>
+  <GCF_CockpitTab_PartDestroyed>DESTROYED</GCF_CockpitTab_PartDestroyed>
+  <GCF_CockpitTab_OccupantStatus>{0} (Consc. {1})</GCF_CockpitTab_OccupantStatus>
+  <GCF_CockpitTab_DisembarkBtn>Eject</GCF_CockpitTab_DisembarkBtn>
+  <GCF_CockpitTab_SeatEmpty>Empty</GCF_CockpitTab_SeatEmpty>
+  <GCF_CockpitTab_AssignBtn>Assign</GCF_CockpitTab_AssignBtn>
+  <GCF_PartFocusTarget_Label>Focus Target</GCF_PartFocusTarget_Label>
+  <GCF_PartFocusTarget_Desc>Assign a priority target for all intact skeletal part weapons and hangar bays. Intact parts aim and attack independently even while moving.</GCF_PartFocusTarget_Desc>
+  <GCF_PartClearTarget_Label>Clear Focus: {0}</GCF_PartClearTarget_Label>
+  <GCF_PartClearTarget_Desc>Clear the locked focus target and return intact part weapons to autonomous sector acquisition.</GCF_PartClearTarget_Desc>
+  <GCF_PartFireAtWill_Label>Part Fire at Will</GCF_PartFireAtWill_Label>
+  <GCF_PartFireAtWill_Desc>When enabled, intact offensive parts automatically acquire and attack enemies in their firing sectors, including on the move.</GCF_PartFireAtWill_Desc>
+  <GCF_PartWeaponsAllSevered>All offensive parts destroyed.</GCF_PartWeaponsAllSevered>
+  <GCF_FloatMenu_PartFocusAttack>Focus part weapons on {0}</GCF_FloatMenu_PartFocusAttack>
+  <GCF_Gizmo_FlightTakeoff_Label>Take Off</GCF_Gizmo_FlightTakeoff_Label>
+  <GCF_Gizmo_FlightLand_Label>Land</GCF_Gizmo_FlightLand_Label>
+  <GCF_Gizmo_FlightToggle_Desc>Toggle between high-altitude aerial flight (bypasses walls and deep water, immune to ground melee attacks) and grounded locomotion.</GCF_Gizmo_FlightToggle_Desc>
+  <GCF_FlightFail_LiftDamaged>Lift organs or thrusters too damaged to take off</GCF_FlightFail_LiftDamaged>
+  <GCF_FlightFail_ThickRoof>Blocked by overhead mountain roof</GCF_FlightFail_ThickRoof>
+  <GCF_FlightState_Grounded>Grounded</GCF_FlightState_Grounded>
+  <GCF_FlightState_TakingOff>Taking Off</GCF_FlightState_TakingOff>
+  <GCF_FlightState_Airborne>Airborne</GCF_FlightState_Airborne>
+  <GCF_FlightState_Landing>Landing</GCF_FlightState_Landing>
+  <GCF_FlightInspectLine>Flight: {0} (Lift {1})</GCF_FlightInspectLine>
+  <GCF_FlightFail_CombatCooldown>Combat flight recovering ({0}s remaining)</GCF_FlightFail_CombatCooldown>
+  <GCF_FlightInspect_CombatAirLeft>Combat flight limit: {0}s</GCF_FlightInspect_CombatAirLeft>
+  <GCF_FlightInspect_CombatCooldown>Takeoff recovery: {0}s</GCF_FlightInspect_CombatCooldown>
+  <GCF_FloatMenu_CannotMeleeAirborne>Cannot melee airborne target {0}</GCF_FloatMenu_CannotMeleeAirborne>
+  <GCF_FloatMenu_TakeCockpitControl>Control {0} ({1})</GCF_FloatMenu_TakeCockpitControl>
+  <GCF_FloatMenu_BoardRoleOpenCount>Board {0} ({1}, {2} open)</GCF_FloatMenu_BoardRoleOpenCount>
+  <GCF_FloatMenu_DraftControl>Draft &amp; Control {0}</GCF_FloatMenu_DraftControl>
+  <GCF_FloatMenu_UndraftControl>Undraft {0}</GCF_FloatMenu_UndraftControl>
+  <GCF_FloatMenu_DraftAndMoveHere>Draft &amp; Move Here</GCF_FloatMenu_DraftAndMoveHere>
+  <GCF_FloatMenu_DraftAndFocusAttack>Draft &amp; Focus Weapons on {0}</GCF_FloatMenu_DraftAndFocusAttack>
+  <GCF_FloatMenu_SwitchAutonomousOn>Control Mode: Enable Autonomous AI</GCF_FloatMenu_SwitchAutonomousOn>
+  <GCF_FloatMenu_SwitchStandbyOn>Control Mode: Park in Standby</GCF_FloatMenu_SwitchStandbyOn>
+  <GCF_FloatMenu_PartFireAtWillOn>Part Fire at Will: ON (Click to Disable)</GCF_FloatMenu_PartFireAtWillOn>
+  <GCF_FloatMenu_PartFireAtWillOff>Part Fire at Will: OFF (Click to Enable)</GCF_FloatMenu_PartFireAtWillOff>
+  <GCF_FloatMenu_PhaseAdvance>Phase Reconfigure: Advance to {0}</GCF_FloatMenu_PhaseAdvance>
+  <GCF_FloatMenu_PhaseRevert>Phase Reconfigure: Revert to {0}</GCF_FloatMenu_PhaseRevert>
+  <GCF_FloatMenu_PhaseDisabled>Cannot Reconfigure: {0}</GCF_FloatMenu_PhaseDisabled>
+  <GCF_Letter_WarQueenScorpionUnlock_Label>Siege Schematic Unlocked: Heavy Mech Scorpion</GCF_Letter_WarQueenScorpionUnlock_Label>
+  <GCF_Letter_WarQueenScorpionUnlock_Text>With the destruction of the War Queen, your colony can now gestate Heavy Mech Scorpions inside a Large Mech Gestator once High Mechtech research and two Powerfocus Chips are ready.</GCF_Letter_WarQueenScorpionUnlock_Text>
+  <GCF_FlightFail_InsufficientLift>Wings too damaged to achieve flight lift</GCF_FlightFail_InsufficientLift>
+  <GCF_CrewMode_Mounted>Mounted</GCF_CrewMode_Mounted>
+  <GCF_CrewMode_Unmounted>Unmounted</GCF_CrewMode_Unmounted>
+  <GCF_WorldDeparture_ConfirmCloseMap>{0} is the last player unit on this non-colony map. Leaving now will close the map and abandon anything left behind. Continue?</GCF_WorldDeparture_ConfirmCloseMap>
+  <GCF_WorldDeparture_ConfirmDestroySite>{0} is the last player unit at "{1}". Leaving now will close the map and remove this world site (all items left behind will be lost). Continue?</GCF_WorldDeparture_ConfirmDestroySite>
+  <GCF_Setting_LoadedGiantsHeader>Loaded Giant Creatures ({0})</GCF_Setting_LoadedGiantsHeader>
+  <GCF_Setting_LoadedGiantsEmpty>No giant creatures loaded</GCF_Setting_LoadedGiantsEmpty>
+  <GCF_GiantSource_BuiltIn>Built-in</GCF_GiantSource_BuiltIn>
+  <GCF_GiantSource_Custom>Custom</GCF_GiantSource_Custom>
+  <GCF_GiantSource_ExternalMod>{0}</GCF_GiantSource_ExternalMod>
+  <GCF_GiantSource_UnknownMod>External Mod</GCF_GiantSource_UnknownMod>
+  <GCF_Setting_OpenCreaturesFolder>Open Custom Creatures Folder (Config\GiantCreatureFramework\Creatures)</GCF_Setting_OpenCreaturesFolder>
+  <GCF_AquaticMode_WaterOnly>Water-Only / Vessel</GCF_AquaticMode_WaterOnly>
+  <GCF_AquaticMode_Amphibious>Amphibious</GCF_AquaticMode_Amphibious>
+  <GCF_AquaticState_DeepWater>Deep Water</GCF_AquaticState_DeepWater>
+  <GCF_AquaticState_ShallowWater>Shallow Water</GCF_AquaticState_ShallowWater>
+  <GCF_AquaticState_Ashore>Ashore</GCF_AquaticState_Ashore>
+  <GCF_AquaticInspectLine>Aquatic Mode: {0} · {1}</GCF_AquaticInspectLine>
+  <GCF_AquaticInspectLineWithPropulsion>Aquatic Mode: {0} · {1} (Propulsion {2})</GCF_AquaticInspectLineWithPropulsion>
+  <GCF_AquaticWorldFail_InvalidDestination>Water-only unit cannot travel onto inland dry terrain (select ocean, lake, coastal, or river tile).</GCF_AquaticWorldFail_InvalidDestination>
+  <GCF_AquaticWorldFail_NoWaterRoute>No connected water or coastal route to destination.</GCF_AquaticWorldFail_NoWaterRoute>
+  <GCF_AquaticFail_NoWaterOnMap>No navigable water on this map for a water-only unit or vessel.</GCF_AquaticFail_NoWaterOnMap>
+</LanguageData>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <GCF_Body_MechScorpion.label>重装机械巨蝎躯体</GCF_Body_MechScorpion.label>
+
+  <GCF_Body_MechScorpion.corePart.parts.cephalothorax_sensor_hood.customLabel>头胸传感罩</GCF_Body_MechScorpion.corePart.parts.cephalothorax_sensor_hood.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.cephalothorax_sensor_hood.parts.left_sight_sensor.customLabel>左视觉传感器</GCF_Body_MechScorpion.corePart.parts.cephalothorax_sensor_hood.parts.left_sight_sensor.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.cephalothorax_sensor_hood.parts.right_sight_sensor.customLabel>右视觉传感器</GCF_Body_MechScorpion.corePart.parts.cephalothorax_sensor_hood.parts.right_sight_sensor.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.cephalothorax_sensor_hood.parts.left_hearing_sensor.customLabel>左听觉传感器</GCF_Body_MechScorpion.corePart.parts.cephalothorax_sensor_hood.parts.left_hearing_sensor.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.cephalothorax_sensor_hood.parts.right_hearing_sensor.customLabel>右听觉传感器</GCF_Body_MechScorpion.corePart.parts.cephalothorax_sensor_hood.parts.right_hearing_sensor.customLabel>
+
+  <GCF_Body_MechScorpion.corePart.parts.left_hypercapacitor.customLabel>左超电容组</GCF_Body_MechScorpion.corePart.parts.left_hypercapacitor.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.right_hypercapacitor.customLabel>右超电容组</GCF_Body_MechScorpion.corePart.parts.right_hypercapacitor.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.left_fluid_reprocessor.customLabel>左流体再处理器</GCF_Body_MechScorpion.corePart.parts.left_fluid_reprocessor.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.right_fluid_reprocessor.customLabel>右流体再处理器</GCF_Body_MechScorpion.corePart.parts.right_fluid_reprocessor.customLabel>
+
+  <GCF_Body_MechScorpion.corePart.parts.left_crusher_claw.customLabel>左液压粉碎巨钳</GCF_Body_MechScorpion.corePart.parts.left_crusher_claw.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.left_crusher_claw.parts.left_pincer_jaw.customLabel>左粉碎钳颚</GCF_Body_MechScorpion.corePart.parts.left_crusher_claw.parts.left_pincer_jaw.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.left_crusher_claw.parts.left_claw_servo.customLabel>左巨钳伺服作动器</GCF_Body_MechScorpion.corePart.parts.left_crusher_claw.parts.left_claw_servo.customLabel>
+
+  <GCF_Body_MechScorpion.corePart.parts.right_crusher_claw.customLabel>右液压粉碎巨钳</GCF_Body_MechScorpion.corePart.parts.right_crusher_claw.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.right_crusher_claw.parts.right_pincer_jaw.customLabel>右粉碎钳颚</GCF_Body_MechScorpion.corePart.parts.right_crusher_claw.parts.right_pincer_jaw.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.right_crusher_claw.parts.right_claw_servo.customLabel>右巨钳伺服作动器</GCF_Body_MechScorpion.corePart.parts.right_crusher_claw.parts.right_claw_servo.customLabel>
+
+  <GCF_Body_MechScorpion.corePart.parts.front_left_hydraulic_leg.customLabel>左前第1液压步足</GCF_Body_MechScorpion.corePart.parts.front_left_hydraulic_leg.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.front_left_hydraulic_leg.parts.front_left_tarsus_foot.customLabel>左前第1跗节足垫</GCF_Body_MechScorpion.corePart.parts.front_left_hydraulic_leg.parts.front_left_tarsus_foot.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.mid_front_left_hydraulic_leg.customLabel>左中前第2液压步足</GCF_Body_MechScorpion.corePart.parts.mid_front_left_hydraulic_leg.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.mid_front_left_hydraulic_leg.parts.mid_front_left_tarsus_foot.customLabel>左中前第2跗节足垫</GCF_Body_MechScorpion.corePart.parts.mid_front_left_hydraulic_leg.parts.mid_front_left_tarsus_foot.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.mid_rear_left_hydraulic_leg.customLabel>左中后第3液压步足</GCF_Body_MechScorpion.corePart.parts.mid_rear_left_hydraulic_leg.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.mid_rear_left_hydraulic_leg.parts.mid_rear_left_tarsus_foot.customLabel>左中后第3跗节足垫</GCF_Body_MechScorpion.corePart.parts.mid_rear_left_hydraulic_leg.parts.mid_rear_left_tarsus_foot.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.rear_left_hydraulic_leg.customLabel>左后第4液压步足</GCF_Body_MechScorpion.corePart.parts.rear_left_hydraulic_leg.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.rear_left_hydraulic_leg.parts.rear_left_tarsus_foot.customLabel>左后第4跗节足垫</GCF_Body_MechScorpion.corePart.parts.rear_left_hydraulic_leg.parts.rear_left_tarsus_foot.customLabel>
+
+  <GCF_Body_MechScorpion.corePart.parts.front_right_hydraulic_leg.customLabel>右前第1液压步足</GCF_Body_MechScorpion.corePart.parts.front_right_hydraulic_leg.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.front_right_hydraulic_leg.parts.front_right_tarsus_foot.customLabel>右前第1跗节足垫</GCF_Body_MechScorpion.corePart.parts.front_right_hydraulic_leg.parts.front_right_tarsus_foot.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.mid_front_right_hydraulic_leg.customLabel>右中前第2液压步足</GCF_Body_MechScorpion.corePart.parts.mid_front_right_hydraulic_leg.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.mid_front_right_hydraulic_leg.parts.mid_front_right_tarsus_foot.customLabel>右中前第2跗节足垫</GCF_Body_MechScorpion.corePart.parts.mid_front_right_hydraulic_leg.parts.mid_front_right_tarsus_foot.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.mid_rear_right_hydraulic_leg.customLabel>右中后第3液压步足</GCF_Body_MechScorpion.corePart.parts.mid_rear_right_hydraulic_leg.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.mid_rear_right_hydraulic_leg.parts.mid_rear_right_tarsus_foot.customLabel>右中后第3跗节足垫</GCF_Body_MechScorpion.corePart.parts.mid_rear_right_hydraulic_leg.parts.mid_rear_right_tarsus_foot.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.rear_right_hydraulic_leg.customLabel>右后第4液压步足</GCF_Body_MechScorpion.corePart.parts.rear_right_hydraulic_leg.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.rear_right_hydraulic_leg.parts.rear_right_tarsus_foot.customLabel>右后第4跗节足垫</GCF_Body_MechScorpion.corePart.parts.rear_right_hydraulic_leg.parts.rear_right_tarsus_foot.customLabel>
+
+  <GCF_Body_MechScorpion.corePart.parts.tail_segment_1.customLabel>第1装甲尾节</GCF_Body_MechScorpion.corePart.parts.tail_segment_1.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.tail_segment_1.parts.tail_segment_2.customLabel>第2装甲尾节</GCF_Body_MechScorpion.corePart.parts.tail_segment_1.parts.tail_segment_2.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.tail_segment_1.parts.tail_segment_2.parts.tail_segment_3.customLabel>第3装甲尾节</GCF_Body_MechScorpion.corePart.parts.tail_segment_1.parts.tail_segment_2.parts.tail_segment_3.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.tail_segment_1.parts.tail_segment_2.parts.tail_segment_3.parts.tail_segment_4.customLabel>第4装甲尾节</GCF_Body_MechScorpion.corePart.parts.tail_segment_1.parts.tail_segment_2.parts.tail_segment_3.parts.tail_segment_4.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.tail_segment_1.parts.tail_segment_2.parts.tail_segment_3.parts.tail_segment_4.parts.tail_segment_5.customLabel>第5装甲尾节</GCF_Body_MechScorpion.corePart.parts.tail_segment_1.parts.tail_segment_2.parts.tail_segment_3.parts.tail_segment_4.parts.tail_segment_5.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.tail_segment_1.parts.tail_segment_2.parts.tail_segment_3.parts.tail_segment_4.parts.tail_segment_5.parts.tail_segment_6.customLabel>第6装甲尾节</GCF_Body_MechScorpion.corePart.parts.tail_segment_1.parts.tail_segment_2.parts.tail_segment_3.parts.tail_segment_4.parts.tail_segment_5.parts.tail_segment_6.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.tail_segment_1.parts.tail_segment_2.parts.tail_segment_3.parts.tail_segment_4.parts.tail_segment_5.parts.tail_segment_6.parts.plasma_tail_stinger.customLabel>等离子关节尾刺</GCF_Body_MechScorpion.corePart.parts.tail_segment_1.parts.tail_segment_2.parts.tail_segment_3.parts.tail_segment_4.parts.tail_segment_5.parts.tail_segment_6.parts.plasma_tail_stinger.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.tail_segment_1.parts.tail_segment_2.parts.tail_segment_3.parts.tail_segment_4.parts.tail_segment_5.parts.tail_segment_6.parts.plasma_tail_stinger.parts.plasma_emitter_core.customLabel>等离子发生核心</GCF_Body_MechScorpion.corePart.parts.tail_segment_1.parts.tail_segment_2.parts.tail_segment_3.parts.tail_segment_4.parts.tail_segment_5.parts.tail_segment_6.parts.plasma_tail_stinger.parts.plasma_emitter_core.customLabel>
+</LanguageData>

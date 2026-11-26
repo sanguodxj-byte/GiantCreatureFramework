@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Giant Creature Framework</name>
+  <shortName>GCF</shortName>
+  <author>Sanguo</author>
+  <packageId>sanguo.giantcreatureframework</packageId>
+  <modVersion>1.0.0</modVersion>
+  <modIconPath IgnoreIfNoMatchingField="true">UI/Icons/GCF_Agent_Logo</modIconPath>
+  <supportedVersions>
+    <li>1.7</li>
+  </supportedVersions>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+      <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>brrainz.harmony</li>
+    <li>Ludeon.RimWorld</li>
+    <li>Ludeon.RimWorld.Royalty</li>
+    <li>Ludeon.RimWorld.Ideology</li>
+    <li>Ludeon.RimWorld.Biotech</li>
+    <li>Ludeon.RimWorld.Anomaly</li>
+    <li>Ludeon.RimWorld.Odyssey</li>
+  </loadAfter>
+  <forceLoadAfter>
+    <li>brrainz.harmony</li>
+    <li>Ludeon.RimWorld</li>
+    <li>Ludeon.RimWorld.Royalty</li>
+    <li>Ludeon.RimWorld.Ideology</li>
+    <li>Ludeon.RimWorld.Biotech</li>
+    <li>Ludeon.RimWorld.Anomaly</li>
+    <li>Ludeon.RimWorld.Odyssey</li>
+  </forceLoadAfter>
+  <incompatibleWith>
+    <li>majorhoff.rimthreaded</li>
+  </incompatibleWith>
+  <description>专为边缘世界打造的巨型生物、超重型机甲与大型载具底层框架（Giant Creature Framework）。
+
+【核心特性】
+- 多部位自然动作与断肢破坏：告别单张贴图平移，巨兽的四肢、翅膀与长尾均独立活动；打断肢体时对应部位当场脱落，长在上面的武器也会随之失效。
+- 真实多格身躯与顺滑交互：受击与阻挡范围随转身实时同步，近战肉搏无透明空气墙；右键点击身体任意位置即可正常集火攻击、喂食、包扎或训练。
+- 多武器齐射、独立炮塔与阶段变形：支持单单位多武器同时开火、360 度独立旋转炮塔，以及首领战多阶段变形展开。
+- 空地飞行、多人乘骑与跨图远征：支持地面与高空飞行切换、最多 12 人座舱或兽背骑乘，以及直接飞越世界地图远征。
+- 内置游戏内 AI 巨兽创作工坊：无需手写繁琐配置，在模组设置中开启创作终端并填入自己的模型与文生图 API 后，即可用自然语言在游戏内自动生成分部件贴图、完成关节拼装与动作配置，免重启热加载进当前地图实机开打，产物自动保存在独立目录跨档加载。
+
+【框架说明】
+主框架保持精简纯粹，仅保留内置机械族单位「重装机械巨蝎」供验证与体验；同时提供模块化扩展支持，可按需挂载独立扩展模组或使用创作工坊自制巨兽。
+
+[English]
+Giant Creature Framework (GCF) is a lean, zero-bloat foundation for multi-part colossal creatures, super-heavy mechs, and multi-tile vehicles in RimWorld 1.7. It brings independently animated limbs, limb-severing disarms, accurate multi-tile hitboxes, multi-weapon volleys, 360-degree turrets, boss phase transformations, flight, multi-crew riding/cockpits, and world map travel — plus an optional in-game AI Giant Workshop (enable in Mod Settings) that generates part sprites, rigs, and animations from plain-language descriptions with live hot-reload. Includes the built-in Heavy Mech Scorpion and modular extension support for add-on creatures and vehicles. All DLCs are optional.</description>
+</ModMetaData>

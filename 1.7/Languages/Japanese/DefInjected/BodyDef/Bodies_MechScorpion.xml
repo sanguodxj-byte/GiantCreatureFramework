@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <GCF_Body_MechScorpion.label>重装機械巨蠍の躯体</GCF_Body_MechScorpion.label>
+
+  <GCF_Body_MechScorpion.corePart.parts.cephalothorax_sensor_hood.customLabel>頭胸センサーハウジング</GCF_Body_MechScorpion.corePart.parts.cephalothorax_sensor_hood.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.cephalothorax_sensor_hood.parts.left_sight_sensor.customLabel>左視覚センサー</GCF_Body_MechScorpion.corePart.parts.cephalothorax_sensor_hood.parts.left_sight_sensor.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.cephalothorax_sensor_hood.parts.right_sight_sensor.customLabel>右視覚センサー</GCF_Body_MechScorpion.corePart.parts.cephalothorax_sensor_hood.parts.right_sight_sensor.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.cephalothorax_sensor_hood.parts.left_hearing_sensor.customLabel>左聴覚センサー</GCF_Body_MechScorpion.corePart.parts.cephalothorax_sensor_hood.parts.left_hearing_sensor.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.cephalothorax_sensor_hood.parts.right_hearing_sensor.customLabel>右聴覚センサー</GCF_Body_MechScorpion.corePart.parts.cephalothorax_sensor_hood.parts.right_hearing_sensor.customLabel>
+
+  <GCF_Body_MechScorpion.corePart.parts.left_hypercapacitor.customLabel>左超容量コンデンサ群</GCF_Body_MechScorpion.corePart.parts.left_hypercapacitor.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.right_hypercapacitor.customLabel>右超容量コンデンサ群</GCF_Body_MechScorpion.corePart.parts.right_hypercapacitor.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.left_fluid_reprocessor.customLabel>左流体再処理装置</GCF_Body_MechScorpion.corePart.parts.left_fluid_reprocessor.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.right_fluid_reprocessor.customLabel>右流体再処理装置</GCF_Body_MechScorpion.corePart.parts.right_fluid_reprocessor.customLabel>
+
+  <GCF_Body_MechScorpion.corePart.parts.left_crusher_claw.customLabel>左油圧粉砕巨鉗</GCF_Body_MechScorpion.corePart.parts.left_crusher_claw.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.left_crusher_claw.parts.left_pincer_jaw.customLabel>左粉砕鉗顎</GCF_Body_MechScorpion.corePart.parts.left_crusher_claw.parts.left_pincer_jaw.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.left_crusher_claw.parts.left_claw_servo.customLabel>左巨鉗サーボアクチュエータ</GCF_Body_MechScorpion.corePart.parts.left_crusher_claw.parts.left_claw_servo.customLabel>
+
+  <GCF_Body_MechScorpion.corePart.parts.right_crusher_claw.customLabel>右油圧粉砕巨鉗</GCF_Body_MechScorpion.corePart.parts.right_crusher_claw.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.right_crusher_claw.parts.right_pincer_jaw.customLabel>右粉砕鉗顎</GCF_Body_MechScorpion.corePart.parts.right_crusher_claw.parts.right_pincer_jaw.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.right_crusher_claw.parts.right_claw_servo.customLabel>右巨鉗サーボアクチュエータ</GCF_Body_MechScorpion.corePart.parts.right_crusher_claw.parts.right_claw_servo.customLabel>
+
+  <GCF_Body_MechScorpion.corePart.parts.front_left_hydraulic_leg.customLabel>左前第1油圧歩脚</GCF_Body_MechScorpion.corePart.parts.front_left_hydraulic_leg.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.front_left_hydraulic_leg.parts.front_left_tarsus_foot.customLabel>左前第1付節足底パッド</GCF_Body_MechScorpion.corePart.parts.front_left_hydraulic_leg.parts.front_left_tarsus_foot.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.mid_front_left_hydraulic_leg.customLabel>左中前第2油圧歩脚</GCF_Body_MechScorpion.corePart.parts.mid_front_left_hydraulic_leg.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.mid_front_left_hydraulic_leg.parts.mid_front_left_tarsus_foot.customLabel>左中前第2付節足底パッド</GCF_Body_MechScorpion.corePart.parts.mid_front_left_hydraulic_leg.parts.mid_front_left_tarsus_foot.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.mid_rear_left_hydraulic_leg.customLabel>左中後第3油圧歩脚</GCF_Body_MechScorpion.corePart.parts.mid_rear_left_hydraulic_leg.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.mid_rear_left_hydraulic_leg.parts.mid_rear_left_tarsus_foot.customLabel>左中後第3付節足底パッド</GCF_Body_MechScorpion.corePart.parts.mid_rear_left_hydraulic_leg.parts.mid_rear_left_tarsus_foot.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.rear_left_hydraulic_leg.customLabel>左後第4油圧歩脚</GCF_Body_MechScorpion.corePart.parts.rear_left_hydraulic_leg.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.rear_left_hydraulic_leg.parts.rear_left_tarsus_foot.customLabel>左後第4付節足底パッド</GCF_Body_MechScorpion.corePart.parts.rear_left_hydraulic_leg.parts.rear_left_tarsus_foot.customLabel>
+
+  <GCF_Body_MechScorpion.corePart.parts.front_right_hydraulic_leg.customLabel>右前第1油圧歩脚</GCF_Body_MechScorpion.corePart.parts.front_right_hydraulic_leg.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.front_right_hydraulic_leg.parts.front_right_tarsus_foot.customLabel>右前第1付節足底パッド</GCF_Body_MechScorpion.corePart.parts.front_right_hydraulic_leg.parts.front_right_tarsus_foot.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.mid_front_right_hydraulic_leg.customLabel>右中前第2油圧歩脚</GCF_Body_MechScorpion.corePart.parts.mid_front_right_hydraulic_leg.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.mid_front_right_hydraulic_leg.parts.mid_front_right_tarsus_foot.customLabel>右中前第2付節足底パッド</GCF_Body_MechScorpion.corePart.parts.mid_front_right_hydraulic_leg.parts.mid_front_right_tarsus_foot.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.mid_rear_right_hydraulic_leg.customLabel>右中後第3油圧歩脚</GCF_Body_MechScorpion.corePart.parts.mid_rear_right_hydraulic_leg.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.mid_rear_right_hydraulic_leg.parts.mid_rear_right_tarsus_foot.customLabel>右中後第3付節足底パッド</GCF_Body_MechScorpion.corePart.parts.mid_rear_right_hydraulic_leg.parts.mid_rear_right_tarsus_foot.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.rear_right_hydraulic_leg.customLabel>右後第4油圧歩脚</GCF_Body_MechScorpion.corePart.parts.rear_right_hydraulic_leg.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.rear_right_hydraulic_leg.parts.rear_right_tarsus_foot.customLabel>右後第4付節足底パッド</GCF_Body_MechScorpion.corePart.parts.rear_right_hydraulic_leg.parts.rear_right_tarsus_foot.customLabel>
+
+  <GCF_Body_MechScorpion.corePart.parts.tail_segment_1.customLabel>第1装甲尾節</GCF_Body_MechScorpion.corePart.parts.tail_segment_1.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.tail_segment_1.parts.tail_segment_2.customLabel>第2装甲尾節</GCF_Body_MechScorpion.corePart.parts.tail_segment_1.parts.tail_segment_2.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.tail_segment_1.parts.tail_segment_2.parts.tail_segment_3.customLabel>第3装甲尾節</GCF_Body_MechScorpion.corePart.parts.tail_segment_1.parts.tail_segment_2.parts.tail_segment_3.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.tail_segment_1.parts.tail_segment_2.parts.tail_segment_3.parts.tail_segment_4.customLabel>第4装甲尾節</GCF_Body_MechScorpion.corePart.parts.tail_segment_1.parts.tail_segment_2.parts.tail_segment_3.parts.tail_segment_4.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.tail_segment_1.parts.tail_segment_2.parts.tail_segment_3.parts.tail_segment_4.parts.tail_segment_5.customLabel>第5装甲尾節</GCF_Body_MechScorpion.corePart.parts.tail_segment_1.parts.tail_segment_2.parts.tail_segment_3.parts.tail_segment_4.parts.tail_segment_5.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.tail_segment_1.parts.tail_segment_2.parts.tail_segment_3.parts.tail_segment_4.parts.tail_segment_5.parts.tail_segment_6.customLabel>第6装甲尾節</GCF_Body_MechScorpion.corePart.parts.tail_segment_1.parts.tail_segment_2.parts.tail_segment_3.parts.tail_segment_4.parts.tail_segment_5.parts.tail_segment_6.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.tail_segment_1.parts.tail_segment_2.parts.tail_segment_3.parts.tail_segment_4.parts.tail_segment_5.parts.tail_segment_6.parts.plasma_tail_stinger.customLabel>プラズマ関節尾針</GCF_Body_MechScorpion.corePart.parts.tail_segment_1.parts.tail_segment_2.parts.tail_segment_3.parts.tail_segment_4.parts.tail_segment_5.parts.tail_segment_6.parts.plasma_tail_stinger.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.tail_segment_1.parts.tail_segment_2.parts.tail_segment_3.parts.tail_segment_4.parts.tail_segment_5.parts.tail_segment_6.parts.plasma_tail_stinger.parts.plasma_emitter_core.customLabel>プラズマ発生コア</GCF_Body_MechScorpion.corePart.parts.tail_segment_1.parts.tail_segment_2.parts.tail_segment_3.parts.tail_segment_4.parts.tail_segment_5.parts.tail_segment_6.parts.plasma_tail_stinger.parts.plasma_emitter_core.customLabel>
+</LanguageData>

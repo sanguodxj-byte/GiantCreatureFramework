@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!-- Register Heavy Mech Scorpion gestation recipe on LargeMechGestator -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="LargeMechGestator"]/recipes</xpath>
+    <value>
+      <li>GCF_Gestate_MechScorpion</li>
+    </value>
+  </Operation>
+
+  <!-- Allow resurrected Heavy Mech Scorpion corpses in ResurrectUltraheavyMech -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/RecipeDef[defName="ResurrectUltraheavyMech"]/fixedIngredientFilter/thingDefs</xpath>
+    <value>
+      <li>Corpse_GCF_MechScorpion</li>
+    </value>
+  </Operation>
+
+  <!-- Upgrade Mech Scorpion sound effects to Biotech Diabolus suite when Biotech is active -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="GCF_MechScorpion"]/race/lifeStageAges</xpath>
+    <value>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Mech_Diabolus_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Diabolus_Death</soundDeath>
+          <soundCall>Pawn_Mech_Diabolus_Call</soundCall>
+        </li>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>100</minAge>
+          <soundWounded>Pawn_Mech_Diabolus_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Diabolus_Death</soundDeath>
+          <soundCall>Pawn_Mech_Diabolus_Call</soundCall>
+        </li>
+      </lifeStageAges>
+    </value>
+  </Operation>
+
+</Patch>

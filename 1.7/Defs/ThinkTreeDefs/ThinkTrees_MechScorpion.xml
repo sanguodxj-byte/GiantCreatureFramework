@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThinkTreeDef>
+    <defName>GCF_MechScorpionMain</defName>
+    <thinkRoot Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="ThinkNode_Subtree">
+          <treeDef>Despawned</treeDef>
+        </li>
+
+        <li Class="ThinkNode_Subtree">
+          <treeDef>Downed</treeDef>
+        </li>
+
+        <!-- Self-Shutdown when energy depleted (Biotech) -->
+        <li Class="ThinkNode_ConditionalLowEnergy" MayRequire="Ludeon.RimWorld.Biotech">
+          <subNodes>
+            <li Class="JobGiver_SelfShutdown" />
+          </subNodes>
+        </li>
+
+        <li Class="ThinkNode_Subtree">
+          <treeDef>BurningResponse</treeDef>
+        </li>
+
+        <li Class="ThinkNode_Subtree">
+          <treeDef>MentalStateCritical</treeDef>
+        </li>
+
+        <li Class="GiantCreatureFramework.ThinkNode_ConditionalGiantPlayerDrafted">
+          <subNodes>
+            <li Class="GiantCreatureFramework.ThinkNode_GiantPlayerDrafted" />
+          </subNodes>
+        </li>
+
+        <li Class="ThinkNode_QueuedJob" />
+
+        <li Class="ThinkNode_ConditionalForcedGoto">
+          <subNodes>
+            <li Class="ThinkNode_Tagger">
+              <tagToGive>Misc</tagToGive>
+              <subNodes>
+                <li Class="JobGiver_ForcedGoto" />
+              </subNodes>
+            </li>
+          </subNodes>
+        </li>
+
+        <li Class="ThinkNode_Subtree">
+          <treeDef>LordDuty</treeDef>
+        </li>
+
+        <!-- Player-controlled mechanoid work modes & charging (Biotech) -->
+        <li Class="ThinkNode_ConditionalPlayerControlledMech" MayRequire="Ludeon.RimWorld.Biotech">
+          <subNodes>
+            <li Class="ThinkNode_ConditionalNotFormingCaravan">
+              <subNodes>
+                <!-- Keep charging if already recharging -->
+                <li Class="ThinkNode_ConditionalRecharging">
+                  <subNodes>
+                    <li Class="JobGiver_GetEnergy_Charger" />
+                  </subNodes>
+                </li>
+
+                <!-- Work mode: obey allowed area, recharge when needed, patrol & fight using part positioning -->
+                <li Class="ThinkNode_ConditionalWorkMode">
+                  <workMode>Work</workMode>
+                  <subNodes>
+                    <li Class="JobGiver_SeekAllowedArea" />
+                    <li Class="JobGiver_GetEnergy_Charger" />
+                    <li Class="GiantCreatureFramework.JobGiver_GiantPartCombatPositioning">
+                      <targetAcquireRadius>58</targetAcquireRadius>
+                      <targetKeepRadius>70</targetKeepRadius>
+                    </li>
+                    <li Class="ThinkNode_Tagger">
+                      <tagToGive>MiscWork</tagToGive>
+                      <subNodes>
+                        <li Class="JobGiver_WanderColony">
+                          <maxDanger>Deadly</maxDanger>
+                          <reportStringOverride>Patrolling.</reportStringOverride>
+                        </li>
+                      </subNodes>
+                    </li>
+                  </subNodes>
+                </li>
+
+                <!-- SelfShutdown mode -->
+                <li Class="ThinkNode_ConditionalWorkMode">
+                  <workMode>SelfShutdown</workMode>
+                  <subNodes>
+                    <li Class="JobGiver_SeekAllowedArea" />
+                    <li Class="JobGiver_SelfShutdown" />
+                  </subNodes>
+                </li>
+
+                <!-- Recharge mode -->
+                <li Class="ThinkNode_ConditionalWorkMode">
+                  <workMode>Recharge</workMode>
+                  <subNodes>
+                    <li Class="JobGiver_SeekAllowedArea" />
+                    <li Class="JobGiver_GetEnergy_Charger" />
+                    <li Class="JobGiver_GetEnergy_SelfShutdown">
+                      <forced>true</forced>
+                    </li>
+                  </subNodes>
+                </li>
+
+                <!-- Escort mode -->
+                <li Class="ThinkNode_ConditionalWorkMode">
+                  <workMode>Escort</workMode>
+                  <subNodes>
+                    <li Class="JobGiver_ExitMapFollowOverseer" />
+                    <li Class="JobGiver_AIDefendOverseer" />
+                    <li Class="JobGiver_AIFollowOverseer" />
+                    <li Class="JobGiver_AIWaitWithOverseer" />
+                    <li Class="JobGiver_WanderOverseer" />
+                  </subNodes>
+                </li>
+              </subNodes>
+            </li>
+          </subNodes>
+        </li>
+
+        <!-- Non player-controlled mechs fight nearby hostiles -->
+        <li Class="ThinkNode_ConditionalPlayerControlledMech">
+          <invert>true</invert>
+          <subNodes>
+            <li Class="GiantCreatureFramework.JobGiver_GiantPartCombatPositioning">
+              <targetAcquireRadius>58</targetAcquireRadius>
+              <targetKeepRadius>70</targetKeepRadius>
+            </li>
+          </subNodes>
+        </li>
+
+        <!-- Idle player mech -->
+        <li Class="ThinkNode_ConditionalPlayerControlledMech" MayRequire="Ludeon.RimWorld.Biotech">
+          <subNodes>
+            <li Class="ThinkNode_Tagger">
+              <tagToGive>Idle</tagToGive>
+              <subNodes>
+                <li Class="JobGiver_WanderColony">
+                  <maxDanger>None</maxDanger>
+                </li>
+              </subNodes>
+            </li>
+          </subNodes>
+        </li>
+
+        <li Class="JobGiver_WanderAnywhere">
+          <maxDanger>Deadly</maxDanger>
+          <ticksBetweenWandersRange>160~320</ticksBetweenWandersRange>
+        </li>
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+
+  <ThinkTreeDef>
+    <defName>GCF_MechScorpionConstant</defName>
+    <thinkRoot Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="ThinkNode_Subtree">
+          <treeDef>Despawned</treeDef>
+        </li>
+        <li Class="ThinkNode_ConditionalCanDoLordJobNow">
+          <subNodes>
+            <li Class="ThinkNode_Subtree">
+              <treeDef>LordDutyConstant</treeDef>
+            </li>
+          </subNodes>
+        </li>
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+
+</Defs>

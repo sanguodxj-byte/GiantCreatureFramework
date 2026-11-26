@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <GCF_MechScorpion.label>重装機械巨蠍</GCF_MechScorpion.label>
+  <GCF_MechScorpion.description>遠方の機械ハイヴが堅固な要塞をこじ開けるために鋳造した超重量級の節足攻城メカノイド。傾斜した反応炉背甲の下に大容量コンデンサ群を並列搭載し、8本の重装油圧脚で瓦礫を踏み越えながら、前面の一対の粉砕巨鉗で接近する標的を挟み込み断ち切る。背上に高く反り立つ多節の尾針は遮蔽物越しに灼熱のプラズマ弾を降り注ぐが、尾針を断たれれば遠距離砲撃は沈黙し、双鉗を砕かれれば近接での圧殺能力を失う。</GCF_MechScorpion.description>
+
+  <GCF_Bullet_PlasmaStinger.label>尾針プラズマ弾</GCF_Bullet_PlasmaStinger.label>
+</LanguageData>

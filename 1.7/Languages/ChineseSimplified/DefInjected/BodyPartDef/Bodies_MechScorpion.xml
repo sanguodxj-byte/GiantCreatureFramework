@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <GCF_MechCarapace.label>重装核心背甲</GCF_MechCarapace.label>
+  <GCF_MechCephalothorax.label>头胸传感罩</GCF_MechCephalothorax.label>
+  <GCF_MechCapacitor.label>超电容组</GCF_MechCapacitor.label>
+  <GCF_MechCrusherClaw.label>液压粉碎巨钳</GCF_MechCrusherClaw.label>
+  <GCF_MechClawPincer.label>液压粉碎钳颚</GCF_MechClawPincer.label>
+  <GCF_MechClawActuator.label>巨钳伺服作动器</GCF_MechClawActuator.label>
+  <GCF_MechWalkingLeg.label>独立液压步足</GCF_MechWalkingLeg.label>
+  <GCF_MechWalkingFoot.label>跗节液压足垫</GCF_MechWalkingFoot.label>
+  <GCF_MechTailRing1.label>第1重装尾节环甲</GCF_MechTailRing1.label>
+  <GCF_MechTailRing1.labelShort>尾节环甲</GCF_MechTailRing1.labelShort>
+  <GCF_MechTailRing2.label>第2重装尾节环甲</GCF_MechTailRing2.label>
+  <GCF_MechTailRing2.labelShort>尾节环甲</GCF_MechTailRing2.labelShort>
+  <GCF_MechTailRing3.label>第3重装尾节环甲</GCF_MechTailRing3.label>
+  <GCF_MechTailRing3.labelShort>尾节环甲</GCF_MechTailRing3.labelShort>
+  <GCF_MechTailRing4.label>第4重装尾节环甲</GCF_MechTailRing4.label>
+  <GCF_MechTailRing4.labelShort>尾节环甲</GCF_MechTailRing4.labelShort>
+  <GCF_MechTailRing5.label>第5重装尾节环甲</GCF_MechTailRing5.label>
+  <GCF_MechTailRing5.labelShort>尾节环甲</GCF_MechTailRing5.labelShort>
+  <GCF_MechTailRing6.label>第6重装尾节环甲</GCF_MechTailRing6.label>
+  <GCF_MechTailRing6.labelShort>尾节环甲</GCF_MechTailRing6.labelShort>
+  <GCF_MechTailStinger.label>等离子关节尾刺</GCF_MechTailStinger.label>
+  <GCF_MechPlasmaEmitter.label>等离子发生核心</GCF_MechPlasmaEmitter.label>
+</LanguageData>

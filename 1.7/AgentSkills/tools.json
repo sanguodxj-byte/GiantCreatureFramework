@@ -1,0 +1,708 @@
+{
+  "capabilities": [
+    {
+      "id": "manuals",
+      "purpose": "运行时制作手册目录与全文加载",
+      "tools": ["list_manuals", "load_manual"]
+    },
+    {
+      "id": "workspace",
+      "purpose": "生物工作区文件目录、Def XML 读写与程序化骨骼动作合成",
+      "tools": ["list_workspace", "read_creature_xml", "write_creature_xml", "generate_locomotion_anim"]
+    },
+    {
+      "id": "sprites",
+      "purpose": "AI 绿幕母图生成、抠图退绿、512x512 骨骼对位、棋盘格预览与多帧动作连拍自检",
+      "tools": ["generate_image", "extract_sheet", "warp_bone", "preview_sheet", "preview_anim_strip"]
+    },
+    {
+      "id": "injection",
+      "purpose": "离线配置与关节审计校验、定向热注入与地图生成",
+      "tools": ["validate_creature", "inject_creature", "spawn_creature"]
+    },
+    {
+      "id": "definitions",
+      "purpose": "已加载 Def 搜索与字段读取",
+      "tools": ["search_defs", "get_def_details"]
+    },
+    {
+      "id": "files",
+      "purpose": "已启用模组磁盘 XML 搜索与读取",
+      "tools": ["search_mod_xml_and_patches", "read_mod_file"]
+    },
+    {
+      "id": "diagnostics",
+      "purpose": "运行错误与异常栈读取",
+      "tools": ["get_recent_errors"]
+    },
+    {
+      "id": "evidence",
+      "purpose": "已取得证据的读取与笔记折叠",
+      "tools": ["read_evidence", "fold_evidence"]
+    }
+  ],
+  "purposes": {
+    "list_manuals": "列出全部运行时制作手册名称与一句话摘要",
+    "load_manual": "按名称加载指定运行时制作手册全文",
+    "list_workspace": "列出全部已创建生物或某只生物工作区下的文件",
+    "read_creature_xml": "读取某只生物工作区内的 Def XML 文件",
+    "write_creature_xml": "在某只生物工作区的 Defs 目录下写入或覆盖 XML 文件",
+    "generate_locomotion_anim": "读取工作区骨架拓扑并按步态或三段扑翼预设自动合成三维骨骼动画 XML",
+    "generate_image": "调用图像生成接口输出 PNG 存入工作区并回传图片自检",
+    "extract_sheet": "切分 #00FF00 绿幕母图、退绿、RGB 扩边并生成预览图",
+    "warp_bone": "将部件切片仿射对位至 512x512 画布、注入外轮廓并可选导出镜像件",
+    "preview_sheet": "将多张工作区 PNG 渲染为深灰棋盘格视觉验收图并回传图片",
+    "preview_anim_strip": "对指定骨骼动画等间隔采样多帧合成三维姿态连拍图与关节连续性诊断并回传图片",
+    "validate_creature": "不注入数据库，解析并执行 ConfigErrors 与关节/解剖树全项审计",
+    "inject_creature": "同步贴图与掩膜并将该生物的 Def 定向热注入当前游戏",
+    "spawn_creature": "在当前地图指定位置生成一只已注入的巨兽个体",
+    "search_defs": "搜索已加载定义",
+    "get_def_details": "读取指定定义的字段",
+    "search_mod_xml_and_patches": "搜索活动模组 XML 与补丁文件",
+    "read_mod_file": "读取指定模组 XML 文件",
+    "get_recent_errors": "查询运行错误与堆栈",
+    "read_evidence": "按 E 编号读取已取得证据",
+    "fold_evidence": "整理笔记并折叠已读证据"
+  },
+  "schemas": [
+    {
+      "name": "list_manuals",
+      "description": "列出所有可用的 GCF 运行时制作手册名称及一句话简介。开始制作贴图、骨骼或 XML 前先查看并按需调用 load_manual。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {},
+        "required": []
+      }
+    },
+    {
+      "name": "load_manual",
+      "description": "加载指定名称的运行时制作手册全文（结果受上下文压缩豁免保护，同一对话无需重复加载同一手册）。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "manualName": {
+            "type": "string",
+            "maxLength": 128,
+            "description": "list_manuals 返回的手册名称，例如 workflow_and_taxonomy、sprite_prompts_and_matting、rig_body_and_anim_xml。"
+          }
+        },
+        "required": ["manualName"]
+      }
+    },
+    {
+      "name": "list_workspace",
+      "description": "查看游戏配置目录 GiantCreatureFramework/Creatures 下的工作区目录。creatureName 留空列出所有生物文件夹；传入 creatureName 列出该生物下的 Defs、Textures 与 Work 文件清单。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "creatureName": {
+            "type": "string",
+            "maxLength": 64,
+            "description": "可选生物目录名（字母、数字、下划线或连字符）；留空列出全部生物工作区。"
+          }
+        },
+        "required": []
+      }
+    },
+    {
+      "name": "read_creature_xml",
+      "description": "读取指定生物工作区内 Defs 子目录下的 XML 文件全文（带行号）。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "creatureName": {
+            "type": "string",
+            "maxLength": 64,
+            "description": "生物工作区名称。"
+          },
+          "relativeXmlPath": {
+            "type": "string",
+            "maxLength": 260,
+            "description": "相对于该生物目录的 XML 路径，如 Defs/Bodies.xml 或 Bodies.xml。"
+          }
+        },
+        "required": ["creatureName", "relativeXmlPath"]
+      }
+    },
+    {
+      "name": "write_creature_xml",
+      "description": "将良构的 RimWorld Defs XML 写入指定生物工作区的 Defs 子目录（自动校验 XML 语法与沙箱边界，不会直接注入游戏）。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "creatureName": {
+            "type": "string",
+            "maxLength": 64,
+            "description": "生物工作区名称（仅限字母、数字、下划线或连字符）。"
+          },
+          "relativeXmlPath": {
+            "type": "string",
+            "maxLength": 260,
+            "description": "Defs 下的文件名或相对路径，如 Defs/Bodies_MyBeast.xml。"
+          },
+          "xmlContent": {
+            "type": "string",
+            "maxLength": 200000,
+            "description": "完整 XML 内容（根节点必须为 <Defs>）。"
+          }
+        },
+        "required": ["creatureName", "relativeXmlPath", "xmlContent"]
+      }
+    },
+    {
+      "name": "generate_image",
+      "description": "调用 OpenAI 兼容图像生成接口生成 PNG 保存到该生物工作区，并将生成结果作为图片附在下一轮消息中供你直接查看检查。无 referencePaths 时走 images/generations；传入当前生物工作区自产草稿图时自动走 images/edits（严禁传入任何外部或原版/模组贴图，不发送遮罩）。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "creatureName": {
+            "type": "string",
+            "maxLength": 64,
+            "description": "生物工作区名称。"
+          },
+          "prompt": {
+            "type": "string",
+            "maxLength": 16000,
+            "description": "严格遵循 sprite_prompts_and_matting 手册四段式模板编写的英文生图提示词。"
+          },
+          "outputPath": {
+            "type": "string",
+            "maxLength": 260,
+            "description": "工作区内保存路径（如 Work/sheet1.png 或 Textures/Things/Pawn/GiantCreature/MyBeast/Icon.png）。"
+          },
+          "size": {
+            "type": "string",
+            "maxLength": 32,
+            "description": "图像尺寸，默认 1024x1024（多栏母图可用 1536x1024 或 1024x1024）。"
+          },
+          "referencePaths": {
+            "type": "array",
+            "maxItems": 4,
+            "items": {
+              "type": "string",
+              "maxLength": 260
+            },
+            "description": "可选参考图路径数组（仅限同一生物工作区内的自产 PNG 草稿，非空时走 images/edits）。"
+          }
+        },
+        "required": ["creatureName", "prompt", "outputPath"]
+      }
+    },
+    {
+      "name": "extract_sheet",
+      "description": "对 #00FF00 绿幕分栏母图执行外围泛洪抠图、退绿、边缘墨线压暗与透明区 RGB 扩边，按列切分输出 part_0.png..part_N.png，并自动生成棋盘格预览图回传给你视觉检查。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "creatureName": {
+            "type": "string",
+            "maxLength": 64,
+            "description": "生物工作区名称。"
+          },
+          "inputPath": {
+            "type": "string",
+            "maxLength": 260,
+            "description": "工作区内的绿幕母图相对路径，如 Work/sheet1.png。"
+          },
+          "outputDir": {
+            "type": "string",
+            "maxLength": 260,
+            "description": "切片输出子目录，如 Work/sheet1_parts。"
+          },
+          "columns": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 12,
+            "description": "可选固定分栏数（0 表示按水平空白自动切分，>=1 表示按指定列数切分）。"
+          },
+          "fillAllHoles": {
+            "type": "boolean",
+            "description": "是否将内部封闭绿洞填充为深灰底衬（默认 false，保留镂空孔洞）。"
+          },
+          "previewPath": {
+            "type": "string",
+            "maxLength": 260,
+            "description": "可选棋盘格预览图输出路径，默认写入 outputDir/preview.png。"
+          }
+        },
+        "required": ["creatureName", "inputPath", "outputDir"]
+      }
+    },
+    {
+      "name": "warp_bone",
+      "description": "将提取出的单个部件 PNG 通过仿射变换对齐到 512x512 标准画布，按世界 drawSize 注入向内欧氏距离场炭黑外轮廓（#14161A），同步换算 pivotPixel 与各插槽像素坐标，校验内部黑线占比，并可选同时导出水平对称镜像部件。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "creatureName": {
+            "type": "string",
+            "maxLength": 64,
+            "description": "生物工作区名称。"
+          },
+          "inputPath": {
+            "type": "string",
+            "maxLength": 260,
+            "description": "源切片相对路径，如 Work/sheet1_parts/part_0.png。"
+          },
+          "outputPath": {
+            "type": "string",
+            "maxLength": 260,
+            "description": "输出 512x512 贴图相对路径，必须位于 Textures/ 下（如 Textures/Things/Pawn/GiantCreature/MyBeast/Thorax.png），对应 GiantRigDef 的 texPath 为 Things/Pawn/GiantCreature/MyBeast/Thorax。"
+          },
+          "mirrorOutputPath": {
+            "type": "string",
+            "maxLength": 260,
+            "description": "可选对称镜像部件输出路径（如 Textures/Things/Pawn/GiantCreature/MyBeast/LegRight.png）。"
+          },
+          "srcPivot": {
+            "type": "string",
+            "maxLength": 64,
+            "description": "源图上的枢轴像素坐标 'x,y'（左上角原点）。"
+          },
+          "dstPivot": {
+            "type": "string",
+            "maxLength": 64,
+            "description": "目标 512x512 画布上的枢轴像素坐标 'x,y'，默认 '256,400'（根躯干居中常用 '256,256'）。"
+          },
+          "scale": {
+            "type": "string",
+            "maxLength": 64,
+            "description": "缩放比例 'sx,sy' 或单数字 's'，默认 '1.0,1.0'。"
+          },
+          "angleDeg": {
+            "type": "integer",
+            "minimum": -180,
+            "maximum": 180,
+            "description": "顺时针旋转角度（度），默认 0。"
+          },
+          "drawSize": {
+            "type": "string",
+            "maxLength": 32,
+            "description": "该骨骼在 GiantRigDef 中的最大世界尺寸（格），如 '4.2'，用于标定外黑轮廓线宽。"
+          },
+          "outlineHex": {
+            "type": "string",
+            "maxLength": 16,
+            "description": "外轮廓墨线色号，默认 '#14161A'。"
+          },
+          "maxInteriorBlackPct": {
+            "type": "string",
+            "maxLength": 16,
+            "description": "深层内部近黑像素占比上限百分比，默认 '1.0'（传入负数如 '-1' 可关闭门禁）。"
+          },
+          "sockets": {
+            "type": "array",
+            "maxItems": 24,
+            "items": {
+              "type": "string",
+              "maxLength": 96
+            },
+            "description": "可选源图插槽坐标列表，每项格式为 'name:x,y'，返回自动换算后的 512x512 目标像素坐标与镜像坐标。"
+          }
+        },
+        "required": ["creatureName", "inputPath", "outputPath", "srcPivot", "drawSize"]
+      }
+    },
+    {
+      "name": "preview_sheet",
+      "description": "将指定生物工作区内的一组贴图合成为深灰双色棋盘格总览 PNG，并作为图片附在下一轮消息中供你直接查看检查边缘透明、外轮廓粗细与内部切面质量。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "creatureName": {
+            "type": "string",
+            "maxLength": 64,
+            "description": "生物工作区名称。"
+          },
+          "inputPaths": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 32,
+            "items": {
+              "type": "string",
+              "maxLength": 260
+            },
+            "description": "要预览的工作区 PNG 相对路径列表。"
+          },
+          "outputPath": {
+            "type": "string",
+            "maxLength": 260,
+            "description": "输出棋盘格总览图路径，如 Work/parts_preview.png。"
+          },
+          "tileSize": {
+            "type": "integer",
+            "minimum": 64,
+            "maximum": 512,
+            "description": "单格缩略尺寸（像素），默认 256。"
+          }
+        },
+        "required": ["creatureName", "inputPaths", "outputPath"]
+      }
+    },
+    {
+      "name": "generate_locomotion_anim",
+      "description": "根据工作区内已编写的 GiantRigDef <nodes> 拓扑与基准角度，自动计算并写入（或按 defName 局部替换合并）平滑的三维 GiantAnimDef 动画片段（支持 CatmullRom/SmoothStep 插值、sagittalPitch 矢状俯仰透视、coronalFlap 冠状扑翼透视、自动跳过 <isRigid> 骨骼、自动前庭头稳与 Z 字解剖收翼，免去手写数千行关键帧）。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "creatureName": {
+            "type": "string",
+            "maxLength": 64,
+            "description": "生物工作区名称。"
+          },
+          "relativeXmlPath": {
+            "type": "string",
+            "maxLength": 260,
+            "description": "目标动画 XML 路径，如 Defs/GiantAnimDefs_MyBeast.xml（文件已存在时仅替换同名 defName 或追加新片段，保留其余动画）。"
+          },
+          "animDefName": {
+            "type": "string",
+            "maxLength": 128,
+            "description": "生成的 GiantAnimDef <defName>。"
+          },
+          "preset": {
+            "type": "string",
+            "enum": [
+              "axial_idle",
+              "quadruped_gait",
+              "wyvern_wing_walk",
+              "biped_gait",
+              "multileg_gait",
+              "wing_flap_loop",
+              "wing_takeoff",
+              "wing_land",
+              "tail_sweep",
+              "bite_strike",
+              "death_collapse"
+            ],
+            "description": "动作预设：axial_idle（呼吸+头稳+收翼待机）、quadruped_gait（四足对角步态）、wyvern_wing_walk（飞龙Z字折翼撑地对角行进）、biped_gait（双足步态）、multileg_gait（多足节肢波浪步态）、wing_flap_loop（三段延迟鞭甩展翼扑翼循环）、wing_takeoff（Z字收翼蓄力升空展开）、wing_land（展翼减速缓冲落回Z字收翼）、tail_sweep（尾链横扫攻击）、bite_strike（蓄力前扑撕咬）、death_collapse（多骨骼倒地死亡）。"
+          },
+          "rigDefName": {
+            "type": "string",
+            "maxLength": 128,
+            "description": "可选目标 GiantRigDef 名称（单骨架工作区可留空自动识别）。"
+          },
+          "durationTicks": {
+            "type": "integer",
+            "minimum": 12,
+            "maximum": 360,
+            "description": "可选总时长 Ticks（留空使用该预设推荐值，如走48、飞60、待机96）。"
+          },
+          "amplitudeScale": {
+            "type": "number",
+            "minimum": 0.15,
+            "maximum": 2.5,
+            "description": "可选动作幅度倍率，默认 1.0（例如 Walk 传 1.0，Run 传 1.35）。"
+          },
+          "impactTick": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 360,
+            "description": "可选单次攻击结算帧（tail_sweep / bite_strike 留空自动取峰值帧）。"
+          },
+          "triggerToolTag": {
+            "type": "string",
+            "maxLength": 128,
+            "description": "可选 <triggerToolTag> 标签。"
+          },
+          "isolateSubtree": {
+            "type": "boolean",
+            "description": "tail_sweep 等局部叠加攻击设为 true 时自动写入 <isolatedSubtreeRootBoneId>。"
+          },
+          "wingGroundedFold": {
+            "type": "boolean",
+            "description": "地面待机/步态预设是否将双翼保持在解剖学 Z 字折叠姿态，默认 true。"
+          },
+          "rootBoneId": { "type": "string", "maxLength": 128, "description": "可选根骨骼 ID（留空自动识别）。" },
+          "spineChain": { "type": "string", "maxLength": 512, "description": "可选脊柱骨骼链（逗号分隔，留空自动识别）。" },
+          "neckChain": { "type": "string", "maxLength": 512, "description": "可选颈部至头颅骨骼链（由近到远逗号分隔，末端视作头颅做前庭头稳；留空自动识别）。" },
+          "tailChain": { "type": "string", "maxLength": 512, "description": "可选尾部骨骼链（由近到远逗号分隔；留空自动识别）。" },
+          "leftWingChain": { "type": "string", "maxLength": 512, "description": "可选左翼主骨链（如 wing_shoulder_l,wing_arm_l,wing_forearm_l,wing_fan_l；留空自动识别）。" },
+          "rightWingChain": { "type": "string", "maxLength": 512, "description": "可选右翼主骨链（留空自动识别）。" },
+          "leftForeChain": { "type": "string", "maxLength": 512, "description": "可选左前肢骨链（留空自动识别）。" },
+          "rightForeChain": { "type": "string", "maxLength": 512, "description": "可选右前肢骨链（留空自动识别）。" },
+          "leftHindChain": { "type": "string", "maxLength": 512, "description": "可选左后肢骨链（留空自动识别）。" },
+          "rightHindChain": { "type": "string", "maxLength": 512, "description": "可选右后肢骨链（留空自动识别）。" },
+          "multiLegLeftChains": { "type": "string", "maxLength": 1024, "description": "multileg_gait 可选左侧多条步足链（每条步足内部逗号分隔，多条步足之间分号分隔）。" },
+          "multiLegRightChains": { "type": "string", "maxLength": 1024, "description": "multileg_gait 可选右侧多条步足链（分号分隔）。" }
+        },
+        "required": ["creatureName", "relativeXmlPath", "animDefName", "preset"]
+      }
+    },
+    {
+      "name": "preview_anim_strip",
+      "description": "对工作区内的指定 GiantAnimDef 等间隔采样多帧，完整求解三维骨骼正向运动学（含 angle、sagittalPitch、coronalFlap、根骨骼 offset、方向变体与 skinnedMeshes），在统一相机比例尺下合成为多帧连拍验收图回传给你视觉检查，并同步返回各帧翼展/体长跨度、动态关节断缝数与双翼越过中轴线告警。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "creatureName": {
+            "type": "string",
+            "maxLength": 64,
+            "description": "生物工作区名称。"
+          },
+          "animDefName": {
+            "type": "string",
+            "maxLength": 128,
+            "description": "要渲染预览的 GiantAnimDef <defName>。"
+          },
+          "rigDefName": {
+            "type": "string",
+            "maxLength": 128,
+            "description": "可选 GiantRigDef <defName>（单骨架工作区可留空自动识别）。"
+          },
+          "frameCount": {
+            "type": "integer",
+            "minimum": 2,
+            "maximum": 12,
+            "description": "等间隔采样帧数（2-12），默认 6。"
+          },
+          "headingDeg": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 360,
+            "description": "观察朝向角度（0=朝北，90=朝东，180=默认朝南正视，270=朝西）。"
+          },
+          "tileSize": {
+            "type": "integer",
+            "minimum": 160,
+            "maximum": 512,
+            "description": "单帧格图尺寸像素（160-512），默认 320。"
+          },
+          "outputPath": {
+            "type": "string",
+            "maxLength": 260,
+            "description": "可选输出 PNG 路径，默认写入 Work/strip_<animDefName>.png。"
+          },
+          "showJoints": {
+            "type": "boolean",
+            "description": "是否在画面上叠加绘制骨骼枢轴点标记以便排查对位，默认 false。"
+          }
+        },
+        "required": ["creatureName", "animDefName"]
+      }
+    },
+    {
+      "name": "validate_creature",
+      "description": "不修改当前运行数据库（dryRun 回滚），解析该生物工作区内的全部 Def XML，返回完整 ConfigErrors，并执行关节不透明圆盘覆盖率（>=20/25）、父子 layerOffset 差值（>=0.5）、外黑轮廓厚度（>=6px）、Rest/Articulated 姿态关节与桥接连续性、1:1 BodyDef 解剖树嵌套及强制 <deathAnim> 审计，同时生成骨骼正南静止与摆动拼装预览图供你视觉核验。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "creatureName": {
+            "type": "string",
+            "maxLength": 64,
+            "description": "生物工作区名称。"
+          },
+          "minOutlinePx": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 24,
+            "description": "外轮廓最小像素厚度门禁，默认 6。"
+          },
+          "maxInteriorBlackPct": {
+            "type": "string",
+            "maxLength": 16,
+            "description": "可选深层内部黑墨占比上限（如 '1.0'；留空不强制拦截）。"
+          }
+        },
+        "required": ["creatureName"]
+      }
+    },
+    {
+      "name": "inject_creature",
+      "description": "先将该生物 Textures/ 下的 PNG 同步进游戏贴图容器与受击掩膜缓存（GiantAlphaMaskCache），再按原版热重载顺序解析并注入 BodyDef、GiantAnimDef、GiantRigDef、种族 ThingDef、隐含尸体 ThingDef 与 PawnKindDef，分配非零 shortHash，并对场上已有同族个体刷新骨架。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "creatureName": {
+            "type": "string",
+            "maxLength": 64,
+            "description": "要热注入的生物工作区名称。"
+          }
+        },
+        "required": ["creatureName"]
+      }
+    },
+    {
+      "name": "spawn_creature",
+      "description": "在当前地图指定位置（或地图中心附近可站立空地）生成一只已热注入的巨兽个体，返回生成的 thingId、坐标、受击格数、碰撞格数与当前骨架状态。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "pawnKindDefName": {
+            "type": "string",
+            "maxLength": 128,
+            "description": "已注入的 PawnKindDef 名称。"
+          },
+          "x": {
+            "type": "integer",
+            "minimum": -1,
+            "maximum": 1000,
+            "description": "地图 X 坐标；传入 -1 表示自动选择地图中心附近空地。"
+          },
+          "z": {
+            "type": "integer",
+            "minimum": -1,
+            "maximum": 1000,
+            "description": "地图 Z 坐标；传入 -1 表示自动选择地图中心附近空地。"
+          },
+          "faction": {
+            "type": "string",
+            "enum": ["wild", "player", "hostile"],
+            "description": "阵营归属：wild（默认野生）、player（玩家殖民地）、hostile（敌对派系）。"
+          }
+        },
+        "required": ["pawnKindDefName"]
+      }
+    },
+    {
+      "name": "search_defs",
+      "description": "搜索已加载的 Def，返回标识、名称、分类、来源及相关性评分。query 支持单个关键词或逗号分隔的多个关键词；搜索候选不等于精确命中。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "搜索关键词；多个关键词以逗号分隔。"
+          },
+          "defTypeFilter": {
+            "type": "string",
+            "description": "可选 Def 类型或分类过滤：如 Weapon、RangedWeapon、MeleeWeapon、Pawn，或 ThingDef、BodyDef、BodyPartDef、PawnKindDef、ThinkTreeDef、GiantRigDef、GiantAnimDef。"
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 60,
+            "description": "返回条数上限，默认 20。"
+          }
+        },
+        "required": ["query"]
+      }
+    },
+    {
+      "name": "get_def_details",
+      "description": "读取指定已加载 Def。fields 留空返回概览与非空字段目录；已知所需字段可直接传 fields 精确读取。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "defName": {
+            "type": "string",
+            "description": "目标 Def 的准确 defName 或名称。"
+          },
+          "defType": {
+            "type": "string",
+            "description": "可选 Def 类型名，如 ThingDef、BodyDef、PawnKindDef、GiantRigDef。"
+          },
+          "fields": {
+            "type": "string",
+            "description": "可选逗号分隔字段名，如 'race,statBases,tools,comps'；留空返回概览与 nonEmptyOutline。"
+          }
+        },
+        "required": ["defName"]
+      }
+    },
+    {
+      "name": "search_mod_xml_and_patches",
+      "description": "跨已启用模组的磁盘 XML 文件（Defs、Patches、Languages）检索关键词或文件名，返回匹配片段（工程内置存量巨兽被屏蔽）。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "keyword": {
+            "type": "string",
+            "description": "要检索的 defName、标签名或 XML 文件名。"
+          },
+          "scope": {
+            "type": "string",
+            "enum": ["all", "defs", "patches", "languages"],
+            "description": "检索范围，默认 all。"
+          },
+          "modFilter": {
+            "type": "string",
+            "description": "可选模组名或 packageId（如 GiantCreatureFramework 或 Core）。"
+          },
+          "startLine": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 100000,
+            "description": "可选起始行号（从 1 开始；0 表示全文匹配）。"
+          },
+          "maxMatches": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 40,
+            "description": "最大返回匹配片段数，默认 25。"
+          }
+        },
+        "required": ["keyword"]
+      }
+    },
+    {
+      "name": "read_mod_file",
+      "description": "读取已启用模组的指定 XML 文件（使用 search_mod_xml_and_patches 返回的 packageId 和 relativeXmlPath），支持按行分页。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "packageId": {
+            "type": "string",
+            "description": "精确模组 packageId。"
+          },
+          "relativeXmlPath": {
+            "type": "string",
+            "description": "检索返回的模组相对 XML 路径。"
+          },
+          "startLine": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 100000,
+            "description": "起始行号（从 1 开始），默认 1。"
+          },
+          "maxLines": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 160,
+            "description": "读取行数（1-160），默认 80。"
+          }
+        },
+        "required": ["packageId", "relativeXmlPath"]
+      }
+    },
+    {
+      "name": "get_recent_errors",
+      "description": "读取游戏运行期捕获到的红字错误（Error / Exception）、重复次数与调用堆栈。",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "maxCount": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 50,
+            "description": "最大返回条数，默认 12。"
+          },
+          "keyword": {
+            "type": "string",
+            "description": "可选错误消息或堆栈过滤关键词。"
+          }
+        },
+        "required": []
+      }
+    }
+  ]
+}

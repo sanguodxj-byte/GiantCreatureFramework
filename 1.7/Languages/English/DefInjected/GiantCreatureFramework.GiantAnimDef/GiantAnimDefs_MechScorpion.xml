@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <GCF_Anim_MechScorpion_Walk.label>Walk</GCF_Anim_MechScorpion_Walk.label>
+  <GCF_Anim_MechScorpion_ClawLeft.label>Left Claw</GCF_Anim_MechScorpion_ClawLeft.label>
+  <GCF_Anim_MechScorpion_ClawRight.label>Right Claw</GCF_Anim_MechScorpion_ClawRight.label>
+  <GCF_Anim_MechScorpion_TailSting.label>Tail Sting</GCF_Anim_MechScorpion_TailSting.label>
+  <GCF_Anim_MechScorpion_RangedTail.label>Tail Volley</GCF_Anim_MechScorpion_RangedTail.label>
+  <GCF_Anim_MechScorpion_CarapaceRam.label>Carapace Ram</GCF_Anim_MechScorpion_CarapaceRam.label>
+  <GCF_Anim_MechScorpion_Downed.label>Downed</GCF_Anim_MechScorpion_Downed.label>
+  <GCF_Anim_MechScorpion_Death.label>hydraulic rupture death collapse</GCF_Anim_MechScorpion_Death.label>
+</LanguageData>

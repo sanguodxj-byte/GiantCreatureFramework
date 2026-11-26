@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <GCF_MechCarapace.label>Тяжёлая спинная броня ядра</GCF_MechCarapace.label>
+  <GCF_MechCephalothorax.label>Сенсорный капюшон головогруди</GCF_MechCephalothorax.label>
+  <GCF_MechCapacitor.label>Блок гиперконденсаторов</GCF_MechCapacitor.label>
+  <GCF_MechCrusherClaw.label>Гидравлическая сокрушительная клешня</GCF_MechCrusherClaw.label>
+  <GCF_MechClawPincer.label>Гидравлические сокрушительные жвалы клешни</GCF_MechClawPincer.label>
+  <GCF_MechClawActuator.label>Сервопривод клешни</GCF_MechClawActuator.label>
+  <GCF_MechWalkingLeg.label>Независимая гидравлическая ходовая нога</GCF_MechWalkingLeg.label>
+  <GCF_MechWalkingFoot.label>Гидравлическая подошва тарзуса</GCF_MechWalkingFoot.label>
+  <GCF_MechTailRing1.label>Кольцевая броня хвостового сегмента 1</GCF_MechTailRing1.label>
+  <GCF_MechTailRing1.labelShort>Броня хвостового сегмента</GCF_MechTailRing1.labelShort>
+  <GCF_MechTailRing2.label>Кольцевая броня хвостового сегмента 2</GCF_MechTailRing2.label>
+  <GCF_MechTailRing2.labelShort>Броня хвостового сегмента</GCF_MechTailRing2.labelShort>
+  <GCF_MechTailRing3.label>Кольцевая броня хвостового сегмента 3</GCF_MechTailRing3.label>
+  <GCF_MechTailRing3.labelShort>Броня хвостового сегмента</GCF_MechTailRing3.labelShort>
+  <GCF_MechTailRing4.label>Кольцевая броня хвостового сегмента 4</GCF_MechTailRing4.label>
+  <GCF_MechTailRing4.labelShort>Броня хвостового сегмента</GCF_MechTailRing4.labelShort>
+  <GCF_MechTailRing5.label>Кольцевая броня хвостового сегмента 5</GCF_MechTailRing5.label>
+  <GCF_MechTailRing5.labelShort>Броня хвостового сегмента</GCF_MechTailRing5.labelShort>
+  <GCF_MechTailRing6.label>Кольцевая броня хвостового сегмента 6</GCF_MechTailRing6.label>
+  <GCF_MechTailRing6.labelShort>Броня хвостового сегмента</GCF_MechTailRing6.labelShort>
+  <GCF_MechTailStinger.label>Плазменное суставчатое жало</GCF_MechTailStinger.label>
+  <GCF_MechPlasmaEmitter.label>Ядро плазменного генератора</GCF_MechPlasmaEmitter.label>
+</LanguageData>

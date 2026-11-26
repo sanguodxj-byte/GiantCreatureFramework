@@ -1,0 +1,58 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <IsTestProject>true</IsTestProject>
+    <IsPackable>false</IsPackable>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <NuGetAudit>false</NuGetAudit>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="3.6.4" />
+    <PackageReference Include="MSTest.TestFramework" Version="3.6.4" />
+    <PackageReference Include="FluentAssertions" Version="6.12.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\GiantCreatureFramework.Agent\Imaging\**\*.cs" Link="Imaging\%(RecursiveDir)%(Filename)%(Extension)" />
+    <Compile Include="..\GiantCreatureFramework.Agent\Agent\UiText.cs" Link="Agent\UiText.cs" />
+    <Compile Include="..\GiantCreatureFramework.Agent\Agent\AIProvider.cs" Link="Agent\AIProvider.cs" />
+    <Compile Include="..\GiantCreatureFramework.Agent\Agent\AgentModels.cs" Link="Agent\AgentModels.cs" />
+    <Compile Include="..\GiantCreatureFramework.Agent\Agent\ModelIdentity.cs" Link="Agent\ModelIdentity.cs" />
+    <Compile Include="..\GiantCreatureFramework.Agent\Agent\MainThreadDispatcher.cs" Link="Agent\MainThreadDispatcher.cs" />
+    <Compile Include="..\GiantCreatureFramework.Agent\Agent\ChatTransport.cs" Link="Agent\ChatTransport.cs" />
+    <Compile Include="..\GiantCreatureFramework.Agent\Agent\AgentSkillStore.cs" Link="Agent\AgentSkillStore.cs" />
+    <Compile Include="..\GiantCreatureFramework.Agent\Agent\AgentPrompts.cs" Link="Agent\AgentPrompts.cs" />
+    <Compile Include="..\GiantCreatureFramework.Agent\Agent\AgentToolRegistry.cs" Link="Agent\AgentToolRegistry.cs" />
+    <Compile Include="..\GiantCreatureFramework.Agent\Agent\AgentTurnRunner.cs" Link="Agent\AgentTurnRunner.cs" />
+    <Compile Include="..\GiantCreatureFramework.Agent\Agent\ToolDiscovery.cs" Link="Agent\ToolDiscovery.cs" />
+    <Compile Include="..\GiantCreatureFramework.Agent\Agent\PromptEditorDraft.cs" Link="Agent\PromptEditorDraft.cs" />
+    <Compile Include="..\GiantCreatureFramework.Agent\Agent\Evidence.cs" Link="Agent\Evidence.cs" />
+    <Compile Include="..\GiantCreatureFramework.Agent\Agent\EvidenceQuality.cs" Link="Agent\EvidenceQuality.cs" />
+    <Compile Include="..\GiantCreatureFramework.Agent\Agent\AnswerContract.cs" Link="Agent\AnswerContract.cs" />
+    <Compile Include="..\GiantCreatureFramework.Agent\Agent\EvidenceContext.cs" Link="Agent\EvidenceContext.cs" />
+    <Compile Include="..\GiantCreatureFramework.Agent\Agent\EvidencePreview.cs" Link="Agent\EvidencePreview.cs" />
+    <Compile Include="..\GiantCreatureFramework.Agent\Agent\ToolArgumentValidation.cs" Link="Agent\ToolArgumentValidation.cs" />
+    <Compile Include="..\GiantCreatureFramework.Agent\Agent\ConversationHistory.cs" Link="Agent\ConversationHistory.cs" />
+    <Compile Include="..\GiantCreatureFramework.Agent\Agent\ConversationContextChoice.cs" Link="Agent\ConversationContextChoice.cs" />
+    <Compile Include="..\GiantCreatureFramework.Agent\Agent\SessionArchive.cs" Link="Agent\SessionArchive.cs" />
+    <Compile Include="..\GiantCreatureFramework.Agent\Agent\TermTagFormatter.cs" Link="Agent\TermTagFormatter.cs" />
+    <Compile Include="..\GiantCreatureFramework.Agent\Authoring\BuiltInPromptGuard.cs" Link="Authoring\BuiltInPromptGuard.cs" />
+    <Compile Include="..\GiantCreatureFramework.Agent\Authoring\UserImg2ImgGuard.cs" Link="Authoring\UserImg2ImgGuard.cs" />
+    <Compile Include="..\GiantCreatureFramework.Agent\Authoring\CreatureWorkspace.cs" Link="Authoring\CreatureWorkspace.cs" />
+    <Compile Include="..\GiantCreatureFramework.Agent\Authoring\ImageGenerationClient.cs" Link="Authoring\ImageGenerationClient.cs" />
+    <Compile Include="..\GiantCreatureFramework.Agent\Authoring\ModManualCatalog.cs" Link="Authoring\ModManualCatalog.cs" />
+    <Compile Include="..\GiantCreatureFramework.Agent\Authoring\ProceduralLocomotionGenerator.cs" Link="Authoring\ProceduralLocomotionGenerator.cs" />
+    <Compile Include="..\GiantCreatureFramework.Agent\Authoring\AnimStripPreviewRenderer.cs" Link="Authoring\AnimStripPreviewRenderer.cs" />
+    <Compile Include="..\GiantCreatureFramework.Agent\Authoring\RigJointAuditor.cs" Link="Authoring\RigJointAuditor.cs" />
+    <Compile Include="..\GiantCreatureFramework.Agent\Injection\BodyPartIndexRemapper.cs" Link="Injection\BodyPartIndexRemapper.cs" />
+    <Compile Include="..\GiantCreatureFramework.Agent\Probes\ExactDefinitionLookup.cs" Link="Probes\ExactDefinitionLookup.cs" />
+    <Compile Include="..\GiantCreatureFramework.Agent\Probes\ModFileReader.cs" Link="Probes\ModFileReader.cs" />
+    <Compile Include="..\GiantCreatureFramework.Agent\Probes\ModSearchScope.cs" Link="Probes\ModSearchScope.cs" />
+  </ItemGroup>
+
+</Project>

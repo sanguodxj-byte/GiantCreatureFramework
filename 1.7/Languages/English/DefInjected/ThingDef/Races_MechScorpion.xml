@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <GCF_MechScorpion.label>heavy mech scorpion</GCF_MechScorpion.label>
+  <GCF_MechScorpion.description>An ultra-heavy arachnid siege mechanoid engineered by distant machine hives to crack fortified bastions. Beneath a sloped reactor carapace and twin hypercapacitor banks, eight armored hydraulic legs carry its massive frame across rubble while colossal crusher claws pin and shear anything within reach. Arching high above its back, a segmented stinger tail rains superheated plasma bolts over cover; severing the tail silences its ranged barrages, while shattering its claws strips away its devastating close-quarters grip.</GCF_MechScorpion.description>
+
+  <GCF_Bullet_PlasmaStinger.label>plasma stinger bolt</GCF_Bullet_PlasmaStinger.label>
+</LanguageData>

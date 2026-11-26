@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RecipeDef ParentName="HeavyMechanoidRecipe">
+    <defName>GCF_Gestate_MechScorpion</defName>
+    <label>gestate heavy mech scorpion</label>
+    <description>Gestate an ultraheavy siege-grade mechanical scorpion armed with twin hydraulic crusher claws and an overhead articulated plasma stinger. Requires defeating a war queen and studying her powerfocus chip.</description>
+    <gestationCycles>18</gestationCycles>
+    <researchPrerequisite>HighMechtech</researchPrerequisite>
+    <displayPriority>350</displayPriority>
+    <ingredients Inherit="False">
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>500</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Plasteel</li>
+          </thingDefs>
+        </filter>
+        <count>500</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>PowerfocusChip</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SubcoreHigh</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <products>
+      <GCF_MechScorpion>1</GCF_MechScorpion>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>GCF_MechScorpion</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+
+</Defs>

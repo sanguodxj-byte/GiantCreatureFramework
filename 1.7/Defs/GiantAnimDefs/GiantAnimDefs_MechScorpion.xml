@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Pure Rotational Pin-Joint Skeletal Animations (Breathing/Scale & Child Offsets Globally Prohibited) -->
+
+  <!-- 1. Authentic Arachnid 8-Leg Alternating Tetrapod Metachronal Wave Walk Cycle -->
+  <!-- Group A: R4@0 -> L3@4 -> R2@8 -> L1@12 | Group B: L4@24 -> R3@28 -> L2@32 -> R1@36 -->
+  <GiantCreatureFramework.GiantAnimDef>
+    <defName>GCF_Anim_MechScorpion_Walk</defName>
+    <label>Walk</label>
+    <durationTicks>48</durationTicks>
+    <loop>true</loop>
+    <blendInTicks>6</blendInTicks>
+    <tracks>
+      <li>
+        <nodeId>carapace</nodeId>
+        <keyframes>
+          <li><tick>0</tick><angle>-1.8</angle><easing>Sine</easing></li>
+          <li><tick>24</tick><angle>1.8</angle><easing>Sine</easing></li>
+          <li><tick>48</tick><angle>-1.8</angle><easing>Sine</easing></li>
+        </keyframes>
+      </li>
+
+      <!-- Tetrapod Group A (28-tick Linear stance, 20-tick EaseOutQuad swing) -->
+      <li>
+        <nodeId>leg_r4</nodeId>
+        <keyframes>
+          <li><tick>0</tick><angle>-5.5</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>28</tick><angle>10.5</angle><easing>Linear</easing></li>
+        </keyframes>
+      </li>
+      <li>
+        <nodeId>leg_l3</nodeId>
+        <keyframes>
+          <li><tick>4</tick><angle>7.5</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>32</tick><angle>-7.5</angle><easing>Linear</easing></li>
+        </keyframes>
+      </li>
+      <li>
+        <nodeId>leg_r2</nodeId>
+        <keyframes>
+          <li><tick>8</tick><angle>-7.5</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>36</tick><angle>7.5</angle><easing>Linear</easing></li>
+        </keyframes>
+      </li>
+      <li>
+        <nodeId>leg_l1</nodeId>
+        <keyframes>
+          <li><tick>12</tick><angle>10.5</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>40</tick><angle>-5.5</angle><easing>Linear</easing></li>
+        </keyframes>
+      </li>
+
+      <!-- Tetrapod Group B (anti-phase by 24 ticks with 4-tick rear-to-front metachronal wave) -->
+      <li>
+        <nodeId>leg_l4</nodeId>
+        <keyframes>
+          <li><tick>4</tick><angle>-10.5</angle><easing>Linear</easing></li>
+          <li><tick>24</tick><angle>5.5</angle><easing>EaseOutQuad</easing></li>
+        </keyframes>
+      </li>
+      <li>
+        <nodeId>leg_r3</nodeId>
+        <keyframes>
+          <li><tick>8</tick><angle>7.5</angle><easing>Linear</easing></li>
+          <li><tick>28</tick><angle>-7.5</angle><easing>EaseOutQuad</easing></li>
+        </keyframes>
+      </li>
+      <li>
+        <nodeId>leg_l2</nodeId>
+        <keyframes>
+          <li><tick>12</tick><angle>-7.5</angle><easing>Linear</easing></li>
+          <li><tick>32</tick><angle>7.5</angle><easing>EaseOutQuad</easing></li>
+        </keyframes>
+      </li>
+      <li>
+        <nodeId>leg_r1</nodeId>
+        <keyframes>
+          <li><tick>16</tick><angle>5.5</angle><easing>Linear</easing></li>
+          <li><tick>36</tick><angle>-10.5</angle><easing>EaseOutQuad</easing></li>
+        </keyframes>
+      </li>
+
+      <li>
+        <nodeId>claw_left</nodeId>
+        <keyframes>
+          <li><tick>0</tick><angle>-5.5</angle><easing>Sine</easing></li>
+          <li><tick>24</tick><angle>4.5</angle><easing>Sine</easing></li>
+          <li><tick>48</tick><angle>-5.5</angle><easing>Sine</easing></li>
+        </keyframes>
+      </li>
+      <li>
+        <nodeId>claw_right</nodeId>
+        <keyframes>
+          <li><tick>0</tick><angle>-4.5</angle><easing>Sine</easing></li>
+          <li><tick>24</tick><angle>5.5</angle><easing>Sine</easing></li>
+          <li><tick>48</tick><angle>-4.5</angle><easing>Sine</easing></li>
+        </keyframes>
+      </li>
+      <!-- 7-Segment Articulated Tail Traveling Serpentine S-Wave (5-tick progressive phase lag) -->
+      <li>
+        <nodeId>tail_seg1</nodeId>
+        <keyframes>
+          <li><tick>0</tick><angle>3.2</angle><easing>Sine</easing></li>
+          <li><tick>24</tick><angle>-3.2</angle><easing>Sine</easing></li>
+        </keyframes>
+      </li>
+      <li>
+        <nodeId>tail_seg2</nodeId>
+        <keyframes>
+          <li><tick>5</tick><angle>3.5</angle><easing>Sine</easing></li>
+          <li><tick>29</tick><angle>-3.5</angle><easing>Sine</easing></li>
+        </keyframes>
+      </li>
+      <li>
+        <nodeId>tail_seg3</nodeId>
+        <keyframes>
+          <li><tick>10</tick><angle>3.8</angle><easing>Sine</easing></li>
+          <li><tick>34</tick><angle>-3.8</angle><easing>Sine</easing></li>
+        </keyframes>
+      </li>
+      <li>
+        <nodeId>tail_seg4</nodeId>
+        <keyframes>
+          <li><tick>15</tick><angle>4.0</angle><easing>Sine</easing></li>
+          <li><tick>39</tick><angle>-4.0</angle><easing>Sine</easing></li>
+        </keyframes>
+      </li>
+      <li>
+        <nodeId>tail_seg5</nodeId>
+        <keyframes>
+          <li><tick>20</tick><angle>4.2</angle><easing>Sine</easing></li>
+          <li><tick>44</tick><angle>-4.2</angle><easing>Sine</easing></li>
+        </keyframes>
+      </li>
+      <li>
+        <nodeId>tail_seg6</nodeId>
+        <keyframes>
+          <li><tick>1</tick><angle>-4.4</angle><easing>Sine</easing></li>
+          <li><tick>25</tick><angle>4.4</angle><easing>Sine</easing></li>
+        </keyframes>
+      </li>
+      <li>
+        <nodeId>tail_stinger</nodeId>
+        <keyframes>
+          <li><tick>6</tick><angle>-4.8</angle><easing>Sine</easing></li>
+          <li><tick>30</tick><angle>4.8</angle><easing>Sine</easing></li>
+        </keyframes>
+      </li>
+    </tracks>
+  </GiantCreatureFramework.GiantAnimDef>
+
+  <!-- 2. Left Crusher Claw Snap -->
+  <GiantCreatureFramework.GiantAnimDef>
+    <defName>GCF_Anim_MechScorpion_ClawLeft</defName>
+    <label>Left Claw</label>
+    <durationTicks>34</durationTicks>
+    <loop>false</loop>
+    <blendInTicks>4</blendInTicks>
+    <triggerToolTag>GCF_LeftClawGroup</triggerToolTag>
+    <impactTick>16</impactTick>
+    <tracks>
+      <li>
+        <nodeId>carapace</nodeId>
+        <keyframes>
+          <li><tick>0</tick><angle>0</angle><offset>(0, 0)</offset></li>
+          <li><tick>9</tick><angle>-10</angle><offset>(-0.15, -0.55)</offset><easing>EaseOutQuad</easing></li>
+          <li><tick>16</tick><angle>14</angle><offset>(0.22, 1.35)</offset><easing>EaseOutBack</easing></li>
+          <li><tick>34</tick><angle>0</angle><offset>(0, 0)</offset><easing>SmoothStep</easing></li>
+        </keyframes>
+      </li>
+      <li>
+        <nodeId>claw_left</nodeId>
+        <keyframes>
+          <li><tick>0</tick><angle>0</angle></li>
+          <li><tick>9</tick><angle>-34</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>16</tick><angle>44</angle><easing>EaseOutBack</easing></li>
+          <li><tick>34</tick><angle>0</angle><easing>SmoothStep</easing></li>
+        </keyframes>
+      </li>
+      <li>
+        <nodeId>claw_right</nodeId>
+        <keyframes>
+          <li><tick>0</tick><angle>0</angle></li>
+          <li><tick>16</tick><angle>14</angle><easing>SmoothStep</easing></li>
+          <li><tick>34</tick><angle>0</angle><easing>SmoothStep</easing></li>
+        </keyframes>
+      </li>
+      <li><nodeId>leg_l1</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>16</tick><angle>-4</angle><easing>SmoothStep</easing></li><li><tick>34</tick><angle>0</angle><easing>SmoothStep</easing></li></keyframes></li>
+      <li><nodeId>leg_l2</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>16</tick><angle>-5</angle><easing>SmoothStep</easing></li><li><tick>34</tick><angle>0</angle><easing>SmoothStep</easing></li></keyframes></li>
+      <li><nodeId>leg_l3</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>16</tick><angle>-6</angle><easing>SmoothStep</easing></li><li><tick>34</tick><angle>0</angle><easing>SmoothStep</easing></li></keyframes></li>
+      <li><nodeId>leg_l4</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>16</tick><angle>-8</angle><easing>SmoothStep</easing></li><li><tick>34</tick><angle>0</angle><easing>SmoothStep</easing></li></keyframes></li>
+      <li><nodeId>leg_r1</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>16</tick><angle>8</angle><easing>SmoothStep</easing></li><li><tick>34</tick><angle>0</angle><easing>SmoothStep</easing></li></keyframes></li>
+      <li><nodeId>leg_r2</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>16</tick><angle>6</angle><easing>SmoothStep</easing></li><li><tick>34</tick><angle>0</angle><easing>SmoothStep</easing></li></keyframes></li>
+      <li><nodeId>leg_r3</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>16</tick><angle>5</angle><easing>SmoothStep</easing></li><li><tick>34</tick><angle>0</angle><easing>SmoothStep</easing></li></keyframes></li>
+      <li><nodeId>leg_r4</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>16</tick><angle>4</angle><easing>SmoothStep</easing></li><li><tick>34</tick><angle>0</angle><easing>SmoothStep</easing></li></keyframes></li>
+    </tracks>
+  </GiantCreatureFramework.GiantAnimDef>
+
+  <!-- 3. Right Crusher Claw Snap -->
+  <GiantCreatureFramework.GiantAnimDef>
+    <defName>GCF_Anim_MechScorpion_ClawRight</defName>
+    <label>Right Claw</label>
+    <durationTicks>34</durationTicks>
+    <loop>false</loop>
+    <blendInTicks>4</blendInTicks>
+    <triggerToolTag>GCF_RightClawGroup</triggerToolTag>
+    <impactTick>16</impactTick>
+    <tracks>
+      <li>
+        <nodeId>carapace</nodeId>
+        <keyframes>
+          <li><tick>0</tick><angle>0</angle><offset>(0, 0)</offset></li>
+          <li><tick>9</tick><angle>10</angle><offset>(0.15, -0.55)</offset><easing>EaseOutQuad</easing></li>
+          <li><tick>16</tick><angle>-14</angle><offset>(-0.22, 1.35)</offset><easing>EaseOutBack</easing></li>
+          <li><tick>34</tick><angle>0</angle><offset>(0, 0)</offset><easing>SmoothStep</easing></li>
+        </keyframes>
+      </li>
+      <li>
+        <nodeId>claw_right</nodeId>
+        <keyframes>
+          <li><tick>0</tick><angle>0</angle></li>
+          <li><tick>9</tick><angle>34</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>16</tick><angle>-44</angle><easing>EaseOutBack</easing></li>
+          <li><tick>34</tick><angle>0</angle><easing>SmoothStep</easing></li>
+        </keyframes>
+      </li>
+      <li>
+        <nodeId>claw_left</nodeId>
+        <keyframes>
+          <li><tick>0</tick><angle>0</angle></li>
+          <li><tick>16</tick><angle>-14</angle><easing>SmoothStep</easing></li>
+          <li><tick>34</tick><angle>0</angle><easing>SmoothStep</easing></li>
+        </keyframes>
+      </li>
+      <li><nodeId>leg_l1</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>16</tick><angle>-8</angle><easing>SmoothStep</easing></li><li><tick>34</tick><angle>0</angle><easing>SmoothStep</easing></li></keyframes></li>
+      <li><nodeId>leg_l2</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>16</tick><angle>-6</angle><easing>SmoothStep</easing></li><li><tick>34</tick><angle>0</angle><easing>SmoothStep</easing></li></keyframes></li>
+      <li><nodeId>leg_l3</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>16</tick><angle>-5</angle><easing>SmoothStep</easing></li><li><tick>34</tick><angle>0</angle><easing>SmoothStep</easing></li></keyframes></li>
+      <li><nodeId>leg_l4</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>16</tick><angle>-4</angle><easing>SmoothStep</easing></li><li><tick>34</tick><angle>0</angle><easing>SmoothStep</easing></li></keyframes></li>
+      <li><nodeId>leg_r1</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>16</tick><angle>4</angle><easing>SmoothStep</easing></li><li><tick>34</tick><angle>0</angle><easing>SmoothStep</easing></li></keyframes></li>
+      <li><nodeId>leg_r2</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>16</tick><angle>5</angle><easing>SmoothStep</easing></li><li><tick>34</tick><angle>0</angle><easing>SmoothStep</easing></li></keyframes></li>
+      <li><nodeId>leg_r3</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>16</tick><angle>6</angle><easing>SmoothStep</easing></li><li><tick>34</tick><angle>0</angle><easing>SmoothStep</easing></li></keyframes></li>
+      <li><nodeId>leg_r4</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>16</tick><angle>8</angle><easing>SmoothStep</easing></li><li><tick>34</tick><angle>0</angle><easing>SmoothStep</easing></li></keyframes></li>
+    </tracks>
+  </GiantCreatureFramework.GiantAnimDef>
+
+  <!-- 4. Overhead Curved Whip Plasma Tail Strike -->
+  <GiantCreatureFramework.GiantAnimDef>
+    <defName>GCF_Anim_MechScorpion_TailSting</defName>
+    <label>Tail Sting</label>
+    <durationTicks>42</durationTicks>
+    <loop>false</loop>
+    <blendInTicks>4</blendInTicks>
+    <triggerToolTag>GCF_TailStingerGroup</triggerToolTag>
+    <impactTick>19</impactTick>
+    <tracks>
+      <li>
+        <nodeId>carapace</nodeId>
+        <keyframes>
+          <li><tick>0</tick><angle>0</angle><offset>(0, 0)</offset></li>
+          <li><tick>10</tick><angle>0</angle><offset>(0, -0.60)</offset><easing>EaseOutQuad</easing></li>
+          <li><tick>19</tick><angle>0</angle><offset>(0, 1.45)</offset><easing>EaseOutBack</easing></li>
+          <li><tick>42</tick><angle>0</angle><offset>(0, 0)</offset><easing>SmoothStep</easing></li>
+        </keyframes>
+      </li>
+      <li>
+        <nodeId>claw_left</nodeId>
+        <keyframes>
+          <li><tick>0</tick><angle>0</angle></li>
+          <li><tick>19</tick><angle>-24</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>42</tick><angle>0</angle><easing>SmoothStep</easing></li>
+        </keyframes>
+      </li>
+      <li>
+        <nodeId>claw_right</nodeId>
+        <keyframes>
+          <li><tick>0</tick><angle>0</angle></li>
+          <li><tick>19</tick><angle>24</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>42</tick><angle>0</angle><easing>SmoothStep</easing></li>
+        </keyframes>
+      </li>
+      <li><nodeId>leg_l1</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>19</tick><angle>7</angle><easing>EaseOutQuad</easing></li><li><tick>42</tick><angle>0</angle><easing>SmoothStep</easing></li></keyframes></li>
+      <li><nodeId>leg_l2</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>19</tick><angle>4</angle><easing>EaseOutQuad</easing></li><li><tick>42</tick><angle>0</angle><easing>SmoothStep</easing></li></keyframes></li>
+      <li><nodeId>leg_l3</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>19</tick><angle>-4</angle><easing>EaseOutQuad</easing></li><li><tick>42</tick><angle>0</angle><easing>SmoothStep</easing></li></keyframes></li>
+      <li><nodeId>leg_l4</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>19</tick><angle>-7</angle><easing>EaseOutQuad</easing></li><li><tick>42</tick><angle>0</angle><easing>SmoothStep</easing></li></keyframes></li>
+      <li><nodeId>leg_r1</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>19</tick><angle>-7</angle><easing>EaseOutQuad</easing></li><li><tick>42</tick><angle>0</angle><easing>SmoothStep</easing></li></keyframes></li>
+      <li><nodeId>leg_r2</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>19</tick><angle>-4</angle><easing>EaseOutQuad</easing></li><li><tick>42</tick><angle>0</angle><easing>SmoothStep</easing></li></keyframes></li>
+      <li><nodeId>leg_r3</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>19</tick><angle>4</angle><easing>EaseOutQuad</easing></li><li><tick>42</tick><angle>0</angle><easing>SmoothStep</easing></li></keyframes></li>
+      <li><nodeId>leg_r4</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>19</tick><angle>7</angle><easing>EaseOutQuad</easing></li><li><tick>42</tick><angle>0</angle><easing>SmoothStep</easing></li></keyframes></li>
+      <!-- 7-Segment Articulated Whip Bending: Coiled Spiral@10 -> Whip Unfurl@15 -> Hook Strike@19 (-218 deg) -> S-Wave Return -->
+      <li>
+        <nodeId>tail_seg1</nodeId>
+        <keyframes>
+          <li><tick>0</tick><angle>0</angle></li>
+          <li><tick>10</tick><angle>-22</angle><easing>SmoothStep</easing></li>
+          <li><tick>15</tick><angle>-64</angle><easing>Linear</easing></li>
+          <li><tick>19</tick><angle>-82</angle><easing>EaseOutBack</easing></li>
+          <li><tick>30</tick><angle>-30</angle><easing>SmoothStep</easing></li>
+          <li><tick>42</tick><angle>0</angle><easing>SmoothStep</easing></li>
+        </keyframes>
+      </li>
+      <li>
+        <nodeId>tail_seg2</nodeId>
+        <keyframes>
+          <li><tick>0</tick><angle>0</angle></li>
+          <li><tick>10</tick><angle>-28</angle><easing>SmoothStep</easing></li>
+          <li><tick>15</tick><angle>-44</angle><easing>Linear</easing></li>
+          <li><tick>19</tick><angle>-46</angle><easing>EaseOutBack</easing></li>
+          <li><tick>30</tick><angle>-18</angle><easing>SmoothStep</easing></li>
+          <li><tick>42</tick><angle>0</angle><easing>SmoothStep</easing></li>
+        </keyframes>
+      </li>
+      <li>
+        <nodeId>tail_seg3</nodeId>
+        <keyframes>
+          <li><tick>0</tick><angle>0</angle></li>
+          <li><tick>10</tick><angle>-34</angle><easing>SmoothStep</easing></li>
+          <li><tick>15</tick><angle>-28</angle><easing>Linear</easing></li>
+          <li><tick>19</tick><angle>-24</angle><easing>EaseOutBack</easing></li>
+          <li><tick>30</tick><angle>-8</angle><easing>SmoothStep</easing></li>
+          <li><tick>42</tick><angle>0</angle><easing>SmoothStep</easing></li>
+        </keyframes>
+      </li>
+      <li>
+        <nodeId>tail_seg4</nodeId>
+        <keyframes>
+          <li><tick>0</tick><angle>0</angle></li>
+          <li><tick>10</tick><angle>-38</angle><easing>SmoothStep</easing></li>
+          <li><tick>15</tick><angle>-18</angle><easing>Linear</easing></li>
+          <li><tick>19</tick><angle>-14</angle><easing>EaseOutBack</easing></li>
+          <li><tick>30</tick><angle>0</angle><easing>SmoothStep</easing></li>
+          <li><tick>42</tick><angle>0</angle><easing>SmoothStep</easing></li>
+        </keyframes>
+      </li>
+      <li>
+        <nodeId>tail_seg5</nodeId>
+        <keyframes>
+          <li><tick>0</tick><angle>0</angle></li>
+          <li><tick>10</tick><angle>-36</angle><easing>SmoothStep</easing></li>
+          <li><tick>15</tick><angle>-14</angle><easing>Linear</easing></li>
+          <li><tick>19</tick><angle>-12</angle><easing>EaseOutBack</easing></li>
+          <li><tick>30</tick><angle>8</angle><easing>SmoothStep</easing></li>
+          <li><tick>42</tick><angle>0</angle><easing>SmoothStep</easing></li>
+        </keyframes>
+      </li>
+      <li>
+        <nodeId>tail_seg6</nodeId>
+        <keyframes>
+          <li><tick>0</tick><angle>0</angle></li>
+          <li><tick>10</tick><angle>-32</angle><easing>SmoothStep</easing></li>
+          <li><tick>15</tick><angle>-14</angle><easing>Linear</easing></li>
+          <li><tick>19</tick><angle>-16</angle><easing>EaseOutBack</easing></li>
+          <li><tick>30</tick><angle>12</angle><easing>SmoothStep</easing></li>
+          <li><tick>42</tick><angle>0</angle><easing>SmoothStep</easing></li>
+        </keyframes>
+      </li>
+      <li>
+        <nodeId>tail_stinger</nodeId>
+        <keyframes>
+          <li><tick>0</tick><angle>0</angle></li>
+          <li><tick>10</tick><angle>-28</angle><easing>SmoothStep</easing></li>
+          <li><tick>15</tick><angle>-18</angle><easing>Linear</easing></li>
+          <li><tick>19</tick><angle>-24</angle><easing>EaseOutBack</easing></li>
+          <li><tick>30</tick><angle>14</angle><easing>SmoothStep</easing></li>
+          <li><tick>42</tick><angle>0</angle><easing>SmoothStep</easing></li>
+        </keyframes>
+      </li>
+    </tracks>
+  </GiantCreatureFramework.GiantAnimDef>
+
+  <!-- 5. Ranged Curved-Arch Tail Plasma Volley Recoil (Whips from rear 0 deg -> -180 deg overhead arch across 4 burst shots @ ticks 12, 21, 30, 39 -> SmoothStep return to rear 0 deg) -->
+  <GiantCreatureFramework.GiantAnimDef>
+    <defName>GCF_Anim_MechScorpion_RangedTail</defName>
+    <label>Tail Volley</label>
+    <durationTicks>56</durationTicks>
+    <loop>false</loop>
+    <blendInTicks>4</blendInTicks>
+    <impactTick>12</impactTick>
+    <tracks>
+      <li>
+        <nodeId>carapace</nodeId>
+        <keyframes>
+          <li><tick>0</tick><offset>(0, 0)</offset></li>
+          <li><tick>6</tick><offset>(0, 0.14)</offset><easing>EaseOutQuad</easing></li>
+          <li><tick>12</tick><offset>(0, -0.24)</offset><easing>EaseOutQuad</easing></li>
+          <li><tick>17</tick><offset>(0, -0.06)</offset><easing>Sine</easing></li>
+          <li><tick>21</tick><offset>(0, -0.24)</offset><easing>EaseOutQuad</easing></li>
+          <li><tick>26</tick><offset>(0, -0.06)</offset><easing>Sine</easing></li>
+          <li><tick>30</tick><offset>(0, -0.24)</offset><easing>EaseOutQuad</easing></li>
+          <li><tick>35</tick><offset>(0, -0.08)</offset><easing>Sine</easing></li>
+          <li><tick>39</tick><offset>(0, -0.26)</offset><easing>EaseOutQuad</easing></li>
+          <li><tick>56</tick><offset>(0, 0)</offset><easing>SmoothStep</easing></li>
+        </keyframes>
+      </li>
+      <li>
+        <nodeId>claw_left</nodeId>
+        <keyframes>
+          <li><tick>0</tick><angle>0</angle></li>
+          <li><tick>8</tick><angle>-16</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>40</tick><angle>-16</angle><easing>Linear</easing></li>
+          <li><tick>56</tick><angle>0</angle><easing>SmoothStep</easing></li>
+        </keyframes>
+      </li>
+      <li>
+        <nodeId>claw_right</nodeId>
+        <keyframes>
+          <li><tick>0</tick><angle>0</angle></li>
+          <li><tick>8</tick><angle>16</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>40</tick><angle>16</angle><easing>Linear</easing></li>
+          <li><tick>56</tick><angle>0</angle><easing>SmoothStep</easing></li>
+        </keyframes>
+      </li>
+      <!-- Curved Overhead Whip Arch (coils slightly behind @ tick 3, whips overhead @ tick 12..39, uncoils cleanly behind body @ tick 56) -->
+      <li>
+        <nodeId>tail_seg1</nodeId>
+        <keyframes>
+          <li><tick>0</tick><angle>0</angle></li>
+          <li><tick>3</tick><angle>8</angle><easing>SmoothStep</easing></li>
+          <li><tick>10</tick><angle>-88</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>12</tick><angle>-84</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>17</tick><angle>-88</angle><easing>Sine</easing></li>
+          <li><tick>21</tick><angle>-84</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>26</tick><angle>-88</angle><easing>Sine</easing></li>
+          <li><tick>30</tick><angle>-84</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>35</tick><angle>-88</angle><easing>Sine</easing></li>
+          <li><tick>39</tick><angle>-83</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>48</tick><angle>-28</angle><easing>SmoothStep</easing></li>
+          <li><tick>56</tick><angle>0</angle><easing>SmoothStep</easing></li>
+        </keyframes>
+      </li>
+      <li>
+        <nodeId>tail_seg2</nodeId>
+        <keyframes>
+          <li><tick>0</tick><angle>0</angle></li>
+          <li><tick>3</tick><angle>6</angle><easing>SmoothStep</easing></li>
+          <li><tick>10</tick><angle>-56</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>12</tick><angle>-53</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>17</tick><angle>-56</angle><easing>Sine</easing></li>
+          <li><tick>21</tick><angle>-53</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>26</tick><angle>-56</angle><easing>Sine</easing></li>
+          <li><tick>30</tick><angle>-53</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>35</tick><angle>-56</angle><easing>Sine</easing></li>
+          <li><tick>39</tick><angle>-52</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>48</tick><angle>-18</angle><easing>SmoothStep</easing></li>
+          <li><tick>56</tick><angle>0</angle><easing>SmoothStep</easing></li>
+        </keyframes>
+      </li>
+      <li>
+        <nodeId>tail_seg3</nodeId>
+        <keyframes>
+          <li><tick>0</tick><angle>0</angle></li>
+          <li><tick>3</tick><angle>5</angle><easing>SmoothStep</easing></li>
+          <li><tick>10</tick><angle>-28</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>12</tick><angle>-26</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>17</tick><angle>-28</angle><easing>Sine</easing></li>
+          <li><tick>21</tick><angle>-26</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>26</tick><angle>-28</angle><easing>Sine</easing></li>
+          <li><tick>30</tick><angle>-26</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>35</tick><angle>-28</angle><easing>Sine</easing></li>
+          <li><tick>39</tick><angle>-25</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>48</tick><angle>-8</angle><easing>SmoothStep</easing></li>
+          <li><tick>56</tick><angle>0</angle><easing>SmoothStep</easing></li>
+        </keyframes>
+      </li>
+      <li>
+        <nodeId>tail_seg4</nodeId>
+        <keyframes>
+          <li><tick>0</tick><angle>0</angle></li>
+          <li><tick>3</tick><angle>3</angle><easing>SmoothStep</easing></li>
+          <li><tick>10</tick><angle>-12</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>12</tick><angle>-10</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>17</tick><angle>-12</angle><easing>Sine</easing></li>
+          <li><tick>21</tick><angle>-10</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>26</tick><angle>-12</angle><easing>Sine</easing></li>
+          <li><tick>30</tick><angle>-10</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>35</tick><angle>-12</angle><easing>Sine</easing></li>
+          <li><tick>39</tick><angle>-9</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>48</tick><angle>-3</angle><easing>SmoothStep</easing></li>
+          <li><tick>56</tick><angle>0</angle><easing>SmoothStep</easing></li>
+        </keyframes>
+      </li>
+      <li>
+        <nodeId>tail_seg5</nodeId>
+        <keyframes>
+          <li><tick>0</tick><angle>0</angle></li>
+          <li><tick>10</tick><angle>-2</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>12</tick><angle>0</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>17</tick><angle>-2</angle><easing>Sine</easing></li>
+          <li><tick>21</tick><angle>0</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>26</tick><angle>-2</angle><easing>Sine</easing></li>
+          <li><tick>30</tick><angle>0</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>35</tick><angle>-2</angle><easing>Sine</easing></li>
+          <li><tick>39</tick><angle>1</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>56</tick><angle>0</angle><easing>SmoothStep</easing></li>
+        </keyframes>
+      </li>
+      <li>
+        <nodeId>tail_seg6</nodeId>
+        <keyframes>
+          <li><tick>0</tick><angle>0</angle></li>
+          <li><tick>10</tick><angle>3</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>12</tick><angle>6</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>17</tick><angle>3</angle><easing>Sine</easing></li>
+          <li><tick>21</tick><angle>6</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>26</tick><angle>3</angle><easing>Sine</easing></li>
+          <li><tick>30</tick><angle>6</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>35</tick><angle>3</angle><easing>Sine</easing></li>
+          <li><tick>39</tick><angle>7</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>56</tick><angle>0</angle><easing>SmoothStep</easing></li>
+        </keyframes>
+      </li>
+      <li>
+        <nodeId>tail_stinger</nodeId>
+        <keyframes>
+          <li><tick>0</tick><angle>0</angle></li>
+          <li><tick>10</tick><angle>3</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>12</tick><angle>-12</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>17</tick><angle>3</angle><easing>Sine</easing></li>
+          <li><tick>21</tick><angle>-12</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>26</tick><angle>3</angle><easing>Sine</easing></li>
+          <li><tick>30</tick><angle>-12</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>35</tick><angle>3</angle><easing>Sine</easing></li>
+          <li><tick>39</tick><angle>-14</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>56</tick><angle>0</angle><easing>SmoothStep</easing></li>
+        </keyframes>
+      </li>
+    </tracks>
+    <events>
+      <li><tick>12</tick><boneId>tail_stinger</boneId><socketId>stinger_tip</socketId><useBoneMuzzle>true</useBoneMuzzle><vfxPreset>PlasmaBurst</vfxPreset><scale>1.0</scale></li>
+      <li><tick>21</tick><boneId>tail_stinger</boneId><socketId>stinger_tip</socketId><useBoneMuzzle>true</useBoneMuzzle><vfxPreset>PlasmaBurst</vfxPreset><scale>0.95</scale></li>
+      <li><tick>30</tick><boneId>tail_stinger</boneId><socketId>stinger_tip</socketId><useBoneMuzzle>true</useBoneMuzzle><vfxPreset>PlasmaBurst</vfxPreset><scale>0.95</scale></li>
+      <li><tick>39</tick><boneId>tail_stinger</boneId><socketId>stinger_tip</socketId><useBoneMuzzle>true</useBoneMuzzle><vfxPreset>PlasmaBurst</vfxPreset><scale>1.0</scale></li>
+    </events>
+  </GiantCreatureFramework.GiantAnimDef>
+
+  <!-- 5b. Melee: Carapace Siege Ram -->
+  <GiantCreatureFramework.GiantAnimDef>
+    <defName>GCF_Anim_MechScorpion_CarapaceRam</defName>
+    <label>Carapace Ram</label>
+    <durationTicks>32</durationTicks>
+    <loop>false</loop>
+    <blendInTicks>3</blendInTicks>
+    <triggerToolTag>HeadAttackTool</triggerToolTag>
+    <impactTick>16</impactTick>
+    <tracks>
+      <li>
+        <nodeId>carapace</nodeId>
+        <keyframes>
+          <li><tick>0</tick><angle>0</angle><offset>(0, 0)</offset></li>
+          <li><tick>8</tick><angle>-4</angle><offset>(0, -0.50)</offset><easing>EaseOutQuad</easing></li>
+          <li><tick>16</tick><angle>6</angle><offset>(0, 1.35)</offset><easing>EaseOutBack</easing></li>
+          <li><tick>24</tick><angle>2</angle><offset>(0, 0.35)</offset><easing>SmoothStep</easing></li>
+          <li><tick>32</tick><angle>0</angle><offset>(0, 0)</offset><easing>SmoothStep</easing></li>
+        </keyframes>
+      </li>
+      <li>
+        <nodeId>claw_left</nodeId>
+        <keyframes>
+          <li><tick>0</tick><angle>0</angle></li>
+          <li><tick>8</tick><angle>-18</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>16</tick><angle>14</angle><easing>EaseOutBack</easing></li>
+          <li><tick>32</tick><angle>0</angle><easing>SmoothStep</easing></li>
+        </keyframes>
+      </li>
+      <li>
+        <nodeId>claw_right</nodeId>
+        <keyframes>
+          <li><tick>0</tick><angle>0</angle></li>
+          <li><tick>8</tick><angle>18</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>16</tick><angle>-14</angle><easing>EaseOutBack</easing></li>
+          <li><tick>32</tick><angle>0</angle><easing>SmoothStep</easing></li>
+        </keyframes>
+      </li>
+      <li><nodeId>leg_l1</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>16</tick><angle>-12</angle><easing>SmoothStep</easing></li><li><tick>32</tick><angle>0</angle><easing>SmoothStep</easing></li></keyframes></li>
+      <li><nodeId>leg_l2</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>16</tick><angle>-10</angle><easing>SmoothStep</easing></li><li><tick>32</tick><angle>0</angle><easing>SmoothStep</easing></li></keyframes></li>
+      <li><nodeId>leg_l3</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>16</tick><angle>8</angle><easing>SmoothStep</easing></li><li><tick>32</tick><angle>0</angle><easing>SmoothStep</easing></li></keyframes></li>
+      <li><nodeId>leg_l4</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>16</tick><angle>12</angle><easing>SmoothStep</easing></li><li><tick>32</tick><angle>0</angle><easing>SmoothStep</easing></li></keyframes></li>
+      <li><nodeId>leg_r1</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>16</tick><angle>12</angle><easing>SmoothStep</easing></li><li><tick>32</tick><angle>0</angle><easing>SmoothStep</easing></li></keyframes></li>
+      <li><nodeId>leg_r2</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>16</tick><angle>10</angle><easing>SmoothStep</easing></li><li><tick>32</tick><angle>0</angle><easing>SmoothStep</easing></li></keyframes></li>
+      <li><nodeId>leg_r3</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>16</tick><angle>-8</angle><easing>SmoothStep</easing></li><li><tick>32</tick><angle>0</angle><easing>SmoothStep</easing></li></keyframes></li>
+      <li><nodeId>leg_r4</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>16</tick><angle>-12</angle><easing>SmoothStep</easing></li><li><tick>32</tick><angle>0</angle><easing>SmoothStep</easing></li></keyframes></li>
+    </tracks>
+  </GiantCreatureFramework.GiantAnimDef>
+
+  <!-- 6. Powered-Down / Downed Splayed Pose -->
+  <GiantCreatureFramework.GiantAnimDef>
+    <defName>GCF_Anim_MechScorpion_Downed</defName>
+    <label>Downed</label>
+    <durationTicks>60</durationTicks>
+    <loop>false</loop>
+    <blendInTicks>14</blendInTicks>
+    <tracks>
+      <li><nodeId>claw_left</nodeId><keyframes><li><tick>0</tick><angle>-28</angle></li></keyframes></li>
+      <li><nodeId>claw_right</nodeId><keyframes><li><tick>0</tick><angle>28</angle></li></keyframes></li>
+      <li><nodeId>leg_l1</nodeId><keyframes><li><tick>0</tick><angle>-8</angle></li></keyframes></li>
+      <li><nodeId>leg_l2</nodeId><keyframes><li><tick>0</tick><angle>-6</angle></li></keyframes></li>
+      <li><nodeId>leg_l3</nodeId><keyframes><li><tick>0</tick><angle>-6</angle></li></keyframes></li>
+      <li><nodeId>leg_l4</nodeId><keyframes><li><tick>0</tick><angle>-9</angle></li></keyframes></li>
+      <li><nodeId>leg_r1</nodeId><keyframes><li><tick>0</tick><angle>8</angle></li></keyframes></li>
+      <li><nodeId>leg_r2</nodeId><keyframes><li><tick>0</tick><angle>6</angle></li></keyframes></li>
+      <li><nodeId>leg_r3</nodeId><keyframes><li><tick>0</tick><angle>6</angle></li></keyframes></li>
+      <li><nodeId>leg_r4</nodeId><keyframes><li><tick>0</tick><angle>9</angle></li></keyframes></li>
+      <li><nodeId>tail_seg1</nodeId><keyframes><li><tick>0</tick><angle>8</angle></li></keyframes></li>
+      <li><nodeId>tail_seg2</nodeId><keyframes><li><tick>0</tick><angle>9</angle></li></keyframes></li>
+      <li><nodeId>tail_seg3</nodeId><keyframes><li><tick>0</tick><angle>10</angle></li></keyframes></li>
+      <li><nodeId>tail_seg4</nodeId><keyframes><li><tick>0</tick><angle>10</angle></li></keyframes></li>
+      <li><nodeId>tail_seg5</nodeId><keyframes><li><tick>0</tick><angle>9</angle></li></keyframes></li>
+      <li><nodeId>tail_seg6</nodeId><keyframes><li><tick>0</tick><angle>8</angle></li></keyframes></li>
+      <li><nodeId>tail_stinger</nodeId><keyframes><li><tick>0</tick><angle>8</angle></li></keyframes></li>
+    </tracks>
+  </GiantCreatureFramework.GiantAnimDef>
+
+  <!-- 7. Mandatory Death Collapse: Hydraulic Rupture Spasm -> Heavy Carapace Slam -> Limp Metallic Wreck -->
+  <GiantCreatureFramework.GiantAnimDef>
+    <defName>GCF_Anim_MechScorpion_Death</defName>
+    <label>hydraulic rupture death collapse</label>
+    <durationTicks>54</durationTicks>
+    <loop>false</loop>
+    <blendInTicks>6</blendInTicks>
+    <tracks>
+      <li>
+        <nodeId>carapace</nodeId>
+        <keyframes>
+          <li><tick>0</tick><angle>0</angle><offset>(0, 0)</offset><easing>SmoothStep</easing></li>
+          <li><tick>12</tick><angle>-6</angle><offset>(-0.08, -0.22)</offset><easing>EaseOutQuad</easing></li>
+          <li><tick>36</tick><angle>11.5</angle><offset>(0.14, -0.38)</offset><easing>EaseInQuad</easing></li>
+          <li><tick>54</tick><angle>10</angle><offset>(0.12, -0.34)</offset><easing>SmoothStep</easing></li>
+        </keyframes>
+      </li>
+      <li>
+        <nodeId>claw_left</nodeId>
+        <keyframes>
+          <li><tick>0</tick><angle>0</angle><easing>SmoothStep</easing></li>
+          <li><tick>12</tick><angle>16</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>36</tick><angle>-38</angle><easing>EaseInQuad</easing></li>
+          <li><tick>54</tick><angle>-35</angle><easing>SmoothStep</easing></li>
+        </keyframes>
+      </li>
+      <li>
+        <nodeId>claw_right</nodeId>
+        <keyframes>
+          <li><tick>0</tick><angle>0</angle><easing>SmoothStep</easing></li>
+          <li><tick>12</tick><angle>-16</angle><easing>EaseOutQuad</easing></li>
+          <li><tick>36</tick><angle>36</angle><easing>EaseInQuad</easing></li>
+          <li><tick>54</tick><angle>33</angle><easing>SmoothStep</easing></li>
+        </keyframes>
+      </li>
+      <li><nodeId>leg_l1</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>12</tick><angle>10</angle><easing>EaseOutQuad</easing></li><li><tick>36</tick><angle>-22</angle><easing>EaseInQuad</easing></li><li><tick>54</tick><angle>-20</angle><easing>SmoothStep</easing></li></keyframes></li>
+      <li><nodeId>leg_l2</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>12</tick><angle>8</angle><easing>EaseOutQuad</easing></li><li><tick>36</tick><angle>-18</angle><easing>EaseInQuad</easing></li><li><tick>54</tick><angle>-16</angle><easing>SmoothStep</easing></li></keyframes></li>
+      <li><nodeId>leg_l3</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>12</tick><angle>-8</angle><easing>EaseOutQuad</easing></li><li><tick>36</tick><angle>16</angle><easing>EaseInQuad</easing></li><li><tick>54</tick><angle>14</angle><easing>SmoothStep</easing></li></keyframes></li>
+      <li><nodeId>leg_l4</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>12</tick><angle>-10</angle><easing>EaseOutQuad</easing></li><li><tick>36</tick><angle>22</angle><easing>EaseInQuad</easing></li><li><tick>54</tick><angle>20</angle><easing>SmoothStep</easing></li></keyframes></li>
+      <li><nodeId>leg_r1</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>12</tick><angle>-10</angle><easing>EaseOutQuad</easing></li><li><tick>36</tick><angle>24</angle><easing>EaseInQuad</easing></li><li><tick>54</tick><angle>21</angle><easing>SmoothStep</easing></li></keyframes></li>
+      <li><nodeId>leg_r2</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>12</tick><angle>-8</angle><easing>EaseOutQuad</easing></li><li><tick>36</tick><angle>18</angle><easing>EaseInQuad</easing></li><li><tick>54</tick><angle>16</angle><easing>SmoothStep</easing></li></keyframes></li>
+      <li><nodeId>leg_r3</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>12</tick><angle>8</angle><easing>EaseOutQuad</easing></li><li><tick>36</tick><angle>-16</angle><easing>EaseInQuad</easing></li><li><tick>54</tick><angle>-14</angle><easing>SmoothStep</easing></li></keyframes></li>
+      <li><nodeId>leg_r4</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>12</tick><angle>10</angle><easing>EaseOutQuad</easing></li><li><tick>36</tick><angle>-20</angle><easing>EaseInQuad</easing></li><li><tick>54</tick><angle>-18</angle><easing>SmoothStep</easing></li></keyframes></li>
+      <li><nodeId>tail_seg1</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>12</tick><angle>-14</angle><easing>EaseOutQuad</easing></li><li><tick>38</tick><angle>16</angle><easing>EaseInQuad</easing></li><li><tick>54</tick><angle>14</angle><easing>SmoothStep</easing></li></keyframes></li>
+      <li><nodeId>tail_seg2</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>12</tick><angle>-12</angle><easing>EaseOutQuad</easing></li><li><tick>38</tick><angle>18</angle><easing>EaseInQuad</easing></li><li><tick>54</tick><angle>16</angle><easing>SmoothStep</easing></li></keyframes></li>
+      <li><nodeId>tail_seg3</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>12</tick><angle>-10</angle><easing>EaseOutQuad</easing></li><li><tick>40</tick><angle>16</angle><easing>EaseInQuad</easing></li><li><tick>54</tick><angle>14</angle><easing>SmoothStep</easing></li></keyframes></li>
+      <li><nodeId>tail_seg4</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>12</tick><angle>-8</angle><easing>EaseOutQuad</easing></li><li><tick>40</tick><angle>14</angle><easing>EaseInQuad</easing></li><li><tick>54</tick><angle>12</angle><easing>SmoothStep</easing></li></keyframes></li>
+      <li><nodeId>tail_seg5</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>12</tick><angle>-6</angle><easing>EaseOutQuad</easing></li><li><tick>42</tick><angle>12</angle><easing>EaseInQuad</easing></li><li><tick>54</tick><angle>10</angle><easing>SmoothStep</easing></li></keyframes></li>
+      <li><nodeId>tail_seg6</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>12</tick><angle>-6</angle><easing>EaseOutQuad</easing></li><li><tick>42</tick><angle>10</angle><easing>EaseInQuad</easing></li><li><tick>54</tick><angle>9</angle><easing>SmoothStep</easing></li></keyframes></li>
+      <li><nodeId>tail_stinger</nodeId><keyframes><li><tick>0</tick><angle>0</angle></li><li><tick>12</tick><angle>-8</angle><easing>EaseOutQuad</easing></li><li><tick>42</tick><angle>14</angle><easing>EaseInQuad</easing></li><li><tick>54</tick><angle>12</angle><easing>SmoothStep</easing></li></keyframes></li>
+    </tracks>
+    <events>
+      <li><tick>12</tick><boneId>carapace</boneId><vfxPreset>PlasmaBurst</vfxPreset><scale>1.05</scale></li>
+      <li><tick>36</tick><boneId>carapace</boneId><vfxPreset>HeavyGroundSlam</vfxPreset><scale>1.25</scale><cameraShake>0.22</cameraShake></li>
+    </events>
+  </GiantCreatureFramework.GiantAnimDef>
+
+  <!-- Arachnid 8-Leg Differential Pivot Turn Left (CCW) -->
+  <GiantCreatureFramework.GiantAnimDef>
+    <defName>GCF_Anim_MechScorpion_TurnLeft</defName>
+    <label>Turn Left</label>
+    <durationTicks>44</durationTicks>
+    <loop>true</loop>
+    <blendInTicks>6</blendInTicks>
+    <tracks>
+      <li>
+        <nodeId>carapace</nodeId>
+        <keyframes>
+          <li><tick>0</tick><angle>-2.8</angle><easing>Sine</easing></li>
+          <li><tick>22</tick><angle>-0.8</angle><easing>Sine</easing></li>
+          <li><tick>44</tick><angle>-2.8</angle><easing>Sine</easing></li>
+        </keyframes>
+      </li>
+      <li><nodeId>leg_r1</nodeId><keyframes><li><tick>0</tick><angle>-13.5</angle><easing>EaseOutQuad</easing></li><li><tick>24</tick><angle>9.5</angle><easing>Linear</easing></li></keyframes></li>
+      <li><nodeId>leg_r2</nodeId><keyframes><li><tick>10</tick><angle>9.0</angle><easing>Linear</easing></li><li><tick>32</tick><angle>-12.0</angle><easing>EaseOutQuad</easing></li></keyframes></li>
+      <li><nodeId>leg_r3</nodeId><keyframes><li><tick>4</tick><angle>-12.0</angle><easing>EaseOutQuad</easing></li><li><tick>28</tick><angle>9.0</angle><easing>Linear</easing></li></keyframes></li>
+      <li><nodeId>leg_r4</nodeId><keyframes><li><tick>14</tick><angle>9.5</angle><easing>Linear</easing></li><li><tick>36</tick><angle>-13.5</angle><easing>EaseOutQuad</easing></li></keyframes></li>
+      <li><nodeId>leg_l1</nodeId><keyframes><li><tick>6</tick><angle>-8.5</angle><easing>Linear</easing></li><li><tick>28</tick><angle>11.5</angle><easing>EaseOutQuad</easing></li></keyframes></li>
+      <li><nodeId>leg_l2</nodeId><keyframes><li><tick>16</tick><angle>10.5</angle><easing>EaseOutQuad</easing></li><li><tick>38</tick><angle>-8.0</angle><easing>Linear</easing></li></keyframes></li>
+      <li><nodeId>leg_l3</nodeId><keyframes><li><tick>8</tick><angle>-8.0</angle><easing>Linear</easing></li><li><tick>30</tick><angle>10.5</angle><easing>EaseOutQuad</easing></li></keyframes></li>
+      <li><nodeId>leg_l4</nodeId><keyframes><li><tick>18</tick><angle>11.5</angle><easing>EaseOutQuad</easing></li><li><tick>40</tick><angle>-8.5</angle><easing>Linear</easing></li></keyframes></li>
+      <li><nodeId>claw_left</nodeId><keyframes><li><tick>0</tick><angle>-10.5</angle><easing>Sine</easing></li><li><tick>22</tick><angle>-4.0</angle><easing>Sine</easing></li><li><tick>44</tick><angle>-10.5</angle><easing>Sine</easing></li></keyframes></li>
+      <li><nodeId>claw_right</nodeId><keyframes><li><tick>0</tick><angle>-7.5</angle><easing>Sine</easing></li><li><tick>22</tick><angle>-1.5</angle><easing>Sine</easing></li><li><tick>44</tick><angle>-7.5</angle><easing>Sine</easing></li></keyframes></li>
+      <li><nodeId>tail_seg1</nodeId><keyframes><li><tick>0</tick><angle>4.5</angle><easing>Sine</easing></li><li><tick>22</tick><angle>2.0</angle><easing>Sine</easing></li><li><tick>44</tick><angle>4.5</angle><easing>Sine</easing></li></keyframes></li>
+      <li><nodeId>tail_seg2</nodeId><keyframes><li><tick>4</tick><angle>5.0</angle><easing>Sine</easing></li><li><tick>26</tick><angle>2.2</angle><easing>Sine</easing></li></keyframes></li>
+      <li><nodeId>tail_seg3</nodeId><keyframes><li><tick>8</tick><angle>5.0</angle><easing>Sine</easing></li><li><tick>30</tick><angle>2.2</angle><easing>Sine</easing></li></keyframes></li>
+      <li><nodeId>tail_seg4</nodeId><keyframes><li><tick>12</tick><angle>4.5</angle><easing>Sine</easing></li><li><tick>34</tick><angle>2.0</angle><easing>Sine</easing></li></keyframes></li>
+    </tracks>
+  </GiantCreatureFramework.GiantAnimDef>
+
+  <!-- Arachnid 8-Leg Differential Pivot Turn Right (CW) -->
+  <GiantCreatureFramework.GiantAnimDef>
+    <defName>GCF_Anim_MechScorpion_TurnRight</defName>
+    <label>Turn Right</label>
+    <durationTicks>44</durationTicks>
+    <loop>true</loop>
+    <blendInTicks>6</blendInTicks>
+    <tracks>
+      <li>
+        <nodeId>carapace</nodeId>
+        <keyframes>
+          <li><tick>0</tick><angle>2.8</angle><easing>Sine</easing></li>
+          <li><tick>22</tick><angle>0.8</angle><easing>Sine</easing></li>
+          <li><tick>44</tick><angle>2.8</angle><easing>Sine</easing></li>
+        </keyframes>
+      </li>
+      <li><nodeId>leg_l1</nodeId><keyframes><li><tick>0</tick><angle>13.5</angle><easing>EaseOutQuad</easing></li><li><tick>24</tick><angle>-9.5</angle><easing>Linear</easing></li></keyframes></li>
+      <li><nodeId>leg_l2</nodeId><keyframes><li><tick>10</tick><angle>-9.0</angle><easing>Linear</easing></li><li><tick>32</tick><angle>12.0</angle><easing>EaseOutQuad</easing></li></keyframes></li>
+      <li><nodeId>leg_l3</nodeId><keyframes><li><tick>4</tick><angle>12.0</angle><easing>EaseOutQuad</easing></li><li><tick>28</tick><angle>-9.0</angle><easing>Linear</easing></li></keyframes></li>
+      <li><nodeId>leg_l4</nodeId><keyframes><li><tick>14</tick><angle>-9.5</angle><easing>Linear</easing></li><li><tick>36</tick><angle>13.5</angle><easing>EaseOutQuad</easing></li></keyframes></li>
+      <li><nodeId>leg_r1</nodeId><keyframes><li><tick>6</tick><angle>8.5</angle><easing>Linear</easing></li><li><tick>28</tick><angle>-11.5</angle><easing>EaseOutQuad</easing></li></keyframes></li>
+      <li><nodeId>leg_r2</nodeId><keyframes><li><tick>16</tick><angle>-10.5</angle><easing>EaseOutQuad</easing></li><li><tick>38</tick><angle>8.0</angle><easing>Linear</easing></li></keyframes></li>
+      <li><nodeId>leg_r3</nodeId><keyframes><li><tick>8</tick><angle>8.0</angle><easing>Linear</easing></li><li><tick>30</tick><angle>-10.5</angle><easing>EaseOutQuad</easing></li></keyframes></li>
+      <li><nodeId>leg_r4</nodeId><keyframes><li><tick>18</tick><angle>-11.5</angle><easing>EaseOutQuad</easing></li><li><tick>40</tick><angle>8.5</angle><easing>Linear</easing></li></keyframes></li>
+      <li><nodeId>claw_right</nodeId><keyframes><li><tick>0</tick><angle>10.5</angle><easing>Sine</easing></li><li><tick>22</tick><angle>4.0</angle><easing>Sine</easing></li><li><tick>44</tick><angle>10.5</angle><easing>Sine</easing></li></keyframes></li>
+      <li><nodeId>claw_left</nodeId><keyframes><li><tick>0</tick><angle>7.5</angle><easing>Sine</easing></li><li><tick>22</tick><angle>1.5</angle><easing>Sine</easing></li><li><tick>44</tick><angle>7.5</angle><easing>Sine</easing></li></keyframes></li>
+      <li><nodeId>tail_seg1</nodeId><keyframes><li><tick>0</tick><angle>-4.5</angle><easing>Sine</easing></li><li><tick>22</tick><angle>-2.0</angle><easing>Sine</easing></li><li><tick>44</tick><angle>-4.5</angle><easing>Sine</easing></li></keyframes></li>
+      <li><nodeId>tail_seg2</nodeId><keyframes><li><tick>4</tick><angle>-5.0</angle><easing>Sine</easing></li><li><tick>26</tick><angle>-2.2</angle><easing>Sine</easing></li></keyframes></li>
+      <li><nodeId>tail_seg3</nodeId><keyframes><li><tick>8</tick><angle>-5.0</angle><easing>Sine</easing></li><li><tick>30</tick><angle>-2.2</angle><easing>Sine</easing></li></keyframes></li>
+      <li><nodeId>tail_seg4</nodeId><keyframes><li><tick>12</tick><angle>-4.5</angle><easing>Sine</easing></li><li><tick>34</tick><angle>-2.0</angle><easing>Sine</easing></li></keyframes></li>
+    </tracks>
+  </GiantCreatureFramework.GiantAnimDef>
+
+</Defs>

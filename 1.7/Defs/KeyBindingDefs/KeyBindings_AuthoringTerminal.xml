@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <KeyBindingCategoryDef>
+    <defName>GCF_AuthoringTerminal_Keys</defName>
+    <label>Creature Forge</label>
+    <description>Giant Creature Framework authoring terminal hotkeys</description>
+    <isGameUniversal>true</isGameUniversal>
+  </KeyBindingCategoryDef>
+
+  <KeyBindingDef>
+    <defName>GCF_ToggleAuthoringTerminal</defName>
+    <label>Toggle Creature Forge terminal</label>
+    <category>GCF_AuthoringTerminal_Keys</category>
+    <defaultKeyCodeA>F10</defaultKeyCodeA>
+  </KeyBindingDef>
+</Defs>

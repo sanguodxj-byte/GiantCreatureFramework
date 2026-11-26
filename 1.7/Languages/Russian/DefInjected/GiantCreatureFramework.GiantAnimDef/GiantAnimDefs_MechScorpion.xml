@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <GCF_Anim_MechScorpion_Walk.label>Гидравлический ход</GCF_Anim_MechScorpion_Walk.label>
+  <GCF_Anim_MechScorpion_ClawLeft.label>Удар левой клешнёй</GCF_Anim_MechScorpion_ClawLeft.label>
+  <GCF_Anim_MechScorpion_ClawRight.label>Удар правой клешнёй</GCF_Anim_MechScorpion_ClawRight.label>
+  <GCF_Anim_MechScorpion_TailSting.label>Выпад хвостовым жалом</GCF_Anim_MechScorpion_TailSting.label>
+  <GCF_Anim_MechScorpion_RangedTail.label>Залп хвостового жала</GCF_Anim_MechScorpion_RangedTail.label>
+  <GCF_Anim_MechScorpion_CarapaceRam.label>Таран бронированной головогрудью</GCF_Anim_MechScorpion_CarapaceRam.label>
+  <GCF_Anim_MechScorpion_Downed.label>Парализованная остановка</GCF_Anim_MechScorpion_Downed.label>
+  <GCF_Anim_MechScorpion_Death.label>Гидравлический взрыв и обрушение конструкции</GCF_Anim_MechScorpion_Death.label>
+</LanguageData>

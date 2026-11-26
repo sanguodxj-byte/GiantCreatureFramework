@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <GCF_MechScorpion.label>重装机械巨蝎</GCF_MechScorpion.label>
+  <GCF_MechScorpion.description>由远古机械巢群专为撕裂坚固要塞而铸造的超重型节肢攻城机械体。厚重的倾斜反应堆背甲下并联着高能超电容组，八条重装液压步足稳健踏过断壁残垣，前端一对粉碎巨钳足以在近身瞬间钳死并剪断重甲目标。高悬于背脊上方的多节尾刺可越过掩体倾泻灼热等离子弹；一旦斩断尾刺即可哑火其远程齐射，击碎双钳则能瓦解其致命的近战钳杀。</GCF_MechScorpion.description>
+
+  <GCF_Bullet_PlasmaStinger.label>尾刺等离子弹</GCF_Bullet_PlasmaStinger.label>
+</LanguageData>

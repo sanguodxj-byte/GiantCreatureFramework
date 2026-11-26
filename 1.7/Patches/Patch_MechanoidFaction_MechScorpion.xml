@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!-- Add Heavy Mech Scorpion as the apex non-boss mechanoid combatant in Mechanoid faction heavy combat groups -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li[kindDef="Combat" and options/Mech_CentipedeBlaster and options/Mech_Scyther]/options</xpath>
+    <value>
+      <GCF_MechScorpion>2.5</GCF_MechScorpion>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li[kindDef="Combat" and options/Mech_CentipedeBurner]/options</xpath>
+    <value>
+      <GCF_MechScorpion>3.0</GCF_MechScorpion>
+    </value>
+  </Operation>
+
+</Patch>

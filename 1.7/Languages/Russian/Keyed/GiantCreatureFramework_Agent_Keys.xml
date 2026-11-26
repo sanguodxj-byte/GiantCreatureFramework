@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <!-- Session status and titles -->
+  <GCFAgent_SessionTitleNew>Новый сеанс</GCFAgent_SessionTitleNew>
+  <GCFAgent_SessionStatusReady>Готов</GCFAgent_SessionStatusReady>
+  <GCFAgent_SessionStatusAborting>Прерывается</GCFAgent_SessionStatusAborting>
+  <GCFAgent_SessionStatusAborted>Прерван</GCFAgent_SessionStatusAborted>
+  <GCFAgent_SessionStatusTimeout>Истекло время запроса</GCFAgent_SessionStatusTimeout>
+  <GCFAgent_SessionStatusRequestFailed>Сбой запроса</GCFAgent_SessionStatusRequestFailed>
+  <GCFAgent_SessionNew>Новый сеанс</GCFAgent_SessionNew>
+  <GCFAgent_SessionListTitle>Список сеансов ({0})</GCFAgent_SessionListTitle>
+  <GCFAgent_SessionDeleteTip>Удалить этот сеанс</GCFAgent_SessionDeleteTip>
+  <GCFAgent_SessionItemSubCached>{0} сообщ. · {1} · кэш {2}</GCFAgent_SessionItemSubCached>
+  <GCFAgent_SessionItemSubTokens>{0} сообщ. · {1} ток.</GCFAgent_SessionItemSubTokens>
+  <GCFAgent_SessionItemSubMessages>{0} сообщений</GCFAgent_SessionItemSubMessages>
+  <GCFAgent_SessionLimitReached>Достигнут лимит сеансов. Сначала прервите или удалите один из сеансов.</GCFAgent_SessionLimitReached>
+  <GCFAgent_SessionReadFailed>Не удалось прочитать сеанс; исходный файл не тронут: {0}</GCFAgent_SessionReadFailed>
+  <GCFAgent_SessionSaveFailed>Не удалось сохранить сеансы: {0}</GCFAgent_SessionSaveFailed>
+  <GCFAgent_SaveStreamingIncomplete>[В момент сохранения этот ход ещё не был завершён; задайте вопрос заново]</GCFAgent_SaveStreamingIncomplete>
+  <GCFAgent_ArchiveFileEmpty>Файл сеанса пуст.</GCFAgent_ArchiveFileEmpty>
+  <GCFAgent_ArchiveStructureInvalid>Недопустимая структура сеанса; исходный файл сохранён для восстановления.</GCFAgent_ArchiveStructureInvalid>
+
+  <!-- Turn status and bubble notices -->
+  <GCFAgent_StatusPromptTooLong>Вопрос превышает лимит в {0} символов; сузьте тему или поднимите лимит одного вопроса</GCFAgent_StatusPromptTooLong>
+  <GCFAgent_StatusSessionBudgetReached>Достигнут чистый бюджет Token на сеанс ({0}/{1})</GCFAgent_StatusSessionBudgetReached>
+  <GCFAgent_StatusUploadingScreenshot>Отправка снимка экрана и запроса</GCFAgent_StatusUploadingScreenshot>
+  <GCFAgent_StatusPreparingQuery>Подготовка запроса</GCFAgent_StatusPreparingQuery>
+  <GCFAgent_StatusFallbackConnection>Переключение на резервную конечную точку ({0}: {1})</GCFAgent_StatusFallbackConnection>
+  <GCFAgent_StatusMultimodalDowngraded>Текущая модель не поддерживает ввод изображений; автоматический переход в режим зондов</GCFAgent_StatusMultimodalDowngraded>
+  <GCFAgent_StatusReadyWithUsage>Готов · этот ход {0}{1} ток. (вход {2} / выход {3})</GCFAgent_StatusReadyWithUsage>
+  <GCFAgent_StatusCapturingScreenshot>Снимок текущего экрана игры...</GCFAgent_StatusCapturingScreenshot>
+  <GCFAgent_StatusReadingEvidence>Чтение данных игры</GCFAgent_StatusReadingEvidence>
+  <GCFAgent_StatusInvestigatingRound>Исследование · раунд {0}</GCFAgent_StatusInvestigatingRound>
+  <GCFAgent_StatusSynthesizing>Сведение выводов и данных</GCFAgent_StatusSynthesizing>
+  <GCFAgent_NoticeTurnIncomplete>[{0}, ответ за этот ход не был завершён]</GCFAgent_NoticeTurnIncomplete>
+  <GCFAgent_NoticePrepareFailed>Сбой подготовки запроса: {0}</GCFAgent_NoticePrepareFailed>
+  <GCFAgent_NoticeRequestFailed>Сбой запроса: {0}</GCFAgent_NoticeRequestFailed>
+  <GCFAgent_NoticeInsufficientEvidence>Текущих данных недостаточно, чтобы подтвердить запрошенный факт.</GCFAgent_NoticeInsufficientEvidence>
+  <GCFAgent_NoticeContentTruncated>[Обрезано]</GCFAgent_NoticeContentTruncated>
+  <GCFAgent_NoticeUiTruncated>[Обрезано]</GCFAgent_NoticeUiTruncated>
+  <GCFAgent_EvidenceNoticeFallback>Подсказка: в этом ходе зондов не вызывалось; текст ниже отвечает напрямую на основе прежних данных или общих знаний</GCFAgent_EvidenceNoticeFallback>
+
+  <!-- Provider display names -->
+  <GCFAgent_ProviderLabel_DeepSeek>DeepSeek</GCFAgent_ProviderLabel_DeepSeek>
+  <GCFAgent_ProviderLabel_GLM>GLM (открытая платформа Zhipu)</GCFAgent_ProviderLabel_GLM>
+  <GCFAgent_ProviderLabel_GLMCoding>GLM Coding (программирование Zhipu)</GCFAgent_ProviderLabel_GLMCoding>
+  <GCFAgent_ProviderLabel_AlibabaIntl>Alibaba Intl (международная Bailian)</GCFAgent_ProviderLabel_AlibabaIntl>
+  <GCFAgent_ProviderLabel_AlibabaCN>Alibaba CN (Bailian Китай)</GCFAgent_ProviderLabel_AlibabaCN>
+  <GCFAgent_ProviderLabel_Moonshot>Moonshot (Kimi)</GCFAgent_ProviderLabel_Moonshot>
+  <GCFAgent_ProviderLabel_Player2>Player2 (локальный клиент / облако без ключа)</GCFAgent_ProviderLabel_Player2>
+  <GCFAgent_ProviderLabel_Custom>Свой (свой OpenAI-совместимый)</GCFAgent_ProviderLabel_Custom>
+  <GCFAgent_ProviderLabel_Disabled>Отключено (не включено)</GCFAgent_ProviderLabel_Disabled>
+  <GCFAgent_ProviderShortLabel_AlibabaCN>Bailian</GCFAgent_ProviderShortLabel_AlibabaCN>
+
+  <!-- Model identity -->
+  <GCFAgent_ModelIdentityRequested>Запрошенная модель: {0}</GCFAgent_ModelIdentityRequested>
+  <GCFAgent_ModelIdentityResponse>Конечная точка вернула модель: {0}</GCFAgent_ModelIdentityResponse>
+  <GCFAgent_ModelIdentityFallback>Этот ход переключён на резервную конечную точку.</GCFAgent_ModelIdentityFallback>
+  <GCFAgent_ModelIdentityCurrent>Текущая</GCFAgent_ModelIdentityCurrent>
+  <GCFAgent_ModelIdentityLast>Прошлая</GCFAgent_ModelIdentityLast>
+  <GCFAgent_ModelTagWithIdentity>{0}: {1} ▾</GCFAgent_ModelTagWithIdentity>
+  <GCFAgent_ModelTagStandby>Резерв: {0}: {1} ▾</GCFAgent_ModelTagStandby>
+  <GCFAgent_ModelTagUnconfigured>Провайдер не настроен ▾</GCFAgent_ModelTagUnconfigured>
+  <GCFAgent_ModelTagNoRequestTip>Запрос ещё не отправлялся. Показана резервная конфигурация модели.</GCFAgent_ModelTagNoRequestTip>
+  <GCFAgent_ModelBadgeTip>Нажмите, чтобы быстро сменить предпочтительного провайдера или модель</GCFAgent_ModelBadgeTip>
+  <GCFAgent_ModelChipCurrent>▾ Текущая: {0}</GCFAgent_ModelChipCurrent>
+  <GCFAgent_ModelChipNext>▾ Следующая: {0}</GCFAgent_ModelChipNext>
+  <GCFAgent_ModelChipChoose>▾ Выбрать провайдера и модель</GCFAgent_ModelChipChoose>
+  <GCFAgent_ModelChipNextSendTip>Смена выбора влияет только на следующую отправку.</GCFAgent_ModelChipNextSendTip>
+  <GCFAgent_ModelChipChooseTip>Выберите модель или провайдера для следующей отправки.</GCFAgent_ModelChipChooseTip>
+  <GCFAgent_SwitcherConfigTag>[Конфиг #{0}] {1} · {2}{3}</GCFAgent_SwitcherConfigTag>
+  <GCFAgent_SwitcherFetchedModel>Переключить на полученную модель -&gt; {0}</GCFAgent_SwitcherFetchedModel>
+  <GCFAgent_SwitcherOpenConfig>Открыть панель настройки провайдера и модели...</GCFAgent_SwitcherOpenConfig>
+  <GCFAgent_NotEnabled>Не включено</GCFAgent_NotEnabled>
+
+  <!-- Token statistics -->
+  <GCFAgent_TokenPillCached>Всего: {0} · кэш {1}</GCFAgent_TokenPillCached>
+  <GCFAgent_TokenPillPlain>Всего: {0} ток.</GCFAgent_TokenPillPlain>
+  <GCFAgent_TokenPillTooltip>Кумулятивный Token за ходы этого сеанса: {0}\n├─ Всего ввода (Prompt): {1}\n├─ Попадания в кэш (Cached): {2} (доля кэша {3})\n├─ Чистый новый ввод (Uncached): {4}\n├─ Пиковый контекст хода (Peak Context): {5}\n└─ Всего вывода (Completion): {6}\nНажмите, чтобы открыть системные промпты и статистику Token</GCFAgent_TokenPillTooltip>
+  <GCFAgent_TokLabel>{0}{1} (чистый вход {2}{3}){4}</GCFAgent_TokLabel>
+  <GCFAgent_TokLabelCache>· кэш {0}</GCFAgent_TokLabelCache>
+  <GCFAgent_TokLabelRounds>({0} раундов)</GCFAgent_TokLabelRounds>
+  <GCFAgent_TokLabelTotalRounds>всего вызовов: {0}</GCFAgent_TokLabelTotalRounds>
+  <GCFAgent_TokLabelTooltip>Суммарный многшаговый счёт этого хода: {0} Tokens{1}\n├─ Всего ввода (включая повторные префиксы раундов): {2}\n├─ Попадания в кэш (Cached): {3} (доля попаданий {4})\n├─ Чистый новый ввод (Uncached): {5}\n├─ Всего вывода (Completion): {6}\n└─ Пиковое окно контекста: {7}</GCFAgent_TokLabelTooltip>
+  <GCFAgent_ReportRoundsTag>{0} раундов ·</GCFAgent_ReportRoundsTag>
+  <GCFAgent_ReportDetailCached>чистый вход {0} · попадания в кэш {1} [{2}] · выход {3}</GCFAgent_ReportDetailCached>
+  <GCFAgent_ReportDetailPlain>вход {0} · попадания в кэш 0 [0.0%] · выход {1}</GCFAgent_ReportDetailPlain>
+  <GCFAgent_ReportLine>Детализация Token ({0}пик {1}): {2}{3} ({4}) | за сеанс {5} (доля кэша {6})</GCFAgent_ReportLine>
+  <GCFAgent_UsageLine1>Текущий сеанс [{0}], всего: {1} ток. | пиковый контекст: {2} ток. | доля попаданий в кэш: {3}</GCFAgent_UsageLine1>
+  <GCFAgent_UsageLine2>Детализация ввода: суммарный ввод {0} (попадания в кэш {1} · чистый новый ввод {2}) | суммарный вывод: {3}</GCFAgent_UsageLine2>
+  <GCFAgent_UsageResetStats>Сбросить статистику</GCFAgent_UsageResetStats>
+
+  <!-- Query evidence preview -->
+  <GCFAgent_EvidenceToggle>Данные запроса ({0})</GCFAgent_EvidenceToggle>
+  <GCFAgent_EvidenceCopyAll>Копировать все данные</GCFAgent_EvidenceCopyAll>
+  <GCFAgent_EvidencePreviewHint>(нажмите [Копировать все данные], чтобы увидеть все сохранённые результаты)</GCFAgent_EvidencePreviewHint>
+  <GCFAgent_EvidencePreviewHeader>{0} · {1} · {2} мс\n{3}</GCFAgent_EvidencePreviewHeader>
+  <GCFAgent_ToolStatusRunning>Выполняется</GCFAgent_ToolStatusRunning>
+  <GCFAgent_ToolStatusFailed>Сбой</GCFAgent_ToolStatusFailed>
+  <GCFAgent_ToolStatusDone>Готово</GCFAgent_ToolStatusDone>
+  <GCFAgent_ScreenshotTag>[Текущий экран игры]</GCFAgent_ScreenshotTag>
+
+  <!-- Tool display names -->
+  <GCFAgent_ToolLabelWithSummary>{0}  [{1}]</GCFAgent_ToolLabelWithSummary>
+  <GCFAgent_ToolLabel_SelectInvestigation>Выбрать способность исследования</GCFAgent_ToolLabel_SelectInvestigation>
+  <GCFAgent_ToolLabel_ReadEvidence>Читать собранные данные</GCFAgent_ToolLabel_ReadEvidence>
+  <GCFAgent_ToolLabel_FoldEvidence>Свести заметки исследования</GCFAgent_ToolLabel_FoldEvidence>
+  <GCFAgent_ToolLabel_SearchKnowledge>Искать в локальной базе знаний</GCFAgent_ToolLabel_SearchKnowledge>
+  <GCFAgent_ToolLabel_ReadKnowledge>Читать источники знаний</GCFAgent_ToolLabel_ReadKnowledge>
+  <GCFAgent_ToolLabel_Calculate>Вычисления и упорядочение данных</GCFAgent_ToolLabel_Calculate>
+  <GCFAgent_ToolLabel_SearchDefs>Искать XML Def</GCFAgent_ToolLabel_SearchDefs>
+  <GCFAgent_ToolLabel_DefDetails>Читать объединённое дерево полей Def</GCFAgent_ToolLabel_DefDetails>
+  <GCFAgent_ToolLabel_WeaponDps>Оценить DPS оружия против одного слоя брони</GCFAgent_ToolLabel_WeaponDps>
+  <GCFAgent_ToolLabel_QuestState>Осмотреть дерево узлов задания</GCFAgent_ToolLabel_QuestState>
+  <GCFAgent_ToolLabel_ColonyState>Читать сводку по колонистам</GCFAgent_ToolLabel_ColonyState>
+  <GCFAgent_ToolLabel_RecentErrors>Извлечь стеки красных ошибок</GCFAgent_ToolLabel_RecentErrors>
+  <GCFAgent_ToolLabel_MethodPatches>Осмотреть цепочку патчей Harmony</GCFAgent_ToolLabel_MethodPatches>
+  <GCFAgent_ToolLabel_Decompile>Декомпилировать исходный код C#</GCFAgent_ToolLabel_Decompile>
+  <GCFAgent_ToolLabel_CodeSymbols>Искать символы сборки</GCFAgent_ToolLabel_CodeSymbols>
+  <GCFAgent_ToolLabel_TypeMembers>Отразить сигнатуры членов класса</GCFAgent_ToolLabel_TypeMembers>
+  <GCFAgent_ToolLabel_DerivedTypes>Искать производные подклассы/реализации</GCFAgent_ToolLabel_DerivedTypes>
+  <GCFAgent_ToolLabel_MethodIl>Читать поток IL-инструкций метода</GCFAgent_ToolLabel_MethodIl>
+  <GCFAgent_ToolLabel_ModsInfo>Читать порядок загрузки модов</GCFAgent_ToolLabel_ModsInfo>
+  <GCFAgent_ToolLabel_ReadModFile>Читать файл мода</GCFAgent_ToolLabel_ReadModFile>
+  <GCFAgent_ToolLabel_SearchModXml>Искать XML/Patch модов на диске между всеми модами</GCFAgent_ToolLabel_SearchModXml>
+  <GCFAgent_ToolLabel_StatFormula>Разобрать формулы ванильных статов</GCFAgent_ToolLabel_StatFormula>
+  <GCFAgent_ToolLabel_Recipes>Найти рецепты и цепочки крафта</GCFAgent_ToolLabel_Recipes>
+  <GCFAgent_ToolLabel_Research>Найти технологическое дерево и разблокировки</GCFAgent_ToolLabel_Research>
+  <GCFAgent_ToolLabel_SelectedObjects>Осмотреть выбранные объекты</GCFAgent_ToolLabel_SelectedObjects>
+  <GCFAgent_ToolLabel_PawnDeep>Глубокий осмотр восьми статов поселенца</GCFAgent_ToolLabel_PawnDeep>
+  <GCFAgent_ToolLabel_MapStoryteller>Диагностика энергосети/запасов/рассказчика карты</GCFAgent_ToolLabel_MapStoryteller>
+  <GCFAgent_ToolLabel_ReflectPath>Отразить пути объектов в памяти времени выполнения</GCFAgent_ToolLabel_ReflectPath>
+
+  <!-- Transport errors (shown in the player bubble) -->
+  <GCFAgent_TransportResponseTimeout>Конечная точка модели превысила время ожидания ответа.</GCFAgent_TransportResponseTimeout>
+  <GCFAgent_TransportHttpError>Конечная точка модели вернула HTTP {0}. Проверьте конфигурацию конечной точки или повторите позже.</GCFAgent_TransportHttpError>
+  <GCFAgent_TransportIdleNoData>Ответ модели долго не содержал данных.</GCFAgent_TransportIdleNoData>
+  <GCFAgent_TransportResponseTooLong>Ответ модели превысил лимит длины.</GCFAgent_TransportResponseTooLong>
+  <GCFAgent_TransportStreamIdle>Поток модели долго не содержал данных.</GCFAgent_TransportStreamIdle>
+  <GCFAgent_TransportStreamTooLong>Поток модели превысил лимит длины.</GCFAgent_TransportStreamTooLong>
+  <GCFAgent_TransportEventLineTooLong>Строка события модели оказалась слишком длинной.</GCFAgent_TransportEventLineTooLong>
+  <GCFAgent_TransportStreamError>Поток модели вернул ошибку.</GCFAgent_TransportStreamError>
+  <GCFAgent_TransportChoicesMustBeArray>Поле choices модели должно быть массивом.</GCFAgent_TransportChoicesMustBeArray>
+  <GCFAgent_TransportToolCallsMustBeArray>Поле tool_calls модели должно быть массивом.</GCFAgent_TransportToolCallsMustBeArray>
+  <GCFAgent_TransportTooManyToolCalls>Вызовы инструментов за один ход превысили {0}.</GCFAgent_TransportTooManyToolCalls>
+  <GCFAgent_TransportLengthTruncated>Вывод модели был обрезан по лимиту длины; сузьте вопрос или поднимите бюджет выходных Token.</GCFAgent_TransportLengthTruncated>
+  <GCFAgent_TransportAbnormalFinish>Ответ модели не завершился штатно.</GCFAgent_TransportAbnormalFinish>
+  <GCFAgent_TransportFinishMismatch>Маркер завершения инструмента не совпал с результатами.</GCFAgent_TransportFinishMismatch>
+  <GCFAgent_TransportToolMissingIdOrName>У вызова инструмента нет имени или идентификатора.</GCFAgent_TransportToolMissingIdOrName>
+  <GCFAgent_TransportArgsMustBeObject>Аргументы инструмента должны быть объектом JSON.</GCFAgent_TransportArgsMustBeObject>
+  <GCFAgent_TransportDuplicateToolCallId>Идентификаторы вызовов инструментов дублируются.</GCFAgent_TransportDuplicateToolCallId>
+
+  <!-- Turn flow errors (shown in the player bubble) -->
+  <GCFAgent_TurnRequestTimeout>Запрос к модели превысил время ожидания на этом ходе; собранные данные сохранены.</GCFAgent_TurnRequestTimeout>
+  <GCFAgent_TurnNoReplyOrToolCall>Модель не вернула ни ответа, ни вызовов инструментов.</GCFAgent_TurnNoReplyOrToolCall>
+  <GCFAgent_TurnNoFinalSubmission>Модель не выполнила корректную отправку ответа.</GCFAgent_TurnNoFinalSubmission>
+  <GCFAgent_TurnContextBudgetExceeded>Этот вопрос и результаты его запросов превышают бюджет контекста; сузьте тему или поднимите бюджет контекста.</GCFAgent_TurnContextBudgetExceeded>
+
+  <!-- Configuration validation and persistence -->
+  <GCFAgent_ConfigReadFailed>Не удалось прочитать конфигурацию: {0}</GCFAgent_ConfigReadFailed>
+  <GCFAgent_ConfigSaveFailed>Не удалось сохранить конфигурацию: {0}</GCFAgent_ConfigSaveFailed>
+  <GCFAgent_ValidateEndpointRequired>Укажите полный адрес конечной точки HTTP(S) Chat Completions или выберите предустановленного провайдера в конфигурации.</GCFAgent_ValidateEndpointRequired>
+  <GCFAgent_ValidateModelRequired>Укажите или выберите имя модели.</GCFAgent_ValidateModelRequired>
+  <GCFAgent_PromptOverridesMismatch>Количество имён и значений переопределений промптов не совпадает.</GCFAgent_PromptOverridesMismatch>
+
+  <!-- Mod settings page -->
+  <GCFAgent_SettingsHeader>Провайдер и промпты кузницы исполинов</GCFAgent_SettingsHeader>
+  <GCFAgent_SettingsOpenTerminal>Открыть терминал кузницы исполинов</GCFAgent_SettingsOpenTerminal>
+
+  <!-- Main menu button -->
+  <GCFAgent_MainTabUnreadTip>Кузница исполинов завершила ответ (нажмите для просмотра)</GCFAgent_MainTabUnreadTip>
+  <GCFAgent_BrandAvatarTip>Нажмите, чтобы задать аватар и промпт личности</GCFAgent_BrandAvatarTip>
+
+  <!-- Common buttons -->
+  <GCFAgent_CommonClose>Закрыть</GCFAgent_CommonClose>
+  <GCFAgent_CommonCancel>Отмена</GCFAgent_CommonCancel>
+  <GCFAgent_CommonCopy>Копировать</GCFAgent_CommonCopy>
+  <GCFAgent_CommonCopyCode>Копировать код</GCFAgent_CommonCopyCode>
+  <GCFAgent_CommonClear>Очистить</GCFAgent_CommonClear>
+  <GCFAgent_CommonAbort>Прервать</GCFAgent_CommonAbort>
+  <GCFAgent_CommonSend>Отправить</GCFAgent_CommonSend>
+  <GCFAgent_ClearButtonTip>Очищает поле ввода, если в нём есть текст; при пустом поле очищает историю текущего диалога</GCFAgent_ClearButtonTip>
+
+  <!-- Input bar -->
+  <GCFAgent_ComposerPlaceholder>Введите вопрос или диагностическую команду... (Enter — отправить, Shift+Enter — новая строка, Ctrl+V — вставить)</GCFAgent_ComposerPlaceholder>
+  <GCFAgent_CameraButtonTip>Снимает текущий экран игры и отправляет модели (текст из поля ввода отправляется вместе с ним)</GCFAgent_CameraButtonTip>
+  <GCFAgent_TermInsertTip>Нажмите, чтобы добавить в поле ввода: {0}</GCFAgent_TermInsertTip>
+  <GCFAgent_ContextOn>Контекст: вкл</GCFAgent_ContextOn>
+  <GCFAgent_ContextOff>Контекст: выкл</GCFAgent_ContextOff>
+  <GCFAgent_ContextPending>Контекст: ожидает выбора</GCFAgent_ContextPending>
+  <GCFAgent_ContextEnableThisChat>Включить контекст для этого диалога</GCFAgent_ContextEnableThisChat>
+  <GCFAgent_ContextDisableThisChat>Выключить контекст для этого диалога</GCFAgent_ContextDisableThisChat>
+  <GCFAgent_ContextScopeTip>Влияет только на этот диалог. При выключении каждый вопрос обрабатывается независимо; история чата сохраняется.</GCFAgent_ContextScopeTip>
+
+  <!-- Conversation context dialog -->
+  <GCFAgent_ContextDialogTitle>Включить контекст для этого диалога?</GCFAgent_ContextDialogTitle>
+  <GCFAgent_ContextDialogBody>Вкл: опирается на прежние вопросы, ответы и результаты исследования; удобен для уточняющих вопросов, но увеличивает расход ввода.\n\nВыкл: каждый вопрос обрабатывается независимо; подходит для отдельных тем. История чата сохраняется.</GCFAgent_ContextDialogBody>
+  <GCFAgent_ContextDialogRemember>Больше не спрашивать (новые диалоги применят этот выбор)</GCFAgent_ContextDialogRemember>
+  <GCFAgent_ContextDialogRememberTip>Текущий диалог можно переключить в любой момент; подсказку можно вернуть в настройках.</GCFAgent_ContextDialogRememberTip>
+  <GCFAgent_ContextEnable>Включить контекст</GCFAgent_ContextEnable>
+  <GCFAgent_ContextDisable>Выключить контекст</GCFAgent_ContextDisable>
+
+  <!-- Provider and model configuration panel -->
+  <GCFAgent_HeaderModelConfig>Модель и конфигурация</GCFAgent_HeaderModelConfig>
+  <GCFAgent_TabProviders>Провайдеры и модели ({0})</GCFAgent_TabProviders>
+  <GCFAgent_TabPrompts>Системные промпты и статистика Token</GCFAgent_TabPrompts>
+  <GCFAgent_TabPromptsCustomized>Системные промпты и статистика (изменены)</GCFAgent_TabPromptsCustomized>
+  <GCFAgent_ActiveProviderLabel>Предпочтение: {0} · {1}</GCFAgent_ActiveProviderLabel>
+  <GCFAgent_NoValidProvider>Не настроен действующий провайдер</GCFAgent_NoValidProvider>
+  <GCFAgent_ProviderListCaption>Список запасных AI-провайдеров (автоматическое переключение в порядке списка; дополнение URL и получение моделей выполняются автоматически)</GCFAgent_ProviderListCaption>
+  <GCFAgent_ProviderAdd>Добавить провайдера</GCFAgent_ProviderAdd>
+  <GCFAgent_KeysHide>Скрыть ключи</GCFAgent_KeysHide>
+  <GCFAgent_KeysShow>Показать ключи</GCFAgent_KeysShow>
+  <GCFAgent_ColEnable>Вкл./Порядок</GCFAgent_ColEnable>
+  <GCFAgent_ColProvider>AI-провайдер (Provider)</GCFAgent_ColProvider>
+  <GCFAgent_ColApiKey>API Key / способ аутентификации</GCFAgent_ColApiKey>
+  <GCFAgent_ColModel>Идентификатор модели (Model)</GCFAgent_ColModel>
+  <GCFAgent_ColActions>Приоритет/Действия</GCFAgent_ColActions>
+  <GCFAgent_ProviderEnableTip>Включить или отключить узел провайдера (автоматическое переключение идёт по порядку списка)</GCFAgent_ProviderEnableTip>
+  <GCFAgent_ProviderRowTip>Текущий провайдер: {0}\nКонечная точка по умолчанию: {1}</GCFAgent_ProviderRowTip>
+  <GCFAgent_LocalKeyPlaceholder>Локальным службам ключ не нужен (необязательно)</GCFAgent_LocalKeyPlaceholder>
+  <GCFAgent_ApiKeyPlaceholder>Введите API Key (sk-...)</GCFAgent_ApiKeyPlaceholder>
+  <GCFAgent_ModelFetchingPlaceholder>Автоматическое получение списка моделей...</GCFAgent_ModelFetchingPlaceholder>
+  <GCFAgent_ModelPickPlaceholder>Введите модель или щёлкните полученные модели справа, чтобы выбрать одну</GCFAgent_ModelPickPlaceholder>
+  <GCFAgent_ModelInputPlaceholder>Введите идентификатор модели (получается автоматически после ввода ключа)</GCFAgent_ModelInputPlaceholder>
+  <GCFAgent_ModelFetchedTip>Автоматически получено {0} доступных моделей (переключение щелчком или правой кнопкой)</GCFAgent_ModelFetchedTip>
+  <GCFAgent_UrlFieldLabel>Адрес конечной точки:</GCFAgent_UrlFieldLabel>
+  <GCFAgent_UrlPlaceholderLocal>http://127.0.0.1:11434/v1/chat/completions (суффикс дополнится автоматически)</GCFAgent_UrlPlaceholderLocal>
+  <GCFAgent_UrlPlaceholderCustom>https://api.example.com/v1/chat/completions (суффикс дополнится автоматически)</GCFAgent_UrlPlaceholderCustom>
+  <GCFAgent_QuestSpoilersSetting>Разрешить запрос скрытых условий заданий (AllowQuestSpoilers — при включении можно запрашивать скрытые условия срабатывания QuestPart и нераскрытые ветки)</GCFAgent_QuestSpoilersSetting>
+  <GCFAgent_FailoverFooterNote>Подсказка: можно включить несколько провайдеров, чтобы получить цепочку переключения (когда основной #1 зависает или ошибается, автоматически включается следующий активный запасной провайдер). Поддержка Google/OpenAI/DeepSeek/Alibaba Bailian/Zhipu GLM/Kimi/Claude/OpenRouter/Player2/локальных служб.</GCFAgent_FailoverFooterNote>
+  <GCFAgent_BannerCollapse>Свернуть панель</GCFAgent_BannerCollapse>
+  <GCFAgent_BannerSavePersist>Сохранить и закрепить</GCFAgent_BannerSavePersist>
+  <GCFAgent_BannerSaved>Конфигурация провайдера и промптов сохранена и закреплена в файле конфигурации.</GCFAgent_BannerSaved>
+  <GCFAgent_BannerSavedWithWarning>Конфигурация сохранена, но проверка основной конечной точки сообщает: {0}</GCFAgent_BannerSavedWithWarning>
+  <GCFAgent_BannerValidate>Проверить конфигурацию</GCFAgent_BannerValidate>
+  <GCFAgent_BannerValidateOk>Проверка пройдена: {0} · {1} ({2})</GCFAgent_BannerValidateOk>
+  <GCFAgent_BannerValidateFailed>Проверка конфигурации не пройдена: {0}</GCFAgent_BannerValidateFailed>
+  <GCFAgent_BannerProviderCount>Включено провайдеров: {0} · лимит бюджета отсутствует · расход Token сообщается с каждым ответом</GCFAgent_BannerProviderCount>
+  <GCFAgent_BannerLocalServiceFound>Автоматически обнаружена локальная служба [{0}]: {1}</GCFAgent_BannerLocalServiceFound>
+  <GCFAgent_BannerModelsFetched>Автоматически получено {1} доступных моделей с {0}</GCFAgent_BannerModelsFetched>
+
+  <!-- Player2 authorization -->
+  <GCFAgent_Player2AuthRequestingCode>Запрос кода авторизации устройства у Player2...</GCFAgent_Player2AuthRequestingCode>
+  <GCFAgent_Player2AuthSuccess>Веб-авторизация Player2 выполнена!</GCFAgent_Player2AuthSuccess>
+  <GCFAgent_Player2AuthTimeout>Веб-авторизация Player2 превысила время ожидания или не была завершена.</GCFAgent_Player2AuthTimeout>
+  <GCFAgent_Player2AuthCancelled>Авторизация Player2 отменена.</GCFAgent_Player2AuthCancelled>
+  <GCFAgent_Player2AuthCancelledShort>Авторизация отменена.</GCFAgent_Player2AuthCancelledShort>
+  <GCFAgent_Player2AuthFailed>Сбой авторизации: {0}</GCFAgent_Player2AuthFailed>
+  <GCFAgent_Player2AuthCodeHint>(Код авторизации: {0})</GCFAgent_Player2AuthCodeHint>
+  <GCFAgent_Player2AuthPageOpened>Страница авторизации Player2 открыта в браузере{0}; ожидается подтверждение на веб-странице...</GCFAgent_Player2AuthPageOpened>
+  <GCFAgent_Player2DeviceRequestFailed>Сбой запроса аутентификации устройства Player2 (HTTP {0})</GCFAgent_Player2DeviceRequestFailed>
+  <GCFAgent_Player2DeviceInvalidResponse>Player2 вернул недопустимый ответ аутентификации устройства.</GCFAgent_Player2DeviceInvalidResponse>
+  <GCFAgent_Player2ClientConnected>Клиент подключён · модель выбрана автоматически</GCFAgent_Player2ClientConnected>
+  <GCFAgent_Player2ClientConnectedTip>Обнаружен локальный клиент Player2 ({0}); вход выполнен автоматически, ключ не нужен. Нажмите, чтобы управлять резервной веб-авторизацией.</GCFAgent_Player2ClientConnectedTip>
+  <GCFAgent_Player2AwaitingWebConfirm>Ожидание подтверждения авторизации на веб-странице...</GCFAgent_Player2AwaitingWebConfirm>
+  <GCFAgent_Player2WebAuthReady>Веб-авторизация готова · автоматическая маршрутизация в облако</GCFAgent_Player2WebAuthReady>
+  <GCFAgent_Player2StartClientHint>Запустите клиент или нажмите веб-авторизацию слева</GCFAgent_Player2StartClientHint>
+  <GCFAgent_Player2LocalEndpoint>Локальная конечная точка Player2: {0}</GCFAgent_Player2LocalEndpoint>
+  <GCFAgent_Player2AutoModelTip>Player2 сама назначает лучшую модель на сервере; параметр model задавать вручную не нужно</GCFAgent_Player2AutoModelTip>
+  <GCFAgent_Player2KeyPlaceholder>На настольном клиенте не нужно / веб-авторизация p2Key</GCFAgent_Player2KeyPlaceholder>
+  <GCFAgent_Player2AuthMenu>Авторизовать</GCFAgent_Player2AuthMenu>
+  <GCFAgent_Player2WaitConfirm>Ожидание подтверждения на веб-странице (открыть заново)</GCFAgent_Player2WaitConfirm>
+  <GCFAgent_Player2WaitConfirmTip>Страница авторизации Player2 открыта в браузере; нажмите, чтобы открыть её заново или отменить</GCFAgent_Player2WaitConfirmTip>
+  <GCFAgent_Player2WebAuth>Веб-авторизация</GCFAgent_Player2WebAuth>
+  <GCFAgent_Player2WebAuthed>Веб-авторизация выполнена</GCFAgent_Player2WebAuthed>
+  <GCFAgent_Player2WebAuthedTip>Настроен ключ веб-авторизации Player2. Нажмите, чтобы пройти авторизацию заново, просмотреть или изменить ключ либо очистить его.</GCFAgent_Player2WebAuthedTip>
+  <GCFAgent_Player2DetectClient>Обнаружить клиент</GCFAgent_Player2DetectClient>
+  <GCFAgent_Player2OneClickAuth>Веб-авторизация в один клик</GCFAgent_Player2OneClickAuth>
+  <GCFAgent_Player2OneClickAuthTip>Открывает веб-авторизацию Player2 в браузере и автоматически подставляет ключ (правая кнопка — другие варианты)</GCFAgent_Player2OneClickAuthTip>
+  <GCFAgent_Player2DetectTip>Обнаруживает локальный настольный клиент Player2 (порты 4315/4316 или api.port)</GCFAgent_Player2DetectTip>
+  <GCFAgent_Player2ReopenAuthPage>Заново открыть страницу авторизации в браузере</GCFAgent_Player2ReopenAuthPage>
+  <GCFAgent_Player2CancelAuth>Отменить идущую веб-авторизацию</GCFAgent_Player2CancelAuth>
+  <GCFAgent_Player2WebAuthCancelled>Веб-авторизация Player2 отменена.</GCFAgent_Player2WebAuthCancelled>
+  <GCFAgent_Player2StartWebAuth>Начать веб-авторизацию в один клик (рекомендуется)</GCFAgent_Player2StartWebAuth>
+  <GCFAgent_Player2DetectNow>Немедленно обнаружить локальный клиент Player2</GCFAgent_Player2DetectNow>
+  <GCFAgent_Player2HideKeyInput>Скрыть поле ручного ввода</GCFAgent_Player2HideKeyInput>
+  <GCFAgent_Player2ShowKeyInput>Ввести вручную / посмотреть API Key</GCFAgent_Player2ShowKeyInput>
+  <GCFAgent_Player2ClearKey>Очистить сохранённый ключ веб-авторизации</GCFAgent_Player2ClearKey>
+  <GCFAgent_Player2KeyCleared>Ключ веб-авторизации Player2 очищен.</GCFAgent_Player2KeyCleared>
+  <GCFAgent_Player2OpenWebsite>Открыть сайт Player2 (player2.game)</GCFAgent_Player2OpenWebsite>
+  <GCFAgent_Player2Detecting>Поиск локального клиента Player2 (api.port / 4315 / 4316)...</GCFAgent_Player2Detecting>
+  <GCFAgent_Player2LocalConnected>Подключено к локальному клиенту Player2 ({0}); ключ сеанса получен автоматически!</GCFAgent_Player2LocalConnected>
+  <GCFAgent_Player2NotDetected>Работающий локальный клиент Player2 не обнаружен. Запустите клиент или нажмите [Веб-авторизация в один клик], чтобы использовать облачную службу.</GCFAgent_Player2NotDetected>
+  <GCFAgent_Player2RequestingDeviceAuth>Запрос веб-авторизации устройства у Player2...</GCFAgent_Player2RequestingDeviceAuth>
+  <GCFAgent_BannerPlayer2AuthSuccess>Веб-авторизация Player2 выполнена; ключ автоматически подставлен и сохранён!</GCFAgent_BannerPlayer2AuthSuccess>
+  <GCFAgent_BannerPlayer2AuthIncomplete>Авторизация Player2 не завершена: {0}</GCFAgent_BannerPlayer2AuthIncomplete>
+
+  <!-- Context switch settings -->
+  <GCFAgent_SettingAskContext>Спрашивать о включении контекста при второй отправке нового диалога</GCFAgent_SettingAskContext>
+  <GCFAgent_SettingAskContextTip>Возврат подсказки не меняет диалоги, где выбор уже сделан.</GCFAgent_SettingAskContextTip>
+  <GCFAgent_SettingDefaultContext>Если не спрашивать снова, новые диалоги включают контекст по умолчанию</GCFAgent_SettingDefaultContext>
+  <GCFAgent_SettingDefaultContextTip>Каждый диалог всё ещё можно изменить отдельно переключателем контекста под полем ввода.</GCFAgent_SettingDefaultContextTip>
+  <GCFAgent_SettingContextNote>Выключение контекста снижает расход ввода на историю; инструментальные исследования внутри хода по-прежнему соединяются нормально.</GCFAgent_SettingContextNote>
+
+  <!-- System prompt editor entry -->
+  <GCFAgent_PromptsOpen>Системные промпты...</GCFAgent_PromptsOpen>
+  <GCFAgent_PromptsOpenDesc>Просмотр, правка и восстановление промптов по умолчанию в отдельном окне.</GCFAgent_PromptsOpenDesc>
+  <GCFAgent_PromptsOpenNote>Вступает в силу для следующего вопроса после сохранения; перезапуск игры не нужен.</GCFAgent_PromptsOpenNote>
+
+  <!-- Knowledge index -->
+  <GCFAgent_KnowledgeEnable>Готовить индекс знаний мода в фоне</GCFAgent_KnowledgeEnable>
+  <GCFAgent_KnowledgeEnableTip>Первая подготовка может продолжаться между игровыми сеансами; запросы всё равно могут использовать исходные инструменты исследования.</GCFAgent_KnowledgeEnableTip>
+  <GCFAgent_KnowledgePreferGpu>Предпочитать GPU</GCFAgent_KnowledgePreferGpu>
+  <GCFAgent_KnowledgeGpuTip>Использует видеокарту при доступности и возвращается к однопоточному CPU при сбое инициализации; фоновая работа замедляется во время лагов игры.</GCFAgent_KnowledgeGpuTip>
+  <GCFAgent_IndexPhaseStarting>Открытие</GCFAgent_IndexPhaseStarting>
+  <GCFAgent_IndexPhaseText>Подготовка полнотекстового индекса</GCFAgent_IndexPhaseText>
+  <GCFAgent_IndexPhaseModel>Прогрев модели</GCFAgent_IndexPhaseModel>
+  <GCFAgent_IndexPhaseEmbedding>Подготовка семантического индекса</GCFAgent_IndexPhaseEmbedding>
+  <GCFAgent_IndexPhaseCode>Подготовка кода мода</GCFAgent_IndexPhaseCode>
+  <GCFAgent_IndexPhasePartial>Доступна часть индекса</GCFAgent_IndexPhasePartial>
+  <GCFAgent_IndexPhaseReady>Готов</GCFAgent_IndexPhaseReady>
+  <GCFAgent_IndexPhaseLexical>Доступен полнотекстовый индекс</GCFAgent_IndexPhaseLexical>
+  <GCFAgent_IndexPhaseFaulted>Индекс временно недоступен</GCFAgent_IndexPhaseFaulted>
+  <GCFAgent_IndexPhaseDisabled>Не включено</GCFAgent_IndexPhaseDisabled>
+  <GCFAgent_IndexPaused>Приостановлено</GCFAgent_IndexPaused>
+  <GCFAgent_IndexStatusLine>{0} · файлы {1} · код {2} · семантика {3}/{4} · {5}</GCFAgent_IndexStatusLine>
+  <GCFAgent_IndexStatusTooltip>{0}\nсборки {1}/{2} · члены IL {3} · сбойные члены {4}\n{5}\n{6}\n{7}</GCFAgent_IndexStatusTooltip>
+  <GCFAgent_IndexResume>Продолжить подготовку</GCFAgent_IndexResume>
+  <GCFAgent_IndexPause>Приостановить подготовку</GCFAgent_IndexPause>
+  <GCFAgent_IndexRebuild>Перестроить индекс</GCFAgent_IndexRebuild>
+  <GCFAgent_IndexNote1>Подготовка идёт в фоне на этой машине; она не вызывает модель и не расходует API Token.</GCFAgent_IndexNote1>
+  <GCFAgent_IndexNote2>После приостановки подготовленные части индекса остаются доступны для запросов; полное исследование содержимого доступно всегда.</GCFAgent_IndexNote2>
+  <GCFAgent_IndexRestartFailed>Не удалось перезапустить индекс: {0}</GCFAgent_IndexRestartFailed>
+
+  <!-- System prompts window -->
+  <GCFAgent_PromptsInitialStatus>Вступает в силу для следующего вопроса после сохранения; перезапуск не нужен. Закрытие окна отбрасывает несохранённые изменения.</GCFAgent_PromptsInitialStatus>
+  <GCFAgent_PromptsSaveIncomplete>Запись конфигурации не завершена: {0}</GCFAgent_PromptsSaveIncomplete>
+  <GCFAgent_PromptsSaved>Сохранено. Следующий вопрос использует новые промпты; уже идущий ответ сохраняет настройки, с которыми был отправлен.</GCFAgent_PromptsSaved>
+  <GCFAgent_PromptsTitle>Системные промпты</GCFAgent_PromptsTitle>
+  <GCFAgent_PromptsUnsavedMark>· не сохранено</GCFAgent_PromptsUnsavedMark>
+  <GCFAgent_PromptsBackToEdit>Вернуться к редактору</GCFAgent_PromptsBackToEdit>
+  <GCFAgent_PromptsPreview>Предпросмотр действующего текста</GCFAgent_PromptsPreview>
+  <GCFAgent_PromptsResetSection>Восстановить значение этого раздела по умолчанию</GCFAgent_PromptsResetSection>
+  <GCFAgent_PromptsResetAll>Восстановить все значения по умолчанию</GCFAgent_PromptsResetAll>
+  <GCFAgent_PromptsPreviewNote>Предпросмотр включает текущий черновик; вступает в силу после сохранения. Промпты, применяемые по условиям срабатывания, перечислены отдельно.</GCFAgent_PromptsPreviewNote>
+  <GCFAgent_PromptsPreviewSection>[{0}]\n{1}</GCFAgent_PromptsPreviewSection>
+  <GCFAgent_PromptsPlaceholder>Оставьте пустым, чтобы не отправлять этот промпт; «Восстановить значение этого раздела по умолчанию» возвращает встроенный текст.</GCFAgent_PromptsPlaceholder>
+  <GCFAgent_PromptsContentStats>Текущий объём {0} символов · локальная оценка ≈{1} Token</GCFAgent_PromptsContentStats>
+  <GCFAgent_PromptsSave>Сохранить</GCFAgent_PromptsSave>
+  <GCFAgent_PromptSectionLabel_Main>Главный системный промпт</GCFAgent_PromptSectionLabel_Main>
+  <GCFAgent_PromptSectionDesc_Main>Обязанности помощника, принципы исследования и рамки ответа.</GCFAgent_PromptSectionDesc_Main>
+  <GCFAgent_PromptSectionLabel_OutputFormat>Формулировки и формат терминов</GCFAgent_PromptSectionLabel_OutputFormat>
+  <GCFAgent_PromptSectionDesc_OutputFormat>Управляет формулировками, видимыми игроку, и тегами терминов.</GCFAgent_PromptSectionDesc_OutputFormat>
+  <GCFAgent_PromptSectionLabel_Persona>Личность и обращение</GCFAgent_PromptSectionLabel_Persona>
+  <GCFAgent_PromptSectionDesc_Persona>Управляет обращением, тоном и стилем персонажа; используется и на странице аватара.</GCFAgent_PromptSectionDesc_Persona>
+  <GCFAgent_PromptSectionLabel_PersonaBoundary>Рамки личности</GCFAgent_PromptSectionLabel_PersonaBoundary>
+  <GCFAgent_PromptSectionDesc_PersonaBoundary>Ставится после личности; объясняет её отношение к фактам и протоколу инструментов.</GCFAgent_PromptSectionDesc_PersonaBoundary>
+  <GCFAgent_PromptSectionLabel_Submission>Инструкции по отправке ответа</GCFAgent_PromptSectionLabel_Submission>
+  <GCFAgent_PromptSectionDesc_Submission>Говорит модели, как передать ответ через инструмент отправки.</GCFAgent_PromptSectionDesc_Submission>
+  <GCFAgent_PromptSectionLabel_Evidence>Инструкции по использованию данных</GCFAgent_PromptSectionLabel_Evidence>
+  <GCFAgent_PromptSectionDesc_Evidence>Описывает идентификаторы источников, предпросмотры, снимки истории и исправление цитат.</GCFAgent_PromptSectionDesc_Evidence>
+  <GCFAgent_PromptSectionLabel_MissingSubmission>Напоминание при отсутствии отправки</GCFAgent_PromptSectionLabel_MissingSubmission>
+  <GCFAgent_PromptSectionDesc_MissingSubmission>Используется, когда модель возвращает простой текст, не отправив ответ.</GCFAgent_PromptSectionDesc_MissingSubmission>
+  <GCFAgent_PromptSectionLabel_CitationRepair>Напоминание после сбоя цитирования</GCFAgent_PromptSectionLabel_CitationRepair>
+  <GCFAgent_PromptSectionDesc_CitationRepair>Добавляется к деталям ошибки при провале проверки цитат.</GCFAgent_PromptSectionDesc_CitationRepair>
+  <GCFAgent_PromptSectionLabel_Synthesis>Инструкции по сводке после сбоя запроса</GCFAgent_PromptSectionLabel_Synthesis>
+  <GCFAgent_PromptSectionDesc_Synthesis>Используется, когда сетевой тайм-аут и подобное требуют сделать выводы по уже собранным данным.</GCFAgent_PromptSectionDesc_Synthesis>
+  <GCFAgent_PromptSectionLabel_ImageQuestion>Вопрос при отправке только снимка экрана</GCFAgent_PromptSectionLabel_ImageQuestion>
+  <GCFAgent_PromptSectionDesc_ImageQuestion>Используется, когда есть снимок экрана, но нет вводимого текста.</GCFAgent_PromptSectionDesc_ImageQuestion>
+  <GCFAgent_PromptSectionLabel_ToolDiscovery>Инструкции по обнаружению инструментов</GCFAgent_PromptSectionLabel_ToolDiscovery>
+  <GCFAgent_PromptSectionDesc_ToolDiscovery>Описывает просмотр каталога и загрузку определений инструментов по имени; общие для всех моделей.</GCFAgent_PromptSectionDesc_ToolDiscovery>
+
+  <!-- Avatar and persona window -->
+  <GCFAgent_PersonaWindowTitle>Настройки аватара помощника и промпта личности</GCFAgent_PersonaWindowTitle>
+  <GCFAgent_PersonaWindowSubtitle>Настройте аватар помощника в левом верхнем углу и слева от сообщений чата, а также особую личность и манеру речи для диалогов</GCFAgent_PersonaWindowSubtitle>
+  <GCFAgent_AvatarCurrentCustom>Текущий аватар: своё изображение ({0})</GCFAgent_AvatarCurrentCustom>
+  <GCFAgent_AvatarCurrentDefault>Текущий аватар: встроенный по умолчанию (поддерживаются PNG / JPG, прозрачный рендер со скруглением углов и без внешней рамки)</GCFAgent_AvatarCurrentDefault>
+  <GCFAgent_AvatarPathPlaceholder>Оставьте пустым для аватара по умолчанию или нажмите [Просмотр локальных изображений] ниже, чтобы выбрать файл PNG/JPG</GCFAgent_AvatarPathPlaceholder>
+  <GCFAgent_AvatarBrowse>Просмотр локальных изображений...</GCFAgent_AvatarBrowse>
+  <GCFAgent_AvatarFolderMenu>Библиотека/папка аватаров</GCFAgent_AvatarFolderMenu>
+  <GCFAgent_AvatarReset>Вернуть аватар по умолчанию</GCFAgent_AvatarReset>
+  <GCFAgent_AvatarResetDone>Восстановлен аватар по умолчанию.</GCFAgent_AvatarResetDone>
+  <GCFAgent_PersonaHeaderActive>Промпт личности (активен · {0} символов / ≈{1} ток.):</GCFAgent_PersonaHeaderActive>
+  <GCFAgent_PersonaHeaderIdle>Промпт личности (задайте характер помощника, роль персонажа, обращение и манеру речи):</GCFAgent_PersonaHeaderIdle>
+  <GCFAgent_PersonaQuickPresets>Быстрые заготовки:</GCFAgent_PersonaQuickPresets>
+  <GCFAgent_PersonaNone>Без особой личности</GCFAgent_PersonaNone>
+  <GCFAgent_PersonaGentleMaid>Мягкая горничная-советница</GCFAgent_PersonaGentleMaid>
+  <GCFAgent_PersonaTsundereAdvisor>Колкая цундере-советница</GCFAgent_PersonaTsundereAdvisor>
+  <GCFAgent_PersonaColdCore>Холодное механическое ядро</GCFAgent_PersonaColdCore>
+  <GCFAgent_PersonaOldCaptain>Старый капитан края мира</GCFAgent_PersonaOldCaptain>
+  <GCFAgent_PersonaCleared>Особая личность очищена.</GCFAgent_PersonaCleared>
+  <GCFAgent_PersonaApplied>Применён шаблон личности [{0}]; можно продолжать свободно править.</GCFAgent_PersonaApplied>
+  <GCFAgent_PersonaEditorPlaceholder>Введите здесь свой промпт личности (например, предысторию персонажа, черты характера, обращение к игроку, любимые фразы); оставьте пустым, чтобы сохранить профессиональный строгий стиль помощника по умолчанию...</GCFAgent_PersonaEditorPlaceholder>
+  <GCFAgent_PersonaSaveDone>Сохранить и завершить</GCFAgent_PersonaSaveDone>
+  <GCFAgent_PersonaStatusHint>Подсказка: промпт личности управляет прежде всего тоном речи и характером помощника, сохраняя способность проверять факты зондами времени выполнения игры.</GCFAgent_PersonaStatusHint>
+  <GCFAgent_AvatarFileMissing>Выбранного файла изображения не существует.</GCFAgent_AvatarFileMissing>
+  <GCFAgent_AvatarLoaded>Аватар загружен и сохранён: {0}</GCFAgent_AvatarLoaded>
+  <GCFAgent_AvatarLoadFailed>Не удалось загрузить аватар: {0}</GCFAgent_AvatarLoadFailed>
+  <GCFAgent_AvatarUse>Использовать аватар: {0}</GCFAgent_AvatarUse>
+  <GCFAgent_AvatarSwitched>Аватар переключён: {0}</GCFAgent_AvatarSwitched>
+  <GCFAgent_AvatarOpenFolder>Открыть папку аватаров в проводнике...</GCFAgent_AvatarOpenFolder>
+  <GCFAgent_AvatarOpenFolderFailed>Не удалось открыть папку: {0}</GCFAgent_AvatarOpenFolderFailed>
+  <GCFAgent_AvatarFileDialogTitle>Выберите изображение аватара помощника кузницы исполинов (PNG / JPG)</GCFAgent_AvatarFileDialogTitle>
+
+
+  <!-- GCF authoring tools and image endpoint -->
+  <GCFAgent_ToolLabel_ListManuals>Список руководств по созданию</GCFAgent_ToolLabel_ListManuals>
+  <GCFAgent_ToolLabel_LoadManual>Загрузить руководство по созданию</GCFAgent_ToolLabel_LoadManual>
+  <GCFAgent_ToolLabel_ListWorkspace>Список рабочей области существ</GCFAgent_ToolLabel_ListWorkspace>
+  <GCFAgent_ToolLabel_ReadCreatureXml>Читать XML существа</GCFAgent_ToolLabel_ReadCreatureXml>
+  <GCFAgent_ToolLabel_WriteCreatureXml>Записать XML существа</GCFAgent_ToolLabel_WriteCreatureXml>
+  <GCFAgent_ToolLabel_GenerateLocomotionAnim>Синтезировать 3D скелетную анимацию</GCFAgent_ToolLabel_GenerateLocomotionAnim>
+  <GCFAgent_ToolLabel_GenerateImage>Создать лист спрайтов</GCFAgent_ToolLabel_GenerateImage>
+  <GCFAgent_ToolLabel_ExtractSheet>Извлечь лист с зелёного фона</GCFAgent_ToolLabel_ExtractSheet>
+  <GCFAgent_ToolLabel_WarpBone>Деформировать и обвести спрайт кости</GCFAgent_ToolLabel_WarpBone>
+  <GCFAgent_ToolLabel_PreviewSheet>Рендер предпросмотра в шахматную клетку</GCFAgent_ToolLabel_PreviewSheet>
+  <GCFAgent_ToolLabel_PreviewAnimStrip>Рендер покадровой ленты анимации</GCFAgent_ToolLabel_PreviewAnimStrip>
+  <GCFAgent_ToolLabel_ValidateCreature>Проверить Def и суставы</GCFAgent_ToolLabel_ValidateCreature>
+  <GCFAgent_ToolLabel_InjectCreature>Горячая инъекция существа</GCFAgent_ToolLabel_InjectCreature>
+  <GCFAgent_ToolLabel_SpawnCreature>Породить существо на карте</GCFAgent_ToolLabel_SpawnCreature>
+  <GCFAgent_ImageApiHeader>Конечная точка генерации изображений (OpenAI-совместимые images/generations и images/edits)</GCFAgent_ImageApiHeader>
+  <GCFAgent_ImageEndpointLabel>Базовый адрес изображений:</GCFAgent_ImageEndpointLabel>
+  <GCFAgent_ImageEndpointPlaceholder>http://127.0.0.1:2048/v1 (generations / edits определяются автоматически)</GCFAgent_ImageEndpointPlaceholder>
+  <GCFAgent_ImageModelLabel>Идентификатор модели изображений:</GCFAgent_ImageModelLabel>
+  <GCFAgent_ImageModelPlaceholder>Введите идентификатор модели изображений (например gemini-3-pro-image / gpt-image-1)</GCFAgent_ImageModelPlaceholder>
+  <GCFAgent_ImageApiKeyLabel>API Key изображений:</GCFAgent_ImageApiKeyLabel>
+  <GCFAgent_ImageApiKeyPlaceholder>Необязательный API Key (оставьте пустым для локальной службы без ключа)</GCFAgent_ImageApiKeyPlaceholder>
+  <GCFAgent_SidebarTitle>Кузница исполинов</GCFAgent_SidebarTitle>
+  <GCFAgent_SidebarSubtitle>RUNTIME CREATURE FORGE</GCFAgent_SidebarSubtitle>
+  <GCFAgent_ManualButton>Руководство GCF</GCFAgent_ManualButton>
+  <GCFAgent_ManualButtonTip>Открыть руководство по архетипам исполинов, переиспользуемым модулям (скиннинг-сетки, турели), Def и инструментам</GCFAgent_ManualButtonTip>
+  <GCFAgent_ManualWindowTitle>Руководство разработчика и инструментов Giant Creature Framework</GCFAgent_ManualWindowTitle>
+  <GCFAgent_ManualWindowSubtitle>Архетипы исполинов · Модули · Справочник Def · Инструменты</GCFAgent_ManualWindowSubtitle>
+  <GCFAgent_ManualCopyAll>Копировать всё</GCFAgent_ManualCopyAll>
+  <GCFAgent_ManualReload>Обновить</GCFAgent_ManualReload>
+  <GCFAgent_ManualSearchPlaceholder>Поиск Def, тегов или инструментов...</GCFAgent_ManualSearchPlaceholder>
+  <GCFAgent_ManualClearSearch>Сбросить фильтр</GCFAgent_ManualClearSearch>
+  <GCFAgent_ManualChaptersHeader>РАЗДЕЛЫ</GCFAgent_ManualChaptersHeader>
+  <GCFAgent_ManualAllChapters>Все разделы (полный вид)</GCFAgent_ManualAllChapters>
+  <GCFAgent_ManualNoMatch>Совпадений по запросу не найдено.</GCFAgent_ManualNoMatch>
+  <GCFAgent_ManualFileMissing>Файл руководства Docs\GiantCreatureFramework_Manual.md не найден.</GCFAgent_ManualFileMissing>
+  <GCFAgent_ManualReadFailed>Ошибка чтения руководства: {0}</GCFAgent_ManualReadFailed>
+</LanguageData>

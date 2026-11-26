@@ -1,0 +1,20 @@
+{
+  "manuals": [
+    {
+      "name": "workflow_and_taxonomy",
+      "summary": "工作区、动作生成、预览、校验与运行时工具调用说明。"
+    },
+    {
+      "name": "sprite_prompts_and_matting",
+      "summary": "内置画风 1 提示词指定格式、绿幕抠图与 512x512 贴图工具使用说明。"
+    },
+    {
+      "name": "rig_body_and_anim_xml",
+      "summary": "骨架、动画、蒙皮与渲染 XML 字段，以及视觉校验说明。"
+    },
+    {
+      "name": "framework_capabilities_and_fields",
+      "summary": "框架全部能力的接入位置、座舱/阶段/武器/飞行/机库配置、专属实现限制，以及公开配置字段的类型与源码初始值。"
+    }
+  ]
+}

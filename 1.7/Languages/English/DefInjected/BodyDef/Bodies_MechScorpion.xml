@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <GCF_Body_MechScorpion.label>giant mechanical scorpion</GCF_Body_MechScorpion.label>
+
+  <GCF_Body_MechScorpion.corePart.parts.cephalothorax_sensor_hood.customLabel>cephalothorax sensor hood</GCF_Body_MechScorpion.corePart.parts.cephalothorax_sensor_hood.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.cephalothorax_sensor_hood.parts.left_sight_sensor.customLabel>left sight sensor</GCF_Body_MechScorpion.corePart.parts.cephalothorax_sensor_hood.parts.left_sight_sensor.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.cephalothorax_sensor_hood.parts.right_sight_sensor.customLabel>right sight sensor</GCF_Body_MechScorpion.corePart.parts.cephalothorax_sensor_hood.parts.right_sight_sensor.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.cephalothorax_sensor_hood.parts.left_hearing_sensor.customLabel>left hearing sensor</GCF_Body_MechScorpion.corePart.parts.cephalothorax_sensor_hood.parts.left_hearing_sensor.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.cephalothorax_sensor_hood.parts.right_hearing_sensor.customLabel>right hearing sensor</GCF_Body_MechScorpion.corePart.parts.cephalothorax_sensor_hood.parts.right_hearing_sensor.customLabel>
+
+  <GCF_Body_MechScorpion.corePart.parts.left_hypercapacitor.customLabel>left hypercapacitor</GCF_Body_MechScorpion.corePart.parts.left_hypercapacitor.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.right_hypercapacitor.customLabel>right hypercapacitor</GCF_Body_MechScorpion.corePart.parts.right_hypercapacitor.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.left_fluid_reprocessor.customLabel>left fluid reprocessor</GCF_Body_MechScorpion.corePart.parts.left_fluid_reprocessor.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.right_fluid_reprocessor.customLabel>right fluid reprocessor</GCF_Body_MechScorpion.corePart.parts.right_fluid_reprocessor.customLabel>
+
+  <GCF_Body_MechScorpion.corePart.parts.left_crusher_claw.customLabel>left crusher claw</GCF_Body_MechScorpion.corePart.parts.left_crusher_claw.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.left_crusher_claw.parts.left_pincer_jaw.customLabel>left pincer jaw</GCF_Body_MechScorpion.corePart.parts.left_crusher_claw.parts.left_pincer_jaw.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.left_crusher_claw.parts.left_claw_servo.customLabel>left claw servo</GCF_Body_MechScorpion.corePart.parts.left_crusher_claw.parts.left_claw_servo.customLabel>
+
+  <GCF_Body_MechScorpion.corePart.parts.right_crusher_claw.customLabel>right crusher claw</GCF_Body_MechScorpion.corePart.parts.right_crusher_claw.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.right_crusher_claw.parts.right_pincer_jaw.customLabel>right pincer jaw</GCF_Body_MechScorpion.corePart.parts.right_crusher_claw.parts.right_pincer_jaw.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.right_crusher_claw.parts.right_claw_servo.customLabel>right claw servo</GCF_Body_MechScorpion.corePart.parts.right_crusher_claw.parts.right_claw_servo.customLabel>
+
+  <GCF_Body_MechScorpion.corePart.parts.front_left_hydraulic_leg.customLabel>front left hydraulic leg</GCF_Body_MechScorpion.corePart.parts.front_left_hydraulic_leg.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.front_left_hydraulic_leg.parts.front_left_tarsus_foot.customLabel>front left tarsus foot</GCF_Body_MechScorpion.corePart.parts.front_left_hydraulic_leg.parts.front_left_tarsus_foot.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.mid_front_left_hydraulic_leg.customLabel>mid front left hydraulic leg</GCF_Body_MechScorpion.corePart.parts.mid_front_left_hydraulic_leg.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.mid_front_left_hydraulic_leg.parts.mid_front_left_tarsus_foot.customLabel>mid front left tarsus foot</GCF_Body_MechScorpion.corePart.parts.mid_front_left_hydraulic_leg.parts.mid_front_left_tarsus_foot.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.mid_rear_left_hydraulic_leg.customLabel>mid rear left hydraulic leg</GCF_Body_MechScorpion.corePart.parts.mid_rear_left_hydraulic_leg.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.mid_rear_left_hydraulic_leg.parts.mid_rear_left_tarsus_foot.customLabel>mid rear left tarsus foot</GCF_Body_MechScorpion.corePart.parts.mid_rear_left_hydraulic_leg.parts.mid_rear_left_tarsus_foot.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.rear_left_hydraulic_leg.customLabel>rear left hydraulic leg</GCF_Body_MechScorpion.corePart.parts.rear_left_hydraulic_leg.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.rear_left_hydraulic_leg.parts.rear_left_tarsus_foot.customLabel>rear left tarsus foot</GCF_Body_MechScorpion.corePart.parts.rear_left_hydraulic_leg.parts.rear_left_tarsus_foot.customLabel>
+
+  <GCF_Body_MechScorpion.corePart.parts.front_right_hydraulic_leg.customLabel>front right hydraulic leg</GCF_Body_MechScorpion.corePart.parts.front_right_hydraulic_leg.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.front_right_hydraulic_leg.parts.front_right_tarsus_foot.customLabel>front right tarsus foot</GCF_Body_MechScorpion.corePart.parts.front_right_hydraulic_leg.parts.front_right_tarsus_foot.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.mid_front_right_hydraulic_leg.customLabel>mid front right hydraulic leg</GCF_Body_MechScorpion.corePart.parts.mid_front_right_hydraulic_leg.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.mid_front_right_hydraulic_leg.parts.mid_front_right_tarsus_foot.customLabel>mid front right tarsus foot</GCF_Body_MechScorpion.corePart.parts.mid_front_right_hydraulic_leg.parts.mid_front_right_tarsus_foot.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.mid_rear_right_hydraulic_leg.customLabel>mid rear right hydraulic leg</GCF_Body_MechScorpion.corePart.parts.mid_rear_right_hydraulic_leg.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.mid_rear_right_hydraulic_leg.parts.mid_rear_right_tarsus_foot.customLabel>mid rear right tarsus foot</GCF_Body_MechScorpion.corePart.parts.mid_rear_right_hydraulic_leg.parts.mid_rear_right_tarsus_foot.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.rear_right_hydraulic_leg.customLabel>rear right hydraulic leg</GCF_Body_MechScorpion.corePart.parts.rear_right_hydraulic_leg.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.rear_right_hydraulic_leg.parts.rear_right_tarsus_foot.customLabel>rear right tarsus foot</GCF_Body_MechScorpion.corePart.parts.rear_right_hydraulic_leg.parts.rear_right_tarsus_foot.customLabel>
+
+  <GCF_Body_MechScorpion.corePart.parts.tail_segment_1.customLabel>tail segment 1</GCF_Body_MechScorpion.corePart.parts.tail_segment_1.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.tail_segment_1.parts.tail_segment_2.customLabel>tail segment 2</GCF_Body_MechScorpion.corePart.parts.tail_segment_1.parts.tail_segment_2.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.tail_segment_1.parts.tail_segment_2.parts.tail_segment_3.customLabel>tail segment 3</GCF_Body_MechScorpion.corePart.parts.tail_segment_1.parts.tail_segment_2.parts.tail_segment_3.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.tail_segment_1.parts.tail_segment_2.parts.tail_segment_3.parts.tail_segment_4.customLabel>tail segment 4</GCF_Body_MechScorpion.corePart.parts.tail_segment_1.parts.tail_segment_2.parts.tail_segment_3.parts.tail_segment_4.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.tail_segment_1.parts.tail_segment_2.parts.tail_segment_3.parts.tail_segment_4.parts.tail_segment_5.customLabel>tail segment 5</GCF_Body_MechScorpion.corePart.parts.tail_segment_1.parts.tail_segment_2.parts.tail_segment_3.parts.tail_segment_4.parts.tail_segment_5.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.tail_segment_1.parts.tail_segment_2.parts.tail_segment_3.parts.tail_segment_4.parts.tail_segment_5.parts.tail_segment_6.customLabel>tail segment 6</GCF_Body_MechScorpion.corePart.parts.tail_segment_1.parts.tail_segment_2.parts.tail_segment_3.parts.tail_segment_4.parts.tail_segment_5.parts.tail_segment_6.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.tail_segment_1.parts.tail_segment_2.parts.tail_segment_3.parts.tail_segment_4.parts.tail_segment_5.parts.tail_segment_6.parts.plasma_tail_stinger.customLabel>plasma tail stinger</GCF_Body_MechScorpion.corePart.parts.tail_segment_1.parts.tail_segment_2.parts.tail_segment_3.parts.tail_segment_4.parts.tail_segment_5.parts.tail_segment_6.parts.plasma_tail_stinger.customLabel>
+  <GCF_Body_MechScorpion.corePart.parts.tail_segment_1.parts.tail_segment_2.parts.tail_segment_3.parts.tail_segment_4.parts.tail_segment_5.parts.tail_segment_6.parts.plasma_tail_stinger.parts.plasma_emitter_core.customLabel>plasma emitter core</GCF_Body_MechScorpion.corePart.parts.tail_segment_1.parts.tail_segment_2.parts.tail_segment_3.parts.tail_segment_4.parts.tail_segment_5.parts.tail_segment_6.parts.plasma_tail_stinger.parts.plasma_emitter_core.customLabel>
+</LanguageData>

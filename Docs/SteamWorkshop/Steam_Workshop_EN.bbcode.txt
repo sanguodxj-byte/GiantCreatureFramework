@@ -1,0 +1,48 @@
+[img]https://REPLACE_WITH_DIRECT_URL/00_Hero_Banner.jpg[/img]
+
+[quote]In vanilla RimWorld, even the biggest creatures are still single flat sprites sliding across the ground.
+[b]Giant Creature Framework (GCF)[/b] is a foundation built for colossal beasts, super-heavy mechs, and multi-tile vehicles—bringing independently animated limbs and wings, true multi-tile bodies, limb-severing disarms, and a [b]built-in in-game AI Giant Workshop[/b] so nobody has to hand-write thousands of lines of config.[/quote]
+
+[img]https://REPLACE_WITH_DIRECT_URL/gcf_all_giants_brawl.gif[/img]
+
+[img]https://REPLACE_WITH_DIRECT_URL/01_Core_Features.jpg[/img]
+
+[list]
+[*][b]True Multi-Part Animation & Limb Severing[/b]: Heads, limbs, wings, tails, and tentacles move naturally on their own. Focus-firing a wing or claw can sever it mid-battle, sending debris flying and disabling whatever weapons were mounted on that limb.
+[*][b]What-You-See-Is-What-You-Hit Multi-Tile Bodies[/b]: Hitboxes and collision turn smoothly with the creature's body, with no invisible air walls blocking melee fighters. Drafted right-click focus fire, feeding, medical tending, and taming all work naturally when clicking any part of a giant's body.
+[*][b]Multi-Weapon Volleys, Turrets & Boss Phases[/b]: A single giant or heavy vehicle can fire multiple weapons at different targets simultaneously, rotate independent 360-degree turrets, and unfold into new boss phases mid-fight.
+[*][b]Flight, Multi-Crew Riding & World Map Travel[/b]: Winged beasts and carriers can take off to cross obstacles and land at will. Up to 12 colonists can ride on saddles or board enclosed cockpits, and fly directly across the world map to raid distant sites.
+[/list]
+
+[img]https://REPLACE_WITH_DIRECT_URL/02_Included_Samples.jpg[/img]
+
+The core framework stays lean and de-contented with the built-in [b]Heavy Mech Scorpion[/b], while providing modular extension hooks for standalone add-ons and player-authored creatures:
+[list]
+[*][b]Built-in · Heavy Mech Scorpion[/b]: Multi-leg gait, granular limb crippling, tail-stinger volleys, and Mechanitor gestation after defeating a War Queen (Biotech).
+[/list]
+
+[img]https://REPLACE_WITH_DIRECT_URL/03_AI_Workshop.jpg[/img]
+
+Rigging dozens of joints, pivot coordinates, and animation curves by hand is brutal—enable the [b]Creature Forge[/b] terminal in Mod Settings to add an in-game AI authoring workshop to your bottom menu bar:
+[list]
+[*][b]Describe It in Plain Words—Zero Hand-Typed Config[/b]: Connect your own LLM and text-to-image API keys, describe the monster, walker, or vehicle you want in plain language, and the terminal automatically generates part sprites, cuts out backgrounds, assembles the rig, and sets up animations and attacks.
+[*][b]Instant Hot-Reload & Persistent Storage[/b]: Spawn your newly created giant straight into your live map without restarting RimWorld, refine it via chat (and preview clips/joint angles in the DevMode rig inspector), and keep it automatically loaded across saves in its own isolated creature folder—ready to copy or wrap into a sub-mod to share.
+[/list]
+
+[img]https://REPLACE_WITH_DIRECT_URL/04_Performance_FAQ.jpg[/img]
+
+[list]
+[*][b]Smooth 60 FPS Performance[/b]: Tested in a 500+ mod load order. The framework sleeps when no giants are on the map with virtually zero overhead, and holds a steady [b]60 FPS[/b] even with 9 giant bosses fighting on screen at once.
+[*][b]Load Order[/b]: Load [b]Harmony[/b] -> Core & Official DLCs (all optional) -> [b]Giant Creature Framework[/b] -> GCF Add-ons.
+[/list]
+
+[spoiler=Frequently Asked Questions (FAQ)]
+[b]Q: Do I need all DLCs or an AI API key just to play?[/b]
+A: Neither is required! Base RimWorld 1.7 + Harmony works out of the box. API keys are only needed if you turn on the Creature Forge terminal in Mod Settings to generate brand-new custom giants (pure text-to-image creation only; external reference images / img2img are not supported).
+
+[b]Q: Safe to add or remove mid-save?[/b]
+A: Safe to add mid-save. Before removing, dismiss or destroy any active giants and quest sites first.
+
+[b]Q: Compatible with Combat Extended (CE)?[/b]
+A: Designed around vanilla combat (no built-in CE patch yet). Incompatible with RimThreaded.
+[/spoiler]

@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <!-- Session status and titles -->
+  <GCFAgent_SessionTitleNew>New session</GCFAgent_SessionTitleNew>
+  <GCFAgent_SessionStatusReady>Ready</GCFAgent_SessionStatusReady>
+  <GCFAgent_SessionStatusAborting>Aborting</GCFAgent_SessionStatusAborting>
+  <GCFAgent_SessionStatusAborted>Aborted</GCFAgent_SessionStatusAborted>
+  <GCFAgent_SessionStatusTimeout>Request timed out</GCFAgent_SessionStatusTimeout>
+  <GCFAgent_SessionStatusRequestFailed>Request failed</GCFAgent_SessionStatusRequestFailed>
+  <GCFAgent_SessionNew>New session</GCFAgent_SessionNew>
+  <GCFAgent_SessionListTitle>Session list ({0})</GCFAgent_SessionListTitle>
+  <GCFAgent_SessionDeleteTip>Delete this session</GCFAgent_SessionDeleteTip>
+  <GCFAgent_SessionItemSubCached>{0} msgs · {1} · cached {2}</GCFAgent_SessionItemSubCached>
+  <GCFAgent_SessionItemSubTokens>{0} msgs · {1} tok</GCFAgent_SessionItemSubTokens>
+  <GCFAgent_SessionItemSubMessages>{0} messages</GCFAgent_SessionItemSubMessages>
+  <GCFAgent_SessionLimitReached>The session limit has been reached. Abort or delete a session first.</GCFAgent_SessionLimitReached>
+  <GCFAgent_SessionReadFailed>Session read failed; the original file was left untouched: {0}</GCFAgent_SessionReadFailed>
+  <GCFAgent_SessionSaveFailed>Failed to save sessions: {0}</GCFAgent_SessionSaveFailed>
+  <GCFAgent_SaveStreamingIncomplete>[This turn was still in progress when saved; please ask again]</GCFAgent_SaveStreamingIncomplete>
+  <GCFAgent_ArchiveFileEmpty>The session file is empty.</GCFAgent_ArchiveFileEmpty>
+  <GCFAgent_ArchiveStructureInvalid>Invalid session structure; the original file was kept for recovery.</GCFAgent_ArchiveStructureInvalid>
+
+  <!-- Turn status and bubble notices -->
+  <GCFAgent_StatusPromptTooLong>Question exceeds the {0}-character limit; narrow the scope or raise the per-question limit</GCFAgent_StatusPromptTooLong>
+  <GCFAgent_StatusSessionBudgetReached>Per-session net Token budget reached ({0}/{1})</GCFAgent_StatusSessionBudgetReached>
+  <GCFAgent_StatusUploadingScreenshot>Uploading screenshot and query</GCFAgent_StatusUploadingScreenshot>
+  <GCFAgent_StatusPreparingQuery>Preparing query</GCFAgent_StatusPreparingQuery>
+  <GCFAgent_StatusFallbackConnection>Switching to fallback endpoint ({0}: {1})</GCFAgent_StatusFallbackConnection>
+  <GCFAgent_StatusMultimodalDowngraded>The current model does not support image input; automatically downgraded to probe mode</GCFAgent_StatusMultimodalDowngraded>
+  <GCFAgent_StatusReadyWithUsage>Ready · this turn {0}{1} tok (in {2} / out {3})</GCFAgent_StatusReadyWithUsage>
+  <GCFAgent_StatusCapturingScreenshot>Capturing the current game screen...</GCFAgent_StatusCapturingScreenshot>
+  <GCFAgent_StatusReadingEvidence>Reading game evidence</GCFAgent_StatusReadingEvidence>
+  <GCFAgent_StatusInvestigatingRound>Investigating · round {0}</GCFAgent_StatusInvestigatingRound>
+  <GCFAgent_StatusSynthesizing>Compiling conclusions and evidence</GCFAgent_StatusSynthesizing>
+  <GCFAgent_NoticeTurnIncomplete>[{0}, the answer for this turn was not completed]</GCFAgent_NoticeTurnIncomplete>
+  <GCFAgent_NoticePrepareFailed>Request preparation failed: {0}</GCFAgent_NoticePrepareFailed>
+  <GCFAgent_NoticeRequestFailed>Request failed: {0}</GCFAgent_NoticeRequestFailed>
+  <GCFAgent_NoticeInsufficientEvidence>The current evidence is not enough to confirm the fact in question.</GCFAgent_NoticeInsufficientEvidence>
+  <GCFAgent_NoticeContentTruncated>[Truncated]</GCFAgent_NoticeContentTruncated>
+  <GCFAgent_NoticeUiTruncated>[Truncated]</GCFAgent_NoticeUiTruncated>
+  <GCFAgent_EvidenceNoticeFallback>Tip: no runtime probes were invoked this turn; the content below answers directly from earlier evidence or general knowledge</GCFAgent_EvidenceNoticeFallback>
+
+  <!-- Provider display names -->
+  <GCFAgent_ProviderLabel_DeepSeek>DeepSeek</GCFAgent_ProviderLabel_DeepSeek>
+  <GCFAgent_ProviderLabel_GLM>GLM (Zhipu Open Platform)</GCFAgent_ProviderLabel_GLM>
+  <GCFAgent_ProviderLabel_GLMCoding>GLM Coding (Zhipu Coding)</GCFAgent_ProviderLabel_GLMCoding>
+  <GCFAgent_ProviderLabel_AlibabaIntl>Alibaba Intl (Bailian International)</GCFAgent_ProviderLabel_AlibabaIntl>
+  <GCFAgent_ProviderLabel_AlibabaCN>Alibaba CN (Bailian China)</GCFAgent_ProviderLabel_AlibabaCN>
+  <GCFAgent_ProviderLabel_Moonshot>Moonshot (Kimi)</GCFAgent_ProviderLabel_Moonshot>
+  <GCFAgent_ProviderLabel_Player2>Player2 (local client / keyless cloud)</GCFAgent_ProviderLabel_Player2>
+  <GCFAgent_ProviderLabel_Custom>Custom (custom OpenAI-compatible)</GCFAgent_ProviderLabel_Custom>
+  <GCFAgent_ProviderLabel_Disabled>Disabled (not enabled)</GCFAgent_ProviderLabel_Disabled>
+  <GCFAgent_ProviderShortLabel_AlibabaCN>Bailian</GCFAgent_ProviderShortLabel_AlibabaCN>
+
+  <!-- Model identity -->
+  <GCFAgent_ModelIdentityRequested>Requested model: {0}</GCFAgent_ModelIdentityRequested>
+  <GCFAgent_ModelIdentityResponse>Endpoint returned model: {0}</GCFAgent_ModelIdentityResponse>
+  <GCFAgent_ModelIdentityFallback>This turn switched to a fallback endpoint.</GCFAgent_ModelIdentityFallback>
+  <GCFAgent_ModelIdentityCurrent>Current</GCFAgent_ModelIdentityCurrent>
+  <GCFAgent_ModelIdentityLast>Last</GCFAgent_ModelIdentityLast>
+  <GCFAgent_ModelTagWithIdentity>{0}: {1} ▾</GCFAgent_ModelTagWithIdentity>
+  <GCFAgent_ModelTagStandby>Standby: {0}: {1} ▾</GCFAgent_ModelTagStandby>
+  <GCFAgent_ModelTagUnconfigured>No provider configured ▾</GCFAgent_ModelTagUnconfigured>
+  <GCFAgent_ModelTagNoRequestTip>No request has been sent yet. The model shown is the standby configuration.</GCFAgent_ModelTagNoRequestTip>
+  <GCFAgent_ModelBadgeTip>Click to quickly switch the preferred provider or model</GCFAgent_ModelBadgeTip>
+  <GCFAgent_ModelChipCurrent>▾ Current: {0}</GCFAgent_ModelChipCurrent>
+  <GCFAgent_ModelChipNext>▾ Next: {0}</GCFAgent_ModelChipNext>
+  <GCFAgent_ModelChipChoose>▾ Choose provider and model</GCFAgent_ModelChipChoose>
+  <GCFAgent_ModelChipNextSendTip>Changing the selection only affects the next send.</GCFAgent_ModelChipNextSendTip>
+  <GCFAgent_ModelChipChooseTip>Choose the model or provider to use for the next send.</GCFAgent_ModelChipChooseTip>
+  <GCFAgent_SwitcherConfigTag>[Config #{0}] {1} · {2}{3}</GCFAgent_SwitcherConfigTag>
+  <GCFAgent_SwitcherFetchedModel>Switch to fetched model -&gt; {0}</GCFAgent_SwitcherFetchedModel>
+  <GCFAgent_SwitcherOpenConfig>Open the provider and model configuration panel...</GCFAgent_SwitcherOpenConfig>
+  <GCFAgent_NotEnabled>Not enabled</GCFAgent_NotEnabled>
+
+  <!-- Token statistics -->
+  <GCFAgent_TokenPillCached>Total: {0} · cached {1}</GCFAgent_TokenPillCached>
+  <GCFAgent_TokenPillPlain>Total: {0} tok</GCFAgent_TokenPillPlain>
+  <GCFAgent_TokenPillTooltip>Cumulative Token across this session's turns: {0}\n├─ Total input (Prompt): {1}\n├─ Cache hits (Cached): {2} (cache rate {3})\n├─ Net new input (Uncached): {4}\n├─ Single-turn peak context (Peak Context): {5}\n└─ Total output (Completion): {6}\nClick to open system prompts and Token stats</GCFAgent_TokenPillTooltip>
+  <GCFAgent_TokLabel>{0}{1} (net in {2}{3}){4}</GCFAgent_TokLabel>
+  <GCFAgent_TokLabelCache>· cached {0}</GCFAgent_TokLabelCache>
+  <GCFAgent_TokLabelRounds>({0} rounds)</GCFAgent_TokLabelRounds>
+  <GCFAgent_TokLabelTotalRounds>{0} total calls</GCFAgent_TokLabelTotalRounds>
+  <GCFAgent_TokLabelTooltip>Multi-step billed total for this turn: {0} Tokens{1}\n├─ Total input (incl. multi-round prefix resends): {2}\n├─ Cache hits (Cached): {3} (cache hit rate {4})\n├─ Net new input (Uncached): {5}\n├─ Total output (Completion): {6}\n└─ Peak context window: {7}</GCFAgent_TokLabelTooltip>
+  <GCFAgent_ReportRoundsTag>{0} rounds ·</GCFAgent_ReportRoundsTag>
+  <GCFAgent_ReportDetailCached>net input {0} · cache hits {1} [{2}] · output {3}</GCFAgent_ReportDetailCached>
+  <GCFAgent_ReportDetailPlain>input {0} · cache hits 0 [0.0%] · output {1}</GCFAgent_ReportDetailPlain>
+  <GCFAgent_ReportLine>Token breakdown ({0}peak {1}): {2}{3} ({4}) | session cumulative {5} (cache rate {6})</GCFAgent_ReportLine>
+  <GCFAgent_UsageLine1>Current session [{0}] cumulative total: {1} tok | peak context: {2} tok | cache hit rate: {3}</GCFAgent_UsageLine1>
+  <GCFAgent_UsageLine2>Input breakdown: cumulative input {0} (cache hits {1} · net new input {2}) | cumulative output: {3}</GCFAgent_UsageLine2>
+  <GCFAgent_UsageResetStats>Reset stats</GCFAgent_UsageResetStats>
+
+  <!-- Query evidence preview -->
+  <GCFAgent_EvidenceToggle>Query evidence ({0})</GCFAgent_EvidenceToggle>
+  <GCFAgent_EvidenceCopyAll>Copy full evidence</GCFAgent_EvidenceCopyAll>
+  <GCFAgent_EvidencePreviewHint>(Click [Copy full evidence] to view all retained results)</GCFAgent_EvidencePreviewHint>
+  <GCFAgent_EvidencePreviewHeader>{0} · {1} · {2} ms\n{3}</GCFAgent_EvidencePreviewHeader>
+  <GCFAgent_ToolStatusRunning>Running</GCFAgent_ToolStatusRunning>
+  <GCFAgent_ToolStatusFailed>Failed</GCFAgent_ToolStatusFailed>
+  <GCFAgent_ToolStatusDone>Done</GCFAgent_ToolStatusDone>
+  <GCFAgent_ScreenshotTag>[Current game screen]</GCFAgent_ScreenshotTag>
+
+  <!-- Tool display names -->
+  <GCFAgent_ToolLabelWithSummary>{0}  [{1}]</GCFAgent_ToolLabelWithSummary>
+  <GCFAgent_ToolLabel_SelectInvestigation>Select investigation capability</GCFAgent_ToolLabel_SelectInvestigation>
+  <GCFAgent_ToolLabel_ReadEvidence>Read collected evidence</GCFAgent_ToolLabel_ReadEvidence>
+  <GCFAgent_ToolLabel_FoldEvidence>Summarize investigation notes</GCFAgent_ToolLabel_FoldEvidence>
+  <GCFAgent_ToolLabel_SearchKnowledge>Search local knowledge</GCFAgent_ToolLabel_SearchKnowledge>
+  <GCFAgent_ToolLabel_ReadKnowledge>Read knowledge sources</GCFAgent_ToolLabel_ReadKnowledge>
+  <GCFAgent_ToolLabel_Calculate>Calculation and data organization</GCFAgent_ToolLabel_Calculate>
+  <GCFAgent_ToolLabel_SearchDefs>Search XML Defs</GCFAgent_ToolLabel_SearchDefs>
+  <GCFAgent_ToolLabel_DefDetails>Read merged Def field tree</GCFAgent_ToolLabel_DefDetails>
+  <GCFAgent_ToolLabel_WeaponDps>Estimate weapon DPS against a single armor layer</GCFAgent_ToolLabel_WeaponDps>
+  <GCFAgent_ToolLabel_QuestState>Inspect quest node tree</GCFAgent_ToolLabel_QuestState>
+  <GCFAgent_ToolLabel_ColonyState>Read colonist summary</GCFAgent_ToolLabel_ColonyState>
+  <GCFAgent_ToolLabel_RecentErrors>Extract red-text error stack traces</GCFAgent_ToolLabel_RecentErrors>
+  <GCFAgent_ToolLabel_MethodPatches>Review Harmony patch chain</GCFAgent_ToolLabel_MethodPatches>
+  <GCFAgent_ToolLabel_Decompile>Decompile C# source</GCFAgent_ToolLabel_Decompile>
+  <GCFAgent_ToolLabel_CodeSymbols>Search assembly symbols</GCFAgent_ToolLabel_CodeSymbols>
+  <GCFAgent_ToolLabel_TypeMembers>Reflect class member signatures</GCFAgent_ToolLabel_TypeMembers>
+  <GCFAgent_ToolLabel_DerivedTypes>Search derived subclasses/implementations</GCFAgent_ToolLabel_DerivedTypes>
+  <GCFAgent_ToolLabel_MethodIl>Read method IL instruction stream</GCFAgent_ToolLabel_MethodIl>
+  <GCFAgent_ToolLabel_ModsInfo>Read mod load order</GCFAgent_ToolLabel_ModsInfo>
+  <GCFAgent_ToolLabel_ReadModFile>Read mod file</GCFAgent_ToolLabel_ReadModFile>
+  <GCFAgent_ToolLabel_SearchModXml>Search mod XML/Patches on disk across mods</GCFAgent_ToolLabel_SearchModXml>
+  <GCFAgent_ToolLabel_StatFormula>Break down vanilla Stat calculation formulas</GCFAgent_ToolLabel_StatFormula>
+  <GCFAgent_ToolLabel_Recipes>Look up recipes and crafting chains</GCFAgent_ToolLabel_Recipes>
+  <GCFAgent_ToolLabel_Research>Look up tech tree and unlocks</GCFAgent_ToolLabel_Research>
+  <GCFAgent_ToolLabel_SelectedObjects>Inspect currently selected objects</GCFAgent_ToolLabel_SelectedObjects>
+  <GCFAgent_ToolLabel_PawnDeep>Pawn eight-stat deep checkup</GCFAgent_ToolLabel_PawnDeep>
+  <GCFAgent_ToolLabel_MapStoryteller>Diagnose map power grid/inventory/storyteller</GCFAgent_ToolLabel_MapStoryteller>
+  <GCFAgent_ToolLabel_ReflectPath>Reflect runtime memory object paths</GCFAgent_ToolLabel_ReflectPath>
+
+  <!-- Transport errors (shown in the player bubble) -->
+  <GCFAgent_TransportResponseTimeout>The model endpoint timed out waiting for a response.</GCFAgent_TransportResponseTimeout>
+  <GCFAgent_TransportHttpError>The model endpoint returned HTTP {0}. Check the endpoint configuration or retry later.</GCFAgent_TransportHttpError>
+  <GCFAgent_TransportIdleNoData>The model response sent no data for a long time.</GCFAgent_TransportIdleNoData>
+  <GCFAgent_TransportResponseTooLong>The model response exceeded the length limit.</GCFAgent_TransportResponseTooLong>
+  <GCFAgent_TransportStreamIdle>The model stream sent no data for a long time.</GCFAgent_TransportStreamIdle>
+  <GCFAgent_TransportStreamTooLong>The model stream exceeded the length limit.</GCFAgent_TransportStreamTooLong>
+  <GCFAgent_TransportEventLineTooLong>A model event line was too long.</GCFAgent_TransportEventLineTooLong>
+  <GCFAgent_TransportStreamError>The model stream returned an error.</GCFAgent_TransportStreamError>
+  <GCFAgent_TransportChoicesMustBeArray>Model choices must be an array.</GCFAgent_TransportChoicesMustBeArray>
+  <GCFAgent_TransportToolCallsMustBeArray>Model tool_calls must be an array.</GCFAgent_TransportToolCallsMustBeArray>
+  <GCFAgent_TransportTooManyToolCalls>Tool calls in a single turn exceeded {0}.</GCFAgent_TransportTooManyToolCalls>
+  <GCFAgent_TransportLengthTruncated>The model output was truncated by the length limit; narrow the question or raise the max output Token budget.</GCFAgent_TransportLengthTruncated>
+  <GCFAgent_TransportAbnormalFinish>The model response did not finish normally.</GCFAgent_TransportAbnormalFinish>
+  <GCFAgent_TransportFinishMismatch>The tool finish marker did not match the results.</GCFAgent_TransportFinishMismatch>
+  <GCFAgent_TransportToolMissingIdOrName>A tool call is missing a name or id.</GCFAgent_TransportToolMissingIdOrName>
+  <GCFAgent_TransportArgsMustBeObject>Tool arguments must be a JSON object.</GCFAgent_TransportArgsMustBeObject>
+  <GCFAgent_TransportDuplicateToolCallId>Tool call ids are duplicated.</GCFAgent_TransportDuplicateToolCallId>
+
+  <!-- Turn flow errors (shown in the player bubble) -->
+  <GCFAgent_TurnRequestTimeout>The model request timed out this turn; evidence gathered so far is kept.</GCFAgent_TurnRequestTimeout>
+  <GCFAgent_TurnNoReplyOrToolCall>The model returned no answer or tool calls.</GCFAgent_TurnNoReplyOrToolCall>
+  <GCFAgent_TurnNoFinalSubmission>The model did not complete a valid answer submission.</GCFAgent_TurnNoFinalSubmission>
+  <GCFAgent_TurnContextBudgetExceeded>This question and its query results exceed the context budget; narrow the scope or raise the max context budget.</GCFAgent_TurnContextBudgetExceeded>
+
+  <!-- Configuration validation and persistence -->
+  <GCFAgent_ConfigReadFailed>Failed to read configuration: {0}</GCFAgent_ConfigReadFailed>
+  <GCFAgent_ConfigSaveFailed>Failed to save configuration: {0}</GCFAgent_ConfigSaveFailed>
+  <GCFAgent_ValidateEndpointRequired>Fill in a full HTTP(S) Chat Completions endpoint URL, or select a preset provider in the configuration.</GCFAgent_ValidateEndpointRequired>
+  <GCFAgent_ValidateModelRequired>Fill in or select a model name.</GCFAgent_ValidateModelRequired>
+  <GCFAgent_PromptOverridesMismatch>The number of prompt override names and values does not match.</GCFAgent_PromptOverridesMismatch>
+
+  <!-- Mod settings page -->
+  <GCFAgent_SettingsHeader>Creature Forge provider and prompt configuration</GCFAgent_SettingsHeader>
+  <GCFAgent_SettingsOpenTerminal>Open Creature Forge terminal</GCFAgent_SettingsOpenTerminal>
+
+  <!-- Main menu button -->
+  <GCFAgent_MainTabUnreadTip>Creature Forge reply finished (click to view)</GCFAgent_MainTabUnreadTip>
+  <GCFAgent_BrandAvatarTip>Click to set the avatar and persona prompt</GCFAgent_BrandAvatarTip>
+
+  <!-- Common buttons -->
+  <GCFAgent_CommonClose>Close</GCFAgent_CommonClose>
+  <GCFAgent_CommonCancel>Cancel</GCFAgent_CommonCancel>
+  <GCFAgent_CommonCopy>Copy</GCFAgent_CommonCopy>
+  <GCFAgent_CommonCopyCode>Copy code</GCFAgent_CommonCopyCode>
+  <GCFAgent_CommonClear>Clear</GCFAgent_CommonClear>
+  <GCFAgent_CommonAbort>Abort</GCFAgent_CommonAbort>
+  <GCFAgent_CommonSend>Send</GCFAgent_CommonSend>
+  <GCFAgent_ClearButtonTip>Clears the input when the input box has content; clears the current conversation history when it is empty</GCFAgent_ClearButtonTip>
+
+  <!-- Input bar -->
+  <GCFAgent_ComposerPlaceholder>Type a question or diagnostic command... (Enter to send, Shift+Enter for a new line, Ctrl+V to paste)</GCFAgent_ComposerPlaceholder>
+  <GCFAgent_CameraButtonTip>Capture the current game screen and send it to the model (any text in the input box is sent along with it)</GCFAgent_CameraButtonTip>
+  <GCFAgent_TermInsertTip>Click to add to the input box: {0}</GCFAgent_TermInsertTip>
+  <GCFAgent_ContextOn>Context: on</GCFAgent_ContextOn>
+  <GCFAgent_ContextOff>Context: off</GCFAgent_ContextOff>
+  <GCFAgent_ContextPending>Context: pending</GCFAgent_ContextPending>
+  <GCFAgent_ContextEnableThisChat>Enable context for this conversation</GCFAgent_ContextEnableThisChat>
+  <GCFAgent_ContextDisableThisChat>Disable context for this conversation</GCFAgent_ContextDisableThisChat>
+  <GCFAgent_ContextScopeTip>Affects only this conversation. When off, each question is handled independently; the chat history is still kept.</GCFAgent_ContextScopeTip>
+
+  <!-- Conversation context dialog -->
+  <GCFAgent_ContextDialogTitle>Enable context for this conversation?</GCFAgent_ContextDialogTitle>
+  <GCFAgent_ContextDialogBody>On: builds on earlier questions, answers and investigation results; suits follow-up questions, but increases input usage.\n\nOff: each question is handled independently; suits unrelated questions. Chat history is still kept.</GCFAgent_ContextDialogBody>
+  <GCFAgent_ContextDialogRemember>Don't ask again (new conversations reuse this choice)</GCFAgent_ContextDialogRemember>
+  <GCFAgent_ContextDialogRememberTip>The current conversation can be switched at any time; the prompt can also be restored in settings.</GCFAgent_ContextDialogRememberTip>
+  <GCFAgent_ContextEnable>Enable context</GCFAgent_ContextEnable>
+  <GCFAgent_ContextDisable>Disable context</GCFAgent_ContextDisable>
+
+  <!-- Provider and model configuration panel -->
+  <GCFAgent_HeaderModelConfig>Model and configuration</GCFAgent_HeaderModelConfig>
+  <GCFAgent_TabProviders>Providers and models ({0})</GCFAgent_TabProviders>
+  <GCFAgent_TabPrompts>System prompts and Token stats</GCFAgent_TabPrompts>
+  <GCFAgent_TabPromptsCustomized>System prompts and stats (customized)</GCFAgent_TabPromptsCustomized>
+  <GCFAgent_ActiveProviderLabel>Preferred: {0} · {1}</GCFAgent_ActiveProviderLabel>
+  <GCFAgent_NoValidProvider>No valid provider configured</GCFAgent_NoValidProvider>
+  <GCFAgent_ProviderListCaption>List of alternate AI providers (automatic failover in list order; URL completion and model fetching are done automatically)</GCFAgent_ProviderListCaption>
+  <GCFAgent_ProviderAdd>Add provider</GCFAgent_ProviderAdd>
+  <GCFAgent_KeysHide>Hide keys</GCFAgent_KeysHide>
+  <GCFAgent_KeysShow>Show keys</GCFAgent_KeysShow>
+  <GCFAgent_ColEnable>Enable/Order</GCFAgent_ColEnable>
+  <GCFAgent_ColProvider>AI provider (Provider)</GCFAgent_ColProvider>
+  <GCFAgent_ColApiKey>API Key / auth method</GCFAgent_ColApiKey>
+  <GCFAgent_ColModel>Model ID (Model)</GCFAgent_ColModel>
+  <GCFAgent_ColActions>Priority/Actions</GCFAgent_ColActions>
+  <GCFAgent_ProviderEnableTip>Enable or disable this provider node (automatic failover follows the list order)</GCFAgent_ProviderEnableTip>
+  <GCFAgent_ProviderRowTip>Current provider: {0}\nDefault endpoint: {1}</GCFAgent_ProviderRowTip>
+  <GCFAgent_LocalKeyPlaceholder>Key not needed for local services (optional)</GCFAgent_LocalKeyPlaceholder>
+  <GCFAgent_ApiKeyPlaceholder>Enter API Key (sk-...)</GCFAgent_ApiKeyPlaceholder>
+  <GCFAgent_ModelFetchingPlaceholder>Fetching model list automatically...</GCFAgent_ModelFetchingPlaceholder>
+  <GCFAgent_ModelPickPlaceholder>Type a model or click the fetched models on the right to pick one</GCFAgent_ModelPickPlaceholder>
+  <GCFAgent_ModelInputPlaceholder>Enter model ID (fetched automatically once the key is filled in)</GCFAgent_ModelInputPlaceholder>
+  <GCFAgent_ModelFetchedTip>Fetched {0} available models automatically (click or right-click to switch)</GCFAgent_ModelFetchedTip>
+  <GCFAgent_UrlFieldLabel>Endpoint URL:</GCFAgent_UrlFieldLabel>
+  <GCFAgent_UrlPlaceholderLocal>http://127.0.0.1:11434/v1/chat/completions (suffix completed automatically)</GCFAgent_UrlPlaceholderLocal>
+  <GCFAgent_UrlPlaceholderCustom>https://api.example.com/v1/chat/completions (suffix completed automatically)</GCFAgent_UrlPlaceholderCustom>
+  <GCFAgent_QuestSpoilersSetting>Allow querying unrevealed quest spoiler conditions (AllowQuestSpoilers — when enabled, hidden QuestPart trigger conditions and unrevealed branches can be queried)</GCFAgent_QuestSpoilersSetting>
+  <GCFAgent_FailoverFooterNote>Tip: multiple providers can be enabled to form a failover chain (when the #1 primary endpoint times out or errors, the next enabled fallback provider is switched to automatically). Supports Google/OpenAI/DeepSeek/Alibaba Bailian/Zhipu GLM/Kimi/Claude/OpenRouter/Player2/local services.</GCFAgent_FailoverFooterNote>
+  <GCFAgent_BannerCollapse>Collapse panel</GCFAgent_BannerCollapse>
+  <GCFAgent_BannerSavePersist>Save and persist</GCFAgent_BannerSavePersist>
+  <GCFAgent_BannerSaved>Provider and prompt configuration saved and persisted to the configuration file.</GCFAgent_BannerSaved>
+  <GCFAgent_BannerSavedWithWarning>Configuration saved, but the primary endpoint validation reports: {0}</GCFAgent_BannerSavedWithWarning>
+  <GCFAgent_BannerValidate>Validate configuration</GCFAgent_BannerValidate>
+  <GCFAgent_BannerValidateOk>Validation passed: {0} · {1} ({2})</GCFAgent_BannerValidateOk>
+  <GCFAgent_BannerValidateFailed>Configuration validation failed: {0}</GCFAgent_BannerValidateFailed>
+  <GCFAgent_BannerProviderCount>{0} providers enabled · no budget cap · Token usage is reported automatically with every reply</GCFAgent_BannerProviderCount>
+  <GCFAgent_BannerLocalServiceFound>Local service detected automatically [{0}]: {1}</GCFAgent_BannerLocalServiceFound>
+  <GCFAgent_BannerModelsFetched>Fetched {1} available models automatically from {0}</GCFAgent_BannerModelsFetched>
+
+  <!-- Player2 authorization -->
+  <GCFAgent_Player2AuthRequestingCode>Requesting a device authorization code from Player2...</GCFAgent_Player2AuthRequestingCode>
+  <GCFAgent_Player2AuthSuccess>Player2 web authorization succeeded!</GCFAgent_Player2AuthSuccess>
+  <GCFAgent_Player2AuthTimeout>Player2 web authorization timed out or was not completed.</GCFAgent_Player2AuthTimeout>
+  <GCFAgent_Player2AuthCancelled>Player2 authorization cancelled.</GCFAgent_Player2AuthCancelled>
+  <GCFAgent_Player2AuthCancelledShort>Authorization cancelled.</GCFAgent_Player2AuthCancelledShort>
+  <GCFAgent_Player2AuthFailed>Authorization failed: {0}</GCFAgent_Player2AuthFailed>
+  <GCFAgent_Player2AuthCodeHint>(Authorization code: {0})</GCFAgent_Player2AuthCodeHint>
+  <GCFAgent_Player2AuthPageOpened>Opened the Player2 authorization page in the browser{0}; waiting for web confirmation...</GCFAgent_Player2AuthPageOpened>
+  <GCFAgent_Player2DeviceRequestFailed>Player2 device authentication request failed (HTTP {0})</GCFAgent_Player2DeviceRequestFailed>
+  <GCFAgent_Player2DeviceInvalidResponse>Player2 returned an invalid device authentication response.</GCFAgent_Player2DeviceInvalidResponse>
+  <GCFAgent_Player2ClientConnected>Client connected · model routed automatically</GCFAgent_Player2ClientConnected>
+  <GCFAgent_Player2ClientConnectedTip>Local Player2 client detected ({0}); logged in automatically with no key needed. Click to manage backup web authorization.</GCFAgent_Player2ClientConnectedTip>
+  <GCFAgent_Player2AwaitingWebConfirm>Waiting for web confirmation of authorization...</GCFAgent_Player2AwaitingWebConfirm>
+  <GCFAgent_Player2WebAuthReady>Web authorization ready · cloud auto-routing</GCFAgent_Player2WebAuthReady>
+  <GCFAgent_Player2StartClientHint>Start the client, or click web authorization on the left</GCFAgent_Player2StartClientHint>
+  <GCFAgent_Player2LocalEndpoint>Local Player2 endpoint: {0}</GCFAgent_Player2LocalEndpoint>
+  <GCFAgent_Player2AutoModelTip>Player2 assigns the best model automatically server-side; the model parameter does not need to be set manually</GCFAgent_Player2AutoModelTip>
+  <GCFAgent_Player2KeyPlaceholder>Not needed on desktop / web authorization p2Key</GCFAgent_Player2KeyPlaceholder>
+  <GCFAgent_Player2AuthMenu>Authorize</GCFAgent_Player2AuthMenu>
+  <GCFAgent_Player2WaitConfirm>Awaiting web confirmation (reopen)</GCFAgent_Player2WaitConfirm>
+  <GCFAgent_Player2WaitConfirmTip>The Player2 authorization page is open in the browser; click to reopen it or cancel</GCFAgent_Player2WaitConfirmTip>
+  <GCFAgent_Player2WebAuth>Web authorization</GCFAgent_Player2WebAuth>
+  <GCFAgent_Player2WebAuthed>Web authorized</GCFAgent_Player2WebAuthed>
+  <GCFAgent_Player2WebAuthedTip>A Player2 web authorization key is configured. Click to re-authorize, view/edit the key, or clear it.</GCFAgent_Player2WebAuthedTip>
+  <GCFAgent_Player2DetectClient>Detect client</GCFAgent_Player2DetectClient>
+  <GCFAgent_Player2OneClickAuth>One-click web authorization</GCFAgent_Player2OneClickAuth>
+  <GCFAgent_Player2OneClickAuthTip>Click to open Player2 web authorization in the browser and fill in the key automatically (right-click for more options)</GCFAgent_Player2OneClickAuthTip>
+  <GCFAgent_Player2DetectTip>Detect the local Player2 desktop client (ports 4315/4316 or api.port)</GCFAgent_Player2DetectTip>
+  <GCFAgent_Player2ReopenAuthPage>Reopen the authorization page in the browser</GCFAgent_Player2ReopenAuthPage>
+  <GCFAgent_Player2CancelAuth>Cancel the web authorization in progress</GCFAgent_Player2CancelAuth>
+  <GCFAgent_Player2WebAuthCancelled>Player2 web authorization cancelled.</GCFAgent_Player2WebAuthCancelled>
+  <GCFAgent_Player2StartWebAuth>Start one-click web authorization (recommended)</GCFAgent_Player2StartWebAuth>
+  <GCFAgent_Player2DetectNow>Detect the local Player2 client now</GCFAgent_Player2DetectNow>
+  <GCFAgent_Player2HideKeyInput>Hide the manual input field</GCFAgent_Player2HideKeyInput>
+  <GCFAgent_Player2ShowKeyInput>Manually enter / view API Key</GCFAgent_Player2ShowKeyInput>
+  <GCFAgent_Player2ClearKey>Clear the saved web authorization key</GCFAgent_Player2ClearKey>
+  <GCFAgent_Player2KeyCleared>Player2 web authorization key cleared.</GCFAgent_Player2KeyCleared>
+  <GCFAgent_Player2OpenWebsite>Open the Player2 website (player2.game)</GCFAgent_Player2OpenWebsite>
+  <GCFAgent_Player2Detecting>Detecting the local Player2 client (api.port / 4315 / 4316)...</GCFAgent_Player2Detecting>
+  <GCFAgent_Player2LocalConnected>Connected to the local Player2 client ({0}); the session key was fetched automatically!</GCFAgent_Player2LocalConnected>
+  <GCFAgent_Player2NotDetected>No running local Player2 client was detected. Start the client, or click [One-click web authorization] to use the cloud service.</GCFAgent_Player2NotDetected>
+  <GCFAgent_Player2RequestingDeviceAuth>Requesting web device authorization from Player2...</GCFAgent_Player2RequestingDeviceAuth>
+  <GCFAgent_BannerPlayer2AuthSuccess>Player2 web authorization succeeded; the key was filled in and saved automatically!</GCFAgent_BannerPlayer2AuthSuccess>
+  <GCFAgent_BannerPlayer2AuthIncomplete>Player2 authorization incomplete: {0}</GCFAgent_BannerPlayer2AuthIncomplete>
+
+  <!-- Context switch settings -->
+  <GCFAgent_SettingAskContext>Ask whether to enable context on a new conversation's second send</GCFAgent_SettingAskContext>
+  <GCFAgent_SettingAskContextTip>Restoring the prompt does not change conversations that already made a choice.</GCFAgent_SettingAskContextTip>
+  <GCFAgent_SettingDefaultContext>When not asking again, new conversations enable context by default</GCFAgent_SettingDefaultContext>
+  <GCFAgent_SettingDefaultContextTip>Each conversation can still be changed individually with the context switch below the input box.</GCFAgent_SettingDefaultContextTip>
+  <GCFAgent_SettingContextNote>Turning context off reduces historical input usage; tool investigations within a turn still connect normally.</GCFAgent_SettingContextNote>
+
+  <!-- System prompt editor entry -->
+  <GCFAgent_PromptsOpen>System prompts...</GCFAgent_PromptsOpen>
+  <GCFAgent_PromptsOpenDesc>View, edit, and restore default prompts in a separate window.</GCFAgent_PromptsOpenDesc>
+  <GCFAgent_PromptsOpenNote>Takes effect on the next question after saving; no game restart needed.</GCFAgent_PromptsOpenNote>
+
+  <!-- Knowledge index -->
+  <GCFAgent_KnowledgeEnable>Prepare mod knowledge index in the background</GCFAgent_KnowledgeEnable>
+  <GCFAgent_KnowledgeEnableTip>The first preparation can continue across game sessions; queries can still use the original investigation tools.</GCFAgent_KnowledgeEnableTip>
+  <GCFAgent_KnowledgePreferGpu>Prefer GPU</GCFAgent_KnowledgePreferGpu>
+  <GCFAgent_KnowledgeGpuTip>Uses the graphics card when available and falls back to single-threaded CPU if initialization fails; background work slows down while the game lags.</GCFAgent_KnowledgeGpuTip>
+  <GCFAgent_IndexPhaseStarting>Opening</GCFAgent_IndexPhaseStarting>
+  <GCFAgent_IndexPhaseText>Preparing full-text index</GCFAgent_IndexPhaseText>
+  <GCFAgent_IndexPhaseModel>Warming up model</GCFAgent_IndexPhaseModel>
+  <GCFAgent_IndexPhaseEmbedding>Preparing semantic index</GCFAgent_IndexPhaseEmbedding>
+  <GCFAgent_IndexPhaseCode>Preparing mod code</GCFAgent_IndexPhaseCode>
+  <GCFAgent_IndexPhasePartial>Partial index available</GCFAgent_IndexPhasePartial>
+  <GCFAgent_IndexPhaseReady>Ready</GCFAgent_IndexPhaseReady>
+  <GCFAgent_IndexPhaseLexical>Full-text index available</GCFAgent_IndexPhaseLexical>
+  <GCFAgent_IndexPhaseFaulted>Index temporarily unavailable</GCFAgent_IndexPhaseFaulted>
+  <GCFAgent_IndexPhaseDisabled>Not enabled</GCFAgent_IndexPhaseDisabled>
+  <GCFAgent_IndexPaused>Paused</GCFAgent_IndexPaused>
+  <GCFAgent_IndexStatusLine>{0} · files {1} · code {2} · semantic {3}/{4} · {5}</GCFAgent_IndexStatusLine>
+  <GCFAgent_IndexStatusTooltip>{0}\nassemblies {1}/{2} · IL members {3} · failed members {4}\n{5}\n{6}\n{7}</GCFAgent_IndexStatusTooltip>
+  <GCFAgent_IndexResume>Resume preparation</GCFAgent_IndexResume>
+  <GCFAgent_IndexPause>Pause preparation</GCFAgent_IndexPause>
+  <GCFAgent_IndexRebuild>Rebuild index</GCFAgent_IndexRebuild>
+  <GCFAgent_IndexNote1>Preparation runs in the background on this machine; it calls no model service and consumes no API tokens.</GCFAgent_IndexNote1>
+  <GCFAgent_IndexNote2>After preparation is paused, completed index parts remain queryable; full content investigation is always available.</GCFAgent_IndexNote2>
+  <GCFAgent_IndexRestartFailed>Failed to restart the index: {0}</GCFAgent_IndexRestartFailed>
+
+  <!-- System prompts window -->
+  <GCFAgent_PromptsInitialStatus>Takes effect on the next question after saving; no restart needed. Closing the window discards unsaved changes.</GCFAgent_PromptsInitialStatus>
+  <GCFAgent_PromptsSaveIncomplete>Configuration write did not complete: {0}</GCFAgent_PromptsSaveIncomplete>
+  <GCFAgent_PromptsSaved>Saved. The next question uses the new prompts; a reply already in progress keeps the settings it was sent with.</GCFAgent_PromptsSaved>
+  <GCFAgent_PromptsTitle>System prompts</GCFAgent_PromptsTitle>
+  <GCFAgent_PromptsUnsavedMark>· unsaved</GCFAgent_PromptsUnsavedMark>
+  <GCFAgent_PromptsBackToEdit>Back to editor</GCFAgent_PromptsBackToEdit>
+  <GCFAgent_PromptsPreview>Effective content preview</GCFAgent_PromptsPreview>
+  <GCFAgent_PromptsResetSection>Restore this section's default</GCFAgent_PromptsResetSection>
+  <GCFAgent_PromptsResetAll>Restore all defaults</GCFAgent_PromptsResetAll>
+  <GCFAgent_PromptsPreviewNote>The preview includes the current draft; it takes effect after saving. Prompts applied under trigger conditions are listed separately.</GCFAgent_PromptsPreviewNote>
+  <GCFAgent_PromptsPreviewSection>[{0}]\n{1}</GCFAgent_PromptsPreviewSection>
+  <GCFAgent_PromptsPlaceholder>Leave empty to not send this prompt; "Restore this section's default" restores the built-in content.</GCFAgent_PromptsPlaceholder>
+  <GCFAgent_PromptsContentStats>Current content {0} characters · local estimate ≈{1} Token</GCFAgent_PromptsContentStats>
+  <GCFAgent_PromptsSave>Save</GCFAgent_PromptsSave>
+  <GCFAgent_PromptSectionLabel_Main>Main system prompt</GCFAgent_PromptSectionLabel_Main>
+  <GCFAgent_PromptSectionDesc_Main>The assistant's responsibilities, investigation principles, and answer scope.</GCFAgent_PromptSectionDesc_Main>
+  <GCFAgent_PromptSectionLabel_OutputFormat>Wording and term format</GCFAgent_PromptSectionLabel_OutputFormat>
+  <GCFAgent_PromptSectionDesc_OutputFormat>Controls player-visible wording and term tags.</GCFAgent_PromptSectionDesc_OutputFormat>
+  <GCFAgent_PromptSectionLabel_Persona>Persona and form of address</GCFAgent_PromptSectionLabel_Persona>
+  <GCFAgent_PromptSectionDesc_Persona>Controls form of address, tone, and character style; shared with the avatar page.</GCFAgent_PromptSectionDesc_Persona>
+  <GCFAgent_PromptSectionLabel_PersonaBoundary>Persona scope</GCFAgent_PromptSectionLabel_PersonaBoundary>
+  <GCFAgent_PromptSectionDesc_PersonaBoundary>Placed after the persona; explains how it relates to facts and the tool protocol.</GCFAgent_PromptSectionDesc_PersonaBoundary>
+  <GCFAgent_PromptSectionLabel_Submission>Answer submission instructions</GCFAgent_PromptSectionLabel_Submission>
+  <GCFAgent_PromptSectionDesc_Submission>Tells the model how to deliver the answer through the submission tool.</GCFAgent_PromptSectionDesc_Submission>
+  <GCFAgent_PromptSectionLabel_Evidence>Evidence usage instructions</GCFAgent_PromptSectionLabel_Evidence>
+  <GCFAgent_PromptSectionDesc_Evidence>Explains source ids, previews, history snapshots, and citation repair.</GCFAgent_PromptSectionDesc_Evidence>
+  <GCFAgent_PromptSectionLabel_MissingSubmission>Reminder when no submission</GCFAgent_PromptSectionLabel_MissingSubmission>
+  <GCFAgent_PromptSectionDesc_MissingSubmission>Used when the model returns plain text without submitting an answer.</GCFAgent_PromptSectionDesc_MissingSubmission>
+  <GCFAgent_PromptSectionLabel_CitationRepair>Reminder after citation failures</GCFAgent_PromptSectionLabel_CitationRepair>
+  <GCFAgent_PromptSectionDesc_CitationRepair>Appended to the error details when citation validation fails.</GCFAgent_PromptSectionDesc_CitationRepair>
+  <GCFAgent_PromptSectionLabel_Synthesis>Summary instructions after request failures</GCFAgent_PromptSectionLabel_Synthesis>
+  <GCFAgent_PromptSectionDesc_Synthesis>Used when a network timeout or similar requires drawing conclusions from evidence already gathered.</GCFAgent_PromptSectionDesc_Synthesis>
+  <GCFAgent_PromptSectionLabel_ImageQuestion>Question used when only a screenshot is sent</GCFAgent_PromptSectionLabel_ImageQuestion>
+  <GCFAgent_PromptSectionDesc_ImageQuestion>Used when there is a screenshot but no input text.</GCFAgent_PromptSectionDesc_ImageQuestion>
+  <GCFAgent_PromptSectionLabel_ToolDiscovery>Tool discovery instructions</GCFAgent_PromptSectionLabel_ToolDiscovery>
+  <GCFAgent_PromptSectionDesc_ToolDiscovery>Explains listing the catalog and loading tool definitions by name; shared by all models.</GCFAgent_PromptSectionDesc_ToolDiscovery>
+
+  <!-- Avatar and persona window -->
+  <GCFAgent_PersonaWindowTitle>Assistant avatar and persona prompt settings</GCFAgent_PersonaWindowTitle>
+  <GCFAgent_PersonaWindowSubtitle>Customize the assistant avatar in the top-left corner and to the left of chat messages, and set a dedicated conversation persona and speaking style</GCFAgent_PersonaWindowSubtitle>
+  <GCFAgent_AvatarCurrentCustom>Current avatar: custom image ({0})</GCFAgent_AvatarCurrentCustom>
+  <GCFAgent_AvatarCurrentDefault>Current avatar: built-in default (PNG / JPG supported, rendered transparent with rounded corners and no outer frame)</GCFAgent_AvatarCurrentDefault>
+  <GCFAgent_AvatarPathPlaceholder>Leave empty to use the default avatar, or click [Browse local images] below to pick a PNG/JPG file</GCFAgent_AvatarPathPlaceholder>
+  <GCFAgent_AvatarBrowse>Browse local images...</GCFAgent_AvatarBrowse>
+  <GCFAgent_AvatarFolderMenu>Avatar library / folder</GCFAgent_AvatarFolderMenu>
+  <GCFAgent_AvatarReset>Restore default avatar</GCFAgent_AvatarReset>
+  <GCFAgent_AvatarResetDone>Restored to the default avatar.</GCFAgent_AvatarResetDone>
+  <GCFAgent_PersonaHeaderActive>Persona prompt (active · {0} characters / ≈{1} tok):</GCFAgent_PersonaHeaderActive>
+  <GCFAgent_PersonaHeaderIdle>Persona prompt (set the assistant's personality, character identity, form of address, and speaking style):</GCFAgent_PersonaHeaderIdle>
+  <GCFAgent_PersonaQuickPresets>Quick presets:</GCFAgent_PersonaQuickPresets>
+  <GCFAgent_PersonaNone>No extra persona</GCFAgent_PersonaNone>
+  <GCFAgent_PersonaGentleMaid>Gentle maid advisor</GCFAgent_PersonaGentleMaid>
+  <GCFAgent_PersonaTsundereAdvisor>Sharp-tongued tsundere advisor</GCFAgent_PersonaTsundereAdvisor>
+  <GCFAgent_PersonaColdCore>Cold mechanical core</GCFAgent_PersonaColdCore>
+  <GCFAgent_PersonaOldCaptain>Old rimworld captain</GCFAgent_PersonaOldCaptain>
+  <GCFAgent_PersonaCleared>Extra persona cleared.</GCFAgent_PersonaCleared>
+  <GCFAgent_PersonaApplied>Applied the [{0}] persona template; you can keep editing it freely.</GCFAgent_PersonaApplied>
+  <GCFAgent_PersonaEditorPlaceholder>Type a custom persona prompt here (e.g. character background, personality traits, how the player is addressed, catchphrases); leave empty to keep the default professional, rigorous assistant style...</GCFAgent_PersonaEditorPlaceholder>
+  <GCFAgent_PersonaSaveDone>Save and finish</GCFAgent_PersonaSaveDone>
+  <GCFAgent_PersonaStatusHint>Tip: the persona prompt primarily controls the assistant's speaking tone and character while keeping the ability to verify facts with in-game runtime probes.</GCFAgent_PersonaStatusHint>
+  <GCFAgent_AvatarFileMissing>The selected image file does not exist.</GCFAgent_AvatarFileMissing>
+  <GCFAgent_AvatarLoaded>Avatar loaded and saved: {0}</GCFAgent_AvatarLoaded>
+  <GCFAgent_AvatarLoadFailed>Failed to load avatar: {0}</GCFAgent_AvatarLoadFailed>
+  <GCFAgent_AvatarUse>Use avatar: {0}</GCFAgent_AvatarUse>
+  <GCFAgent_AvatarSwitched>Avatar switched: {0}</GCFAgent_AvatarSwitched>
+  <GCFAgent_AvatarOpenFolder>Open the avatar folder in the file explorer...</GCFAgent_AvatarOpenFolder>
+  <GCFAgent_AvatarOpenFolderFailed>Could not open the folder: {0}</GCFAgent_AvatarOpenFolderFailed>
+  <GCFAgent_AvatarFileDialogTitle>Choose a Creature Forge assistant avatar image (PNG / JPG)</GCFAgent_AvatarFileDialogTitle>
+
+
+  <!-- GCF authoring tools and image endpoint -->
+  <GCFAgent_ToolLabel_ListManuals>List authoring manuals</GCFAgent_ToolLabel_ListManuals>
+  <GCFAgent_ToolLabel_LoadManual>Load authoring manual</GCFAgent_ToolLabel_LoadManual>
+  <GCFAgent_ToolLabel_ListWorkspace>List creature workspace</GCFAgent_ToolLabel_ListWorkspace>
+  <GCFAgent_ToolLabel_ReadCreatureXml>Read creature XML</GCFAgent_ToolLabel_ReadCreatureXml>
+  <GCFAgent_ToolLabel_WriteCreatureXml>Write creature XML</GCFAgent_ToolLabel_WriteCreatureXml>
+  <GCFAgent_ToolLabel_GenerateLocomotionAnim>Synthesize 3D skeletal animation</GCFAgent_ToolLabel_GenerateLocomotionAnim>
+  <GCFAgent_ToolLabel_GenerateImage>Generate sprite sheet</GCFAgent_ToolLabel_GenerateImage>
+  <GCFAgent_ToolLabel_ExtractSheet>Extract green-screen sheet</GCFAgent_ToolLabel_ExtractSheet>
+  <GCFAgent_ToolLabel_WarpBone>Warp and outline bone sprite</GCFAgent_ToolLabel_WarpBone>
+  <GCFAgent_ToolLabel_PreviewSheet>Render checkerboard preview</GCFAgent_ToolLabel_PreviewSheet>
+  <GCFAgent_ToolLabel_PreviewAnimStrip>Render animation strip preview</GCFAgent_ToolLabel_PreviewAnimStrip>
+  <GCFAgent_ToolLabel_ValidateCreature>Validate Defs and joints</GCFAgent_ToolLabel_ValidateCreature>
+  <GCFAgent_ToolLabel_InjectCreature>Hot-inject creature</GCFAgent_ToolLabel_InjectCreature>
+  <GCFAgent_ToolLabel_SpawnCreature>Spawn creature on map</GCFAgent_ToolLabel_SpawnCreature>
+  <GCFAgent_ImageApiHeader>Image Generation Endpoint (OpenAI-compatible images/generations and images/edits)</GCFAgent_ImageApiHeader>
+  <GCFAgent_ImageEndpointLabel>Image Base URL:</GCFAgent_ImageEndpointLabel>
+  <GCFAgent_ImageEndpointPlaceholder>http://127.0.0.1:2048/v1 (generations / edits resolved automatically)</GCFAgent_ImageEndpointPlaceholder>
+  <GCFAgent_ImageModelLabel>Image Model ID:</GCFAgent_ImageModelLabel>
+  <GCFAgent_ImageModelPlaceholder>Enter image model ID (e.g. gemini-3-pro-image / gpt-image-1)</GCFAgent_ImageModelPlaceholder>
+  <GCFAgent_ImageApiKeyLabel>Image API Key:</GCFAgent_ImageApiKeyLabel>
+  <GCFAgent_ImageApiKeyPlaceholder>Optional API Key (leave empty for keyless local service)</GCFAgent_ImageApiKeyPlaceholder>
+  <GCFAgent_SidebarTitle>Creature Forge</GCFAgent_SidebarTitle>
+  <GCFAgent_SidebarSubtitle>RUNTIME CREATURE FORGE</GCFAgent_SidebarSubtitle>
+  <GCFAgent_ManualButton>GCF Manual &amp; Tools</GCFAgent_ManualButton>
+  <GCFAgent_ManualButtonTip>Open the Giant Creature Framework manual covering unit archetypes, reusable capabilities (skinned meshes, custom turrets), Def schemas, and tool types</GCFAgent_ManualButtonTip>
+  <GCFAgent_ManualWindowTitle>Giant Creature Framework Developer &amp; Tool Manual</GCFAgent_ManualWindowTitle>
+  <GCFAgent_ManualWindowSubtitle>Unit Archetypes · Reusable Capabilities · Def Reference · Tool Types</GCFAgent_ManualWindowSubtitle>
+  <GCFAgent_ManualCopyAll>Copy All</GCFAgent_ManualCopyAll>
+  <GCFAgent_ManualReload>Reload</GCFAgent_ManualReload>
+  <GCFAgent_ManualSearchPlaceholder>Filter Defs, tags, or tools...</GCFAgent_ManualSearchPlaceholder>
+  <GCFAgent_ManualClearSearch>Clear search filter</GCFAgent_ManualClearSearch>
+  <GCFAgent_ManualChaptersHeader>CHAPTERS</GCFAgent_ManualChaptersHeader>
+  <GCFAgent_ManualAllChapters>All Chapters (Full View)</GCFAgent_ManualAllChapters>
+  <GCFAgent_ManualNoMatch>No manual blocks or table rows matched your filter.</GCFAgent_ManualNoMatch>
+  <GCFAgent_ManualFileMissing>Manual file Docs\GiantCreatureFramework_Manual.md was not found.</GCFAgent_ManualFileMissing>
+  <GCFAgent_ManualReadFailed>Failed to read manual: {0}</GCFAgent_ManualReadFailed>
+</LanguageData>
