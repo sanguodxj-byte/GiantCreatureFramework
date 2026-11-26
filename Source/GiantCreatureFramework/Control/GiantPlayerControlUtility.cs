@@ -388,7 +388,7 @@ namespace GiantCreatureFramework
     }
 
     /// <summary>
-    /// Provides tactical right-click control options when a player Giant Creature (such as GCF_MechColossus)
+    /// Provides tactical right-click control options when a player Giant Creature
     /// is selected (especially while undrafted or when right-clicking the giant itself), without interfering
     /// with instant single-right-click DraftedMove / PartFocus auto-take orders when drafted.
     /// </summary>
@@ -846,7 +846,7 @@ namespace GiantCreatureFramework
         [HarmonyPatch(typeof(Pawn_MechanitorTracker), nameof(Pawn_MechanitorTracker.Notify_DeSpawned))]
         public static bool Pawn_MechanitorTracker_NotifyDeSpawned_Prefix(Pawn ___pawn)
         {
-            // Keep overseen mechs (including GCF_MechColossus itself!) drafted & controlled when the Mechanitor boards a GCF cockpit
+            // Keep overseen mechs drafted & controlled when the Mechanitor boards a GCF cockpit
             if (___pawn != null && !___pawn.Dead && !___pawn.Downed &&
                 (CompGiantCockpit.CurrentlyBoardingPawn == ___pawn || ___pawn.ParentHolder is CompGiantCockpit))
             {

@@ -31,9 +31,41 @@ DEFAULT_RIMWORLD_DIR = VERIFY_ROOT / "isolated_rw_host"
 DEFAULT_RIMWORLD_EXE = DEFAULT_RIMWORLD_DIR / "RimWorldWin64.exe"
 DEFAULT_RUNTIME_DIR = VERIFY_ROOT / "arena_runtime"
 DEFAULT_GABS_DIR = VERIFY_ROOT / "gabs_arena"
-DEFAULT_GABS_EXE = pathlib.Path(r"D:\rimmod\GABS\gabs.exe")
-DEFAULT_FFMPEG_EXE = pathlib.Path(r"C:\Users\Administrator\scoop\shims\ffmpeg.exe")
 USER_RW_ROOT = pathlib.Path.home() / "AppData/LocalLow/Ludeon Studios/RimWorld by Ludeon Studios"
+
+
+def resolve_executable(explicit_value: str, env_var: str, command_names: tuple[str, ...]) -> pathlib.Path | None:
+    if explicit_value:
+        candidate = pathlib.Path(explicit_value).expanduser()
+        if candidate.is_file():
+            return candidate.resolve()
+        found = shutil.which(explicit_value)
+        if found:
+            return pathlib.Path(found).resolve()
+    env_val = os.environ.get(env_var, "").strip()
+    if env_val:
+        candidate = pathlib.Path(env_val).expanduser()
+        if candidate.is_file():
+            return candidate.resolve()
+        found = shutil.which(env_val)
+        if found:
+            return pathlib.Path(found).resolve()
+    for name in command_names:
+        found = shutil.which(name)
+        if found:
+            return pathlib.Path(found).resolve()
+    return None
+
+
+def resolve_gabs_exe(explicit_value: str) -> pathlib.Path:
+    resolved = resolve_executable(explicit_value, "GABS_EXE", ("gabs.exe", "gabs"))
+    if resolved is None:
+        raise FileNotFoundError("gabs executable not found. Pass --gabs-exe, set GABS_EXE, or add gabs to PATH.")
+    return resolved
+
+
+def resolve_ffmpeg_exe(explicit_value: str) -> pathlib.Path | None:
+    return resolve_executable(explicit_value, "FFMPEG_EXE", ("ffmpeg.exe", "ffmpeg"))
 
 ARENA_MODS = [
     "brrainz.harmony",
@@ -574,8 +606,9 @@ def cmd_launch(args: argparse.Namespace):
         lang=args.lang,
         mods_config_path=mods_cfg_path,
     )
+    gabs_exe = resolve_gabs_exe(args.gabs_exe)
     gabs_proc = subprocess.Popen(
-        [str(DEFAULT_GABS_EXE), "server", "http", "--addr", f"127.0.0.1:{args.port}", "--configDir", str(gabs_dir)],
+        [str(gabs_exe), "server", "http", "--addr", f"127.0.0.1:{args.port}", "--configDir", str(gabs_dir)],
         stdout=subprocess.DEVNULL,
         stderr=subprocess.DEVNULL,
     )
@@ -611,8 +644,8 @@ def cmd_launch(args: argparse.Namespace):
             gabs_proc.terminate()
 
 
-def build_contact_sheet_from_mp4(mp4_path: pathlib.Path, out_path: pathlib.Path, title: str, total_seconds: float):
-    if not mp4_path.exists() or not DEFAULT_FFMPEG_EXE.exists() or total_seconds <= 0.1:
+def build_contact_sheet_from_mp4(mp4_path: pathlib.Path, out_path: pathlib.Path, title: str, total_seconds: float, ffmpeg_exe: pathlib.Path | None):
+    if not mp4_path.exists() or ffmpeg_exe is None or not ffmpeg_exe.exists() or total_seconds <= 0.1:
         return
     tmp_dir = out_path.parent / "_sheet_tmp"
     if tmp_dir.exists():
@@ -632,7 +665,7 @@ def build_contact_sheet_from_mp4(mp4_path: pathlib.Path, out_path: pathlib.Path,
             f_png = tmp_dir / f"s_{slot:02d}.png"
             subprocess.run(
                 [
-                    str(DEFAULT_FFMPEG_EXE),
+                    str(ffmpeg_exe),
                     "-y",
                     "-ss",
                     f"{ts:.3f}",
@@ -697,8 +730,11 @@ def cmd_record(args: argparse.Namespace):
         mods_config_path=mods_cfg_path,
     )
 
+    gabs_exe = resolve_gabs_exe(args.gabs_exe)
+    ffmpeg_exe = resolve_ffmpeg_exe(args.ffmpeg_exe)
+
     gabs_proc = subprocess.Popen(
-        [str(DEFAULT_GABS_EXE), "server", "http", "--addr", f"127.0.0.1:{args.port}", "--configDir", str(gabs_dir)],
+        [str(gabs_exe), "server", "http", "--addr", f"127.0.0.1:{args.port}", "--configDir", str(gabs_dir)],
         stdout=subprocess.DEVNULL,
         stderr=subprocess.DEVNULL,
     )
@@ -712,11 +748,11 @@ def cmd_record(args: argparse.Namespace):
     ffmpeg_proc: subprocess.Popen | None = None
 
     def start_ffmpeg_pipe() -> subprocess.Popen | None:
-        if not DEFAULT_FFMPEG_EXE.exists():
+        if ffmpeg_exe is None or not ffmpeg_exe.exists():
             return None
         return subprocess.Popen(
             [
-                str(DEFAULT_FFMPEG_EXE),
+                str(ffmpeg_exe),
                 "-y",
                 "-f",
                 "image2pipe",
@@ -791,7 +827,7 @@ def cmd_record(args: argparse.Namespace):
         if args.engine == "native":
             rec_res = unwrap_result(client.rw("gcf_arena/start_native_recording", {
                 "outputPath": str(mp4_path),
-                "ffmpegPath": str(DEFAULT_FFMPEG_EXE),
+                "ffmpegPath": str(ffmpeg_exe) if ffmpeg_exe else "",
                 "fps": args.fps,
                 "ticksPerFrame": args.ticks_per_frame,
                 "introSeconds": args.intro_seconds,
@@ -933,7 +969,7 @@ def cmd_record(args: argparse.Namespace):
     total_seconds = (total_frames / float(args.fps)) if args.fps > 0 else 0.0
     title = f"Giant Arena ({args.fps}fps 1.00x): {args.side_a} (Red) vs {args.side_b} (Blue) [{args.preset}]"
     if args.engine == "native":
-        build_contact_sheet_from_mp4(mp4_path, sheet_path, title, total_seconds)
+        build_contact_sheet_from_mp4(mp4_path, sheet_path, title, total_seconds, ffmpeg_exe)
     elif thumbs:
         build_contact_sheet_from_thumbs(thumbs, sheet_path, title)
 
@@ -979,8 +1015,8 @@ def cmd_record(args: argparse.Namespace):
 
 
 def add_common_match_args(p: argparse.ArgumentParser):
-    p.add_argument("--side-a", default="GCF_Rathalos", help="PawnKindDef for Side A (West / Red).")
-    p.add_argument("--side-b", default="GCF_Valstrax", help="PawnKindDef for Side B (East / Blue).")
+    p.add_argument("--side-a", default="GCF_MechScorpion", help="PawnKindDef for Side A (West / Red).")
+    p.add_argument("--side-b", default="GCF_MechScorpion", help="PawnKindDef for Side B (East / Blue).")
     p.add_argument("--preset", default="Colosseum", help="Preset arena: Colosseum, Plains, DesertRuins, Tundra, VolcanicBasalt.")
     p.add_argument("--count-a", type=int, default=1, help="Number of Side A units (1-8).")
     p.add_argument("--count-b", type=int, default=1, help="Number of Side B units (1-8).")
@@ -1003,6 +1039,8 @@ def add_common_match_args(p: argparse.ArgumentParser):
     p.add_argument("--height", type=int, default=900, help="Window height in pixels.")
     p.add_argument("--lang", default="", help="Optional RimWorld langFolderName override (empty preserves user Prefs.xml language).")
     p.add_argument("--rimworld-exe", default=str(DEFAULT_RIMWORLD_EXE), help="Path to RimWorldWin64.exe.")
+    p.add_argument("--gabs-exe", default="", help="Path to gabs executable (defaults to GABS_EXE env var or PATH).")
+    p.add_argument("--ffmpeg-exe", default="", help="Path to ffmpeg executable (defaults to FFMPEG_EXE env var or PATH).")
     p.add_argument("--mods-config", default="", help="Optional path to an existing ModsConfig.xml (e.g. full multi-race playset).")
     p.add_argument("--startup-timeout", type=int, default=180, help="Timeout in seconds waiting for RimWorld Playing state.")
     p.add_argument("--runtime-dir", default=str(DEFAULT_RUNTIME_DIR), help="Isolated savedatafolder path.")

@@ -25,6 +25,24 @@ namespace GiantCreatureFramework
         private static readonly FieldInfo CameraDriverDesiredDollyRawField =
             AccessTools.Field(typeof(CameraDriver), "desiredDollyRaw");
 
+        private static readonly AccessTools.FieldRef<PawnTweener, Vector3> PawnTweenerTweenedPosRef =
+            AccessTools.FieldRefAccess<PawnTweener, Vector3>("tweenedPos");
+        private static readonly AccessTools.FieldRef<PawnTweener, Vector3> PawnTweenerLastSpringPosRef =
+            AccessTools.FieldRefAccess<PawnTweener, Vector3>("lastTickSpringPos");
+        private static readonly AccessTools.FieldRef<PawnTweener, int> PawnTweenerLastDrawFrameRef =
+            AccessTools.FieldRefAccess<PawnTweener, int>("lastDrawFrame");
+        private static readonly AccessTools.FieldRef<PawnTweener, int> PawnTweenerLastDrawTickRef =
+            AccessTools.FieldRefAccess<PawnTweener, int>("lastDrawTick");
+        private static readonly Func<PawnTweener, Vector3> PawnTweenerRootDelegate = CreatePawnTweenerRootDelegate();
+
+        private static Func<PawnTweener, Vector3> CreatePawnTweenerRootDelegate()
+        {
+            MethodInfo m = AccessTools.Method(typeof(PawnTweener), "TweenedPosRoot");
+            return m != null
+                ? (Func<PawnTweener, Vector3>)Delegate.CreateDelegate(typeof(Func<PawnTweener, Vector3>), m, throwOnBindFailure: false)
+                : null;
+        }
+
         // Continuous floating-point critically-damped camera state (eliminates integer CurrentViewRect quantization stutter)
         private static bool hasSmoothedCamera;
         private static float smoothedCamX;
@@ -356,7 +374,7 @@ namespace GiantCreatureFramework
                 }
             }
 
-            // Short suffix match (e.g. "Rathalos" -> "GCF_Rathalos")
+            // Short suffix match (e.g. "MechScorpion" -> "GCF_MechScorpion")
             string prefixed = trimmed.StartsWith("GCF_", StringComparison.OrdinalIgnoreCase) ? trimmed : "GCF_" + trimmed;
             for (int i = 0; i < all.Count; i++)
             {
@@ -1046,11 +1064,51 @@ namespace GiantCreatureFramework
                 }
                 else
                 {
-                    // RimWorld 1.7 skips PostTickVisuals when TickManager.Paused == true (TicksThisFrame == 0).
-                    // Explicitly advance both smooth sub-cell Drawer tweening and Pawn_RotationTracker.UpdateRotation()!
+                    // RimWorld 1.7 freezes PawnTweener (TickRateMultiplier == 0) and skips PostTickVisuals when Paused.
+                    // Advance exact 60Hz sub-cell PawnTweener spring FIRST so p.DrawPos stays tightly coupled to p.Position,
+                    // then run ProcessPostTickVisuals (jitterer, leaner, renderer, and UpdateRotation).
+                    StepNonGiantPawnTweenerForLockstep(p, safeTicks);
                     p.ProcessPostTickVisuals(safeTicks, fullMapRect);
                 }
             }
+        }
+
+        private static void StepNonGiantPawnTweenerForLockstep(Pawn p, int safeTicks)
+        {
+            PawnTweener tweener = p?.Drawer?.tweener;
+            if (tweener == null)
+            {
+                return;
+            }
+
+            if (PawnTweenerRootDelegate == null ||
+                PawnTweenerTweenedPosRef == null ||
+                PawnTweenerLastSpringPosRef == null ||
+                PawnTweenerLastDrawFrameRef == null ||
+                PawnTweenerLastDrawTickRef == null)
+            {
+                tweener.ResetTweenedPosToRoot();
+                return;
+            }
+
+            int lastTick = PawnTweenerLastDrawTickRef(tweener);
+            Vector3 root = PawnTweenerRootDelegate(tweener);
+            ref Vector3 cur = ref PawnTweenerTweenedPosRef(tweener);
+            Vector3 delta = root - cur;
+
+            // Snap on initial spawn, Notify_Teleported(resetTweenedPos: true), or >15-cell map teleport;
+            // otherwise step the exact 0.09f 60Hz spring so walking, collision offsets, and 1..6-cell boss knockbacks glide smoothly!
+            if (lastTick < 0 || delta.sqrMagnitude > 225.0f)
+            {
+                tweener.ResetTweenedPosToRoot();
+                return;
+            }
+
+            PawnTweenerLastSpringPosRef(tweener) = cur;
+            float alpha = safeTicks == 1 ? 0.09f : (1f - Mathf.Pow(1f - 0.09f, safeTicks));
+            cur += delta * alpha;
+            PawnTweenerLastDrawFrameRef(tweener) = RealTime.frameCount;
+            PawnTweenerLastDrawTickRef(tweener) = GenTicks.TicksGame;
         }
 
         public static GiantArenaCameraRecommendation FrameMatchCamera(
@@ -2511,11 +2569,14 @@ namespace GiantCreatureFramework
 
         private static void DebugSetupQuickMatch()
         {
+            List<GiantArenaUnitCatalogEntry> units = ListAvailableUnits(includeNonGiants: false);
+            string sideAKind = units.Count > 0 ? units[0].DefName : "GCF_MechScorpion";
+            string sideBKind = units.Count > 1 ? units[1].DefName : sideAKind;
             SetupMatch(new GiantArenaMatchConfig
             {
                 Preset = nameof(GiantArenaPresetId.Colosseum),
-                SideAKind = DefDatabase<PawnKindDef>.GetNamedSilentFail("GCF_Rathalos") != null ? "GCF_Rathalos" : "GCF_MechScorpion",
-                SideBKind = DefDatabase<PawnKindDef>.GetNamedSilentFail("GCF_Valstrax") != null ? "GCF_Valstrax" : "GCF_MechScorpion",
+                SideAKind = sideAKind,
+                SideBKind = sideBKind,
                 StartPaused = false,
                 CleanVideoMode = true,
                 CinematicHudOnly = false,

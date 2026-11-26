@@ -3719,7 +3719,13 @@ namespace GiantCreatureFramework
             }
             else if (preserveActiveMeleeOnGiant)
             {
-                other.Drawer?.tweener?.ResetTweenedPosToRoot();
+                // Sync pather.nextCell and cachedMovePercentage to safeCell without interrupting CurJob (AttackMelee),
+                // preventing TweenedPosRoot() from staying anchored to a pre-push cell far behind the pawn.
+                other.pather?.ResetToCurrentPosition();
+                if (safeCell.DistanceToSquared(originCell) > 225)
+                {
+                    other.Drawer?.tweener?.ResetTweenedPosToRoot();
+                }
             }
             else
             {

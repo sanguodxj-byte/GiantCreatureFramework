@@ -715,7 +715,7 @@ namespace GiantCreatureFramework
         /// <see cref="DamageWorker_Stab"/> splash, <see cref="DamageWorker_Blunt"/> inner-hit) from bypassing
         /// an intact <see cref="BodyPartDepth.Outside"/> armor shell and dealing direct <c>FinalizeAndAddInjury</c>
         /// hits to enclosed <see cref="BodyPartDepth.Inside"/> vital organs (<c>Brain</c>, <c>Heart</c>, <c>Reactor</c>),
-        /// while preserving explicit internal damage such as <c>CompValstraxDragonEnergy</c> chest backfire.
+        /// while preserving explicit internal self-burst damage.
         /// </summary>
         [HarmonyPrefix]
         [HarmonyPatch(typeof(DamageWorker_AddInjury), "FinalizeAndAddInjury",

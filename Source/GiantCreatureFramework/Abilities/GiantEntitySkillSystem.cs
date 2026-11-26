@@ -838,8 +838,8 @@ namespace GiantCreatureFramework
             }
             else
             {
-                // Ground-targeted skills (e.g. Rathalos FireballBreath / FireballLiftoff) must lock onto the
-                // target's map cell rather than tracking a moving Pawn/Thing during cast warmup.
+                // Ground-targeted skills must lock onto the target's map cell rather than
+                // tracking a moving Pawn/Thing during cast warmup.
                 TargetingParameters tpParams = ab.verb.verbProps?.targetParams;
                 if (tpParams != null
                     && tpParams.canTargetLocations

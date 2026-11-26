@@ -53,8 +53,8 @@ public sealed class GiantArenaBridgeTools
         ResultDescription = "Match setup status and initial GiantArenaMatchState snapshot.")]
     public Task<object> SetupMatch(
         IRimBridgeContext ctx,
-        [ToolParameter(Description = "PawnKindDef defName (or short suffix like Rathalos) for Side A (West / Red).")] string sideAKind = "GCF_Rathalos",
-        [ToolParameter(Description = "PawnKindDef defName (or short suffix like Valstrax) for Side B (East / Blue).")] string sideBKind = "GCF_Valstrax",
+        [ToolParameter(Description = "PawnKindDef defName (or short suffix like MechScorpion) for Side A (West / Red).")] string sideAKind = "GCF_MechScorpion",
+        [ToolParameter(Description = "PawnKindDef defName (or short suffix like MechScorpion) for Side B (East / Blue).")] string sideBKind = "GCF_MechScorpion",
         [ToolParameter(Description = "Preset arena name: Colosseum, Plains, DesertRuins, Tundra, or VolcanicBasalt.")] string preset = "Colosseum",
         [ToolParameter(Description = "Number of Side A units to spawn (1-8, ignored when sideARaidPoints > 0).")] int sideACount = 1,
         [ToolParameter(Description = "Number of Side B units to spawn (1-8, ignored when sideBRaidPoints > 0).")] int sideBCount = 1,
@@ -233,7 +233,7 @@ public sealed class GiantArenaBridgeTools
     public Task<object> StartNativeRecording(
         IRimBridgeContext ctx,
         [ToolParameter(Description = "Absolute output .mp4 file path.")] string outputPath,
-        [ToolParameter(Description = "Path to ffmpeg.exe.")] string ffmpegPath = @"C:\Users\Administrator\scoop\shims\ffmpeg.exe",
+        [ToolParameter(Description = "Optional path or command name for ffmpeg (defaults to GCF_FFMPEG_PATH / FFMPEG_PATH / PATH).")] string ffmpegPath = "",
         [ToolParameter(Description = "Output framerate (default 60 fps).")] int fps = 60,
         [ToolParameter(Description = "RimWorld simulation ticks stepped per rendered frame (default 1 => 60fps * 1 = 1.00x real-time).")] int ticksPerFrame = 1,
         [ToolParameter(Description = "Opening face-off hold in seconds while Boss Health Bars unfold.")] float introSeconds = 1.5f,

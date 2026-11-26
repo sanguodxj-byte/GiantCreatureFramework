@@ -608,7 +608,7 @@ namespace GiantCreatureFramework
 
         /// <summary>
         /// Returns true when damage explicitly targets an internal organ (e.g., <c>dinfo.Depth == BodyPartDepth.Inside</c>,
-        /// internal self-detonation such as <c>CompValstraxDragonEnergy</c> chest backfire, non-propagating unattributed
+        /// internal self-detonation backfire, non-propagating unattributed
         /// internal injuries, or non-external environmental/medical effects).
         /// </summary>
         public static bool IsExplicitInternalOrSelfBurstDamage(Pawn pawn, BodyPartRecord targetOrgan, in DamageInfo dinfo)

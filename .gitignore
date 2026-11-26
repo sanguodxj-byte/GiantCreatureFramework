@@ -13,6 +13,10 @@ backup_screenshots/
 *.gif
 *.wav
 
+# Multi-submod local integration suite & dev-only showcase bridge tools
+Tests/
+Source/GiantCreatureFramework.Agent.BridgeTools/
+
 # Non-generic creature resources (keep MechScorpion and generic Wounds only)
 1.7/Textures/Things/Pawn/GiantCreature/*
 !1.7/Textures/Things/Pawn/GiantCreature/MechScorpion/

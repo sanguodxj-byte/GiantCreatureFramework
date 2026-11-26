@@ -202,7 +202,7 @@ namespace GiantCreatureFramework
         /// Parses either a JSON config file path or a compact CLI spec:
         ///   KindA:KindB[:Preset[:CountAxCountB[:Separation[:StartPaused]]]]
         /// Example:
-        ///   GCF_Rathalos:GCF_Valstrax:Colosseum:1x1:34:false
+        ///   GCF_MechScorpion:GCF_MechScorpion:Colosseum:1x1:34:false
         /// </summary>
         public static bool TryParseSpecOrFile(string rawSpec, out GiantArenaMatchConfig config, out string error)
         {

@@ -13,7 +13,7 @@ namespace GiantCreatureFramework
     public sealed class GiantArenaRecordingRequest
     {
         public string OutputPath { get; set; } = string.Empty;
-        public string FfmpegPath { get; set; } = @"C:\Users\Administrator\scoop\shims\ffmpeg.exe";
+        public string FfmpegPath { get; set; } = string.Empty;
         public int Fps { get; set; } = 60;
         public int TicksPerFrame { get; set; } = 1;
         public float IntroSeconds { get; set; } = 1.5f;
@@ -86,6 +86,51 @@ namespace GiantCreatureFramework
         public static bool IsRecording => recording;
         public static event Action<int, float, Map> OnRecorderFrameStepped;
 
+        private static string ResolveFfmpegPath(string requestedPath)
+        {
+            string[] candidates =
+            {
+                requestedPath,
+                Environment.GetEnvironmentVariable("GCF_FFMPEG_PATH"),
+                Environment.GetEnvironmentVariable("FFMPEG_PATH"),
+                "ffmpeg.exe",
+                "ffmpeg"
+            };
+            string pathEnv = Environment.GetEnvironmentVariable("PATH") ?? string.Empty;
+            string[] pathDirs = pathEnv.Split(Path.PathSeparator, StringSplitOptions.RemoveEmptyEntries);
+
+            foreach (string raw in candidates)
+            {
+                if (string.IsNullOrWhiteSpace(raw))
+                {
+                    continue;
+                }
+                string candidate = raw.Trim().Trim('"');
+                if (File.Exists(candidate))
+                {
+                    return Path.GetFullPath(candidate);
+                }
+                if (candidate.IndexOf(Path.DirectorySeparatorChar) < 0 && candidate.IndexOf(Path.AltDirectorySeparatorChar) < 0)
+                {
+                    foreach (string dir in pathDirs)
+                    {
+                        try
+                        {
+                            string full = Path.Combine(dir.Trim(), candidate);
+                            if (File.Exists(full))
+                            {
+                                return full;
+                            }
+                        }
+                        catch
+                        {
+                        }
+                    }
+                }
+            }
+            return string.Empty;
+        }
+
         public static bool StartRecording(GiantArenaRecordingRequest req, out string error)
         {
             error = string.Empty;
@@ -109,12 +154,12 @@ namespace GiantCreatureFramework
                 error = "OutputPath is required.";
                 return false;
             }
-            string ffmpegPath = string.IsNullOrWhiteSpace(req.FfmpegPath)
-                ? @"C:\Users\Administrator\scoop\shims\ffmpeg.exe"
-                : req.FfmpegPath.Trim();
-            if (!File.Exists(ffmpegPath))
+            string ffmpegPath = ResolveFfmpegPath(req.FfmpegPath);
+            if (string.IsNullOrEmpty(ffmpegPath))
             {
-                error = $"ffmpeg executable not found at '{ffmpegPath}'.";
+                error = string.IsNullOrWhiteSpace(req.FfmpegPath)
+                    ? "ffmpeg executable not found. Pass FfmpegPath, set GCF_FFMPEG_PATH or FFMPEG_PATH, or add ffmpeg to PATH."
+                    : $"ffmpeg executable not found at '{req.FfmpegPath}'.";
                 return false;
             }
 
@@ -301,6 +346,7 @@ namespace GiantCreatureFramework
                         tm.DoSingleTick();
                     }
                 }
+                GiantArenaService.SyncPawnTweenersForLockstepFrame(Find.CurrentMap, activeReq.TicksPerFrame);
                 try
                 {
                     OnRecorderFrameStepped?.Invoke(
@@ -311,7 +357,6 @@ namespace GiantCreatureFramework
                 catch
                 {
                 }
-                GiantArenaService.SyncPawnTweenersForLockstepFrame(Find.CurrentMap, activeReq.TicksPerFrame);
 
                 if (activeReq.TrackCamera)
                 {

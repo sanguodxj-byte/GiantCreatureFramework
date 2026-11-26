@@ -1634,23 +1634,7 @@ namespace GiantCreatureFramework
             }
             else
             {
-                string defName = pawn?.def?.defName ?? string.Empty;
-                if (defName.IndexOf("Rathalos", StringComparison.OrdinalIgnoreCase) >= 0)
-                {
-                    baseBorder = new Color(0.78f, 0.56f, 0.28f, 1.00f);
-                }
-                else if (defName.IndexOf("Valstrax", StringComparison.OrdinalIgnoreCase) >= 0)
-                {
-                    baseBorder = new Color(0.76f, 0.34f, 0.38f, 1.00f);
-                }
-                else if (defName.IndexOf("Carrier", StringComparison.OrdinalIgnoreCase) >= 0)
-                {
-                    baseBorder = new Color(0.76f, 0.66f, 0.34f, 1.00f);
-                }
-                else
-                {
-                    baseBorder = def.borderColor;
-                }
+                baseBorder = def != null ? def.borderColor : new Color(0.58f, 0.56f, 0.52f, 1.00f);
             }
 
             if (isSelected)
